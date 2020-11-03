@@ -16,6 +16,18 @@
 		5A122FF72547490D00417AEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A122FF52547490D00417AEE /* LaunchScreen.storyboard */; };
 		5A1230022547490D00417AEE /* MemuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1230012547490D00417AEE /* MemuTests.swift */; };
 		5A12300D2547490D00417AEE /* MemuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A12300C2547490D00417AEE /* MemuUITests.swift */; };
+		5A6A09122551D2B600F143ED /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09112551D2B600F143ED /* HomeScreen.storyboard */; };
+		5A6A09172551D2C000F143ED /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09162551D2C000F143ED /* Menu.storyboard */; };
+		5A6A091C2551D2D200F143ED /* Launchpad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A091B2551D2D200F143ED /* Launchpad.storyboard */; };
+		5A6A09212551D2DE00F143ED /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09202551D2DE00F143ED /* Notes.storyboard */; };
+		5A6A09262551D2EB00F143ED /* Puzzle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09252551D2EB00F143ED /* Puzzle.storyboard */; };
+		5A6A092B2551D32200F143ED /* Rewards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A092A2551D32200F143ED /* Rewards.storyboard */; };
+		5A6A093D2551D41300F143ED /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A093C2551D41300F143ED /* MenuViewController.swift */; };
+		5A6A09452551D44800F143ED /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09442551D44800F143ED /* HomeScreenViewController.swift */; };
+		5A6A094A2551D47B00F143ED /* LaunchpadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09492551D47B00F143ED /* LaunchpadViewController.swift */; };
+		5A6A094F2551D48C00F143ED /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A094E2551D48C00F143ED /* NotesViewController.swift */; };
+		5A6A09552551D4AA00F143ED /* PuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09542551D4AA00F143ED /* PuzzleViewController.swift */; };
+		5A6A095D2551D4C300F143ED /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A095C2551D4C300F143ED /* RewardsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +63,18 @@
 		5A1230082547490D00417AEE /* MemuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A12300C2547490D00417AEE /* MemuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemuUITests.swift; sourceTree = "<group>"; };
 		5A12300E2547490D00417AEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A6A09112551D2B600F143ED /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
+		5A6A09162551D2C000F143ED /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		5A6A091B2551D2D200F143ED /* Launchpad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launchpad.storyboard; sourceTree = "<group>"; };
+		5A6A09202551D2DE00F143ED /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
+		5A6A09252551D2EB00F143ED /* Puzzle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Puzzle.storyboard; sourceTree = "<group>"; };
+		5A6A092A2551D32200F143ED /* Rewards.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rewards.storyboard; sourceTree = "<group>"; };
+		5A6A093C2551D41300F143ED /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		5A6A09442551D44800F143ED /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		5A6A09492551D47B00F143ED /* LaunchpadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadViewController.swift; sourceTree = "<group>"; };
+		5A6A094E2551D48C00F143ED /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		5A6A09542551D4AA00F143ED /* PuzzleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleViewController.swift; sourceTree = "<group>"; };
+		5A6A095C2551D4C300F143ED /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +125,12 @@
 		5A122FE62547490C00417AEE /* Memu */ = {
 			isa = PBXGroup;
 			children = (
+				5A6A090A2551CFFD00F143ED /* Home Screen */,
+				5A6A090F2551D1BA00F143ED /* Menu */,
+				5A6A090C2551D16000F143ED /* Launchpad */,
+				5A6A090B2551D12700F143ED /* Notes */,
+				5A6A090E2551D18000F143ED /* Puzzle */,
+				5A6A09102551D1D300F143ED /* Rewards */,
 				5A122FE72547490C00417AEE /* AppDelegate.swift */,
 				5A122FE92547490C00417AEE /* SceneDelegate.swift */,
 				5A122FEB2547490C00417AEE /* ViewController.swift */,
@@ -129,6 +159,60 @@
 				5A12300E2547490D00417AEE /* Info.plist */,
 			);
 			path = MemuUITests;
+			sourceTree = "<group>";
+		};
+		5A6A090A2551CFFD00F143ED /* Home Screen */ = {
+			isa = PBXGroup;
+			children = (
+				5A6A09112551D2B600F143ED /* HomeScreen.storyboard */,
+				5A6A09442551D44800F143ED /* HomeScreenViewController.swift */,
+			);
+			path = "Home Screen";
+			sourceTree = "<group>";
+		};
+		5A6A090B2551D12700F143ED /* Notes */ = {
+			isa = PBXGroup;
+			children = (
+				5A6A09202551D2DE00F143ED /* Notes.storyboard */,
+				5A6A094E2551D48C00F143ED /* NotesViewController.swift */,
+			);
+			path = Notes;
+			sourceTree = "<group>";
+		};
+		5A6A090C2551D16000F143ED /* Launchpad */ = {
+			isa = PBXGroup;
+			children = (
+				5A6A091B2551D2D200F143ED /* Launchpad.storyboard */,
+				5A6A09492551D47B00F143ED /* LaunchpadViewController.swift */,
+			);
+			path = Launchpad;
+			sourceTree = "<group>";
+		};
+		5A6A090E2551D18000F143ED /* Puzzle */ = {
+			isa = PBXGroup;
+			children = (
+				5A6A09252551D2EB00F143ED /* Puzzle.storyboard */,
+				5A6A09542551D4AA00F143ED /* PuzzleViewController.swift */,
+			);
+			path = Puzzle;
+			sourceTree = "<group>";
+		};
+		5A6A090F2551D1BA00F143ED /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				5A6A09162551D2C000F143ED /* Menu.storyboard */,
+				5A6A093C2551D41300F143ED /* MenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		5A6A09102551D1D300F143ED /* Rewards */ = {
+			isa = PBXGroup;
+			children = (
+				5A6A092A2551D32200F143ED /* Rewards.storyboard */,
+				5A6A095C2551D4C300F143ED /* RewardsViewController.swift */,
+			);
+			path = Rewards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +318,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A6A09172551D2C000F143ED /* Menu.storyboard in Resources */,
+				5A6A09212551D2DE00F143ED /* Notes.storyboard in Resources */,
+				5A6A092B2551D32200F143ED /* Rewards.storyboard in Resources */,
+				5A6A09262551D2EB00F143ED /* Puzzle.storyboard in Resources */,
 				5A122FF72547490D00417AEE /* LaunchScreen.storyboard in Resources */,
+				5A6A09122551D2B600F143ED /* HomeScreen.storyboard in Resources */,
+				5A6A091C2551D2D200F143ED /* Launchpad.storyboard in Resources */,
 				5A122FF42547490D00417AEE /* Assets.xcassets in Resources */,
 				5A122FEF2547490C00417AEE /* Main.storyboard in Resources */,
 			);
@@ -262,9 +352,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A122FEC2547490C00417AEE /* ViewController.swift in Sources */,
+				5A6A09552551D4AA00F143ED /* PuzzleViewController.swift in Sources */,
+				5A6A093D2551D41300F143ED /* MenuViewController.swift in Sources */,
 				5A122FF22547490C00417AEE /* Memu.xcdatamodeld in Sources */,
 				5A122FE82547490C00417AEE /* AppDelegate.swift in Sources */,
+				5A6A095D2551D4C300F143ED /* RewardsViewController.swift in Sources */,
+				5A6A094F2551D48C00F143ED /* NotesViewController.swift in Sources */,
+				5A6A094A2551D47B00F143ED /* LaunchpadViewController.swift in Sources */,
 				5A122FEA2547490C00417AEE /* SceneDelegate.swift in Sources */,
+				5A6A09452551D44800F143ED /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +537,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Memu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -459,6 +556,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Memu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
