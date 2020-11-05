@@ -53,7 +53,7 @@ class CompletionViewController: UIViewController {
         
         var snapshot = NSDiffableDataSourceSnapshot<Section, UIImage>()
         snapshot.appendSections([.main])
-        let img: [UIImage] = [UIImage(systemName: "note")!,UIImage(systemName: "note.text")!, UIImage(systemName: "music.note")!]
+        let img: [UIImage] = [UIImage(named: "blueOn")!, UIImage(named: "greenOn")!, UIImage(named: "yellowOn")!, UIImage(named: "redOn")!]
         snapshot.appendItems(img)
         
         dataSource.apply(snapshot, animatingDifferences: false)
