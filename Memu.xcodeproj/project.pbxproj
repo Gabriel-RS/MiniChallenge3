@@ -16,6 +16,8 @@
 		5A122FF72547490D00417AEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A122FF52547490D00417AEE /* LaunchScreen.storyboard */; };
 		5A1230022547490D00417AEE /* MemuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1230012547490D00417AEE /* MemuTests.swift */; };
 		5A12300D2547490D00417AEE /* MemuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A12300C2547490D00417AEE /* MemuUITests.swift */; };
+		5A19B1A62554943E00C4F804 /* LaunchpadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A19B1A52554943E00C4F804 /* LaunchpadCell.swift */; };
+		5A19B1AE2554988A00C4F804 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A19B1AD2554988A00C4F804 /* ButtonCell.swift */; };
 		5A6A09122551D2B600F143ED /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09112551D2B600F143ED /* HomeScreen.storyboard */; };
 		5A6A09172551D2C000F143ED /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09162551D2C000F143ED /* Menu.storyboard */; };
 		5A6A091C2551D2D200F143ED /* Launchpad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A091B2551D2D200F143ED /* Launchpad.storyboard */; };
@@ -66,6 +68,8 @@
 		5A1230082547490D00417AEE /* MemuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A12300C2547490D00417AEE /* MemuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemuUITests.swift; sourceTree = "<group>"; };
 		5A12300E2547490D00417AEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A19B1A52554943E00C4F804 /* LaunchpadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadCell.swift; sourceTree = "<group>"; };
+		5A19B1AD2554988A00C4F804 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		5A6A09112551D2B600F143ED /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
 		5A6A09162551D2C000F143ED /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		5A6A091B2551D2D200F143ED /* Launchpad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launchpad.storyboard; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 		5A6A096C2551E66000F143ED /* Collection View */ = {
 			isa = PBXGroup;
 			children = (
+				5A19B1A52554943E00C4F804 /* LaunchpadCell.swift */,
+				5A19B1AD2554988A00C4F804 /* ButtonCell.swift */,
 				5A6A09702551E6D700F143ED /* SequenceCell.swift */,
 			);
 			path = "Collection View";
@@ -388,7 +394,9 @@
 				5A6A094A2551D47B00F143ED /* LaunchpadViewController.swift in Sources */,
 				5A6A09682551D86900F143ED /* CompletionViewController.swift in Sources */,
 				5A122FEA2547490C00417AEE /* SceneDelegate.swift in Sources */,
+				5A19B1A62554943E00C4F804 /* LaunchpadCell.swift in Sources */,
 				5A6A09452551D44800F143ED /* HomeScreenViewController.swift in Sources */,
+				5A19B1AE2554988A00C4F804 /* ButtonCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,22 +8,39 @@
 import UIKit
 
 class LaunchpadViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    enum Section {
+        case sequence
+        case button
+        case launchpad
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        collectionView.delegate = self
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+    
+//    func configLayout() -> UICollectionViewCompositionalLayout {
+//        let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int, layoutEnviroment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+//            
+//            
+//        }
+//        return layout
+//    }
+    
+    func configDataSource() {
+        
+    }
 
+}
+
+// MARK: - Delegate
+
+extension LaunchpadViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
 }

@@ -36,10 +36,10 @@
             </objects>
             <point key="canvasLocation" x="139" y="125"/>
         </scene>
-        <!--Completion-->
+        <!--Launchpad-->
         <scene sceneID="Vdb-UT-xCA">
             <objects>
-                <viewControllerPlaceholder storyboardName="Completion" id="YgH-xL-GwR" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Launchpad" id="YgH-xL-GwR" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Rc-EO-0J8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="762" y="122"/>
