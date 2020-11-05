@@ -33,6 +33,16 @@
 		5A6A09632551D83C00F143ED /* Completion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09622551D83C00F143ED /* Completion.storyboard */; };
 		5A6A09682551D86900F143ED /* CompletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09672551D86900F143ED /* CompletionViewController.swift */; };
 		5A6A09712551E6D700F143ED /* SequenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09702551E6D700F143ED /* SequenceCell.swift */; };
+		835768D72554BC980053722F /* marimba_nota_mi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 835768CD2554BC970053722F /* marimba_nota_mi.mp3 */; };
+		835768D82554BC980053722F /* feedback_recompensa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 835768CE2554BC970053722F /* feedback_recompensa.mp3 */; };
+		835768D92554BC980053722F /* marimba_nota_fa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 835768CF2554BC970053722F /* marimba_nota_fa.mp3 */; };
+		835768DA2554BC980053722F /* feedback_negativo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 835768D02554BC970053722F /* feedback_negativo.mp3 */; };
+		835768DB2554BC980053722F /* marimba_nota_la.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 835768D12554BC970053722F /* marimba_nota_la.mp3 */; };
+		835768DC2554BC980053722F /* marimba_nota_do.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 835768D22554BC970053722F /* marimba_nota_do.mp3 */; };
+		835768DD2554BC980053722F /* marimba_nota_re.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 835768D32554BC970053722F /* marimba_nota_re.mp3 */; };
+		835768DE2554BC980053722F /* marimba_nota_si.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 835768D42554BC970053722F /* marimba_nota_si.mp3 */; };
+		835768DF2554BC980053722F /* marimba_nota_sol.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 835768D52554BC970053722F /* marimba_nota_sol.mp3 */; };
+		835768E02554BC980053722F /* feedback_positivo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 835768D62554BC980053722F /* feedback_positivo.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +95,16 @@
 		5A6A09622551D83C00F143ED /* Completion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Completion.storyboard; sourceTree = "<group>"; };
 		5A6A09672551D86900F143ED /* CompletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionViewController.swift; sourceTree = "<group>"; };
 		5A6A09702551E6D700F143ED /* SequenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceCell.swift; sourceTree = "<group>"; };
+		835768CD2554BC970053722F /* marimba_nota_mi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_mi.mp3; sourceTree = "<group>"; };
+		835768CE2554BC970053722F /* feedback_recompensa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feedback_recompensa.mp3; sourceTree = "<group>"; };
+		835768CF2554BC970053722F /* marimba_nota_fa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_fa.mp3; sourceTree = "<group>"; };
+		835768D02554BC970053722F /* feedback_negativo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feedback_negativo.mp3; sourceTree = "<group>"; };
+		835768D12554BC970053722F /* marimba_nota_la.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_la.mp3; sourceTree = "<group>"; };
+		835768D22554BC970053722F /* marimba_nota_do.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_do.mp3; sourceTree = "<group>"; };
+		835768D32554BC970053722F /* marimba_nota_re.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_re.mp3; sourceTree = "<group>"; };
+		835768D42554BC970053722F /* marimba_nota_si.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_si.mp3; sourceTree = "<group>"; };
+		835768D52554BC970053722F /* marimba_nota_sol.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_sol.mp3; sourceTree = "<group>"; };
+		835768D62554BC980053722F /* feedback_positivo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feedback_positivo.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +155,7 @@
 		5A122FE62547490C00417AEE /* Memu */ = {
 			isa = PBXGroup;
 			children = (
+				835768BC2554BB0C0053722F /* Sounds */,
 				5A6A090A2551CFFD00F143ED /* Home Screen */,
 				5A6A090F2551D1BA00F143ED /* Menu */,
 				5A6A090C2551D16000F143ED /* Launchpad */,
@@ -246,6 +267,23 @@
 			path = "Collection View";
 			sourceTree = "<group>";
 		};
+		835768BC2554BB0C0053722F /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				835768D02554BC970053722F /* feedback_negativo.mp3 */,
+				835768D62554BC980053722F /* feedback_positivo.mp3 */,
+				835768CE2554BC970053722F /* feedback_recompensa.mp3 */,
+				835768D22554BC970053722F /* marimba_nota_do.mp3 */,
+				835768CF2554BC970053722F /* marimba_nota_fa.mp3 */,
+				835768D12554BC970053722F /* marimba_nota_la.mp3 */,
+				835768CD2554BC970053722F /* marimba_nota_mi.mp3 */,
+				835768D32554BC970053722F /* marimba_nota_re.mp3 */,
+				835768D42554BC970053722F /* marimba_nota_si.mp3 */,
+				835768D52554BC970053722F /* marimba_nota_sol.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -349,6 +387,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				835768E02554BC980053722F /* feedback_positivo.mp3 in Resources */,
+				835768DA2554BC980053722F /* feedback_negativo.mp3 in Resources */,
+				835768DB2554BC980053722F /* marimba_nota_la.mp3 in Resources */,
 				5A6A09172551D2C000F143ED /* Menu.storyboard in Resources */,
 				5A6A09212551D2DE00F143ED /* Notes.storyboard in Resources */,
 				5A6A09632551D83C00F143ED /* Completion.storyboard in Resources */,
@@ -357,7 +398,14 @@
 				5A122FF72547490D00417AEE /* LaunchScreen.storyboard in Resources */,
 				5A6A09122551D2B600F143ED /* HomeScreen.storyboard in Resources */,
 				5A6A091C2551D2D200F143ED /* Launchpad.storyboard in Resources */,
+				835768DF2554BC980053722F /* marimba_nota_sol.mp3 in Resources */,
+				835768D92554BC980053722F /* marimba_nota_fa.mp3 in Resources */,
+				835768D72554BC980053722F /* marimba_nota_mi.mp3 in Resources */,
 				5A122FF42547490D00417AEE /* Assets.xcassets in Resources */,
+				835768DC2554BC980053722F /* marimba_nota_do.mp3 in Resources */,
+				835768D82554BC980053722F /* feedback_recompensa.mp3 in Resources */,
+				835768DD2554BC980053722F /* marimba_nota_re.mp3 in Resources */,
+				835768DE2554BC980053722F /* marimba_nota_si.mp3 in Resources */,
 				5A122FEF2547490C00417AEE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
