@@ -23,13 +23,11 @@
 		5A6A09122551D2B600F143ED /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09112551D2B600F143ED /* HomeScreen.storyboard */; };
 		5A6A09172551D2C000F143ED /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09162551D2C000F143ED /* Menu.storyboard */; };
 		5A6A091C2551D2D200F143ED /* Launchpad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A091B2551D2D200F143ED /* Launchpad.storyboard */; };
-		5A6A09212551D2DE00F143ED /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09202551D2DE00F143ED /* Notes.storyboard */; };
 		5A6A09262551D2EB00F143ED /* Puzzle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09252551D2EB00F143ED /* Puzzle.storyboard */; };
 		5A6A092B2551D32200F143ED /* Rewards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A092A2551D32200F143ED /* Rewards.storyboard */; };
 		5A6A093D2551D41300F143ED /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A093C2551D41300F143ED /* MenuViewController.swift */; };
 		5A6A09452551D44800F143ED /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09442551D44800F143ED /* HomeScreenViewController.swift */; };
 		5A6A094A2551D47B00F143ED /* LaunchpadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09492551D47B00F143ED /* LaunchpadViewController.swift */; };
-		5A6A094F2551D48C00F143ED /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A094E2551D48C00F143ED /* NotesViewController.swift */; };
 		5A6A09552551D4AA00F143ED /* PuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09542551D4AA00F143ED /* PuzzleViewController.swift */; };
 		5A6A095D2551D4C300F143ED /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A095C2551D4C300F143ED /* RewardsViewController.swift */; };
 		5A6A09632551D83C00F143ED /* Completion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09622551D83C00F143ED /* Completion.storyboard */; };
@@ -89,13 +87,11 @@
 		5A6A09112551D2B600F143ED /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
 		5A6A09162551D2C000F143ED /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		5A6A091B2551D2D200F143ED /* Launchpad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launchpad.storyboard; sourceTree = "<group>"; };
-		5A6A09202551D2DE00F143ED /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		5A6A09252551D2EB00F143ED /* Puzzle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Puzzle.storyboard; sourceTree = "<group>"; };
 		5A6A092A2551D32200F143ED /* Rewards.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rewards.storyboard; sourceTree = "<group>"; };
 		5A6A093C2551D41300F143ED /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		5A6A09442551D44800F143ED /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		5A6A09492551D47B00F143ED /* LaunchpadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadViewController.swift; sourceTree = "<group>"; };
-		5A6A094E2551D48C00F143ED /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		5A6A09542551D4AA00F143ED /* PuzzleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleViewController.swift; sourceTree = "<group>"; };
 		5A6A095C2551D4C300F143ED /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 		5A6A09622551D83C00F143ED /* Completion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Completion.storyboard; sourceTree = "<group>"; };
@@ -214,8 +210,8 @@
 		5A6A090B2551D12700F143ED /* Notes */ = {
 			isa = PBXGroup;
 			children = (
-				5A6A09202551D2DE00F143ED /* Notes.storyboard */,
-				5A6A094E2551D48C00F143ED /* NotesViewController.swift */,
+				026C0EE725533AAC008ABFCB /* NotasViewController.swift */,
+				026C0EE225533A9A008ABFCB /* Notas.storyboard */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -225,8 +221,6 @@
 			children = (
 				5A6A091B2551D2D200F143ED /* Launchpad.storyboard */,
 				5A6A09492551D47B00F143ED /* LaunchpadViewController.swift */,
-				026C0EE225533A9A008ABFCB /* Notas.storyboard */,
-				026C0EE725533AAC008ABFCB /* NotasViewController.swift */,
 			);
 			path = Launchpad;
 			sourceTree = "<group>";
@@ -404,7 +398,6 @@
 				835768DB2554BC980053722F /* marimba_nota_la.mp3 in Resources */,
 				5A6A09172551D2C000F143ED /* Menu.storyboard in Resources */,
 				832D3E062555CA0E002D32D1 /* default_interface.mp3 in Resources */,
-				5A6A09212551D2DE00F143ED /* Notes.storyboard in Resources */,
 				5A6A09632551D83C00F143ED /* Completion.storyboard in Resources */,
 				5A6A092B2551D32200F143ED /* Rewards.storyboard in Resources */,
 				5A6A09262551D2EB00F143ED /* Puzzle.storyboard in Resources */,
@@ -454,7 +447,6 @@
 				026C0EE825533AAC008ABFCB /* NotasViewController.swift in Sources */,
 				5A122FE82547490C00417AEE /* AppDelegate.swift in Sources */,
 				5A6A095D2551D4C300F143ED /* RewardsViewController.swift in Sources */,
-				5A6A094F2551D48C00F143ED /* NotesViewController.swift in Sources */,
 				5A6A094A2551D47B00F143ED /* LaunchpadViewController.swift in Sources */,
 				5A6A09682551D86900F143ED /* CompletionViewController.swift in Sources */,
 				5A122FEA2547490C00417AEE /* SceneDelegate.swift in Sources */,

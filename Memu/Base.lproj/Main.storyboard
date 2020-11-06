@@ -16,36 +16,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSJ-8n-bc7">
                                 <rect key="frame" x="184" y="433" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="YgH-xL-GwR" kind="presentation" modalPresentationStyle="fullScreen" id="ClE-DG-TeA"/>
-
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQz-ja-Xj1">
                                 <rect key="frame" x="187" y="571" width="41" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Notas"/>
                                 <connections>
                                     <segue destination="FML-dX-fMp" kind="show" id="S5X-dS-Nob"/>
-
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-
                         <constraints>
                             <constraint firstItem="dSJ-8n-bc7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9R3-H3-kO4"/>
                             <constraint firstItem="dSJ-8n-bc7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SMu-je-KIX"/>
                         </constraints>
-
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-
             <point key="canvasLocation" x="139" y="125"/>
         </scene>
         <!--Launchpad-->
@@ -55,8 +51,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Rc-EO-0J8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="762" y="122"/>
-
-            <point key="canvasLocation" x="139" y="109"/>
         </scene>
         <!--Notas-->
         <scene sceneID="YKt-70-83O">
@@ -67,7 +61,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5pX-bk-FsI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="662" y="317"/>
-
         </scene>
     </scenes>
     <resources>

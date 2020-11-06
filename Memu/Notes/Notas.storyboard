@@ -275,8 +275,8 @@
         <segue reference="fbj-ZQ-U1N"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="noteAOff" width="161" height="161"/>
-        <image name="noteAOn" width="158" height="158"/>
+        <image name="noteAOff" width="162.33000183105469" height="161"/>
+        <image name="noteAOn" width="159.33000183105469" height="158"/>
         <image name="noteBOff" width="161" height="161"/>
         <image name="noteBOn" width="158" height="158"/>
         <image name="noteCOff" width="161" height="161"/>
