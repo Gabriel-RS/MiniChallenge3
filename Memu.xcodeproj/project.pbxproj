@@ -33,8 +33,6 @@
 		5A6A09632551D83C00F143ED /* Completion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09622551D83C00F143ED /* Completion.storyboard */; };
 		5A6A09682551D86900F143ED /* CompletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09672551D86900F143ED /* CompletionViewController.swift */; };
 		5A6A09712551E6D700F143ED /* SequenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09702551E6D700F143ED /* SequenceCell.swift */; };
-		832D3E062555CA0E002D32D1 /* default_interface.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 832D3E042555CA0E002D32D1 /* default_interface.mp3 */; };
-		832D3E072555CA0E002D32D1 /* tecla_bloqueada.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 832D3E052555CA0E002D32D1 /* tecla_bloqueada.mp3 */; };
 		835768D72554BC980053722F /* marimba_nota_mi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 835768CD2554BC970053722F /* marimba_nota_mi.mp3 */; };
 		835768D82554BC980053722F /* feedback_recompensa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 835768CE2554BC970053722F /* feedback_recompensa.mp3 */; };
 		835768D92554BC980053722F /* marimba_nota_fa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 835768CF2554BC970053722F /* marimba_nota_fa.mp3 */; };
@@ -97,8 +95,6 @@
 		5A6A09622551D83C00F143ED /* Completion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Completion.storyboard; sourceTree = "<group>"; };
 		5A6A09672551D86900F143ED /* CompletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionViewController.swift; sourceTree = "<group>"; };
 		5A6A09702551E6D700F143ED /* SequenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceCell.swift; sourceTree = "<group>"; };
-		832D3E042555CA0E002D32D1 /* default_interface.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = default_interface.mp3; path = ../../../../../Desktop/sounds/default_interface.mp3; sourceTree = "<group>"; };
-		832D3E052555CA0E002D32D1 /* tecla_bloqueada.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tecla_bloqueada.mp3; path = ../../../../../Desktop/sounds/tecla_bloqueada.mp3; sourceTree = "<group>"; };
 		835768CD2554BC970053722F /* marimba_nota_mi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_mi.mp3; sourceTree = "<group>"; };
 		835768CE2554BC970053722F /* feedback_recompensa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feedback_recompensa.mp3; sourceTree = "<group>"; };
 		835768CF2554BC970053722F /* marimba_nota_fa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_fa.mp3; sourceTree = "<group>"; };
@@ -274,8 +270,6 @@
 		835768BC2554BB0C0053722F /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				832D3E042555CA0E002D32D1 /* default_interface.mp3 */,
-				832D3E052555CA0E002D32D1 /* tecla_bloqueada.mp3 */,
 				835768D02554BC970053722F /* feedback_negativo.mp3 */,
 				835768D62554BC980053722F /* feedback_positivo.mp3 */,
 				835768CE2554BC970053722F /* feedback_recompensa.mp3 */,
@@ -397,7 +391,6 @@
 				835768DA2554BC980053722F /* feedback_negativo.mp3 in Resources */,
 				835768DB2554BC980053722F /* marimba_nota_la.mp3 in Resources */,
 				5A6A09172551D2C000F143ED /* Menu.storyboard in Resources */,
-				832D3E062555CA0E002D32D1 /* default_interface.mp3 in Resources */,
 				5A6A09632551D83C00F143ED /* Completion.storyboard in Resources */,
 				5A6A092B2551D32200F143ED /* Rewards.storyboard in Resources */,
 				5A6A09262551D2EB00F143ED /* Puzzle.storyboard in Resources */,
@@ -410,7 +403,6 @@
 				835768D72554BC980053722F /* marimba_nota_mi.mp3 in Resources */,
 				5A122FF42547490D00417AEE /* Assets.xcassets in Resources */,
 				835768DC2554BC980053722F /* marimba_nota_do.mp3 in Resources */,
-				832D3E072555CA0E002D32D1 /* tecla_bloqueada.mp3 in Resources */,
 				835768D82554BC980053722F /* feedback_recompensa.mp3 in Resources */,
 				835768DD2554BC980053722F /* marimba_nota_re.mp3 in Resources */,
 				835768DE2554BC980053722F /* marimba_nota_si.mp3 in Resources */,

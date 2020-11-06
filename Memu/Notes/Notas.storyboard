@@ -52,7 +52,7 @@
                                     <constraint firstAttribute="width" secondItem="psM-U2-fAx" secondAttribute="height" multiplier="1:1" id="Cbx-Bc-iXn"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="noteCOff"/>
-                                <state key="selected" backgroundImage="noteCOn_2"/>
+                                <state key="selected" backgroundImage="noteCOn"/>
                                 <connections>
                                     <action selector="btnDo:" destination="6aB-an-ka7" eventType="touchUpInside" id="aWe-8j-zUp"/>
                                 </connections>
@@ -63,7 +63,7 @@
                                     <constraint firstAttribute="width" secondItem="OBU-R3-Ml3" secondAttribute="height" multiplier="1:1" id="Ifq-tm-xz5"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="noteDOff"/>
-                                <state key="selected" backgroundImage="noteDOn_2"/>
+                                <state key="selected" backgroundImage="noteDOn"/>
                                 <connections>
                                     <action selector="btnRe:" destination="6aB-an-ka7" eventType="touchUpInside" id="KAY-Pg-XJw"/>
                                 </connections>
@@ -123,6 +123,21 @@
                                     <action selector="btnSi:" destination="6aB-an-ka7" eventType="touchUpInside" id="cAo-KY-WuV"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Só é possível selecionar 4 notas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHu-w5-fMN">
+                                <rect key="frame" x="73" y="125" width="244" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.92711073160000002" green="0.33290818329999999" blue="0.39214605089999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="highlightedColor" red="0.92711073160000002" green="0.33290818329999999" blue="0.39214605089999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5j-CZ-egT">
+                                <rect key="frame" x="148" y="182" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Imprime vetor"/>
+                                <connections>
+                                    <action selector="btnInprime:" destination="6aB-an-ka7" eventType="touchUpInside" id="lY5-kN-Srp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="49p-L4-KBX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -170,6 +185,7 @@
                         <outlet property="btnRe" destination="OBU-R3-Ml3" id="LMs-mg-kZc"/>
                         <outlet property="btnSi" destination="rqb-oO-0o5" id="4UZ-Iw-gtN"/>
                         <outlet property="btnSol" destination="iIW-9U-Q0k" id="JqR-r2-Wr5"/>
+                        <outlet property="lblAviso" destination="mHu-w5-fMN" id="Tzv-v1-M6i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXc-rA-jDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -280,9 +296,9 @@
         <image name="noteBOff" width="161" height="161"/>
         <image name="noteBOn" width="158" height="158"/>
         <image name="noteCOff" width="161" height="161"/>
-        <image name="noteCOn_2" width="158" height="158"/>
+        <image name="noteCOn" width="158" height="158"/>
         <image name="noteDOff" width="161" height="161"/>
-        <image name="noteDOn_2" width="158" height="158"/>
+        <image name="noteDOn" width="158" height="158"/>
         <image name="noteEOff" width="161" height="161"/>
         <image name="noteEOn" width="158" height="158"/>
         <image name="noteFOff" width="161" height="161"/>
