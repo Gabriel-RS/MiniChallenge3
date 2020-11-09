@@ -87,13 +87,13 @@
 		830DE1E22559C8570024DD08 /* feedback_positivo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feedback_positivo.mp3; sourceTree = "<group>"; };
 		830DE1E32559C8570024DD08 /* feedback_recompensa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feedback_recompensa.mp3; sourceTree = "<group>"; };
 		830DE1E42559C8570024DD08 /* tecla_bloqueada.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tecla_bloqueada.mp3; sourceTree = "<group>"; };
-		831B1FA52559D0C800AEACEC /* marimba_nota_si.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = marimba_nota_si.mp3; path = ../../../../../../Desktop/sounds/marimba_nota_si.mp3; sourceTree = "<group>"; };
-		831B1FA62559D0C800AEACEC /* marimba_nota_do.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = marimba_nota_do.mp3; path = ../../../../../../Desktop/sounds/marimba_nota_do.mp3; sourceTree = "<group>"; };
-		831B1FA72559D0C800AEACEC /* marimba_nota_sol.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = marimba_nota_sol.mp3; path = ../../../../../../Desktop/sounds/marimba_nota_sol.mp3; sourceTree = "<group>"; };
-		831B1FA82559D0C800AEACEC /* marimba_nota_re.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = marimba_nota_re.mp3; path = ../../../../../../Desktop/sounds/marimba_nota_re.mp3; sourceTree = "<group>"; };
-		831B1FA92559D0C800AEACEC /* marimba_nota_fa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = marimba_nota_fa.mp3; path = ../../../../../../Desktop/sounds/marimba_nota_fa.mp3; sourceTree = "<group>"; };
-		831B1FAA2559D0C800AEACEC /* marimba_nota_la.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = marimba_nota_la.mp3; path = ../../../../../../Desktop/sounds/marimba_nota_la.mp3; sourceTree = "<group>"; };
-		831B1FAB2559D0C800AEACEC /* marimba_nota_mi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = marimba_nota_mi.mp3; path = ../../../../../../Desktop/sounds/marimba_nota_mi.mp3; sourceTree = "<group>"; };
+		831B1FA52559D0C800AEACEC /* marimba_nota_si.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_si.mp3; sourceTree = "<group>"; };
+		831B1FA62559D0C800AEACEC /* marimba_nota_do.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_do.mp3; sourceTree = "<group>"; };
+		831B1FA72559D0C800AEACEC /* marimba_nota_sol.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_sol.mp3; sourceTree = "<group>"; };
+		831B1FA82559D0C800AEACEC /* marimba_nota_re.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_re.mp3; sourceTree = "<group>"; };
+		831B1FA92559D0C800AEACEC /* marimba_nota_fa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_fa.mp3; sourceTree = "<group>"; };
+		831B1FAA2559D0C800AEACEC /* marimba_nota_la.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_la.mp3; sourceTree = "<group>"; };
+		831B1FAB2559D0C800AEACEC /* marimba_nota_mi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_mi.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
