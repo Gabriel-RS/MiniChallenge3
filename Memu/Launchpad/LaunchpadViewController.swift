@@ -19,18 +19,20 @@ class LaunchpadViewController: UIViewController {
         case launchpad
     }
     
-    let sequenceImg: [UIImage] = [UIImage(named: "pinkOn")!,
+    var sequenceImg: [UIImage] = [UIImage(named: "pinkOn")!,
                                  UIImage(named: "greenOn")!,
                                  UIImage(named: "redOn")!,
-                                 UIImage(named: "blueOn")!,
+                                 UIImage(named: "sequenceOff")!,
                                  UIImage(named: "delete")!]
     
     let btnImg: [UIImage] = [UIImage(named: "play")!]
     
-    let keyImg: [UIImage] = [UIImage(named: "keyBlueOn")!,
+    var keyImg: [UIImage] = [UIImage(named: "keyBlueOff")!,
                              UIImage(named: "keyGreenOn")!,
                              UIImage(named: "keyRedOn")!,
                              UIImage(named: "keyPinkOn")!]
+    
+    static var locked = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,10 +92,11 @@ class LaunchpadViewController: UIViewController {
             } else {
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1.0))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                item.contentInsets = NSDirectionalEdgeInsets(top: 1, leading: 0, bottom: 5, trailing: 0)
+                item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
                 
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.2))
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.25))
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+                group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
                 
                 let section = NSCollectionLayoutSection(group: group)
                 section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 50, bottom: 0, trailing: 50)
@@ -123,7 +126,14 @@ class LaunchpadViewController: UIViewController {
             } else if image == UIImage(named: "play")!  {
                 return btnCell
             } else {
-                return keyCell
+                if IndexPath[0] == 0 {
+                    print(IndexPath)
+                    keyCell.keyOn.image = image
+                    return keyCell
+
+                }else {
+                    return keyCell
+                }
             }
         })
         var snapshot = NSDiffableDataSourceSnapshot<Section, UIImage>()
@@ -141,6 +151,29 @@ class LaunchpadViewController: UIViewController {
 
 extension LaunchpadViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Cell: \(indexPath[1])")
+        print("Cell: \(indexPath)")
+        
+        if let keyCell = collectionView.cellForItem(at: indexPath) as? LaunchpadCell {
+            if keyCell.keyOn.image == UIImage(named: "keyBlueOff") && LaunchpadViewController.locked == false {
+                //keyCell.keyOn.image = UIImage(named: "keyBlueOn")
+                keyImg[0] = UIImage(named: "keyBlueOn")!
+                sequenceImg[3] = UIImage(named: "blueOn")!
+                configDataSource()
+            }
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        if let keyCell = collectionView.cellForItem(at: indexPath) as? LaunchpadCell {
+            keyCell.keyOn.isHighlighted = true
+            keyCell.keyOn.alpha = 0.8
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        if let keyCell = collectionView.cellForItem(at: indexPath) as? LaunchpadCell {
+            keyCell.keyOn.isHighlighted = false
+            keyCell.keyOn.alpha = 1.0
+        }
     }
 }
