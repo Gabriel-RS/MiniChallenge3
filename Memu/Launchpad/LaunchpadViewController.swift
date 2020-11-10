@@ -19,6 +19,17 @@ class LaunchpadViewController: UIViewController {
         case launchpad
     }
     
+    // cria um tabuleiro para ser exibido (launchpad)
+    var board = Board(size: 4, instrument: "marimba", isLaunchpad: true)
+    
+    // pega as notas do launchpad para serem manipuladas (didSelect e keyCell)
+    var keyNotes = [Note]()
+    
+    // vetor de imagens das notas para configurar a collection view (snapshot)
+    var keyImages:[UIImage]?
+    
+
+    
     let sequenceImg: [UIImage] = [UIImage(named: "pinkOn")!,
                                  UIImage(named: "greenOn")!,
                                  UIImage(named: "redOn")!,
@@ -27,17 +38,21 @@ class LaunchpadViewController: UIViewController {
     
     let btnImg: [UIImage] = [UIImage(named: "play")!]
     
-    let keyImg: [UIImage] = [UIImage(named: "keyBlueOn")!,
-                             UIImage(named: "keyGreenOn")!,
-                             UIImage(named: "keyRedOn")!,
-                             UIImage(named: "keyPinkOn")!]
+//    let keyImg: [UIImage] = [UIImage(named: "keyBlueOn")!,
+//                             UIImage(named: "keyGreenOn")!,
+//                             UIImage(named: "keyRedOn")!,
+//                             UIImage(named: "keyPinkOn")!]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.collectionViewLayout = configLayout()
-        configDataSource()
+        
+        keyNotes = board.launchpad
 
+        keyImages = board.getKeyImagesLaunchpad()
+        
+        configDataSource()
     }
     
     // MARK: - Button
@@ -54,7 +69,7 @@ class LaunchpadViewController: UIViewController {
     
     
     
-    // MARK: - Collection View
+    // MARK: - Collection View Layout
     
     func configLayout() -> UICollectionViewCompositionalLayout {
         let layout = UICollectionViewCompositionalLayout { (sectionIndex: Int, layoutEnviroment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
@@ -106,6 +121,7 @@ class LaunchpadViewController: UIViewController {
         return layout
     }
     
+    // MARK: - Collection View Data Source
     func configDataSource() {
         dataSource = UICollectionViewDiffableDataSource<Section, UIImage>(collectionView: self.collectionView, cellProvider: { (collectionView, IndexPath, image) -> UICollectionViewCell? in
             
@@ -115,9 +131,13 @@ class LaunchpadViewController: UIViewController {
             
             guard let keyCell = collectionView.dequeueReusableCell(withReuseIdentifier: LaunchpadCell.reuseIdentifier, for: IndexPath) as? LaunchpadCell else { fatalError("Cannot create key cell") }
             
-            keyCell.keyOn.image = image
-            
-            
+//            keyCell.keyOn.image = image
+            if IndexPath.section == 2 {
+                // atribui nota à celula do launchpad
+                let note = self.keyNotes[IndexPath.row]
+                keyCell.setNoteKey(note: note)
+            }
+
             if image == UIImage(named: "delete")! {
                 return btnDeleteCell
             } else if image == UIImage(named: "play")!  {
@@ -126,11 +146,12 @@ class LaunchpadViewController: UIViewController {
                 return keyCell
             }
         })
+        
         var snapshot = NSDiffableDataSourceSnapshot<Section, UIImage>()
         snapshot.appendSections([.sequence, .button, .launchpad])
         snapshot.appendItems(sequenceImg, toSection: .sequence)
         snapshot.appendItems(btnImg, toSection: .button)
-        snapshot.appendItems(keyImg, toSection: .launchpad)
+        snapshot.appendItems(keyImages!, toSection: .launchpad)
         
         dataSource.apply(snapshot, animatingDifferences: false)
     }
@@ -142,5 +163,18 @@ class LaunchpadViewController: UIViewController {
 extension LaunchpadViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Cell: \(indexPath[1])")
+        print(keyNotes[indexPath[1]].name)
+        
+        let selectedNote = keyNotes[indexPath[1]]
+        
+        if selectedNote.image == UIImage(named: "key\(selectedNote.color)Off") {
+            selectedNote.turnOn()
+            // TODO: Adicionar na sequência
+        } else {
+            // TODO: chamar essa função ao apertar o botão apagar + retirar da sequência
+            selectedNote.turnOff()
+        }
+        
+        collectionView.reloadData()
     }
 }

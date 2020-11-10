@@ -33,6 +33,8 @@
 		5A6A09632551D83C00F143ED /* Completion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09622551D83C00F143ED /* Completion.storyboard */; };
 		5A6A09682551D86900F143ED /* CompletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09672551D86900F143ED /* CompletionViewController.swift */; };
 		5A6A09712551E6D700F143ED /* SequenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09702551E6D700F143ED /* SequenceCell.swift */; };
+		8536C6012559B2C200706EE7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536C6002559B2C200706EE7 /* Note.swift */; };
+		8536C6092559B39D00706EE7 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536C6082559B39D00706EE7 /* Board.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		5A6A09622551D83C00F143ED /* Completion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Completion.storyboard; sourceTree = "<group>"; };
 		5A6A09672551D86900F143ED /* CompletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionViewController.swift; sourceTree = "<group>"; };
 		5A6A09702551E6D700F143ED /* SequenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceCell.swift; sourceTree = "<group>"; };
+		8536C6002559B2C200706EE7 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		8536C6082559B39D00706EE7 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,7 @@
 		5A122FE62547490C00417AEE /* Memu */ = {
 			isa = PBXGroup;
 			children = (
+				8536C5FF2559B2B600706EE7 /* Model */,
 				5A6A090A2551CFFD00F143ED /* Home Screen */,
 				5A6A090F2551D1BA00F143ED /* Menu */,
 				5A6A090C2551D16000F143ED /* Launchpad */,
@@ -244,6 +249,15 @@
 				5A6A09702551E6D700F143ED /* SequenceCell.swift */,
 			);
 			path = "Collection View";
+			sourceTree = "<group>";
+		};
+		8536C5FF2559B2B600706EE7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8536C6002559B2C200706EE7 /* Note.swift */,
+				8536C6082559B39D00706EE7 /* Board.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,6 +402,7 @@
 				5A6A09712551E6D700F143ED /* SequenceCell.swift in Sources */,
 				5A6A093D2551D41300F143ED /* MenuViewController.swift in Sources */,
 				5A122FF22547490C00417AEE /* Memu.xcdatamodeld in Sources */,
+				8536C6012559B2C200706EE7 /* Note.swift in Sources */,
 				5A122FE82547490C00417AEE /* AppDelegate.swift in Sources */,
 				5A6A095D2551D4C300F143ED /* RewardsViewController.swift in Sources */,
 				5A6A094F2551D48C00F143ED /* NotesViewController.swift in Sources */,
@@ -396,6 +411,7 @@
 				5A122FEA2547490C00417AEE /* SceneDelegate.swift in Sources */,
 				5A19B1A62554943E00C4F804 /* LaunchpadCell.swift in Sources */,
 				5A6A09452551D44800F143ED /* HomeScreenViewController.swift in Sources */,
+				8536C6092559B39D00706EE7 /* Board.swift in Sources */,
 				5A19B1AE2554988A00C4F804 /* ButtonCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
