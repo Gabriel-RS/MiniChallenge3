@@ -99,6 +99,7 @@ class Notas: UIViewController {
         defineNotas(btn: btnSol, note: "sol")
         defineNotas(btn: btnLa, note: "la")
         defineNotas(btn: btnSi, note: "si")
+        performSegue(withIdentifier: "apresentaNotas", sender: self)
         
     }
     
@@ -141,25 +142,48 @@ class checkNotes: UIViewController {
     @IBOutlet weak var btn1: UIButton!
     @IBOutlet weak var btn2: UIButton!
     @IBOutlet weak var btn3: UIButton!
-    @IBOutlet weak var brn4: UIButton!
+    @IBOutlet weak var btn4: UIButton!
     
     
     override func viewDidLoad() {
-        for i in 0...notesArray.count-1{
-            switch(notesArray[i]){
-            case "do":
-                btn1.isSelected = true
-                break
-            case "re": break
-                  
-            default:
-                <#code#>
-            }
-        }
+        defineNote(btn: btn1, note: notesArray[0])
+        defineNote(btn: btn2, note: notesArray[1])
+        defineNote(btn: btn3, note: notesArray[2])
+        defineNote(btn: btn4, note: notesArray[3])
     }
     
-    func checkPrevious(){
+    func defineNote(btn: UIButton, note: String){
+        switch(note){
+        case "do":
+            btn.setImage(UIImage(named: "noteCOff"), for: .normal)
+            break
+        case "re":
+            btn.setImage(UIImage(named: "noteDOff"), for: .normal)
+            break
+        case "mi":
+            btn.setImage(UIImage(named: "noteEOff"), for: .normal)
+            break
+        case "fa":
+            btn.setImage(UIImage(named: "noteFOff"), for: .normal)
+            break
+        case "sol":
+            btn.setImage(UIImage(named: "noteGOff"), for: .normal)
+            break
+        case "la":
+            btn.setImage(UIImage(named: "noteAOff"), for: .normal)
+            break
+        case "si":
+            btn.setImage(UIImage(named: "noteBOff"), for: .normal)
+            break
+        default:
+            break
+        }
         
+    }
+    
+    
+    @IBAction func backBttn(_ sender: Any) {
+       
     }
     
     

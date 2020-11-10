@@ -244,16 +244,25 @@
                                     <action selector="btnDo:" destination="6aB-an-ka7" eventType="touchUpInside" id="aEj-Db-3Xv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1s-Qe-KFn">
+                                <rect key="frame" x="314" y="112" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Voltar"/>
+                                <connections>
+                                    <action selector="backBttn:" destination="i0W-rN-5qx" eventType="touchUpInside" id="xox-7u-6bN"/>
+                                    <segue destination="6aB-an-ka7" kind="show" id="a55-Cx-GBp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fa5-XK-9OZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="p6t-1L-2R6"/>
                     <connections>
-                        <outlet property="brn4" destination="Clb-n4-mSk" id="o28-OI-cf6"/>
                         <outlet property="btn1" destination="sNW-6Y-Y3t" id="zjm-Ee-4XL"/>
                         <outlet property="btn2" destination="5Mm-Kg-Eav" id="lfq-h7-2xy"/>
                         <outlet property="btn3" destination="ndp-XK-9Wo" id="1ct-fv-0U9"/>
+                        <outlet property="btn4" destination="Clb-n4-mSk" id="P1R-gn-hKS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iuO-y6-Juq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -356,7 +365,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fbj-ZQ-U1N"/>
+        <segue reference="a55-Cx-GBp"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="noteAOff" width="162.33000183105469" height="161"/>
