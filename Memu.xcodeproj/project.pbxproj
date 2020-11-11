@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		022EF23D255C859300C393AC /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 022EF23C255C859300C393AC /* Notes.storyboard */; };
 		5A122FE82547490C00417AEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A122FE72547490C00417AEE /* AppDelegate.swift */; };
 		5A122FEA2547490C00417AEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A122FE92547490C00417AEE /* SceneDelegate.swift */; };
 		5A122FEC2547490C00417AEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A122FEB2547490C00417AEE /* ViewController.swift */; };
@@ -21,7 +22,6 @@
 		5A6A09122551D2B600F143ED /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09112551D2B600F143ED /* HomeScreen.storyboard */; };
 		5A6A09172551D2C000F143ED /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09162551D2C000F143ED /* Menu.storyboard */; };
 		5A6A091C2551D2D200F143ED /* Launchpad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A091B2551D2D200F143ED /* Launchpad.storyboard */; };
-		5A6A09212551D2DE00F143ED /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09202551D2DE00F143ED /* Notes.storyboard */; };
 		5A6A09262551D2EB00F143ED /* Puzzle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09252551D2EB00F143ED /* Puzzle.storyboard */; };
 		5A6A092B2551D32200F143ED /* Rewards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A092A2551D32200F143ED /* Rewards.storyboard */; };
 		5A6A093D2551D41300F143ED /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A093C2551D41300F143ED /* MenuViewController.swift */; };
@@ -55,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		022EF23C255C859300C393AC /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		5A122FE42547490C00417AEE /* Memu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A122FE72547490C00417AEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A122FE92547490C00417AEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,7 +76,6 @@
 		5A6A09112551D2B600F143ED /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
 		5A6A09162551D2C000F143ED /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		5A6A091B2551D2D200F143ED /* Launchpad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launchpad.storyboard; sourceTree = "<group>"; };
-		5A6A09202551D2DE00F143ED /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		5A6A09252551D2EB00F143ED /* Puzzle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Puzzle.storyboard; sourceTree = "<group>"; };
 		5A6A092A2551D32200F143ED /* Rewards.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rewards.storyboard; sourceTree = "<group>"; };
 		5A6A093C2551D41300F143ED /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 		5A6A090B2551D12700F143ED /* Notes */ = {
 			isa = PBXGroup;
 			children = (
-				5A6A09202551D2DE00F143ED /* Notes.storyboard */,
+				022EF23C255C859300C393AC /* Notes.storyboard */,
 				5A6A094E2551D48C00F143ED /* NotesViewController.swift */,
 			);
 			path = Notes;
@@ -364,7 +364,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A6A09172551D2C000F143ED /* Menu.storyboard in Resources */,
-				5A6A09212551D2DE00F143ED /* Notes.storyboard in Resources */,
 				5A6A09632551D83C00F143ED /* Completion.storyboard in Resources */,
 				5A6A092B2551D32200F143ED /* Rewards.storyboard in Resources */,
 				5A6A09262551D2EB00F143ED /* Puzzle.storyboard in Resources */,
@@ -372,6 +371,7 @@
 				5A6A09122551D2B600F143ED /* HomeScreen.storyboard in Resources */,
 				5A6A091C2551D2D200F143ED /* Launchpad.storyboard in Resources */,
 				5A122FF42547490D00417AEE /* Assets.xcassets in Resources */,
+				022EF23D255C859300C393AC /* Notes.storyboard in Resources */,
 				5A122FEF2547490C00417AEE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
