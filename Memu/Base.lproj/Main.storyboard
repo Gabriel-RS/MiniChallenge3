@@ -23,6 +23,14 @@
                                     <segue destination="YgH-xL-GwR" kind="presentation" modalPresentationStyle="fullScreen" id="ClE-DG-TeA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQz-ja-Xj1">
+                                <rect key="frame" x="187" y="571" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Notas"/>
+                                <connections>
+                                    <segue destination="FML-dX-fMp" kind="show" id="S5X-dS-Nob"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -43,6 +51,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Rc-EO-0J8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="762" y="122"/>
+        </scene>
+        <!--Notas-->
+        <scene sceneID="YKt-70-83O">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Notas" id="FML-dX-fMp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OGw-MV-dvg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5pX-bk-FsI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="662" y="317"/>
         </scene>
     </scenes>
     <resources>
