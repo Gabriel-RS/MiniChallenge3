@@ -89,6 +89,8 @@ class Notas: UIViewController {
                         lblAviso.isHidden = false
             
         }
+        
+        
     }
     
     @IBAction func btnSegue(_ sender: Any) {
@@ -100,6 +102,9 @@ class Notas: UIViewController {
         defineNotas(btn: btnLa, note: "la")
         defineNotas(btn: btnSi, note: "si")
         performSegue(withIdentifier: "apresentaNotas", sender: self)
+    }
+    
+    @IBAction func btnCancel(_ sender: Any) {
         
     }
     
@@ -155,25 +160,25 @@ class checkNotes: UIViewController {
     func defineNote(btn: UIButton, note: String){
         switch(note){
         case "do":
-            btn.setImage(UIImage(named: "noteCOff"), for: .normal)
+            btn.setImage(UIImage(named: "keyBlueOff"), for: .normal)
             break
         case "re":
-            btn.setImage(UIImage(named: "noteDOff"), for: .normal)
+            btn.setImage(UIImage(named: "keyGreenOff"), for: .normal)
             break
         case "mi":
-            btn.setImage(UIImage(named: "noteEOff"), for: .normal)
+            btn.setImage(UIImage(named: "keyRedOff"), for: .normal)
             break
         case "fa":
-            btn.setImage(UIImage(named: "noteFOff"), for: .normal)
+            btn.setImage(UIImage(named: "keyPinkOff"), for: .normal)
             break
         case "sol":
-            btn.setImage(UIImage(named: "noteGOff"), for: .normal)
+            btn.setImage(UIImage(named: "keyPurpleOff"), for: .normal)
             break
         case "la":
-            btn.setImage(UIImage(named: "noteAOff"), for: .normal)
+            btn.setImage(UIImage(named: "keyOrangeOff"), for: .normal)
             break
         case "si":
-            btn.setImage(UIImage(named: "noteBOff"), for: .normal)
+            btn.setImage(UIImage(named: "keyYellowOff"), for: .normal)
             break
         default:
             break
