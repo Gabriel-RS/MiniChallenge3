@@ -23,6 +23,9 @@
                                     <constraint firstAttribute="height" constant="52" id="ac3-EL-NGX"/>
                                 </constraints>
                                 <state key="normal" title="Menu" image="menu"/>
+                                <connections>
+                                    <action selector="btnMenu:" destination="8gh-7E-tSa" eventType="touchUpInside" id="MDE-8i-CbX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTA-pw-zyP">
                                 <rect key="frame" x="20" y="790" width="50" height="52"/>
@@ -31,6 +34,9 @@
                                     <constraint firstAttribute="height" constant="52" id="bAY-6p-wO1"/>
                                 </constraints>
                                 <state key="normal" title="Note" image="note"/>
+                                <connections>
+                                    <action selector="btnNotes:" destination="8gh-7E-tSa" eventType="touchUpInside" id="nTO-iH-W7h"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noR-Ku-2iL">
                                 <rect key="frame" x="344" y="790" width="50" height="52"/>
@@ -39,6 +45,9 @@
                                     <constraint firstAttribute="height" constant="52" id="sjf-uN-PWO"/>
                                 </constraints>
                                 <state key="normal" title="Check" image="check"/>
+                                <connections>
+                                    <action selector="btnCheck:" destination="8gh-7E-tSa" eventType="touchUpInside" id="WuY-3z-gPP"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NcY-Kg-mxs">
                                 <rect key="frame" x="0.0" y="144" width="414" height="623"/>
@@ -53,38 +62,8 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SequenceCell" id="0LL-bg-IWU" customClass="SequenceCell" customModule="Memu" customModuleProvider="target">
-                                        <rect key="frame" x="34" y="0.0" width="346" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Cuc-9Y-VdJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="346" height="50"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueOn" translatesAutoresizingMaskIntoConstraints="NO" id="DEY-qg-Bxn">
-                                                    <rect key="frame" x="5" y="5" width="50" height="40"/>
-                                                    <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="7cu-NU-CzU"/>
-                                                        <constraint firstAttribute="width" secondItem="DEY-qg-Bxn" secondAttribute="height" multiplier="5:4" id="gdt-Pi-hjR"/>
-                                                        <constraint firstAttribute="height" constant="40" id="o7h-vr-1To"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="DEY-qg-Bxn" secondAttribute="bottom" constant="5" id="QRm-fA-a5l"/>
-                                                <constraint firstItem="DEY-qg-Bxn" firstAttribute="top" secondItem="Cuc-9Y-VdJ" secondAttribute="top" constant="5" id="Wen-cQ-alN"/>
-                                                <constraint firstItem="DEY-qg-Bxn" firstAttribute="leading" secondItem="Cuc-9Y-VdJ" secondAttribute="leading" constant="5" id="ZtQ-nq-C9P"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <size key="customSize" width="346" height="50"/>
-                                        <connections>
-                                            <outlet property="image" destination="DEY-qg-Bxn" id="jlp-6p-Sys"/>
-                                        </connections>
-                                    </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DeleteCell" id="HGR-Vc-gVg" customClass="ButtonCell" customModule="Memu" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="60" width="414" height="91"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Yuj-1m-QE0">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
@@ -111,7 +90,7 @@
                                         <size key="customSize" width="414" height="91"/>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ButtonCell" id="V2P-OY-pSc" customClass="ButtonCell" customModule="Memu" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="161" width="414" height="63"/>
+                                        <rect key="frame" x="0.0" y="101" width="414" height="63"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ony-fY-sUN">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="63"/>
@@ -154,7 +133,7 @@
                                         <size key="customSize" width="414" height="63"/>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LaunchpadCell" id="k5u-Cd-eKh" customClass="LaunchpadCell" customModule="Memu" customModuleProvider="target">
-                                        <rect key="frame" x="142" y="234" width="130" height="120"/>
+                                        <rect key="frame" x="142" y="174" width="130" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="VE3-G0-lLQ">
                                             <rect key="frame" x="0.0" y="0.0" width="130" height="120"/>
@@ -208,7 +187,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="blueOn" width="150" height="150"/>
         <image name="check" width="150" height="160"/>
         <image name="delete" width="225.32000732421875" height="137"/>
         <image name="keyBlueOn" width="158" height="158"/>

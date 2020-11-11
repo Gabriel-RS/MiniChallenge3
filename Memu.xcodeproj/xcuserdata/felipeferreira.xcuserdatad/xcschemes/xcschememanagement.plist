@@ -10,5 +10,26 @@
 			<integer>0</integer>
 		</dict>
 	</dict>
+<<<<<<< HEAD
+=======
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>5A122FE32547490C00417AEE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5A122FFC2547490D00417AEE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5A1230072547490D00417AEE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+>>>>>>> merge
 </dict>
 </plist>
