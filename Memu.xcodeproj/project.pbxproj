@@ -31,6 +31,9 @@
 		5A6A09552551D4AA00F143ED /* PuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09542551D4AA00F143ED /* PuzzleViewController.swift */; };
 		5A6A095D2551D4C300F143ED /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A095C2551D4C300F143ED /* RewardsViewController.swift */; };
 
+		85989D402551D9B600154D70 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85989D3F2551D9B600154D70 /* Tutorial.storyboard */; };
+		85989D482551F76E00154D70 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85989D472551F76E00154D70 /* TutorialViewController.swift */; };
+
 		831B1FAC2559D0C800AEACEC /* marimba_nota_si.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 831B1FA52559D0C800AEACEC /* marimba_nota_si.mp3 */; };
 		831B1FAD2559D0C800AEACEC /* marimba_nota_do.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 831B1FA62559D0C800AEACEC /* marimba_nota_do.mp3 */; };
 		831B1FAE2559D0C800AEACEC /* marimba_nota_sol.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 831B1FA72559D0C800AEACEC /* marimba_nota_sol.mp3 */; };
@@ -92,6 +95,9 @@
 		5A6A094E2551D48C00F143ED /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		5A6A09542551D4AA00F143ED /* PuzzleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleViewController.swift; sourceTree = "<group>"; };
 		5A6A095C2551D4C300F143ED /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
+
+		85989D3F2551D9B600154D70 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
+		85989D472551F76E00154D70 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 
 		830DE1E02559C8570024DD08 /* default_interface.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = default_interface.mp3; sourceTree = "<group>"; };
 		830DE1E12559C8570024DD08 /* feedback_negativo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feedback_negativo.mp3; sourceTree = "<group>"; };
@@ -160,6 +166,7 @@
 		5A122FE62547490C00417AEE /* Memu */ = {
 			isa = PBXGroup;
 			children = (
+				85989D3E2551D99800154D70 /* Tutorial */,
 				5A6A090A2551CFFD00F143ED /* Home Screen */,
 				5A6A090F2551D1BA00F143ED /* Menu */,
 				5A6A090C2551D16000F143ED /* Launchpad */,
@@ -255,6 +262,16 @@
 			);
 			path = Rewards;
 			sourceTree = "<group>";
+		};
+
+		85989D3E2551D99800154D70 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				85989D3F2551D9B600154D70 /* Tutorial.storyboard */,
+				85989D472551F76E00154D70 /* TutorialViewController.swift */,
+			);
+			path = Tutorial;
+      sourceTree = "<group>";
 		};
 
 		830DE1BF2559C6B50024DD08 /* Sounds */ = {
@@ -416,9 +433,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
+				85989D402551D9B600154D70 /* Tutorial.storyboard in Resources */,
+
 				831B1FB22559D0C800AEACEC /* marimba_nota_mi.mp3 in Resources */,
 				831B1FAF2559D0C800AEACEC /* marimba_nota_re.mp3 in Resources */,
 				831B1FB12559D0C800AEACEC /* marimba_nota_la.mp3 in Resources */,
+
 				5A6A09172551D2C000F143ED /* Menu.storyboard in Resources */,
 				831B1FAE2559D0C800AEACEC /* marimba_nota_sol.mp3 in Resources */,
 				5A6A09212551D2DE00F143ED /* Notes.storyboard in Resources */,
@@ -468,7 +489,11 @@
 				5A6A094A2551D47B00F143ED /* LaunchpadViewController.swift in Sources */,
 				5A6A09682551D86900F143ED /* CompletionViewController.swift in Sources */,
 				5A122FEA2547490C00417AEE /* SceneDelegate.swift in Sources */,
+
+				85989D482551F76E00154D70 /* TutorialViewController.swift in Sources */,
+
 				5A19B1A62554943E00C4F804 /* LaunchpadCell.swift in Sources */,
+
 				5A6A09452551D44800F143ED /* HomeScreenViewController.swift in Sources */,
 				5A19B1AE2554988A00C4F804 /* ButtonCell.swift in Sources */,
 			);
