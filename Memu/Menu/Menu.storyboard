@@ -1,7 +1,99 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="tGt-od-COX">
+            <objects>
+                <viewController id="Abo-YD-lzX" customClass="MenuViewController" customModule="Memu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d8w-6I-qCD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gS2-aB-vOq">
+                                <rect key="frame" x="44" y="204" width="327" height="88.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gS2-aB-vOq" secondAttribute="height" multiplier="48:13" id="lM9-aK-fXf"/>
+                                </constraints>
+                                <state key="normal" image="continuar">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnContinue:" destination="Abo-YD-lzX" eventType="touchUpInside" id="ROd-Kl-TEV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVp-Hh-9Uo">
+                                <rect key="frame" x="44" y="471" width="327" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gVp-Hh-9Uo" secondAttribute="height" multiplier="48:13" constant="-1.6153846153846416" id="6Pt-Dn-vpj"/>
+                                </constraints>
+                                <state key="normal" image="menuInicial">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnHome:" destination="Abo-YD-lzX" eventType="touchUpInside" id="AhA-h5-H5B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2F-V3-Gkz">
+                                <rect key="frame" x="44" y="337" width="327" height="88.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="C2F-V3-Gkz" secondAttribute="height" multiplier="48:13" id="b2W-fi-bgE"/>
+                                </constraints>
+                                <state key="normal" image="novoJogo">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnNewGame:" destination="Abo-YD-lzX" eventType="touchUpInside" id="DRd-04-1ng"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sZ-0O-WlE">
+                                <rect key="frame" x="44" y="605" width="327" height="88.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9sZ-0O-WlE" secondAttribute="height" multiplier="48:13" id="Cmj-6g-Pi1"/>
+                                </constraints>
+                                <state key="normal" image="ajuda">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnHelp:" destination="Abo-YD-lzX" eventType="touchUpInside" id="DMq-xQ-zxS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nzz-bh-snM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="C2F-V3-Gkz" firstAttribute="centerX" secondItem="d8w-6I-qCD" secondAttribute="centerX" id="9IK-dd-pBg"/>
+                            <constraint firstItem="9sZ-0O-WlE" firstAttribute="top" secondItem="gVp-Hh-9Uo" secondAttribute="bottom" constant="45" id="Ajj-73-1iZ"/>
+                            <constraint firstItem="9sZ-0O-WlE" firstAttribute="centerX" secondItem="d8w-6I-qCD" secondAttribute="centerX" id="Ias-Op-H0S"/>
+                            <constraint firstItem="gVp-Hh-9Uo" firstAttribute="centerX" secondItem="d8w-6I-qCD" secondAttribute="centerX" id="UOl-BX-00J"/>
+                            <constraint firstItem="gVp-Hh-9Uo" firstAttribute="centerY" secondItem="d8w-6I-qCD" secondAttribute="centerY" constant="67.5" id="fjs-yG-xOC"/>
+                            <constraint firstItem="gVp-Hh-9Uo" firstAttribute="top" secondItem="C2F-V3-Gkz" secondAttribute="bottom" constant="45" id="hhB-iI-yub"/>
+                            <constraint firstItem="gS2-aB-vOq" firstAttribute="centerX" secondItem="d8w-6I-qCD" secondAttribute="centerX" id="nhp-tF-Hs6"/>
+                            <constraint firstItem="C2F-V3-Gkz" firstAttribute="top" secondItem="gS2-aB-vOq" secondAttribute="bottom" constant="45" id="vx0-kv-CSf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ztx-gA-4a1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-371.01449275362324" y="29.464285714285712"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ajuda" width="327" height="85"/>
+        <image name="continuar" width="327" height="85"/>
+        <image name="menuInicial" width="327" height="85"/>
+        <image name="novoJogo" width="327" height="85"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

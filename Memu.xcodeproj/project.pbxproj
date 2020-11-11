@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		026C0EE325533A9A008ABFCB /* Notas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 026C0EE225533A9A008ABFCB /* Notas.storyboard */; };
+		026C0EE825533AAC008ABFCB /* NotasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026C0EE725533AAC008ABFCB /* NotasViewController.swift */; };
 		5A122FE82547490C00417AEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A122FE72547490C00417AEE /* AppDelegate.swift */; };
 		5A122FEA2547490C00417AEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A122FE92547490C00417AEE /* SceneDelegate.swift */; };
 		5A122FEC2547490C00417AEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A122FEB2547490C00417AEE /* ViewController.swift */; };
@@ -16,25 +18,31 @@
 		5A122FF72547490D00417AEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A122FF52547490D00417AEE /* LaunchScreen.storyboard */; };
 		5A1230022547490D00417AEE /* MemuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1230012547490D00417AEE /* MemuTests.swift */; };
 		5A12300D2547490D00417AEE /* MemuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A12300C2547490D00417AEE /* MemuUITests.swift */; };
+		5A19B1A62554943E00C4F804 /* LaunchpadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A19B1A52554943E00C4F804 /* LaunchpadCell.swift */; };
+		5A19B1AE2554988A00C4F804 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A19B1AD2554988A00C4F804 /* ButtonCell.swift */; };
 		5A6A09122551D2B600F143ED /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09112551D2B600F143ED /* HomeScreen.storyboard */; };
 		5A6A09172551D2C000F143ED /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09162551D2C000F143ED /* Menu.storyboard */; };
 		5A6A091C2551D2D200F143ED /* Launchpad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A091B2551D2D200F143ED /* Launchpad.storyboard */; };
-		5A6A09212551D2DE00F143ED /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09202551D2DE00F143ED /* Notes.storyboard */; };
 		5A6A09262551D2EB00F143ED /* Puzzle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09252551D2EB00F143ED /* Puzzle.storyboard */; };
 		5A6A092B2551D32200F143ED /* Rewards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A092A2551D32200F143ED /* Rewards.storyboard */; };
 		5A6A093D2551D41300F143ED /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A093C2551D41300F143ED /* MenuViewController.swift */; };
 		5A6A09452551D44800F143ED /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09442551D44800F143ED /* HomeScreenViewController.swift */; };
 		5A6A094A2551D47B00F143ED /* LaunchpadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09492551D47B00F143ED /* LaunchpadViewController.swift */; };
-		5A6A094F2551D48C00F143ED /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A094E2551D48C00F143ED /* NotesViewController.swift */; };
 		5A6A09552551D4AA00F143ED /* PuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09542551D4AA00F143ED /* PuzzleViewController.swift */; };
 		5A6A095D2551D4C300F143ED /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A095C2551D4C300F143ED /* RewardsViewController.swift */; };
-		831B1FAC2559D0C800AEACEC /* marimba_nota_si.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 831B1FA52559D0C800AEACEC /* marimba_nota_si.mp3 */; };
-		831B1FAD2559D0C800AEACEC /* marimba_nota_do.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 831B1FA62559D0C800AEACEC /* marimba_nota_do.mp3 */; };
-		831B1FAE2559D0C800AEACEC /* marimba_nota_sol.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 831B1FA72559D0C800AEACEC /* marimba_nota_sol.mp3 */; };
-		831B1FAF2559D0C800AEACEC /* marimba_nota_re.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 831B1FA82559D0C800AEACEC /* marimba_nota_re.mp3 */; };
-		831B1FB02559D0C800AEACEC /* marimba_nota_fa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 831B1FA92559D0C800AEACEC /* marimba_nota_fa.mp3 */; };
-		831B1FB12559D0C800AEACEC /* marimba_nota_la.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 831B1FAA2559D0C800AEACEC /* marimba_nota_la.mp3 */; };
-		831B1FB22559D0C800AEACEC /* marimba_nota_mi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 831B1FAB2559D0C800AEACEC /* marimba_nota_mi.mp3 */; };
+		5A6A09632551D83C00F143ED /* Completion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09622551D83C00F143ED /* Completion.storyboard */; };
+		5A6A09682551D86900F143ED /* CompletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09672551D86900F143ED /* CompletionViewController.swift */; };
+		5A6A09712551E6D700F143ED /* SequenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09702551E6D700F143ED /* SequenceCell.swift */; };
+		835768D72554BC980053722F /* marimba_nota_mi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 835768CD2554BC970053722F /* marimba_nota_mi.mp3 */; };
+		835768D82554BC980053722F /* feedback_recompensa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 835768CE2554BC970053722F /* feedback_recompensa.mp3 */; };
+		835768D92554BC980053722F /* marimba_nota_fa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 835768CF2554BC970053722F /* marimba_nota_fa.mp3 */; };
+		835768DA2554BC980053722F /* feedback_negativo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 835768D02554BC970053722F /* feedback_negativo.mp3 */; };
+		835768DB2554BC980053722F /* marimba_nota_la.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 835768D12554BC970053722F /* marimba_nota_la.mp3 */; };
+		835768DC2554BC980053722F /* marimba_nota_do.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 835768D22554BC970053722F /* marimba_nota_do.mp3 */; };
+		835768DD2554BC980053722F /* marimba_nota_re.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 835768D32554BC970053722F /* marimba_nota_re.mp3 */; };
+		835768DE2554BC980053722F /* marimba_nota_si.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 835768D42554BC970053722F /* marimba_nota_si.mp3 */; };
+		835768DF2554BC980053722F /* marimba_nota_sol.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 835768D52554BC970053722F /* marimba_nota_sol.mp3 */; };
+		835768E02554BC980053722F /* feedback_positivo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 835768D62554BC980053722F /* feedback_positivo.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		026C0EE225533A9A008ABFCB /* Notas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notas.storyboard; sourceTree = "<group>"; };
+		026C0EE725533AAC008ABFCB /* NotasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotasViewController.swift; sourceTree = "<group>"; };
 		5A122FE42547490C00417AEE /* Memu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A122FE72547490C00417AEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A122FE92547490C00417AEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,30 +80,31 @@
 		5A1230082547490D00417AEE /* MemuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A12300C2547490D00417AEE /* MemuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemuUITests.swift; sourceTree = "<group>"; };
 		5A12300E2547490D00417AEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A19B1A52554943E00C4F804 /* LaunchpadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadCell.swift; sourceTree = "<group>"; };
+		5A19B1AD2554988A00C4F804 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
 		5A6A09112551D2B600F143ED /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
 		5A6A09162551D2C000F143ED /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		5A6A091B2551D2D200F143ED /* Launchpad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launchpad.storyboard; sourceTree = "<group>"; };
-		5A6A09202551D2DE00F143ED /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		5A6A09252551D2EB00F143ED /* Puzzle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Puzzle.storyboard; sourceTree = "<group>"; };
 		5A6A092A2551D32200F143ED /* Rewards.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rewards.storyboard; sourceTree = "<group>"; };
 		5A6A093C2551D41300F143ED /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		5A6A09442551D44800F143ED /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		5A6A09492551D47B00F143ED /* LaunchpadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadViewController.swift; sourceTree = "<group>"; };
-		5A6A094E2551D48C00F143ED /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		5A6A09542551D4AA00F143ED /* PuzzleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleViewController.swift; sourceTree = "<group>"; };
 		5A6A095C2551D4C300F143ED /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
-		830DE1E02559C8570024DD08 /* default_interface.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = default_interface.mp3; sourceTree = "<group>"; };
-		830DE1E12559C8570024DD08 /* feedback_negativo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feedback_negativo.mp3; sourceTree = "<group>"; };
-		830DE1E22559C8570024DD08 /* feedback_positivo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feedback_positivo.mp3; sourceTree = "<group>"; };
-		830DE1E32559C8570024DD08 /* feedback_recompensa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feedback_recompensa.mp3; sourceTree = "<group>"; };
-		830DE1E42559C8570024DD08 /* tecla_bloqueada.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tecla_bloqueada.mp3; sourceTree = "<group>"; };
-		831B1FA52559D0C800AEACEC /* marimba_nota_si.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_si.mp3; sourceTree = "<group>"; };
-		831B1FA62559D0C800AEACEC /* marimba_nota_do.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_do.mp3; sourceTree = "<group>"; };
-		831B1FA72559D0C800AEACEC /* marimba_nota_sol.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_sol.mp3; sourceTree = "<group>"; };
-		831B1FA82559D0C800AEACEC /* marimba_nota_re.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_re.mp3; sourceTree = "<group>"; };
-		831B1FA92559D0C800AEACEC /* marimba_nota_fa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_fa.mp3; sourceTree = "<group>"; };
-		831B1FAA2559D0C800AEACEC /* marimba_nota_la.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_la.mp3; sourceTree = "<group>"; };
-		831B1FAB2559D0C800AEACEC /* marimba_nota_mi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_mi.mp3; sourceTree = "<group>"; };
+		5A6A09622551D83C00F143ED /* Completion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Completion.storyboard; sourceTree = "<group>"; };
+		5A6A09672551D86900F143ED /* CompletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionViewController.swift; sourceTree = "<group>"; };
+		5A6A09702551E6D700F143ED /* SequenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceCell.swift; sourceTree = "<group>"; };
+		835768CD2554BC970053722F /* marimba_nota_mi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_mi.mp3; sourceTree = "<group>"; };
+		835768CE2554BC970053722F /* feedback_recompensa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feedback_recompensa.mp3; sourceTree = "<group>"; };
+		835768CF2554BC970053722F /* marimba_nota_fa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_fa.mp3; sourceTree = "<group>"; };
+		835768D02554BC970053722F /* feedback_negativo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feedback_negativo.mp3; sourceTree = "<group>"; };
+		835768D12554BC970053722F /* marimba_nota_la.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_la.mp3; sourceTree = "<group>"; };
+		835768D22554BC970053722F /* marimba_nota_do.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_do.mp3; sourceTree = "<group>"; };
+		835768D32554BC970053722F /* marimba_nota_re.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_re.mp3; sourceTree = "<group>"; };
+		835768D42554BC970053722F /* marimba_nota_si.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_si.mp3; sourceTree = "<group>"; };
+		835768D52554BC970053722F /* marimba_nota_sol.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_sol.mp3; sourceTree = "<group>"; };
+		835768D62554BC980053722F /* feedback_positivo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feedback_positivo.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,13 +155,15 @@
 		5A122FE62547490C00417AEE /* Memu */ = {
 			isa = PBXGroup;
 			children = (
+				835768BC2554BB0C0053722F /* Sounds */,
 				5A6A090A2551CFFD00F143ED /* Home Screen */,
 				5A6A090F2551D1BA00F143ED /* Menu */,
 				5A6A090C2551D16000F143ED /* Launchpad */,
 				5A6A090B2551D12700F143ED /* Notes */,
 				5A6A090E2551D18000F143ED /* Puzzle */,
 				5A6A09102551D1D300F143ED /* Rewards */,
-				830DE1BF2559C6B50024DD08 /* Sounds */,
+				5A6A09612551D7BC00F143ED /* Completion */,
+				5A6A096C2551E66000F143ED /* Collection View */,
 				5A122FE72547490C00417AEE /* AppDelegate.swift */,
 				5A122FE92547490C00417AEE /* SceneDelegate.swift */,
 				5A122FEB2547490C00417AEE /* ViewController.swift */,
@@ -193,8 +206,8 @@
 		5A6A090B2551D12700F143ED /* Notes */ = {
 			isa = PBXGroup;
 			children = (
-				5A6A09202551D2DE00F143ED /* Notes.storyboard */,
-				5A6A094E2551D48C00F143ED /* NotesViewController.swift */,
+				026C0EE725533AAC008ABFCB /* NotasViewController.swift */,
+				026C0EE225533A9A008ABFCB /* Notas.storyboard */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -235,39 +248,40 @@
 			path = Rewards;
 			sourceTree = "<group>";
 		};
-		830DE1BF2559C6B50024DD08 /* Sounds */ = {
+		5A6A09612551D7BC00F143ED /* Completion */ = {
 			isa = PBXGroup;
 			children = (
-				830DE1DF2559C8470024DD08 /* Interface */,
-				830DE1CD2559C7E20024DD08 /* Marimba */,
+				5A6A09622551D83C00F143ED /* Completion.storyboard */,
+				5A6A09672551D86900F143ED /* CompletionViewController.swift */,
+			);
+			path = Completion;
+			sourceTree = "<group>";
+		};
+		5A6A096C2551E66000F143ED /* Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				5A19B1A52554943E00C4F804 /* LaunchpadCell.swift */,
+				5A19B1AD2554988A00C4F804 /* ButtonCell.swift */,
+				5A6A09702551E6D700F143ED /* SequenceCell.swift */,
+			);
+			path = "Collection View";
+			sourceTree = "<group>";
+		};
+		835768BC2554BB0C0053722F /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				835768D02554BC970053722F /* feedback_negativo.mp3 */,
+				835768D62554BC980053722F /* feedback_positivo.mp3 */,
+				835768CE2554BC970053722F /* feedback_recompensa.mp3 */,
+				835768D22554BC970053722F /* marimba_nota_do.mp3 */,
+				835768CF2554BC970053722F /* marimba_nota_fa.mp3 */,
+				835768D12554BC970053722F /* marimba_nota_la.mp3 */,
+				835768CD2554BC970053722F /* marimba_nota_mi.mp3 */,
+				835768D32554BC970053722F /* marimba_nota_re.mp3 */,
+				835768D42554BC970053722F /* marimba_nota_si.mp3 */,
+				835768D52554BC970053722F /* marimba_nota_sol.mp3 */,
 			);
 			path = Sounds;
-			sourceTree = "<group>";
-		};
-		830DE1CD2559C7E20024DD08 /* Marimba */ = {
-			isa = PBXGroup;
-			children = (
-				831B1FA62559D0C800AEACEC /* marimba_nota_do.mp3 */,
-				831B1FA92559D0C800AEACEC /* marimba_nota_fa.mp3 */,
-				831B1FAA2559D0C800AEACEC /* marimba_nota_la.mp3 */,
-				831B1FAB2559D0C800AEACEC /* marimba_nota_mi.mp3 */,
-				831B1FA82559D0C800AEACEC /* marimba_nota_re.mp3 */,
-				831B1FA52559D0C800AEACEC /* marimba_nota_si.mp3 */,
-				831B1FA72559D0C800AEACEC /* marimba_nota_sol.mp3 */,
-			);
-			path = Marimba;
-			sourceTree = "<group>";
-		};
-		830DE1DF2559C8470024DD08 /* Interface */ = {
-			isa = PBXGroup;
-			children = (
-				830DE1E02559C8570024DD08 /* default_interface.mp3 */,
-				830DE1E12559C8570024DD08 /* feedback_negativo.mp3 */,
-				830DE1E22559C8570024DD08 /* feedback_positivo.mp3 */,
-				830DE1E32559C8570024DD08 /* feedback_recompensa.mp3 */,
-				830DE1E42559C8570024DD08 /* tecla_bloqueada.mp3 */,
-			);
-			path = Interface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,21 +387,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				831B1FB22559D0C800AEACEC /* marimba_nota_mi.mp3 in Resources */,
-				831B1FAF2559D0C800AEACEC /* marimba_nota_re.mp3 in Resources */,
-				831B1FB12559D0C800AEACEC /* marimba_nota_la.mp3 in Resources */,
+				835768E02554BC980053722F /* feedback_positivo.mp3 in Resources */,
+				835768DA2554BC980053722F /* feedback_negativo.mp3 in Resources */,
+				835768DB2554BC980053722F /* marimba_nota_la.mp3 in Resources */,
 				5A6A09172551D2C000F143ED /* Menu.storyboard in Resources */,
-				831B1FAE2559D0C800AEACEC /* marimba_nota_sol.mp3 in Resources */,
-				5A6A09212551D2DE00F143ED /* Notes.storyboard in Resources */,
+				5A6A09632551D83C00F143ED /* Completion.storyboard in Resources */,
 				5A6A092B2551D32200F143ED /* Rewards.storyboard in Resources */,
 				5A6A09262551D2EB00F143ED /* Puzzle.storyboard in Resources */,
-				831B1FAC2559D0C800AEACEC /* marimba_nota_si.mp3 in Resources */,
-				831B1FB02559D0C800AEACEC /* marimba_nota_fa.mp3 in Resources */,
-				831B1FAD2559D0C800AEACEC /* marimba_nota_do.mp3 in Resources */,
 				5A122FF72547490D00417AEE /* LaunchScreen.storyboard in Resources */,
 				5A6A09122551D2B600F143ED /* HomeScreen.storyboard in Resources */,
+				026C0EE325533A9A008ABFCB /* Notas.storyboard in Resources */,
 				5A6A091C2551D2D200F143ED /* Launchpad.storyboard in Resources */,
+				835768DF2554BC980053722F /* marimba_nota_sol.mp3 in Resources */,
+				835768D92554BC980053722F /* marimba_nota_fa.mp3 in Resources */,
+				835768D72554BC980053722F /* marimba_nota_mi.mp3 in Resources */,
 				5A122FF42547490D00417AEE /* Assets.xcassets in Resources */,
+				835768DC2554BC980053722F /* marimba_nota_do.mp3 in Resources */,
+				835768D82554BC980053722F /* feedback_recompensa.mp3 in Resources */,
+				835768DD2554BC980053722F /* marimba_nota_re.mp3 in Resources */,
+				835768DE2554BC980053722F /* marimba_nota_si.mp3 in Resources */,
 				5A122FEF2547490C00417AEE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,14 +433,18 @@
 			files = (
 				5A122FEC2547490C00417AEE /* ViewController.swift in Sources */,
 				5A6A09552551D4AA00F143ED /* PuzzleViewController.swift in Sources */,
+				5A6A09712551E6D700F143ED /* SequenceCell.swift in Sources */,
 				5A6A093D2551D41300F143ED /* MenuViewController.swift in Sources */,
 				5A122FF22547490C00417AEE /* Memu.xcdatamodeld in Sources */,
+				026C0EE825533AAC008ABFCB /* NotasViewController.swift in Sources */,
 				5A122FE82547490C00417AEE /* AppDelegate.swift in Sources */,
 				5A6A095D2551D4C300F143ED /* RewardsViewController.swift in Sources */,
-				5A6A094F2551D48C00F143ED /* NotesViewController.swift in Sources */,
 				5A6A094A2551D47B00F143ED /* LaunchpadViewController.swift in Sources */,
+				5A6A09682551D86900F143ED /* CompletionViewController.swift in Sources */,
 				5A122FEA2547490C00417AEE /* SceneDelegate.swift in Sources */,
+				5A19B1A62554943E00C4F804 /* LaunchpadCell.swift in Sources */,
 				5A6A09452551D44800F143ED /* HomeScreenViewController.swift in Sources */,
+				5A19B1AE2554988A00C4F804 /* ButtonCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,7 +621,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UF373B4HU9;
 				INFOPLIST_FILE = Memu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -618,7 +640,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UF373B4HU9;
 				INFOPLIST_FILE = Memu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
