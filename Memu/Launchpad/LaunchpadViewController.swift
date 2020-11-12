@@ -30,11 +30,11 @@ class LaunchpadViewController: UIViewController {
     
 
     
-    let sequenceImg: [UIImage] = [UIImage(named: "pinkOn")!,
-                                 UIImage(named: "greenOn")!,
-                                 UIImage(named: "redOn")!,
-                                 UIImage(named: "blueOn")!,
-                                 UIImage(named: "delete")!]
+    let sequenceImg: [UIImage] = [UIImage(named: "seqPinkOn")!,
+                                     UIImage(named: "seqGreenOn")!,
+                                     UIImage(named: "seqRedOn")!,
+                                     UIImage(named: "seqBlueOn")!,
+                                     UIImage(named: "delete")!]
     
     let btnImg: [UIImage] = [UIImage(named: "play")!]
     

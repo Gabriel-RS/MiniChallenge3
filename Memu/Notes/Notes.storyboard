@@ -51,8 +51,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="105" id="F4B-Rv-x2l"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="pickBlueOn"/>
-                                <state key="selected" backgroundImage="noteCOn"/>
+                                <state key="normal" backgroundImage="pickBlueOff"/>
+                                <state key="selected" backgroundImage="pickBlueOn"/>
                                 <connections>
                                     <action selector="btnDo:" destination="6aB-an-ka7" eventType="touchUpInside" id="aWe-8j-zUp"/>
                                 </connections>
@@ -62,16 +62,16 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="104" id="W1V-6N-Anc"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="pickGreenOn"/>
-                                <state key="selected" backgroundImage="noteDOn"/>
+                                <state key="normal" backgroundImage="pickGreenOff"/>
+                                <state key="selected" backgroundImage="pickGreenOn"/>
                                 <connections>
                                     <action selector="btnRe:" destination="6aB-an-ka7" eventType="touchUpInside" id="KAY-Pg-XJw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFp-8d-i2o">
                                 <rect key="frame" x="280" y="220" width="106" height="105"/>
-                                <state key="normal" backgroundImage="pickRedOn"/>
-                                <state key="selected" backgroundImage="noteEOn"/>
+                                <state key="normal" backgroundImage="pickRedOff"/>
+                                <state key="selected" backgroundImage="pickRedOn"/>
                                 <connections>
                                     <action selector="btnMi:" destination="6aB-an-ka7" eventType="touchUpInside" id="aB5-D7-Tcy"/>
                                 </connections>
@@ -81,8 +81,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="105" id="vcw-me-q2l"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="pickPinkOn"/>
-                                <state key="selected" backgroundImage="noteFOn"/>
+                                <state key="normal" backgroundImage="pickPinkOff"/>
+                                <state key="selected" backgroundImage="pickPinkOn"/>
                                 <connections>
                                     <action selector="btnFa:" destination="6aB-an-ka7" eventType="touchUpInside" id="Vhh-sr-XSG"/>
                                 </connections>
@@ -93,7 +93,7 @@
                                     <constraint firstAttribute="width" constant="104" id="DlI-SN-AaK"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="pickPurpleOff"/>
-                                <state key="selected" backgroundImage="noteGOn"/>
+                                <state key="selected" backgroundImage="pickPurpleOn"/>
                                 <connections>
                                     <action selector="btnSol:" destination="6aB-an-ka7" eventType="touchUpInside" id="ZyF-uL-zFP"/>
                                 </connections>
@@ -101,7 +101,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAe-PO-TSD">
                                 <rect key="frame" x="280" y="360" width="106" height="105"/>
                                 <state key="normal" backgroundImage="pickOrangeOff"/>
-                                <state key="selected" backgroundImage="noteAOn"/>
+                                <state key="selected" backgroundImage="pickOrangeOn"/>
                                 <connections>
                                     <action selector="btnLa:" destination="6aB-an-ka7" eventType="touchUpInside" id="3KU-LA-l17"/>
                                 </connections>
@@ -112,7 +112,7 @@
                                     <constraint firstAttribute="width" constant="104" id="g6Z-lO-GZA"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="pickYellowOff"/>
-                                <state key="selected" backgroundImage="noteBOn"/>
+                                <state key="selected" backgroundImage="pickYellowOn"/>
                                 <connections>
                                     <action selector="btnSi:" destination="6aB-an-ka7" eventType="touchUpInside" id="cAo-KY-WuV"/>
                                 </connections>
@@ -378,20 +378,21 @@
         <segue reference="a55-Cx-GBp"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="noteAOn" width="159.33000183105469" height="158"/>
-        <image name="noteBOn" width="158" height="158"/>
         <image name="noteCOn" width="158" height="158"/>
-        <image name="noteDOn" width="158" height="158"/>
-        <image name="noteEOn" width="158" height="158"/>
-        <image name="noteFOn" width="158" height="158"/>
-        <image name="noteGOn" width="158" height="158"/>
+        <image name="pickBlueOff" width="161" height="161"/>
         <image name="pickBlueOn" width="158" height="158"/>
+        <image name="pickGreenOff" width="161" height="161"/>
         <image name="pickGreenOn" width="158" height="158"/>
         <image name="pickOrangeOff" width="162.33000183105469" height="161"/>
+        <image name="pickOrangeOn" width="159.33000183105469" height="158"/>
+        <image name="pickPinkOff" width="161" height="161"/>
         <image name="pickPinkOn" width="158" height="158"/>
         <image name="pickPurpleOff" width="161" height="161"/>
+        <image name="pickPurpleOn" width="158" height="158"/>
+        <image name="pickRedOff" width="161" height="161"/>
         <image name="pickRedOn" width="158" height="158"/>
         <image name="pickYellowOff" width="161" height="161"/>
+        <image name="pickYellowOn" width="158" height="158"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
