@@ -1,12 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "keyPurpleOff.svg",
+      "filename" : "redOn.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "keyPurpleOff 2.svg",
+      "filename" : "redOn 2.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },

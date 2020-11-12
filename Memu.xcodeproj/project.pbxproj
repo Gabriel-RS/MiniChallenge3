@@ -147,18 +147,8 @@
 		022EF261255C8A1B00C393AC /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				022EF262255C8A1B00C393AC /* marimba_nota_la.mp3 */,
-				022EF269255C8A1B00C393AC /* feedback_negativo.mp3 */,
-				022EF26A255C8A1B00C393AC /* marimba_nota_re.mp3 */,
-				022EF26B255C8A1B00C393AC /* marimba_nota_fa.mp3 */,
-				022EF26C255C8A1B00C393AC /* feedback_positivo.mp3 */,
-				022EF26D255C8A1B00C393AC /* marimba_nota_do.mp3 */,
-				022EF26E255C8A1B00C393AC /* tecla_bloqueada.mp3 */,
-				022EF26F255C8A1B00C393AC /* marimba_nota_sol.mp3 */,
-				022EF270255C8A1B00C393AC /* marimba_nota_si.mp3 */,
-				022EF279255C8A1B00C393AC /* feedback_recompensa.mp3 */,
-				022EF27A255C8A1B00C393AC /* default_interface.mp3 */,
-				022EF27B255C8A1B00C393AC /* marimba_nota_mi.mp3 */,
+				8502715B255DB2260018C513 /* Marimba */,
+				8502715A255DB1F70018C513 /* Interface */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -308,6 +298,32 @@
 				5A6A09702551E6D700F143ED /* SequenceCell.swift */,
 			);
 			path = "Collection View";
+			sourceTree = "<group>";
+		};
+		8502715A255DB1F70018C513 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				022EF269255C8A1B00C393AC /* feedback_negativo.mp3 */,
+				022EF26C255C8A1B00C393AC /* feedback_positivo.mp3 */,
+				022EF26E255C8A1B00C393AC /* tecla_bloqueada.mp3 */,
+				022EF279255C8A1B00C393AC /* feedback_recompensa.mp3 */,
+				022EF27A255C8A1B00C393AC /* default_interface.mp3 */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		8502715B255DB2260018C513 /* Marimba */ = {
+			isa = PBXGroup;
+			children = (
+				022EF262255C8A1B00C393AC /* marimba_nota_la.mp3 */,
+				022EF26A255C8A1B00C393AC /* marimba_nota_re.mp3 */,
+				022EF26B255C8A1B00C393AC /* marimba_nota_fa.mp3 */,
+				022EF26D255C8A1B00C393AC /* marimba_nota_do.mp3 */,
+				022EF26F255C8A1B00C393AC /* marimba_nota_sol.mp3 */,
+				022EF270255C8A1B00C393AC /* marimba_nota_si.mp3 */,
+				022EF27B255C8A1B00C393AC /* marimba_nota_mi.mp3 */,
+			);
+			path = Marimba;
 			sourceTree = "<group>";
 		};
 		8536C5FF2559B2B600706EE7 /* Model */ = {
