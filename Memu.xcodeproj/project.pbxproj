@@ -202,6 +202,7 @@
 				5A6A090F2551D1BA00F143ED /* Menu */,
 				5A6A090C2551D16000F143ED /* Launchpad */,
 				5A6A090B2551D12700F143ED /* Notes */,
+				027EB5FC255DAA6900DD7720 /* Tutorial */,
 				5A6A090E2551D18000F143ED /* Puzzle */,
 				5A6A09102551D1D300F143ED /* Rewards */,
 				5A6A09612551D7BC00F143ED /* Completion */,
@@ -302,7 +303,6 @@
 		5A6A096C2551E66000F143ED /* Collection View */ = {
 			isa = PBXGroup;
 			children = (
-				027EB5FC255DAA6900DD7720 /* Tutorial */,
 				5A19B1A52554943E00C4F804 /* LaunchpadCell.swift */,
 				5A19B1AD2554988A00C4F804 /* ButtonCell.swift */,
 				5A6A09702551E6D700F143ED /* SequenceCell.swift */,
