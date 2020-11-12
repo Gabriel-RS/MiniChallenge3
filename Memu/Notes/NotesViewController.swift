@@ -24,6 +24,15 @@ class Notas: UIViewController {
     var audioPlayer = AVAudioPlayer()
     var vetorNotas = [AVAudioPlayer]()
     
+    override func viewDidLoad() {
+        playSound(note: "do")
+        playSound(note: "re")
+        playSound(note: "mi")
+        playSound(note: "fa")
+    }
+    
+
+    
     
     @IBAction func btnDo(_ sender: UIButton) {
         selectedOrNot(btn: btnDo, note: "do")
