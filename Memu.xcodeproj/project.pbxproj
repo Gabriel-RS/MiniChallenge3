@@ -20,6 +20,8 @@
 		022EF291255C8A1B00C393AC /* feedback_recompensa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 022EF279255C8A1B00C393AC /* feedback_recompensa.mp3 */; };
 		022EF292255C8A1B00C393AC /* default_interface.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 022EF27A255C8A1B00C393AC /* default_interface.mp3 */; };
 		022EF293255C8A1B00C393AC /* marimba_nota_mi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 022EF27B255C8A1B00C393AC /* marimba_nota_mi.mp3 */; };
+		027EB5FF255DAA6A00DD7720 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027EB5FD255DAA6900DD7720 /* TutorialViewController.swift */; };
+		027EB600255DAA6A00DD7720 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027EB5FE255DAA6900DD7720 /* Tutorial.storyboard */; };
 		5A122FE82547490C00417AEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A122FE72547490C00417AEE /* AppDelegate.swift */; };
 		5A122FEA2547490C00417AEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A122FE92547490C00417AEE /* SceneDelegate.swift */; };
 		5A122FEC2547490C00417AEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A122FEB2547490C00417AEE /* ViewController.swift */; };
@@ -80,6 +82,8 @@
 		022EF279255C8A1B00C393AC /* feedback_recompensa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feedback_recompensa.mp3; sourceTree = "<group>"; };
 		022EF27A255C8A1B00C393AC /* default_interface.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = default_interface.mp3; sourceTree = "<group>"; };
 		022EF27B255C8A1B00C393AC /* marimba_nota_mi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_mi.mp3; sourceTree = "<group>"; };
+		027EB5FD255DAA6900DD7720 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		027EB5FE255DAA6900DD7720 /* Tutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		5A122FE42547490C00417AEE /* Memu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A122FE72547490C00417AEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A122FE92547490C00417AEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +162,16 @@
 			);
 			path = Sounds;
 			sourceTree = "<group>";
+		};
+		027EB5FC255DAA6900DD7720 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				027EB5FD255DAA6900DD7720 /* TutorialViewController.swift */,
+				027EB5FE255DAA6900DD7720 /* Tutorial.storyboard */,
+			);
+			name = Tutorial;
+			path = Memu/Tutorial;
+			sourceTree = SOURCE_ROOT;
 		};
 		5A122FDB2547490C00417AEE = {
 			isa = PBXGroup;
@@ -288,6 +302,7 @@
 		5A6A096C2551E66000F143ED /* Collection View */ = {
 			isa = PBXGroup;
 			children = (
+				027EB5FC255DAA6900DD7720 /* Tutorial */,
 				5A19B1A52554943E00C4F804 /* LaunchpadCell.swift */,
 				5A19B1AD2554988A00C4F804 /* ButtonCell.swift */,
 				5A6A09702551E6D700F143ED /* SequenceCell.swift */,
@@ -410,6 +425,7 @@
 				022EF285255C8A1B00C393AC /* feedback_positivo.mp3 in Resources */,
 				022EF291255C8A1B00C393AC /* feedback_recompensa.mp3 in Resources */,
 				5A6A09172551D2C000F143ED /* Menu.storyboard in Resources */,
+				027EB600255DAA6A00DD7720 /* Tutorial.storyboard in Resources */,
 				5A6A09632551D83C00F143ED /* Completion.storyboard in Resources */,
 				5A6A092B2551D32200F143ED /* Rewards.storyboard in Resources */,
 				022EF283255C8A1B00C393AC /* marimba_nota_re.mp3 in Resources */,
@@ -466,6 +482,7 @@
 				5A6A09682551D86900F143ED /* CompletionViewController.swift in Sources */,
 				5A122FEA2547490C00417AEE /* SceneDelegate.swift in Sources */,
 				5A19B1A62554943E00C4F804 /* LaunchpadCell.swift in Sources */,
+				027EB5FF255DAA6A00DD7720 /* TutorialViewController.swift in Sources */,
 				5A6A09452551D44800F143ED /* HomeScreenViewController.swift in Sources */,
 				8536C6092559B39D00706EE7 /* Board.swift in Sources */,
 				5A19B1AE2554988A00C4F804 /* ButtonCell.swift in Sources */,
