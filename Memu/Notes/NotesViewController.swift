@@ -25,10 +25,7 @@ class Notas: UIViewController {
     var vetorNotas = [AVAudioPlayer]()
     
     override func viewDidLoad() {
-        playSound(note: "do")
-        playSound(note: "re")
-        playSound(note: "mi")
-        playSound(note: "fa")
+        
     }
     
 
