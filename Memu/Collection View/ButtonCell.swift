@@ -20,13 +20,13 @@ class ButtonCell: UICollectionViewCell {
     }
     
     @IBAction func btnLock(_ sender: Any) {
-        print("Lock Button")
-        let lock  = LaunchpadViewController.locked
-        if lock == false {
-            LaunchpadViewController.locked = true
-        } else {
-            LaunchpadViewController.locked = false
-        }
+//        print("Lock Button")
+//        let lock  = LaunchpadViewController.locked
+//        if lock == false {
+//            LaunchpadViewController.locked = true
+//        } else {
+//            LaunchpadViewController.locked = false
+//        }
     }
     
 }

@@ -52,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="762" y="122"/>
         </scene>
-        <!--Notas-->
+        <!--Notes-->
         <scene sceneID="YKt-70-83O">
             <objects>
-                <viewControllerPlaceholder storyboardName="Notas" id="FML-dX-fMp" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Notes" id="FML-dX-fMp" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="OGw-MV-dvg"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5pX-bk-FsI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
