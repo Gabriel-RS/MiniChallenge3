@@ -30,6 +30,8 @@ class Note: Hashable {
             return UIImage(named: "seqOff")!
         case "puzzle":
             return UIImage(named: "keyGrayOff")!
+        case "delete":
+            return UIImage(named: "delete")!
         default:
             return UIImage(named: "key\(self.color)Off")!
         }

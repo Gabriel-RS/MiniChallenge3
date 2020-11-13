@@ -11,8 +11,11 @@ class ButtonCell: UICollectionViewCell {
     static let reuseIdentifier = String(describing: ButtonCell.self)
     static let reuseIdentifierDelete = "DeleteCell"
     
+    weak var delegate: ButtonCellDelegate?
+    
     @IBAction func btnDelete(_ sender: Any) {
         print("Delete Button")
+        delegate?.delete()
     }
     
     @IBAction func btnPlay(_ sender: Any) {
@@ -29,4 +32,8 @@ class ButtonCell: UICollectionViewCell {
         }
     }
     
+}
+
+protocol ButtonCellDelegate: class {
+    func delete()
 }
