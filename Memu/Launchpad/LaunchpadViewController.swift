@@ -53,8 +53,6 @@ class LaunchpadViewController: UIViewController {
         keyNotes = board.launchpad
         keyNotes2 = board2.launchpad
         keyNotes3 = board3.launchpad
-
-        keyImages = board.getKeyImagesLaunchpad()
         
         configDataSource()
     }

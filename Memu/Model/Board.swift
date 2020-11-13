@@ -25,41 +25,18 @@ class Board {
         let possibleColors = ["Blue","Green","Red","Pink","Purple", "Orange","Yellow"]
 
         for i in 0..<size {
-            let note = Note(name: possibleNotes[i], soundFile: "\(instrument)_nota_\(possibleNotes[i])", color: possibleColors[i])
+            let note = Note(name: possibleNotes[i], soundFile: "\(instrument)_nota_\(possibleNotes[i])", color: possibleColors[i], type: "launchpad")
             launchpad.append(note)
         }
 
     }
     
-    // pega as cores para ser apresentado na collection view do launchpad
-    func getKeyImagesLaunchpad() -> [UIImage] {
-        var images = [UIImage]()
-        for note in launchpad {
-            print(note.image)
-            images.append(note.image)
-        }
-        return images
-    }
-    
     // para ser chamado quando alterar as notas musicais
-//    func setNotes(notes: [Note]) {
-//        self.launchpad = notes
-//    }
-//
-//    func getNotes() -> [Note] {
-//        return self.launchpad
-//    }
-//
-    
-    // as notas vão ser as mesmas, mas a imagem será alterada
-//    func getKeyImagesPuzzle() -> [UIImage] {
-//        var puzzleImages = [UIImage]()
-//        for _ in launchpad {
-//            let grayKey = UIImage(named: "keyGrayOn")!
-//            puzzleImages.append(grayKey)
-//        }
-//
-//        return puzzleImages
-//    }
-//
+    func setNotes(notes: [Note]) {
+        self.launchpad = notes
+    }
+
+    func getNotes() -> [Note] {
+        return self.launchpad
+    }
 }

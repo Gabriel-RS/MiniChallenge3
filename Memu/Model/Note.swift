@@ -15,12 +15,24 @@ class Note: Hashable {
     var color: String
     var image: UIImage
     
-    init(name: String, soundFile: String, color: String) {
+    init(name: String, soundFile: String, color: String, type: String) {
         self.name = name
         self.soundFile = soundFile
         self.color = color
-        // começa sempre desligado
-        image = UIImage(named: "key\(self.color)Off")!
+        image = UIImage()
+        
+        image = setInitialImage(type: type)
+    }
+    
+    func setInitialImage(type: String) -> UIImage{
+        switch(type){
+        case "sequence":
+            return UIImage(named: "seqOff")!
+        case "puzzle":
+            return UIImage(named: "keyGrayOff")!
+        default:
+            return UIImage(named: "key\(self.color)Off")!
+        }
     }
     
     func turnOn() {
