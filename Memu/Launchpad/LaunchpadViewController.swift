@@ -43,6 +43,8 @@ class LaunchpadViewController: UIViewController {
     
     let btnImg: [UIImage] = [UIImage(named: "play")!]
     
+    static var locked = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
@@ -173,7 +175,7 @@ extension LaunchpadViewController: UICollectionViewDelegate {
         
         let selectedNote = keyNotes[indexPath[1]]
         
-        if indexPath.section == 2 {
+        if indexPath.section == 2 && LaunchpadViewController.locked == false {
             if selectedNote.image == UIImage(named: "key\(selectedNote.color)Off") {
                 selectedNote.turnOn()
                 // TODO: Adicionar na sequência
@@ -182,5 +184,19 @@ extension LaunchpadViewController: UICollectionViewDelegate {
         }
         
         collectionView.reloadData()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        if let keyCell = collectionView.cellForItem(at: indexPath) as? LaunchpadCell {
+            keyCell.keyOn.isHighlighted = true
+            keyCell.keyOn.alpha = 0.8
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        if let keyCell = collectionView.cellForItem(at: indexPath) as? LaunchpadCell {
+            keyCell.keyOn.isHighlighted = false
+            keyCell.keyOn.alpha = 1.0
+        }
     }
 }
