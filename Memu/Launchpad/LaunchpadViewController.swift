@@ -61,6 +61,7 @@ class LaunchpadViewController: UIViewController {
     
     @IBAction func btnMenu(_ sender: Any) {
         print("Menu Button")
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func btnNotes(_ sender: Any) {
         print("Notes Button")
@@ -136,6 +137,7 @@ class LaunchpadViewController: UIViewController {
             if self.sequenceImg[IndexPath.row] == UIImage(named: "delete")! {
                 return btnDeleteCell
             } else if IndexPath.section == 1  {
+                btnCell.lockImg()
                 return btnCell
             } else {
                 if IndexPath.section == 0 {
