@@ -36,6 +36,7 @@
                                 <state key="normal" title="Note" image="note"/>
                                 <connections>
                                     <action selector="btnNotes:" destination="8gh-7E-tSa" eventType="touchUpInside" id="nTO-iH-W7h"/>
+                                    <segue destination="xK7-uN-vNd" kind="show" id="Ph9-iZ-dEx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noR-Ku-2iL">
@@ -184,6 +185,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pTq-fo-21N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-149.27536231884059" y="176.78571428571428"/>
+        </scene>
+        <!--Notes-->
+        <scene sceneID="iWG-L5-WQn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Notes" id="xK7-uN-vNd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nus-nh-gme"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2vx-tg-cpf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-353" y="555"/>
         </scene>
     </scenes>
     <resources>

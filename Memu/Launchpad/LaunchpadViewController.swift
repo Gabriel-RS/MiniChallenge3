@@ -19,27 +19,19 @@ class LaunchpadViewController: UIViewController {
         case launchpad
     }
     
-    // cria um tabuleiro para ser exibido (launchpad)
-    var board = Board(size: 4, instrument: "marimba", isLaunchpad: true)
-    var board2 = Board(size: 5, instrument: "marimba", isLaunchpad: false)
-    var board3 = Board(size: 1, instrument: "marimba", isLaunchpad: false)
-
-    
-    // pega as notas do launchpad para serem manipuladas (didSelect e keyCell)
+    // cria um tabuleiro para ser exibido (launchpad) e suas notas
+    var board = Board(size: 4, instrument: "marimba", type: "launchpad")
     var keyNotes = [Note]()
-    var keyNotes2 = [Note]()
+    
+    // configura a sequencia e suas notas
+    var sequence = Sequence(size: 4)
+    var sequenceNotes = [Note]()
+    
+    
+    // seção button
+    var board3 = Board(size: 1, instrument: "marimba", type: "launchpad")
     var keyNotes3 = [Note]()
     
-    // vetor de imagens das notas para configurar a collection view (snapshot)
-    var keyImages:[UIImage]?
-    
-
-    
-    var sequenceImg: [UIImage] = [UIImage(named: "seqPinkOn")!,
-                                     UIImage(named: "seqGreenOn")!,
-                                     UIImage(named: "seqRedOn")!,
-                                     UIImage(named: "seqBlueOn")!,
-                                     UIImage(named: "delete")!]
     
     let btnImg: [UIImage] = [UIImage(named: "play")!]
     
@@ -49,9 +41,11 @@ class LaunchpadViewController: UIViewController {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.collectionViewLayout = configLayout()
-        
+
         keyNotes = board.launchpad
-        keyNotes2 = board2.launchpad
+        sequenceNotes = sequence.notes
+        
+        // seção button
         keyNotes3 = board3.launchpad
         
         configDataSource()
@@ -69,7 +63,9 @@ class LaunchpadViewController: UIViewController {
         print("Check Button")
     }
     
-    
+    func getSequenceNotes() -> [Note]{
+        return self.sequenceNotes
+    }
     
     // MARK: - Collection View Layout
     
@@ -133,17 +129,22 @@ class LaunchpadViewController: UIViewController {
             
             guard let keyCell = collectionView.dequeueReusableCell(withReuseIdentifier: LaunchpadCell.reuseIdentifier, for: IndexPath) as? LaunchpadCell else { fatalError("Cannot create key cell") }
             
-            if self.sequenceImg[IndexPath.row] == UIImage(named: "delete")! {
+            if self.sequenceNotes[IndexPath.row].image == UIImage(named: "delete")! {
+                btnDeleteCell.delegate = self
                 return btnDeleteCell
             } else if IndexPath.section == 1  {
+                btnCell.delegate = self
                 return btnCell
             } else {
+                // se for seção da sequencia
                 if IndexPath.section == 0 {
                     print(IndexPath)
-                    keyCell.keyOn.image = self.sequenceImg[IndexPath.row]
+                    let sequenceNote = self.sequenceNotes[IndexPath.row]
+                    keyCell.setNoteKey(note: sequenceNote)
                     return keyCell
 
                 }else {
+                    // se for seção do tabuleiro/launchpad
                     let note = self.keyNotes[IndexPath.row]
                     keyCell.setNoteKey(note: note)
                     return keyCell
@@ -154,7 +155,7 @@ class LaunchpadViewController: UIViewController {
         
         var snapshot = NSDiffableDataSourceSnapshot<Section, Note>()
         snapshot.appendSections([.sequence, .button, .launchpad])
-        snapshot.appendItems(keyNotes2, toSection: .sequence)
+        snapshot.appendItems(sequenceNotes, toSection: .sequence)
         snapshot.appendItems(keyNotes3, toSection: .button)
         snapshot.appendItems(keyNotes, toSection: .launchpad)
         
@@ -175,9 +176,13 @@ extension LaunchpadViewController: UICollectionViewDelegate {
         
         if indexPath.section == 2 && LaunchpadViewController.locked == false {
             if selectedNote.image == UIImage(named: "key\(selectedNote.color)Off") {
+                // muda cor da tecla
                 selectedNote.turnOn()
-                // TODO: Adicionar na sequência
-                sequenceImg[indexPath.row] = selectedNote.image
+                
+                // adiciona no array de sequencia
+                sequence.addNote(note: selectedNote)
+                // atualiza array de notas da sequencia (conectado à collection)
+                self.sequenceNotes = sequence.notes
             }
         }
         
@@ -195,6 +200,33 @@ extension LaunchpadViewController: UICollectionViewDelegate {
         if let keyCell = collectionView.cellForItem(at: indexPath) as? LaunchpadCell {
             keyCell.keyOn.isHighlighted = false
             keyCell.keyOn.alpha = 1.0
+        }
+    }
+}
+
+
+extension LaunchpadViewController: ButtonCellDelegate {
+    func delete() {
+        // retira a nota do vetor
+        let erasedNote = sequence.eraseNote()
+        // atualiza as notas para aparecerem na collection
+        self.sequenceNotes = sequence.notes
+        
+        // acha a nota apagada e desliga ela do launchpad
+        for note in keyNotes {
+            if(note.name == erasedNote.name) {
+                note.turnOff()
+            }
+        }
+        
+        collectionView.reloadData()
+    }
+    
+    func play() {
+        for note in sequenceNotes {
+            if(note.name != "off" && note.name != "delete") {
+                print(note.name)
+            }
         }
     }
 }
