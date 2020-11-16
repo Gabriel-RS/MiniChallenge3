@@ -154,6 +154,8 @@ class Notas: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "unwind"){
             let vc = segue.destination as! LaunchpadViewController
+            vc.sequence.reset()
+            vc.sequenceNotes = vc.sequence.notes
             vc.board.setNotes(notes: notes)
             vc.keyNotes = notes
             vc.collectionView.reloadData()
