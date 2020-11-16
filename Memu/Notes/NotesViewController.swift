@@ -116,7 +116,7 @@ class Notas: UIViewController {
         defineNotas(btn: btnSol, note: noteSol)
         defineNotas(btn: btnLa, note: noteLa)
         defineNotas(btn: btnSi, note: noteSi)
-        self.dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "unwind", sender: self)
     }
     
     
@@ -125,9 +125,10 @@ class Notas: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "apresentaNotas"){
+        if(segue.identifier == "unwind"){
             let vc = segue.destination as! LaunchpadViewController
             vc.keyNotes = notes
+            vc.collectionView.reloadData()
         }
     }
     
@@ -153,6 +154,11 @@ class Notas: UIViewController {
     }
     
     
-
+    @IBAction func imprime(_ sender: Any) {
+        for note in notes {
+            print(note.color)
+        }
+    }
+    
     
 }

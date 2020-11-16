@@ -194,15 +194,18 @@
                         <outlet property="btnSi" destination="rqb-oO-0o5" id="4UZ-Iw-gtN"/>
                         <outlet property="btnSol" destination="iIW-9U-Q0k" id="JqR-r2-Wr5"/>
                         <outlet property="lblAviso" destination="mHu-w5-fMN" id="Tzv-v1-M6i"/>
+                        <segue destination="NIb-fE-CgP" kind="unwind" identifier="unwind" unwindAction="unwindSegueWithUnwindSegue:" id="K78-X2-fPk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXc-rA-jDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="NIb-fE-CgP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1178" y="895"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dwv-ml-tON">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OFk-9b-swO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="3Bg-3h-vFy" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1ji-9i-RuH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -290,7 +293,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="LWJ-B7-QjQ"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OFk-9b-swO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-455.07246376811599" y="180.80357142857142"/>
         </scene>
