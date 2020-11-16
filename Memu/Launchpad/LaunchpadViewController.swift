@@ -133,6 +133,7 @@ class LaunchpadViewController: UIViewController {
                 btnDeleteCell.delegate = self
                 return btnDeleteCell
             } else if IndexPath.section == 1  {
+                btnCell.delegate = self
                 return btnCell
             } else {
                 // se for seção da sequencia
@@ -169,7 +170,7 @@ class LaunchpadViewController: UIViewController {
 extension LaunchpadViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Cell: \(indexPath[1])")
-//        print(keyNotes[indexPath[1]].name)
+        print(keyNotes[indexPath[1]].name)
         
         let selectedNote = keyNotes[indexPath[1]]
         
@@ -210,8 +211,22 @@ extension LaunchpadViewController: ButtonCellDelegate {
         let erasedNote = sequence.eraseNote()
         // atualiza as notas para aparecerem na collection
         self.sequenceNotes = sequence.notes
-        // TODO: ATUALIZAR LAUNCHPAD
+        
+        // acha a nota apagada e desliga ela do launchpad
+        for note in keyNotes {
+            if(note.name == erasedNote.name) {
+                note.turnOff()
+            }
+        }
         
         collectionView.reloadData()
+    }
+    
+    func play() {
+        for note in sequenceNotes {
+            if(note.name != "off" && note.name != "delete") {
+                print(note.name)
+            }
+        }
     }
 }

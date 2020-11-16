@@ -20,6 +20,7 @@ class ButtonCell: UICollectionViewCell {
     
     @IBAction func btnPlay(_ sender: Any) {
         print("Play Button")
+        delegate?.play()
     }
     
     @IBAction func btnLock(_ sender: Any) {
@@ -36,4 +37,5 @@ class ButtonCell: UICollectionViewCell {
 
 protocol ButtonCellDelegate: class {
     func delete()
+    func play()
 }

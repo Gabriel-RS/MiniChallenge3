@@ -27,9 +27,10 @@ class Sequence {
     }
     
     func addNote(note: Note) {
+        // cria uma nota do tipo sequencia
+        let sequenceNote = Note(name: note.name, soundFile: note.soundFile, color: note.color, type: "sequence")
         // se a sequencia não estiver cheia
         if findFirstOffIndex() != -1 {
-            let sequenceNote = note
             sequenceNote.image = UIImage(named: "seq\(sequenceNote.color)On")!
             notes[findFirstOffIndex()] = sequenceNote
         }

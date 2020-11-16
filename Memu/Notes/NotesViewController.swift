@@ -127,7 +127,7 @@ class Notas: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "apresentaNotas"){
             let vc = segue.destination as! LaunchpadViewController
-                //vc.notesArray = notes
+            vc.keyNotes = notes
         }
     }
     
