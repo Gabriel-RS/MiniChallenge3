@@ -8,6 +8,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Notes-->
+        <scene sceneID="37b-qC-zZa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Notes" id="8U2-bt-FeL" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UOl-wr-DMA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-701" y="400"/>
+        </scene>
         <!--Launchpad View Controller-->
         <scene sceneID="dlM-5D-0ZM">
             <objects>
@@ -36,6 +44,7 @@
                                 <state key="normal" title="Note" image="note"/>
                                 <connections>
                                     <action selector="btnNotes:" destination="8gh-7E-tSa" eventType="touchUpInside" id="nTO-iH-W7h"/>
+                                    <segue destination="8U2-bt-FeL" kind="presentation" id="Tvi-iz-sXM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noR-Ku-2iL">

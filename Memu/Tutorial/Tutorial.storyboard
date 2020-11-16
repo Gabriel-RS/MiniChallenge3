@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YbS-vD-RU7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -47,6 +47,7 @@
                                 </state>
                                 <connections>
                                     <action selector="playTutorial:" destination="YbS-vD-RU7" eventType="touchUpInside" id="RFj-aO-Rfc"/>
+                                    <segue destination="khY-bw-dYd" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="RRY-xs-oQ6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Wav-XQ-c9t">
@@ -176,6 +177,16 @@ A seguir, entenda como funciona:</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPM-H4-75E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="192.75362318840581" y="-31.473214285714285"/>
+        </scene>
+        <!--Launchpad-->
+        <scene sceneID="Gbt-X3-0Sy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Launchpad" id="khY-bw-dYd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="68p-N0-uUi"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oze-b6-hcU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="941" y="187"/>
         </scene>
     </scenes>
     <resources>
