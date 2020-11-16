@@ -33,37 +33,6 @@ class Notas: UIViewController {
     
     override func viewDidLoad() {
         aux = notes.count
-        loadBttns()
-    }
-    
-    func loadBttns(){
-        for note in notes {
-            switch(note.name){
-            case "do":
-                btnDo.isSelected = true
-                break;
-            case "re":
-                btnRe.isSelected = true
-                break
-            case "mi":
-                btnMi.isSelected = true
-                break
-            case "fa":
-                btnFa.isSelected = true
-                break
-            case "sol":
-                btnSol.isSelected = true
-                break
-            case "la":
-                btnLa.isSelected = true
-                break;
-            case "si":
-                btnSi.isSelected = true
-                break
-            default:
-                break
-            }
-        }
     }
     
     
@@ -135,7 +104,19 @@ class Notas: UIViewController {
         
     }
     
+    func checkMin() -> Bool{
+        if aux < 4 {
+            lblAviso.text = "Selecione 4 notas"
+            lblAviso.isHidden = false
+            return false
+        } else {
+            lblAviso.isHidden = true
+            return true
+        }
+    }
+    
     @IBAction func btnSegue(_ sender: Any) {
+        if checkMin() {
         defineNotas(btn: btnDo, note: noteDo)
         defineNotas(btn: btnRe, note: noteRe)
         defineNotas(btn: btnMi, note: noteMi)
@@ -144,6 +125,7 @@ class Notas: UIViewController {
         defineNotas(btn: btnLa, note: noteLa)
         defineNotas(btn: btnSi, note: noteSi)
         performSegue(withIdentifier: "unwind", sender: self)
+        } 
     }
     
     
