@@ -12,7 +12,7 @@ import AVFoundation
 class Notas: UIViewController {
     
     var notes:[Note] = []
-    var aux:Int = 4
+    var aux:Int = 0
     @IBOutlet weak var btnDo: UIButton!
     @IBOutlet weak var btnRe: UIButton!
     @IBOutlet weak var btnMi: UIButton!
@@ -32,12 +32,39 @@ class Notas: UIViewController {
     var noteSi = Note(name: "si", soundFile: "marimba_nota_do.mp3", color: "Yellow", type: "launchpad" )
     
     override func viewDidLoad() {
-        
-        
-        
+        aux = notes.count
+        loadBttns()
     }
     
-
+    func loadBttns(){
+        for note in notes {
+            switch(note.name){
+            case "do":
+                btnDo.isSelected = true
+                break;
+            case "re":
+                btnRe.isSelected = true
+                break
+            case "mi":
+                btnMi.isSelected = true
+                break
+            case "fa":
+                btnFa.isSelected = true
+                break
+            case "sol":
+                btnSol.isSelected = true
+                break
+            case "la":
+                btnLa.isSelected = true
+                break;
+            case "si":
+                btnSi.isSelected = true
+                break
+            default:
+                break
+            }
+        }
+    }
     
     
     @IBAction func btnDo(_ sender: UIButton) {
@@ -116,7 +143,7 @@ class Notas: UIViewController {
         defineNotas(btn: btnSol, note: noteSol)
         defineNotas(btn: btnLa, note: noteLa)
         defineNotas(btn: btnSi, note: noteSi)
-        self.dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "unwind", sender: self)
     }
     
     
@@ -125,9 +152,13 @@ class Notas: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "apresentaNotas"){
+        if(segue.identifier == "unwind"){
             let vc = segue.destination as! LaunchpadViewController
+            vc.sequence.reset()
+            vc.sequenceNotes = vc.sequence.notes
+            vc.board.setNotes(notes: notes)
             vc.keyNotes = notes
+            vc.collectionView.reloadData()
         }
     }
     
@@ -153,6 +184,11 @@ class Notas: UIViewController {
     }
     
     
-
+    @IBAction func imprime(_ sender: Any) {
+        for note in notes {
+            print(note.color)
+        }
+    }
+    
     
 }
