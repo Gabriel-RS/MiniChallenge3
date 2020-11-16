@@ -15,7 +15,7 @@ class Board {
     var size: Int
     var instrument: String
     
-    init(size: Int, instrument: String, isLaunchpad: Bool) {
+    init(size: Int, instrument: String, type: String) {
         self.size = size
         self.instrument = instrument
         self.launchpad = [Note]()
@@ -23,12 +23,25 @@ class Board {
         let possibleNotes = ["do", "re", "mi", "fa", "sol", "la", "si"]
         
         let possibleColors = ["Blue","Green","Red","Pink","Purple", "Orange","Yellow"]
+        
+        for i in 0..<size {
+            let note = Note(name: possibleNotes[i], soundFile: "\(instrument)_nota_\(possibleNotes[i])", color: possibleColors[i], type: type)
+            launchpad.append(note)
+        }
 
+    }
+    
+    // reseta como se fosse primeira vez jogando launchpad (do re mi fa)
+    func reset() {
+        self.launchpad = [Note]()
+        let possibleNotes = ["do", "re", "mi", "fa", "sol", "la", "si"]
+        
+        let possibleColors = ["Blue","Green","Red","Pink","Purple", "Orange","Yellow"]
+        
         for i in 0..<size {
             let note = Note(name: possibleNotes[i], soundFile: "\(instrument)_nota_\(possibleNotes[i])", color: possibleColors[i], type: "launchpad")
             launchpad.append(note)
         }
-
     }
     
     // para ser chamado quando alterar as notas musicais
