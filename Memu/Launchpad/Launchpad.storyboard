@@ -132,6 +132,9 @@
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <size key="customSize" width="414" height="63"/>
+                                        <connections>
+                                            <outlet property="btnLock" destination="aa6-vE-JbY" id="Tnf-JZ-vzk"/>
+                                        </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LaunchpadCell" id="k5u-Cd-eKh" customClass="LaunchpadCell" customModule="Memu" customModuleProvider="target">
                                         <rect key="frame" x="142" y="174" width="130" height="120"/>
