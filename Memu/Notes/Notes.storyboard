@@ -21,9 +21,6 @@
                                 <rect key="frame" x="172" y="407" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="6aB-an-ka7" kind="show" id="aCe-yn-IYx"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ss3-1M-rAg"/>
@@ -31,7 +28,6 @@
                     </view>
                     <connections>
                         <segue destination="3Bg-3h-vFy" kind="show" identifier="segueCollection" id="tM6-XL-dUF"/>
-                        <segue destination="6aB-an-ka7" kind="show" identifier="segueNotas" id="fbj-ZQ-U1N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ogf-ca-695" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -43,11 +39,11 @@
             <objects>
                 <viewController id="6aB-an-ka7" customClass="Notas" customModule="Memu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9V8-fe-BGg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psM-U2-fAx">
-                                <rect key="frame" x="28" y="220" width="105" height="105"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psM-U2-fAx">
+                                <rect key="frame" x="28" y="274" width="105" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="105" id="F4B-Rv-x2l"/>
                                 </constraints>
@@ -57,8 +53,8 @@
                                     <action selector="btnDo:" destination="6aB-an-ka7" eventType="touchUpInside" id="aWe-8j-zUp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBU-R3-Ml3">
-                                <rect key="frame" x="155" y="220" width="104" height="105"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBU-R3-Ml3">
+                                <rect key="frame" x="155" y="274" width="104" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="104" id="W1V-6N-Anc"/>
                                 </constraints>
@@ -68,16 +64,16 @@
                                     <action selector="btnRe:" destination="6aB-an-ka7" eventType="touchUpInside" id="KAY-Pg-XJw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFp-8d-i2o">
-                                <rect key="frame" x="280" y="220" width="106" height="105"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFp-8d-i2o">
+                                <rect key="frame" x="280" y="274" width="106" height="105"/>
                                 <state key="normal" backgroundImage="pickRedOff"/>
                                 <state key="selected" backgroundImage="pickRedOn"/>
                                 <connections>
                                     <action selector="btnMi:" destination="6aB-an-ka7" eventType="touchUpInside" id="aB5-D7-Tcy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFa-It-kQi">
-                                <rect key="frame" x="28" y="360" width="105" height="105"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFa-It-kQi">
+                                <rect key="frame" x="28" y="414" width="105" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="105" id="vcw-me-q2l"/>
                                 </constraints>
@@ -88,7 +84,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIW-9U-Q0k">
-                                <rect key="frame" x="155" y="360" width="104" height="105"/>
+                                <rect key="frame" x="155" y="414" width="104" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="104" id="DlI-SN-AaK"/>
                                 </constraints>
@@ -99,7 +95,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAe-PO-TSD">
-                                <rect key="frame" x="280" y="360" width="106" height="105"/>
+                                <rect key="frame" x="280" y="414" width="106" height="105"/>
                                 <state key="normal" backgroundImage="pickOrangeOff"/>
                                 <state key="selected" backgroundImage="pickOrangeOn"/>
                                 <connections>
@@ -107,7 +103,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqb-oO-0o5">
-                                <rect key="frame" x="155" y="500" width="104" height="105"/>
+                                <rect key="frame" x="155" y="554" width="104" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="104" id="g6Z-lO-GZA"/>
                                 </constraints>
@@ -118,13 +114,13 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Só é possível selecionar 4 notas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHu-w5-fMN">
-                                <rect key="frame" x="79" y="125" width="244" height="21"/>
+                                <rect key="frame" x="79" y="179" width="244" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.92711073160000002" green="0.33290818329999999" blue="0.39214605089999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.92711073160000002" green="0.33290818329999999" blue="0.39214605089999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNi-Nk-pL6">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="54" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="97p-DP-AH4"/>
                                 </constraints>
@@ -205,7 +201,6 @@
         <!--View Controller-->
         <scene sceneID="dwv-ml-tON">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OFk-9b-swO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="3Bg-3h-vFy" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1ji-9i-RuH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -293,13 +288,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="LWJ-B7-QjQ"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OFk-9b-swO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-455.07246376811599" y="180.80357142857142"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="aCe-yn-IYx"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="pickBlueOff" width="161" height="161"/>
         <image name="pickBlueOn" width="158" height="158"/>
