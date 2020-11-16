@@ -55,6 +55,7 @@ class LaunchpadViewController: UIViewController {
     
     @IBAction func btnMenu(_ sender: Any) {
         print("Menu Button")
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func btnNotes(_ sender: Any) {
         print("Notes Button")
@@ -134,6 +135,8 @@ class LaunchpadViewController: UIViewController {
                 return btnDeleteCell
             } else if IndexPath.section == 1  {
                 btnCell.delegate = self
+
+                btnCell.lockImg()
                 return btnCell
             } else {
                 // se for seção da sequencia
@@ -175,23 +178,23 @@ class LaunchpadViewController: UIViewController {
 extension LaunchpadViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Cell: \(indexPath[1])")
-        print(keyNotes[indexPath[1]].name)
-        
-        let selectedNote = keyNotes[indexPath[1]]
         
         if indexPath.section == 2 && LaunchpadViewController.locked == false {
-            if selectedNote.image == UIImage(named: "key\(selectedNote.color)Off") {
+            print(keyNotes[indexPath[1]].name)
+            if keyNotes[indexPath[1]].image == UIImage(named: "key\(keyNotes[indexPath[1]].color)Off") {
                 // muda cor da tecla
-                selectedNote.turnOn()
+                keyNotes[indexPath[1]].turnOn()
                 
                 // adiciona no array de sequencia
-                sequence.addNote(note: selectedNote)
+                sequence.addNote(note: keyNotes[indexPath[1]])
                 // atualiza array de notas da sequencia (conectado à collection)
                 self.sequenceNotes = sequence.notes
+                
+                collectionView.reloadData()
             }
         }
         
-        collectionView.reloadData()
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {

@@ -26,6 +26,18 @@ class Sequence {
         notes.append(deleteNote)
     }
     
+    func reset() {
+        self.notes = [Note]()
+        for _ in 0..<size {
+            let note = Note(name: "off", soundFile: "", color: "", type: "sequence")
+            notes.append(note)
+        }
+        
+        // adiciona botão de deletar como ultimo elemento do array (fora do tamanho)
+        let deleteNote = Note(name: "delete", soundFile: "", color: "", type: "delete")
+        notes.append(deleteNote)
+    }
+    
     func addNote(note: Note) {
         // cria uma nota do tipo sequencia
         let sequenceNote = Note(name: note.name, soundFile: note.soundFile, color: note.color, type: "sequence")
