@@ -39,10 +39,13 @@ class Sequence {
     func eraseNote() -> Note{
         let blankNote = Note(name: "off", soundFile: "", color: "", type: "sequence")
         let lastNoteIndex = findLastNoteIndex() - 1
-        let erasedNote = notes[lastNoteIndex]
-        notes[lastNoteIndex] = blankNote
+        if(lastNoteIndex != -1) {
+            let erasedNote = notes[lastNoteIndex]
+            notes[lastNoteIndex] = blankNote
+            return erasedNote
+        }
         
-        return erasedNote
+        return blankNote
     }
     
     // acha o primeiro elemento cujo nome é off para nota ser adicionada no lugar dele
