@@ -157,6 +157,40 @@ class PuzzleViewController: UIViewController {
 
         dataSource.apply(snapshot, animatingDifferences: false)
     }
+    
+    
+    func compareSequence() -> Array<Note>{
+        var auxArray: [Note] = []
+        var count: Int = 0
+        let wrongNote = Note(name: "wrong", soundFile: "none", color: "Grey", type: "invalid")
+        for launchpadNote in launchpadSequence {
+                if launchpadNote == sequenceNotes[count] {
+                    auxArray.append(sequenceNotes[count])
+                } else {
+                    auxArray.append(wrongNote)
+                }
+            count += 1
+        }
+        return auxArray
+    }
+    
+    
+    func checkVictory() -> Bool {
+        let comparedArray: [Note] = compareSequence()
+        var aux: Int = 0
+        for i in 0...comparedArray.count-1{
+            if comparedArray[i].name != "wrong" {
+                //codigo para mudar cor da sequencia = cor da nota aqui
+                aux += 1
+            } else {
+                //codigo para mudar cor da sequencia para cinza
+            }
+            
+        }
+        
+        //retorna pra saber e ganhou ou nao
+        return aux == 4 ? true : false
+    }
 
 }
 

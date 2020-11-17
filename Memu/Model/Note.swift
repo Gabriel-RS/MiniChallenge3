@@ -32,6 +32,8 @@ class Note: Hashable {
             return UIImage(named: "keyGrayOff")!
         case "delete":
             return UIImage(named: "delete")!
+        case "invalid":
+            return UIImage(named: "seqGrayOn")!
         default:
             return UIImage(named: "key\(self.color)Off")!
         }

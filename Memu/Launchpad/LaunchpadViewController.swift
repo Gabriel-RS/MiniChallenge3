@@ -170,6 +170,14 @@ class LaunchpadViewController: UIViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "go2Puzzle" {
+            let vc = segue.destination as? PuzzleViewController
+            vc?.puzzleBoard.setPuzzleNotes(notes: keyNotes)
+            vc?.launchpadSequence = sequenceNotes
+        }
+    }
+    
 
 }
 
