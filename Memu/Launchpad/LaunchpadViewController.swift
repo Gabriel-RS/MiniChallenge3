@@ -241,6 +241,9 @@ extension LaunchpadViewController: ButtonCellDelegate {
             }
         }
         
+        // se deletar qualquer nota, a sequencia já não vai estar cheia
+        btnCheck.isEnabled = false
+        
         collectionView.reloadData()
     }
     
