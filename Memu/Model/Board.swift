@@ -48,6 +48,18 @@ class Board {
     func setNotes(notes: [Note]) {
         self.launchpad = notes
     }
+    
+    // para ser chamado quando passar do launchpad para o puzzle
+    func setPuzzleNotes(notes: [Note]) {
+        let puzzleNotes = notes
+        
+        // atualiza as imagens sem alterar a cor
+        for note in puzzleNotes {
+            note.image = UIImage(named: "keyGrayOff")!
+        }
+        
+        self.launchpad = puzzleNotes
+    }
 
     func getNotes() -> [Note] {
         return self.launchpad
