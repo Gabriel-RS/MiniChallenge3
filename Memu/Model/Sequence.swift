@@ -87,4 +87,13 @@ class Sequence {
         
         return index
     }
+    
+    func isFull() -> Bool {
+        for note in notes {
+            if note.name == "off" && note.name != "delete" {
+                return false
+            }
+        }
+        return true
+    }
 }

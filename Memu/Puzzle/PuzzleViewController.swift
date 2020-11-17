@@ -14,6 +14,7 @@ class PuzzleViewController: UIViewController {
     @IBOutlet weak var ear3: UIImageView!
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var btnCheck: UIButton!
     
     enum Section {
         case sequence
@@ -65,6 +66,7 @@ class PuzzleViewController: UIViewController {
     
     @IBAction func btnCheck(_ sender: Any) {
         print("Check Button")
+        print(checkVictory())
     }
     
     @IBAction func btnMenu(_ sender: Any) {
@@ -222,6 +224,10 @@ extension PuzzleViewController: UICollectionViewDelegate {
                 sequence.addNote(note: puzzleNotes[indexPath[1]])
                 // atualiza array de notas da sequencia (conectado à collection)
                 self.sequenceNotes = sequence.notes
+                
+                if sequence.isFull() {
+                    btnCheck.isEnabled = true
+                }
                 
                 collectionView.reloadData()
             }
