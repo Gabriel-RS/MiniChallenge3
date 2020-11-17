@@ -10,6 +10,7 @@ import UIKit
 class LaunchpadViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var btnCheck: UIButton!
     
     var dataSource: UICollectionViewDiffableDataSource<Section, Note>!
     
@@ -62,6 +63,7 @@ class LaunchpadViewController: UIViewController {
     }
     @IBAction func btnCheck(_ sender: Any) {
         print("Check Button")
+        performSegue(withIdentifier: "go2Puzzle", sender: self)
     }
     
     func getSequenceNotes() -> [Note]{
@@ -198,6 +200,10 @@ extension LaunchpadViewController: UICollectionViewDelegate {
                 // atualiza array de notas da sequencia (conectado à collection)
                 self.sequenceNotes = sequence.notes
                 
+                if sequence.isFull() {
+                    btnCheck.isEnabled = true
+                }
+                
                 collectionView.reloadData()
             }
         }
@@ -234,6 +240,9 @@ extension LaunchpadViewController: ButtonCellDelegate {
                 note.turnOff()
             }
         }
+        
+        // se deletar qualquer nota, a sequencia já não vai estar cheia
+        btnCheck.isEnabled = false
         
         collectionView.reloadData()
     }

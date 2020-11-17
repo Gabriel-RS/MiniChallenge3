@@ -14,6 +14,7 @@ class PuzzleViewController: UIViewController {
     @IBOutlet weak var ear3: UIImageView!
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var btnCheck: UIButton!
     
     enum Section {
         case sequence
@@ -21,11 +22,11 @@ class PuzzleViewController: UIViewController {
         case puzzle
     }
     
-    // cria um tabuleiro para ser exibido (launchpad) e suas notas
+    // cria um tabuleiro puzzle para ser exibido e suas notas (do, re, mi, fa)
     var puzzleBoard = Board(size: 4, instrument: "marimba", type: "puzzle")
     var puzzleNotes = [Note]()
     
-    // configura a sequencia e suas notas
+    // configura a sequencia do puzzle e suas notas
     var sequence = Sequence(size: 4)
     var sequenceNotes = [Note]()
     
@@ -52,13 +53,20 @@ class PuzzleViewController: UIViewController {
     }
     
     // MARK: - Button
-    
+    // toca a sequencia criada no launchpad
     @IBAction func btnPlay(_ sender: Any) {
         print("Play Button")
+        
+        for note in launchpadSequence {
+            if(note.name != "delete") {
+                print(note.name)
+            }
+        }
     }
     
     @IBAction func btnCheck(_ sender: Any) {
         print("Check Button")
+        print(checkVictory())
     }
     
     @IBAction func btnMenu(_ sender: Any) {
@@ -130,16 +138,21 @@ class PuzzleViewController: UIViewController {
             guard let puzzleCell = collectionView.dequeueReusableCell(withReuseIdentifier: LaunchpadCell.reuseIdentifier, for: IndexPath) as? LaunchpadCell else { fatalError("Cannot create key cell") }
 
             if self.sequenceNotes[IndexPath.row].image == UIImage(named: "delete")! {
+                btnDeleteCell.delegate = self
                 return btnDeleteCell
             } else if IndexPath.section == 1  {
+                // botão das ouvidas
+                btnCell.delegate = self
                 return btnCell
             } else {
                 if IndexPath.section == 0 {
+                    // se for elemento da sequencia
                     print(IndexPath)
                     puzzleCell.setNoteKey(note: self.sequenceNotes[IndexPath.row])
                     return puzzleCell
 
                 } else {
+                    // se for tecla do puzzle
                     let note = self.puzzleNotes[IndexPath.row]
                     puzzleCell.setNoteKey(note: note)
                     return puzzleCell
@@ -194,15 +207,16 @@ class PuzzleViewController: UIViewController {
 
 }
 
-// MARK: - Delegate
+// MARK: - Delegates
 
 extension PuzzleViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Cell: \(indexPath[1])")
         
+        // se for da seção de tecla
         if indexPath.section == 2  {
             print(puzzleNotes[indexPath[1]].name)
-            if puzzleNotes[indexPath[1]].image == UIImage(named: "key\(puzzleNotes[indexPath[1]].color)Off") {
+            if puzzleNotes[indexPath[1]].image == UIImage(named: "keyGrayOff") {
                 // muda cor da tecla
                 puzzleNotes[indexPath[1]].turnOn()
                 
@@ -210,6 +224,10 @@ extension PuzzleViewController: UICollectionViewDelegate {
                 sequence.addNote(note: puzzleNotes[indexPath[1]])
                 // atualiza array de notas da sequencia (conectado à collection)
                 self.sequenceNotes = sequence.notes
+                
+                if sequence.isFull() {
+                    btnCheck.isEnabled = true
+                }
                 
                 collectionView.reloadData()
             }
@@ -227,6 +245,36 @@ extension PuzzleViewController: UICollectionViewDelegate {
         if let keyCell = collectionView.cellForItem(at: indexPath) as? LaunchpadCell {
             keyCell.keyOn.isHighlighted = false
             keyCell.keyOn.alpha = 1.0
+        }
+    }
+}
+
+extension PuzzleViewController: ButtonCellDelegate {
+    func delete() {
+        // retira a nota do vetor
+        let erasedNote = sequence.eraseNote()
+        // atualiza as notas para aparecerem na collection
+        self.sequenceNotes = sequence.notes
+        
+        // acha a nota apagada e desliga ela do launchpad
+        for note in puzzleNotes {
+            if(note.name == erasedNote.name) {
+                note.turnOff()
+            }
+        }
+        
+        // se deletar qualquer nota, a sequencia já não vai estar cheia
+        btnCheck.isEnabled = false
+        
+        collectionView.reloadData()
+    }
+    
+    // toca a sequencia criada no puzzle
+    func play() {
+        for note in sequenceNotes {
+            if(note.name != "off" && note.name != "delete") {
+                print(note.name)
+            }
         }
     }
 }
