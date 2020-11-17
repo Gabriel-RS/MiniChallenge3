@@ -41,9 +41,18 @@ class Sequence {
     func addNote(note: Note) {
         // cria uma nota do tipo sequencia
         let sequenceNote = Note(name: note.name, soundFile: note.soundFile, color: note.color, type: "sequence")
+        
         // se a sequencia não estiver cheia
         if findFirstOffIndex() != -1 {
-            sequenceNote.image = UIImage(named: "seq\(sequenceNote.color)On")!
+            // se for tecla do launchpad
+            if(note.image == UIImage(named: "key\(note.color)On")) {
+                sequenceNote.image = UIImage(named: "seq\(sequenceNote.color)On")!
+                
+            } else {
+                // se for tecla do puzzle
+                sequenceNote.image = UIImage(named: "seqGrayOn")!
+            }
+            
             notes[findFirstOffIndex()] = sequenceNote
         }
     }
