@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Explorador" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wa9-gJ-Jst">
-                                <rect key="frame" x="141" y="102" width="133" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Explorador" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wa9-gJ-Jst">
+                                <rect key="frame" x="23" y="102" width="371" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -76,17 +76,25 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1.0"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ayY-0h-Evh">
-                                <rect key="frame" x="32" y="454.5" width="351" height="2.5"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qIM-MC-SJS">
+                                <rect key="frame" x="20" y="446" width="332" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8w-24-Yxe">
-                                <rect key="frame" x="32" y="473" width="362" height="21"/>
+                                <rect key="frame" x="23" y="479" width="362" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulF-hR-xii">
+                                <rect key="frame" x="349" y="426" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="progressoPadrao"/>
+                                <connections>
+                                    <action selector="btCheckProgress:" destination="LTh-dC-4fT" eventType="touchUpInside" id="nZR-U5-waD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MDY-pn-lMg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -94,9 +102,10 @@
                     <connections>
                         <outlet property="ivImage" destination="0sN-GW-Aiz" id="Kev-TX-xAy"/>
                         <outlet property="lbDescription" destination="apA-AY-5Wc" id="N1s-WR-SaA"/>
+                        <outlet property="lbProgress" destination="TRV-7C-BVa" id="5Cw-ai-JM1"/>
                         <outlet property="lbScore" destination="Q8w-24-Yxe" id="i2s-ON-Tnq"/>
                         <outlet property="lbTitle" destination="wa9-gJ-Jst" id="hJG-Jh-UbS"/>
-                        <outlet property="pvPlayer" destination="ayY-0h-Evh" id="3mP-Ne-TWz"/>
+                        <outlet property="progressPlayer" destination="qIM-MC-SJS" id="ZkX-Ve-xif"/>
                         <outlet property="pvProgress" destination="xZh-U9-ouP" id="KdB-j0-AB7"/>
                     </connections>
                 </viewController>
@@ -106,6 +115,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="progressoPadrao" width="360.17999267578125" height="368.16000366210938"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
