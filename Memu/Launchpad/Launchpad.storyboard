@@ -134,6 +134,7 @@
                                         <size key="customSize" width="414" height="63"/>
                                         <connections>
                                             <outlet property="btnLock" destination="aa6-vE-JbY" id="Tnf-JZ-vzk"/>
+                                            <outlet property="btnPlay" destination="D3Z-nG-SSe" id="meX-JO-Wlv"/>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LaunchpadCell" id="k5u-Cd-eKh" customClass="LaunchpadCell" customModule="Memu" customModuleProvider="target">

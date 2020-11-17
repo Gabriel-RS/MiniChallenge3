@@ -14,6 +14,7 @@ class ButtonCell: UICollectionViewCell {
     weak var delegate: ButtonCellDelegate?
 
     @IBOutlet weak var btnLock: UIButton!
+    @IBOutlet weak var btnPlay: UIButton!
     
     let locked = LaunchpadViewController.locked
     
@@ -44,7 +45,6 @@ class ButtonCell: UICollectionViewCell {
     @IBAction func btnPlay(_ sender: Any) {
         print("Play Button")
         delegate?.play()
-
     }
     
     //Puzzle
