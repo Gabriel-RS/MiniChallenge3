@@ -177,12 +177,14 @@ class PuzzleViewController: UIViewController {
         var count: Int = 0
         let wrongNote = Note(name: "wrong", soundFile: "none", color: "Grey", type: "invalid")
         for launchpadNote in launchpadSequence {
-                if launchpadNote == sequenceNotes[count] {
+            if launchpadNote.name != "delete"{
+            if launchpadNote.name == sequenceNotes[count].name {
                     auxArray.append(sequenceNotes[count])
                 } else {
                     auxArray.append(wrongNote)
                 }
             count += 1
+        }
         }
         return auxArray
     }
