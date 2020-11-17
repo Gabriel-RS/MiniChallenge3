@@ -21,11 +21,34 @@ class PuzzleViewController: UIViewController {
         case puzzle
     }
     
+    // cria um tabuleiro para ser exibido (launchpad) e suas notas
+    var puzzleBoard = Board(size: 4, instrument: "marimba", type: "puzzle")
+    var puzzleNotes = [Note]()
+    
+    // configura a sequencia e suas notas
+    var sequence = Sequence(size: 4)
+    var sequenceNotes = [Note]()
+    
+    // recebe a sequencia de notas do launchpad
+    var launchpadSequence = [Note]()
+    
+    var board3 = Board(size: 1, instrument: "marimba", type: "puzzle")
+    var keyNotes3 = [Note]()
+    
     var dataSource: UICollectionViewDiffableDataSource<Section, Note>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.delegate = self
         collectionView.collectionViewLayout = configLayout()
+        
+        puzzleNotes = puzzleBoard.launchpad
+        sequenceNotes = sequence.notes
+        
+        // seção button
+        keyNotes3 = board3.launchpad
+        
+        configDataSource()
     }
     
     // MARK: - Button
@@ -97,44 +120,44 @@ class PuzzleViewController: UIViewController {
     
     // MARK: - Collection View Data Source
     
-//    func configDataSource() {
-//        dataSource = UICollectionViewDiffableDataSource<Section, Note>(collectionView: self.collectionView, cellProvider: { (collectionView, IndexPath, image) -> UICollectionViewCell? in
-//
-//            guard let btnDeleteCell = collectionView.dequeueReusableCell(withReuseIdentifier: ButtonCell.reuseIdentifierDelete, for: IndexPath) as? ButtonCell else { fatalError("Cannot create delete button cell") }
-//
-//            guard let btnCell = collectionView.dequeueReusableCell(withReuseIdentifier: ButtonCell.reuseIdentifier, for: IndexPath) as? ButtonCell else { fatalError("Cannot create button cell") }
-//
-//            guard let puzzleCell = collectionView.dequeueReusableCell(withReuseIdentifier: LaunchpadCell.reuseIdentifier, for: IndexPath) as? LaunchpadCell else { fatalError("Cannot create key cell") }
-//
-//            if self.sequenceImg[IndexPath.row] == UIImage(named: "delete")! {
-//                return btnDeleteCell
-//            } else if IndexPath.section == 1  {
-//                return btnCell
-//            } else {
-//                if IndexPath.section == 0 {
-//                    print(IndexPath)
-//                    puzzleCell.keyOn.image = self.sequenceImg[IndexPath.row]
-//                    return puzzleCell
-//
-//                } else {
-//                    let note = self.keyNotes[IndexPath.row]
-//                    puzzleCell.setNoteKey(note: note)
-//                    return puzzleCell
-//                }
-//            }
-//
-//        })
-//
-//        var snapshot = NSDiffableDataSourceSnapshot<Section, Note>()
-//        snapshot.appendSections([.sequence, .button, .puzzle])
-//        snapshot.appendItems(keyNotes2, toSection: .sequence)
-//        snapshot.appendItems(keyNotes3, toSection: .button)
-//        snapshot.appendItems(keyNotes, toSection: .puzzle)
-//
-//
-//        dataSource.apply(snapshot, animatingDifferences: false)
-//    }
-//
+    func configDataSource() {
+        dataSource = UICollectionViewDiffableDataSource<Section, Note>(collectionView: self.collectionView, cellProvider: { (collectionView, IndexPath, image) -> UICollectionViewCell? in
+
+            guard let btnDeleteCell = collectionView.dequeueReusableCell(withReuseIdentifier: ButtonCell.reuseIdentifierDelete, for: IndexPath) as? ButtonCell else { fatalError("Cannot create delete button cell") }
+
+            guard let btnCell = collectionView.dequeueReusableCell(withReuseIdentifier: ButtonCell.reuseIdentifier, for: IndexPath) as? ButtonCell else { fatalError("Cannot create button cell") }
+
+            guard let puzzleCell = collectionView.dequeueReusableCell(withReuseIdentifier: LaunchpadCell.reuseIdentifier, for: IndexPath) as? LaunchpadCell else { fatalError("Cannot create key cell") }
+
+            if self.sequenceNotes[IndexPath.row].image == UIImage(named: "delete")! {
+                return btnDeleteCell
+            } else if IndexPath.section == 1  {
+                return btnCell
+            } else {
+                if IndexPath.section == 0 {
+                    print(IndexPath)
+                    puzzleCell.setNoteKey(note: self.sequenceNotes[IndexPath.row])
+                    return puzzleCell
+
+                } else {
+                    let note = self.puzzleNotes[IndexPath.row]
+                    puzzleCell.setNoteKey(note: note)
+                    return puzzleCell
+                }
+            }
+
+        })
+
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Note>()
+        snapshot.appendSections([.sequence, .button, .puzzle])
+        snapshot.appendItems(sequenceNotes, toSection: .sequence)
+        snapshot.appendItems(keyNotes3, toSection: .button)
+        snapshot.appendItems(puzzleNotes, toSection: .puzzle)
+
+
+        dataSource.apply(snapshot, animatingDifferences: false)
+    }
+
 }
 
 // MARK: - Delegate
@@ -142,21 +165,23 @@ class PuzzleViewController: UIViewController {
 extension PuzzleViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Cell: \(indexPath[1])")
-//        print(keyNotes[indexPath[1]].name)
-//
-//        let selectedNote = keyNotes[indexPath[1]]
-//
-//        if indexPath.section == 2 && LaunchpadViewController.locked == false {
-//            if selectedNote.image == UIImage(named: "key\(selectedNote.color)Off") {
-//                selectedNote.turnOn()
-//                // TODO: Adicionar na sequência
-//                sequenceImg[indexPath.row] = selectedNote.image
-//            }
-//        }
-//
-//        collectionView.reloadData()
+        
+        if indexPath.section == 2  {
+            print(puzzleNotes[indexPath[1]].name)
+            if puzzleNotes[indexPath[1]].image == UIImage(named: "key\(puzzleNotes[indexPath[1]].color)Off") {
+                // muda cor da tecla
+                puzzleNotes[indexPath[1]].turnOn()
+                
+                // adiciona no array de sequencia
+                sequence.addNote(note: puzzleNotes[indexPath[1]])
+                // atualiza array de notas da sequencia (conectado à collection)
+                self.sequenceNotes = sequence.notes
+                
+                collectionView.reloadData()
+            }
+        }
     }
-    
+        
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
         if let keyCell = collectionView.cellForItem(at: indexPath) as? LaunchpadCell {
             keyCell.keyOn.isHighlighted = true
