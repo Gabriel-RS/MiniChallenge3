@@ -28,6 +28,8 @@ class Note: Hashable {
         switch(type){
         case "sequence":
             return UIImage(named: "seqOff")!
+        case "sequenceOn":
+            return UIImage(named: "seq\(self.color)On")!
         case "puzzle":
             return UIImage(named: "keyGrayOff")!
         case "delete":

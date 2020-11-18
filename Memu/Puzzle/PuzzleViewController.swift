@@ -66,7 +66,28 @@ class PuzzleViewController: UIViewController {
     
     @IBAction func btnCheck(_ sender: Any) {
         print("Check Button")
-        print(checkVictory())
+        let sequenceResult: [Note] = generateResultSequence()
+        
+        if checkVictory(comparedArray: sequenceResult) {
+            performSegue(withIdentifier: "conclusionSegue", sender: self)
+        } else {
+            // atualiza sequencia do tabuleiro e sequencia conectada à collection view
+            sequence.notes = sequenceResult
+            sequence.notes.append(Note(name: "delete", soundFile: "", color: "", type: "delete"))
+            sequenceNotes = sequenceResult
+            sequenceNotes.append(Note(name: "delete", soundFile: "", color: "", type: "delete"))
+            
+            self.puzzleBoard.turnOffWrong(notes: sequenceResult)
+            collectionView.reloadData()
+        }
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "conclusionSegue" {
+            let vc = segue.destination as! CompletionViewController
+            vc.resultSequence = generateResultSequence()
+        }
     }
     
     @IBAction func btnMenu(_ sender: Any) {
@@ -172,39 +193,32 @@ class PuzzleViewController: UIViewController {
     }
     
     
-    func compareSequence() -> Array<Note>{
-        var auxArray: [Note] = []
+    func generateResultSequence() -> Array<Note>{
+        var result: [Note] = []
         var count: Int = 0
-        let wrongNote = Note(name: "wrong", soundFile: "none", color: "Grey", type: "invalid")
+        
         for launchpadNote in launchpadSequence {
-            if launchpadNote.name != "delete"{
-            if launchpadNote.name == sequenceNotes[count].name {
-                    auxArray.append(sequenceNotes[count])
+            if launchpadNote.name != "delete" {
+                if launchpadNote.name == sequenceNotes[count].name {
+                    let rightNote = Note(name: launchpadNote.name, soundFile: launchpadNote.soundFile, color: launchpadNote.color, type: "sequenceOn")
+                    result.append(rightNote)
                 } else {
-                    auxArray.append(wrongNote)
+                    let wrongNote = Note(name: "wrong", soundFile: "none", color: "Gray", type: "sequence")
+                    result.append(wrongNote)
                 }
-            count += 1
+                count += 1
+            }
         }
-        }
-        return auxArray
+        return result
     }
     
-    
-    func checkVictory() -> Bool {
-        let comparedArray: [Note] = compareSequence()
-        var aux: Int = 0
-        for i in 0...comparedArray.count-1{
-            if comparedArray[i].name != "wrong" {
-                //codigo para mudar cor da sequencia = cor da nota aqui
-                aux += 1
-            } else {
-                //codigo para mudar cor da sequencia para cinza
+    func checkVictory(comparedArray: [Note]) -> Bool {
+        for note in comparedArray {
+            if note.name == "wrong" {
+                return false
             }
-            
         }
-        
-        //retorna pra saber e ganhou ou nao
-        return aux == 4 ? true : false
+        return true
     }
 
 }

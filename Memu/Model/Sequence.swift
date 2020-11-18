@@ -54,6 +54,7 @@ class Sequence {
             }
             
             notes[findFirstOffIndex()] = sequenceNote
+            
         }
     }
     
@@ -72,7 +73,7 @@ class Sequence {
     // acha o primeiro elemento cujo nome é off para nota ser adicionada no lugar dele
     func findFirstOffIndex() -> Int{
         for i in 0..<size {
-            if notes[i].name == "off" {
+            if notes[i].name == "off" || notes[i].name == "wrong" {
                 return i
             }
         }

@@ -12,4 +12,10 @@ class SequenceCell: UICollectionViewCell {
     
     @IBOutlet weak var image: UIImageView!
     
+    var noteKey: Note?
+    
+    func setNoteKey(note: Note) {
+        self.noteKey = note
+        image.image = note.image
+    }
 }

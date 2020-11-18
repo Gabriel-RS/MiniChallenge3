@@ -64,4 +64,12 @@ class Board {
     func getNotes() -> [Note] {
         return self.launchpad
     }
+    
+    func turnOffWrong(notes: [Note]) {
+        for i in 0..<notes.count {
+            if notes[i].name != launchpad[i].name {
+                launchpad[i].turnOff()
+            }
+        }
+    }
 }
