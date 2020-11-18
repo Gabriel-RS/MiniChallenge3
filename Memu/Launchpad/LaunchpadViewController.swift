@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class LaunchpadViewController: UIViewController {
     
@@ -35,6 +36,11 @@ class LaunchpadViewController: UIViewController {
     
     
     let btnImg: [UIImage] = [UIImage(named: "play")!]
+    
+    var sequenceSong: [String] = []
+    var playerItem: [AVPlayerItem] = []
+    var sequencePlayer: AVQueuePlayer?
+    var notePlayer: AVAudioPlayer?
     
     static var locked = false
     
@@ -194,11 +200,13 @@ extension LaunchpadViewController: UICollectionViewDelegate {
             if keyNotes[indexPath[1]].image == UIImage(named: "key\(keyNotes[indexPath[1]].color)Off") {
                 // muda cor da tecla
                 keyNotes[indexPath[1]].turnOn()
-                
+                playNote(keyNotes[indexPath[1]].soundFile)
                 // adiciona no array de sequencia
                 sequence.addNote(note: keyNotes[indexPath[1]])
+                //sequenceSong.append(keyNotes[indexPath[1]].name)
                 // atualiza array de notas da sequencia (conectado à collection)
                 self.sequenceNotes = sequence.notes
+
                 
                 if sequence.isFull() {
                     btnCheck.isEnabled = true
@@ -252,6 +260,41 @@ extension LaunchpadViewController: ButtonCellDelegate {
             if(note.name != "off" && note.name != "delete") {
                 print(note.name)
             }
+        }
+        prepareToPlay()
+        sequencePlayer?.seek(to: .zero)
+        sequencePlayer?.play()
+    }
+    
+    func prepareToPlay() {
+        
+        if sequencePlayer != nil {
+            sequencePlayer?.removeAllItems()
+            playerItem.removeAll()
+        }
+        
+        let songs = sequenceNotes
+        for song in songs {
+            if song.name != "off" && song.name != "delete" {
+                guard let url = Bundle.main.url(forResource: song.soundFile, withExtension: ".mp3") else {
+                    fatalError("Cannot load \(song)")
+                }
+                playerItem.append(AVPlayerItem(url: url))
+            }
+        }
+        
+        sequencePlayer = AVQueuePlayer(items: playerItem)
+    }
+    
+    func playNote(_ song: String) {
+        let path = Bundle.main.path(forResource: song, ofType: ".mp3")!
+        let url = URL(fileURLWithPath: path)
+        
+        do {
+            notePlayer = try AVAudioPlayer(contentsOf: url)
+            notePlayer?.play()
+        } catch {
+            print(error)
         }
     }
     
