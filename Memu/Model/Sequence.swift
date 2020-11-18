@@ -60,7 +60,9 @@ class Sequence {
     
     func eraseNote() -> Note{
         let blankNote = Note(name: "off", soundFile: "", color: "", type: "sequence")
+        
         let lastNoteIndex = findLastNoteIndex() - 1
+        
         if(lastNoteIndex != -1) {
             let erasedNote = notes[lastNoteIndex]
             notes[lastNoteIndex] = blankNote
@@ -73,13 +75,14 @@ class Sequence {
     // acha o primeiro elemento cujo nome é off para nota ser adicionada no lugar dele
     func findFirstOffIndex() -> Int{
         for i in 0..<size {
-            if notes[i].name == "off" || notes[i].name == "wrong" {
+            if notes[i].name == "off"{
                 return i
             }
         }
         return -1
     }
     
+    // pega a primeira nota da sequencia que pode ser excluída
     func findLastNoteIndex() -> Int {
         var index = 0
         while (notes[index].name != "off" && index < size) {

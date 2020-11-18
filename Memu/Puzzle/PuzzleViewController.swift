@@ -69,6 +69,7 @@ class PuzzleViewController: UIViewController {
         let sequenceResult: [Note] = generateResultSequence()
         
         if checkVictory(comparedArray: sequenceResult) {
+            // se sequencia estiver certa
             performSegue(withIdentifier: "conclusionSegue", sender: self)
         } else {
             // atualiza sequencia do tabuleiro e sequencia conectada à collection view
@@ -78,6 +79,8 @@ class PuzzleViewController: UIViewController {
             sequenceNotes.append(Note(name: "delete", soundFile: "", color: "", type: "delete"))
             
             self.puzzleBoard.turnOffWrong(notes: sequenceResult)
+            btnCheck.isEnabled = false
+            
             collectionView.reloadData()
         }
 
@@ -203,7 +206,7 @@ class PuzzleViewController: UIViewController {
                     let rightNote = Note(name: launchpadNote.name, soundFile: launchpadNote.soundFile, color: launchpadNote.color, type: "sequenceOn")
                     result.append(rightNote)
                 } else {
-                    let wrongNote = Note(name: "wrong", soundFile: "none", color: "Gray", type: "sequence")
+                    let wrongNote = Note(name: launchpadNote.name, soundFile: launchpadNote.soundFile, color: launchpadNote.color, type: "invalid")
                     result.append(wrongNote)
                 }
                 count += 1
@@ -214,7 +217,7 @@ class PuzzleViewController: UIViewController {
     
     func checkVictory(comparedArray: [Note]) -> Bool {
         for note in comparedArray {
-            if note.name == "wrong" {
+            if note.image == UIImage(named: "seqGrayOn") {
                 return false
             }
         }
