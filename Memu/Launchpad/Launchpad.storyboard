@@ -183,12 +183,24 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnCheck" destination="noR-Ku-2iL" id="9Ji-GV-lr1"/>
                         <outlet property="collectionView" destination="NcY-Kg-mxs" id="wTP-7w-RZM"/>
+                        <segue destination="h4S-Xx-DZ9" kind="show" identifier="go2Puzzle" id="z7Z-Wm-FuI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pTq-fo-21N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-149.27536231884059" y="176.78571428571428"/>
+        </scene>
+        <!--Puzzle-->
+        <scene sceneID="FmG-fw-lr8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Puzzle" id="h4S-Xx-DZ9" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pH6-h0-0Yp"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aSF-zM-dnt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="650" y="163"/>
         </scene>
         <!--Notes-->
         <scene sceneID="iWG-L5-WQn">

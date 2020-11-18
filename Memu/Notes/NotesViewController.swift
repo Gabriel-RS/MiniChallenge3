@@ -24,12 +24,12 @@ class Notas: UIViewController {
     var audioPlayer = AVAudioPlayer()
     var vetorNotas = [AVAudioPlayer]()
     var noteDo = Note(name: "do", soundFile: "marimba_nota_do.mp3", color: "Blue", type: "launchpad")
-    var noteRe = Note(name: "re", soundFile: "marimba_nota_do.mp3", color: "Green", type: "launchpad" )
-    var noteMi = Note(name: "mi", soundFile: "marimba_nota_do.mp3", color: "Red", type: "launchpad" )
-    var noteFa = Note(name: "fa", soundFile: "marimba_nota_do.mp3", color: "Pink", type: "launchpad" )
-    var noteSol = Note(name: "sol", soundFile: "marimba_nota_do.mp3", color: "Purple", type: "launchpad" )
-    var noteLa = Note(name: "la", soundFile: "marimba_nota_do.mp3", color: "Orange", type: "launchpad" )
-    var noteSi = Note(name: "si", soundFile: "marimba_nota_do.mp3", color: "Yellow", type: "launchpad" )
+    var noteRe = Note(name: "re", soundFile: "marimba_nota_re.mp3", color: "Green", type: "launchpad" )
+    var noteMi = Note(name: "mi", soundFile: "marimba_nota_mi.mp3", color: "Red", type: "launchpad" )
+    var noteFa = Note(name: "fa", soundFile: "marimba_nota_fa.mp3", color: "Pink", type: "launchpad" )
+    var noteSol = Note(name: "sol", soundFile: "marimba_nota_sol.mp3", color: "Purple", type: "launchpad" )
+    var noteLa = Note(name: "la", soundFile: "marimba_nota_la.mp3", color: "Orange", type: "launchpad" )
+    var noteSi = Note(name: "si", soundFile: "marimba_nota_si.mp3", color: "Yellow", type: "launchpad" )
     
     override func viewDidLoad() {
         aux = notes.count
