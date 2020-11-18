@@ -38,8 +38,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3LW-gR-mai">
                                 <rect key="frame" x="46" y="679" width="327" height="87"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="87" id="Qzz-6h-baT"/>
-                                    <constraint firstAttribute="width" constant="327" id="rz1-4O-QCH"/>
+                                    <constraint firstAttribute="height" constant="87" id="5k5-9n-kjt"/>
                                 </constraints>
                                 <state key="normal" title="Menu Inicial" image="menuInicial"/>
                                 <connections>
@@ -89,20 +88,34 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9L-NR-CFO">
+                                <rect key="frame" x="46" y="534" width="327" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="87" id="EhQ-YA-zXb"/>
+                                </constraints>
+                                <state key="normal" title="Novo Jogo" image="novoJogo"/>
+                                <connections>
+                                    <action selector="btnNewGame:" destination="j3x-vK-EPw" eventType="touchUpInside" id="99r-Jk-iEf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vuc-AJ-P40"/>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Vuc-AJ-P40" firstAttribute="bottom" secondItem="3LW-gR-mai" secondAttribute="bottom" constant="96" id="3xM-rX-dll"/>
                             <constraint firstItem="Vuc-AJ-P40" firstAttribute="trailing" secondItem="P5c-4U-eJj" secondAttribute="trailing" constant="46" id="4Ap-uG-bY8"/>
+                            <constraint firstItem="D9L-NR-CFO" firstAttribute="trailing" secondItem="3LW-gR-mai" secondAttribute="trailing" id="5XC-q8-71i"/>
+                            <constraint firstItem="D9L-NR-CFO" firstAttribute="leading" secondItem="3LW-gR-mai" secondAttribute="leading" id="6XB-Vm-RDB"/>
                             <constraint firstItem="Vuc-AJ-P40" firstAttribute="trailing" secondItem="P6G-OK-SIX" secondAttribute="trailing" constant="46" id="AdM-vJ-bBT"/>
                             <constraint firstItem="Vuc-AJ-P40" firstAttribute="trailing" secondItem="SDr-69-dmP" secondAttribute="trailing" constant="46" id="Apv-Hv-vw3"/>
                             <constraint firstItem="P6G-OK-SIX" firstAttribute="top" secondItem="Vuc-AJ-P40" secondAttribute="top" constant="192" id="Avz-U6-O12"/>
+                            <constraint firstItem="D9L-NR-CFO" firstAttribute="leading" secondItem="P5c-4U-eJj" secondAttribute="leading" id="JsL-wg-0LD"/>
                             <constraint firstItem="P5c-4U-eJj" firstAttribute="top" secondItem="P6G-OK-SIX" secondAttribute="bottom" constant="20" id="MDx-2o-3YL"/>
                             <constraint firstItem="SDr-69-dmP" firstAttribute="top" secondItem="Vuc-AJ-P40" secondAttribute="top" constant="46" id="WRk-F2-Sik"/>
-                            <constraint firstItem="3LW-gR-mai" firstAttribute="leading" secondItem="Vuc-AJ-P40" secondAttribute="leading" constant="46" id="XBD-bE-Jpx"/>
                             <constraint firstItem="P6G-OK-SIX" firstAttribute="leading" secondItem="Vuc-AJ-P40" secondAttribute="leading" constant="46" id="Znt-Y7-Cgu"/>
+                            <constraint firstItem="3LW-gR-mai" firstAttribute="top" secondItem="D9L-NR-CFO" secondAttribute="bottom" constant="58" id="iZM-LJ-xIW"/>
                             <constraint firstItem="P5c-4U-eJj" firstAttribute="leading" secondItem="Vuc-AJ-P40" secondAttribute="leading" constant="46" id="rFe-pH-Zj6"/>
-                            <constraint firstItem="3LW-gR-mai" firstAttribute="top" secondItem="P5c-4U-eJj" secondAttribute="bottom" constant="282" id="tcM-HQ-IC4"/>
+                            <constraint firstItem="Vuc-AJ-P40" firstAttribute="trailing" secondItem="D9L-NR-CFO" secondAttribute="trailing" constant="41" id="sGY-4R-c6e"/>
                             <constraint firstItem="SDr-69-dmP" firstAttribute="leading" secondItem="Vuc-AJ-P40" secondAttribute="leading" constant="46" id="wGT-fR-6dB"/>
                         </constraints>
                     </view>
@@ -117,6 +130,7 @@
     </scenes>
     <resources>
         <image name="menuInicial" width="517.5" height="133.44000244140625"/>
+        <image name="novoJogo" width="517.5" height="133.44000244140625"/>
         <image name="seqBlueOn" width="150" height="150"/>
     </resources>
 </document>

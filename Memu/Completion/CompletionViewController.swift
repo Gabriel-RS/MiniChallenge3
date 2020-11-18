@@ -27,6 +27,10 @@ class CompletionViewController: UIViewController {
 
     }
     
+    @IBAction func btnNewGame(_ sender: Any) {
+        print("novo jogo")
+    }
+    
     @IBAction func btnHomeScreen(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
