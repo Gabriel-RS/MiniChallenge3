@@ -54,7 +54,7 @@
                                 <rect key="frame" x="26" y="615" width="368" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e5H-6y-WRD">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="inicianteC" translatesAutoresizingMaskIntoConstraints="NO" id="e5H-6y-WRD">
                                         <rect key="frame" x="8" y="8" width="80" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -79,6 +79,7 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qIM-MC-SJS">
                                 <rect key="frame" x="20" y="446" width="332" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8w-24-Yxe">
                                 <rect key="frame" x="23" y="479" width="362" height="21"/>
@@ -100,6 +101,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="btProgressPlayer" destination="ulF-hR-xii" id="Dec-he-AjB"/>
                         <outlet property="ivImage" destination="0sN-GW-Aiz" id="Kev-TX-xAy"/>
                         <outlet property="lbDescription" destination="apA-AY-5Wc" id="N1s-WR-SaA"/>
                         <outlet property="lbProgress" destination="TRV-7C-BVa" id="5Cw-ai-JM1"/>
@@ -115,6 +117,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="inicianteC" width="457.17001342773438" height="442.30999755859375"/>
         <image name="progressoPadrao" width="360.17999267578125" height="368.16000366210938"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
