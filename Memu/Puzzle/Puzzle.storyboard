@@ -215,11 +215,22 @@
                         <outlet property="ear1" destination="q7s-ci-lat" id="R5X-aX-zhW"/>
                         <outlet property="ear2" destination="tJA-eW-WJd" id="hCG-9v-Bgh"/>
                         <outlet property="ear3" destination="hyp-1E-G3m" id="Jkj-CK-7CF"/>
+                        <segue destination="umK-vD-sBV" kind="show" identifier="conclusionSegue" id="CYE-eq-0bH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="foD-Ar-4nc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-149.27536231884059" y="176.78571428571428"/>
+        </scene>
+        <!--Completion-->
+        <scene sceneID="ofN-aJ-HKr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Completion" id="umK-vD-sBV" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="3ZT-3I-Adq"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ht-mk-Vfh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="501" y="399"/>
         </scene>
     </scenes>
     <resources>

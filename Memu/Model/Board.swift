@@ -61,7 +61,17 @@ class Board {
         self.launchpad = puzzleNotes
     }
 
+    // não tá sendo chamado
     func getNotes() -> [Note] {
         return self.launchpad
+    }
+    
+    // não tá sendo chamado
+    func turnOffWrong(notes: [Note]) {
+        for i in 0..<notes.count {
+            if notes[i].image == UIImage(named: "seqGrayOn") {
+                launchpad[i].turnOff()
+            }
+        }
     }
 }
