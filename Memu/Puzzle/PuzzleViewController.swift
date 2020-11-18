@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PuzzleViewController: UIViewController {
 
     @IBOutlet weak var ear1: UIImageView!
     @IBOutlet weak var ear2: UIImageView!
     @IBOutlet weak var ear3: UIImageView!
+    var ouvidas = Int()
+    var launchpadVc = LaunchpadViewController()
+    
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var btnCheck: UIButton!
@@ -39,6 +43,7 @@ class PuzzleViewController: UIViewController {
     var dataSource: UICollectionViewDiffableDataSource<Section, Note>!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.collectionViewLayout = configLayout()
@@ -50,12 +55,16 @@ class PuzzleViewController: UIViewController {
         keyNotes3 = board3.launchpad
         
         configDataSource()
+        
+        //ouvidas
+        ouvidas = 3
     }
     
     // MARK: - Button
     // toca a sequencia criada no launchpad
     @IBAction func btnPlay(_ sender: Any) {
         print("Play Button")
+        playLaunchpad()
         
         for note in launchpadSequence {
             if(note.name != "delete") {
@@ -63,6 +72,39 @@ class PuzzleViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func btnHear(_ sender: Any) {
+        
+        if ouvidas > 0 {
+            switch(ouvidas){
+            case 3:
+                ear3.image = UIImage(named: "earOff")
+                ouvidas -= 1
+                play()
+                break
+            case 2:
+                ear2.image = UIImage(named: "earOff")
+                ouvidas -= 1
+                play()
+                break
+            case 1:
+                ear1.image = UIImage(named: "earOff")
+                ouvidas -= 1
+                play()
+                break
+            case 0:
+                break
+            default:
+                break
+                
+            }
+        } else {
+            let alert = UIAlertController(title: "Ouvidas", message: "\nVocê já gastou todas as suas ouvidas!", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
     
     @IBAction func btnCheck(_ sender: Any) {
         print("Check Button")
@@ -206,6 +248,9 @@ class PuzzleViewController: UIViewController {
         //retorna pra saber e ganhou ou nao
         return aux == 4 ? true : false
     }
+    
+    
+    
 
 }
 
@@ -221,7 +266,7 @@ extension PuzzleViewController: UICollectionViewDelegate {
             if puzzleNotes[indexPath[1]].image == UIImage(named: "keyGrayOff") {
                 // muda cor da tecla
                 puzzleNotes[indexPath[1]].turnOn()
-                
+                launchpadVc.playNote(puzzleNotes[indexPath[1]].soundFile)
                 // adiciona no array de sequencia
                 sequence.addNote(note: puzzleNotes[indexPath[1]])
                 // atualiza array de notas da sequencia (conectado à collection)
@@ -278,5 +323,23 @@ extension PuzzleViewController: ButtonCellDelegate {
                 print(note.name)
             }
         }
+        
+        launchpadVc.prepareToPlay(sequenceNotes: sequenceNotes)
+        launchpadVc.sequencePlayer?.seek(to: .zero)
+        launchpadVc.sequencePlayer?.play()
     }
+    
+    func playLaunchpad() {
+        for note in sequenceNotes {
+            if(note.name != "off" && note.name != "delete") {
+                print(note.name)
+            }
+        }
+        
+        launchpadVc.prepareToPlay(sequenceNotes: launchpadSequence)
+        launchpadVc.sequencePlayer?.seek(to: .zero)
+        launchpadVc.sequencePlayer?.play()
+    }
+    
+    
 }

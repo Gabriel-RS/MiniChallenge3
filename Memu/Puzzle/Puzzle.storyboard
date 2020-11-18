@@ -35,7 +35,7 @@
                                 </constraints>
                                 <state key="normal" title="Note" image="play"/>
                                 <connections>
-                                    <action selector="btnPlay:" destination="NIZ-Ik-7oU" eventType="touchUpInside" id="gCo-WO-LvW"/>
+                                    <action selector="btnPlay:" destination="NIZ-Ik-7oU" eventType="touchUpInside" id="4j6-Xl-4mI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRO-4e-UoB">
@@ -105,6 +105,7 @@
                                                     </constraints>
                                                     <state key="normal" title="Play" image="hearing"/>
                                                     <connections>
+                                                        <action selector="btnHear:" destination="NIZ-Ik-7oU" eventType="touchUpInside" id="Wn8-Iq-mwp"/>
                                                         <action selector="btnHearing:" destination="lYZ-Ra-cll" eventType="touchUpInside" id="H3D-ac-fLm"/>
                                                     </connections>
                                                 </button>

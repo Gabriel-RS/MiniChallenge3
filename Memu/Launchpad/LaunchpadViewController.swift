@@ -261,12 +261,12 @@ extension LaunchpadViewController: ButtonCellDelegate {
                 print(note.name)
             }
         }
-        prepareToPlay()
+        prepareToPlay(sequenceNotes: sequenceNotes)
         sequencePlayer?.seek(to: .zero)
         sequencePlayer?.play()
     }
     
-    func prepareToPlay() {
+    func prepareToPlay(sequenceNotes: Array<Note>) {
         
         if sequencePlayer != nil {
             sequencePlayer?.removeAllItems()
