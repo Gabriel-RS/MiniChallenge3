@@ -78,7 +78,6 @@ class PuzzleViewController: UIViewController {
             sequenceNotes = sequenceResult
             sequenceNotes.append(Note(name: "delete", soundFile: "", color: "", type: "delete"))
             
-            self.puzzleBoard.turnOffWrong(notes: sequenceResult)
             btnCheck.isEnabled = false
             
             collectionView.reloadData()
@@ -206,7 +205,7 @@ class PuzzleViewController: UIViewController {
                     let rightNote = Note(name: launchpadNote.name, soundFile: launchpadNote.soundFile, color: launchpadNote.color, type: "sequenceOn")
                     result.append(rightNote)
                 } else {
-                    let wrongNote = Note(name: launchpadNote.name, soundFile: launchpadNote.soundFile, color: launchpadNote.color, type: "invalid")
+                    let wrongNote = Note(name: sequenceNotes[count].name, soundFile: sequenceNotes[count].soundFile, color: sequenceNotes[count].color, type: "invalid")
                     result.append(wrongNote)
                 }
                 count += 1
