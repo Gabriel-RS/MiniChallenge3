@@ -74,4 +74,8 @@ class Board {
             }
         }
     }
+    
+    func shuffleBoard() {
+        launchpad.shuffle()
+    }
 }

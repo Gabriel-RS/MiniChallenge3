@@ -38,9 +38,7 @@ class LaunchpadViewController: UIViewController {
     var playerItem: [AVPlayerItem] = []
     var sequencePlayer: AVQueuePlayer?
     var notePlayer: AVAudioPlayer?
-    
-    static var locked = false
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
@@ -138,7 +136,6 @@ class LaunchpadViewController: UIViewController {
             } else if IndexPath.section == 1  {
                 btnCell.delegate = self
 
-                btnCell.lockImg()
                 return btnCell
             } else {
                 // se for seção da sequencia
@@ -189,11 +186,13 @@ extension LaunchpadViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Cell: \(indexPath[1])")
         
-        if indexPath.section == 2 && LaunchpadViewController.locked == false {
+        // se for a seção das teclas
+        if indexPath.section == 2 {
             print(board.launchpad[indexPath[1]].name)
             if board.launchpad[indexPath[1]].image == UIImage(named: "key\(board.launchpad[indexPath[1]].color)Off") {
                 // muda cor da tecla
                 board.launchpad[indexPath[1]].turnOn()
+                
                 playNote(board.launchpad[indexPath[1]].soundFile)
                 // adiciona no array de sequencia
                 sequence.addNote(note: board.launchpad[indexPath[1]])
@@ -205,7 +204,6 @@ extension LaunchpadViewController: UICollectionViewDelegate {
                 collectionView.reloadData()
             }
         }
-        
         
     }
     
@@ -285,6 +283,6 @@ extension LaunchpadViewController: ButtonCellDelegate {
             print(error)
         }
     }
-    
+
 }
 

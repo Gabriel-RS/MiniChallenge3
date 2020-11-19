@@ -13,7 +13,8 @@ class PuzzleViewController: UIViewController {
     @IBOutlet weak var ear1: UIImageView!
     @IBOutlet weak var ear2: UIImageView!
     @IBOutlet weak var ear3: UIImageView!
-    var ouvidas = Int()
+    var ouvidas = 3
+    
     var launchpadVc = LaunchpadViewController()
     
     
@@ -25,6 +26,9 @@ class PuzzleViewController: UIViewController {
         case button
         case puzzle
     }
+    
+    static var locked = false
+    static var timesLocked = 0
     
     // cria um tabuleiro puzzle para ser exibido e suas notas (do, re, mi, fa)
     var puzzleBoard = Board(size: 4, instrument: "marimba", type: "puzzle")
@@ -49,6 +53,9 @@ class PuzzleViewController: UIViewController {
         // seção button
         keyNotes3 = board3.launchpad
         
+        // randomiza as teclas
+        puzzleBoard.shuffleBoard()
+        
         configDataSource()
         
         //ouvidas
@@ -59,7 +66,9 @@ class PuzzleViewController: UIViewController {
     // toca a sequencia criada no launchpad
     @IBAction func btnPlay(_ sender: Any) {
         print("Play Button")
-        playLaunchpad()
+        launchpadVc.prepareToPlay(sequenceNotes: launchpadSequence)
+        launchpadVc.sequencePlayer?.seek(to: .zero)
+        launchpadVc.sequencePlayer?.play()
         
         for note in launchpadSequence {
             if(note.name != "delete") {
@@ -68,52 +77,25 @@ class PuzzleViewController: UIViewController {
         }
     }
     
-    @IBAction func btnHear(_ sender: Any) {
-        
-        if ouvidas > 0 {
-            switch(ouvidas){
-            case 3:
-                ear3.image = UIImage(named: "earOff")
-                ouvidas -= 1
-                play()
-                break
-            case 2:
-                ear2.image = UIImage(named: "earOff")
-                ouvidas -= 1
-                play()
-                break
-            case 1:
-                ear1.image = UIImage(named: "earOff")
-                ouvidas -= 1
-                play()
-                break
-            case 0:
-                break
-            default:
-                break
-                
-            }
-        } else {
-            let alert = UIAlertController(title: "Ouvidas", message: "\nVocê já gastou todas as suas ouvidas!", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-    }
-    
-    
     @IBAction func btnCheck(_ sender: Any) {
         print("Check Button")
         let sequenceResult: [Note] = generateResultSequence()
-        
+        // se estiver tudo certo -> tela de conclusão
         if checkVictory(comparedArray: sequenceResult) {
             // se sequencia estiver certa
             performSegue(withIdentifier: "conclusionSegue", sender: self)
+            
+            // TODO: emitir som de feedback positivo
+            
         } else {
             // atualiza sequencia do tabuleiro e sequencia conectada à collection view
             sequence.notes = sequenceResult
             sequence.notes.append(Note(name: "delete", soundFile: "", color: "", type: "delete"))
-            
+            // retira uma ouvida e bloqueia o botão de checar
+            updateOuvidas()
             btnCheck.isEnabled = false
+            
+            // TODO: emitir som de feedback negativo
             
             collectionView.reloadData()
         }
@@ -158,6 +140,37 @@ class PuzzleViewController: UIViewController {
             }
         }
         return true
+    }
+    
+    func playSequence() {
+        for note in sequence.notes {
+            if(note.name != "off" && note.name != "delete") {
+                print(note.name)
+            }
+        }
+        
+        launchpadVc.prepareToPlay(sequenceNotes: sequence.notes)
+        launchpadVc.sequencePlayer?.seek(to: .zero)
+        launchpadVc.sequencePlayer?.play()
+    }
+    
+    func updateOuvidas() {
+        switch(ouvidas) {
+        case 3:
+            ear3.image = UIImage(named: "earOff")
+            ouvidas -= 1
+            break
+        case 2:
+            ear2.image = UIImage(named: "earOff")
+            ouvidas -= 1
+            break
+        case 1:
+            ear1.image = UIImage(named: "earOff")
+            ouvidas -= 1
+            break
+        default:
+            break
+        }
     }
     
     // MARK: - Collection View Layout
@@ -229,6 +242,10 @@ class PuzzleViewController: UIViewController {
             } else if IndexPath.section == 1  {
                 // botão das ouvidas
                 btnCell.delegate = self
+                
+                // botao de cadeado
+                btnCell.lockImg()
+                
                 return btnCell
             } else {
                 if IndexPath.section == 0 {
@@ -264,9 +281,9 @@ class PuzzleViewController: UIViewController {
 extension PuzzleViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Cell: \(indexPath[1])")
-        
-        // se for da seção de tecla
-        if indexPath.section == 2  {
+
+        // se for da seção de tecla e o tabuleiro nao estiver bloqueado
+        if indexPath.section == 2 && !PuzzleViewController.locked {
             print(puzzleBoard.launchpad[indexPath[1]].name)
             if puzzleBoard.launchpad[indexPath[1]].image == UIImage(named: "keyGrayOff") {
                 // muda cor da tecla
@@ -281,7 +298,12 @@ extension PuzzleViewController: UICollectionViewDelegate {
                 
                 collectionView.reloadData()
             }
+            
+        } else {
+            // se o tabuleiro estiver bloqueado, apenas toca a tecla
+            launchpadVc.playNote(puzzleBoard.launchpad[indexPath[1]].soundFile)
         }
+        
     }
         
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
@@ -300,6 +322,7 @@ extension PuzzleViewController: UICollectionViewDelegate {
 }
 
 extension PuzzleViewController: ButtonCellDelegate {
+    
     func delete() {
         // retira a nota do vetor
         let erasedNote = sequence.eraseNote()
@@ -319,28 +342,16 @@ extension PuzzleViewController: ButtonCellDelegate {
     
     // toca a sequencia criada no puzzle
     func play() {
-        for note in sequence.notes {
-            if(note.name != "off" && note.name != "delete") {
-                print(note.name)
-            }
+        if ouvidas > 0 {
+            updateOuvidas()
+            playSequence()
+        } else {
+            let alert = UIAlertController(title: "Ouvidas", message: "\nVocê já gastou todas as suas ouvidas!", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
+            // TODO: emitir som tecla bloqueada
         }
-        
-        launchpadVc.prepareToPlay(sequenceNotes: sequence.notes)
-        launchpadVc.sequencePlayer?.seek(to: .zero)
-        launchpadVc.sequencePlayer?.play()
     }
-    
-    func playLaunchpad() {
-        for note in sequence.notes {
-            if(note.name != "off" && note.name != "delete") {
-                print(note.name)
-            }
-        }
-        
-        launchpadVc.prepareToPlay(sequenceNotes: launchpadSequence)
-        launchpadVc.sequencePlayer?.seek(to: .zero)
-        launchpadVc.sequencePlayer?.play()
-    }
-    
     
 }
