@@ -23,13 +23,13 @@ class Notas: UIViewController {
     @IBOutlet weak var lblAviso: UILabel!
     var audioPlayer = AVAudioPlayer()
     var vetorNotas = [AVAudioPlayer]()
-    var noteDo = Note(name: "do", soundFile: "marimba_nota_do.mp3", color: "Blue", type: "launchpad")
-    var noteRe = Note(name: "re", soundFile: "marimba_nota_re.mp3", color: "Green", type: "launchpad" )
-    var noteMi = Note(name: "mi", soundFile: "marimba_nota_mi.mp3", color: "Red", type: "launchpad" )
-    var noteFa = Note(name: "fa", soundFile: "marimba_nota_fa.mp3", color: "Pink", type: "launchpad" )
-    var noteSol = Note(name: "sol", soundFile: "marimba_nota_sol.mp3", color: "Purple", type: "launchpad" )
-    var noteLa = Note(name: "la", soundFile: "marimba_nota_la.mp3", color: "Orange", type: "launchpad" )
-    var noteSi = Note(name: "si", soundFile: "marimba_nota_si.mp3", color: "Yellow", type: "launchpad" )
+    var noteDo = Note(name: "do", soundFile: "marimba_nota_do", color: "Blue", type: "launchpad")
+    var noteRe = Note(name: "re", soundFile: "marimba_nota_re", color: "Green", type: "launchpad" )
+    var noteMi = Note(name: "mi", soundFile: "marimba_nota_mi", color: "Red", type: "launchpad" )
+    var noteFa = Note(name: "fa", soundFile: "marimba_nota_fa", color: "Pink", type: "launchpad" )
+    var noteSol = Note(name: "sol", soundFile: "marimba_nota_sol", color: "Purple", type: "launchpad" )
+    var noteLa = Note(name: "la", soundFile: "marimba_nota_la", color: "Orange", type: "launchpad" )
+    var noteSi = Note(name: "si", soundFile: "marimba_nota_si", color: "Yellow", type: "launchpad" )
     
     override func viewDidLoad() {
         aux = notes.count
@@ -72,33 +72,28 @@ class Notas: UIViewController {
         //se o vetor de notas tiver tamanho quatro, ele apenas poderá remover notas
         if(aux == 4) {
             
-                        lblAviso.isHidden = true
-                        if(btn.isSelected){
-                            btn.isSelected = false
-                            aux -= 1
-                        } else {
-                            lblAviso.isHidden = false
-                        }
-        
+            lblAviso.isHidden = true
+            if(btn.isSelected){
+                btn.isSelected = false
+                aux -= 1
+            } else {
+                lblAviso.isHidden = false
+            }
         //se o número de notas for menor que 4, ele poderá incluir notas ou remover outras que ainda existam
         } else if (aux < 4){
-            
-                        //se o botão não está selecionado e a houver um click, o botão passa a estar selecionado e a nota toca
-                        if(btn.isSelected == false) {
-                            btn.isSelected = true
-                            aux += 1
-                            playSound(note: note)
-                            //caso o botão já esteja selecionado e o usuário clicar, a nota é removida
-                        } else {
-                            btn.isSelected = false
-                            aux -= 1
-                            }
-            
+            //se o botão não está selecionado e a houver um click, o botão passa a estar selecionado e a nota toca
+            if(btn.isSelected == false) {
+                btn.isSelected = true
+                aux += 1
+                playSound(note: note)
+                //caso o botão já esteja selecionado e o usuário clicar, a nota é removida
+            } else {
+                btn.isSelected = false
+                aux -= 1
+                }
         } else {
-                    
-                        btn.isSelected = false
-                        lblAviso.isHidden = false
-            
+            btn.isSelected = false
+            lblAviso.isHidden = false
         }
         
         
@@ -117,14 +112,14 @@ class Notas: UIViewController {
     
     @IBAction func btnSegue(_ sender: Any) {
         if checkMin() {
-        defineNotas(btn: btnDo, note: noteDo)
-        defineNotas(btn: btnRe, note: noteRe)
-        defineNotas(btn: btnMi, note: noteMi)
-        defineNotas(btn: btnFa, note: noteFa)
-        defineNotas(btn: btnSol, note: noteSol)
-        defineNotas(btn: btnLa, note: noteLa)
-        defineNotas(btn: btnSi, note: noteSi)
-        performSegue(withIdentifier: "unwind", sender: self)
+            defineNotas(btn: btnDo, note: noteDo)
+            defineNotas(btn: btnRe, note: noteRe)
+            defineNotas(btn: btnMi, note: noteMi)
+            defineNotas(btn: btnFa, note: noteFa)
+            defineNotas(btn: btnSol, note: noteSol)
+            defineNotas(btn: btnLa, note: noteLa)
+            defineNotas(btn: btnSi, note: noteSi)
+            performSegue(withIdentifier: "unwind", sender: self)
         } 
     }
     
@@ -137,9 +132,7 @@ class Notas: UIViewController {
         if(segue.identifier == "unwind"){
             let vc = segue.destination as! LaunchpadViewController
             vc.sequence.reset()
-            vc.sequenceNotes = vc.sequence.notes
             vc.board.setNotes(notes: notes)
-            vc.keyNotes = notes
             vc.collectionView.reloadData()
         }
     }
@@ -171,6 +164,5 @@ class Notas: UIViewController {
             print(note.color)
         }
     }
-    
     
 }

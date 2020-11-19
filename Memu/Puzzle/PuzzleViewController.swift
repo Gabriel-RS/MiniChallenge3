@@ -28,11 +28,9 @@ class PuzzleViewController: UIViewController {
     
     // cria um tabuleiro puzzle para ser exibido e suas notas (do, re, mi, fa)
     var puzzleBoard = Board(size: 4, instrument: "marimba", type: "puzzle")
-    var puzzleNotes = [Note]()
     
     // configura a sequencia do puzzle e suas notas
     var sequence = Sequence(size: 4)
-    var sequenceNotes = [Note]()
     
     // recebe a sequencia de notas do launchpad
     var launchpadSequence = [Note]()
@@ -47,10 +45,7 @@ class PuzzleViewController: UIViewController {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.collectionViewLayout = configLayout()
-        
-        puzzleNotes = puzzleBoard.launchpad
-        sequenceNotes = sequence.notes
-        
+                
         // seção button
         keyNotes3 = board3.launchpad
         
@@ -117,8 +112,6 @@ class PuzzleViewController: UIViewController {
             // atualiza sequencia do tabuleiro e sequencia conectada à collection view
             sequence.notes = sequenceResult
             sequence.notes.append(Note(name: "delete", soundFile: "", color: "", type: "delete"))
-            sequenceNotes = sequenceResult
-            sequenceNotes.append(Note(name: "delete", soundFile: "", color: "", type: "delete"))
             
             btnCheck.isEnabled = false
             
@@ -137,6 +130,34 @@ class PuzzleViewController: UIViewController {
     @IBAction func btnMenu(_ sender: Any) {
         print("Menu Button")
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func generateResultSequence() -> Array<Note>{
+        var result: [Note] = []
+        var count: Int = 0
+        
+        for launchpadNote in launchpadSequence {
+            if launchpadNote.name != "delete" {
+                if launchpadNote.name == sequence.notes[count].name {
+                    let rightNote = Note(name: launchpadNote.name, soundFile: launchpadNote.soundFile, color: launchpadNote.color, type: "sequenceOn")
+                    result.append(rightNote)
+                } else {
+                    let wrongNote = Note(name: sequence.notes[count].name, soundFile: sequence.notes[count].soundFile, color: sequence.notes[count].color, type: "invalid")
+                    result.append(wrongNote)
+                }
+                count += 1
+            }
+        }
+        return result
+    }
+    
+    func checkVictory(comparedArray: [Note]) -> Bool {
+        for note in comparedArray {
+            if note.image == UIImage(named: "seqGrayOn") {
+                return false
+            }
+        }
+        return true
     }
     
     // MARK: - Collection View Layout
@@ -202,7 +223,7 @@ class PuzzleViewController: UIViewController {
 
             guard let puzzleCell = collectionView.dequeueReusableCell(withReuseIdentifier: LaunchpadCell.reuseIdentifier, for: IndexPath) as? LaunchpadCell else { fatalError("Cannot create key cell") }
 
-            if self.sequenceNotes[IndexPath.row].image == UIImage(named: "delete")! {
+            if self.sequence.notes[IndexPath.row].image == UIImage(named: "delete")! {
                 btnDeleteCell.delegate = self
                 return btnDeleteCell
             } else if IndexPath.section == 1  {
@@ -213,12 +234,12 @@ class PuzzleViewController: UIViewController {
                 if IndexPath.section == 0 {
                     // se for elemento da sequencia
                     print(IndexPath)
-                    puzzleCell.setNoteKey(note: self.sequenceNotes[IndexPath.row])
+                    puzzleCell.setNoteKey(note: self.sequence.notes[IndexPath.row])
                     return puzzleCell
 
                 } else {
                     // se for tecla do puzzle
-                    let note = self.puzzleNotes[IndexPath.row]
+                    let note = self.puzzleBoard.launchpad[IndexPath.row]
                     puzzleCell.setNoteKey(note: note)
                     return puzzleCell
                 }
@@ -228,45 +249,13 @@ class PuzzleViewController: UIViewController {
 
         var snapshot = NSDiffableDataSourceSnapshot<Section, Note>()
         snapshot.appendSections([.sequence, .button, .puzzle])
-        snapshot.appendItems(sequenceNotes, toSection: .sequence)
+        snapshot.appendItems(sequence.notes, toSection: .sequence)
         snapshot.appendItems(keyNotes3, toSection: .button)
-        snapshot.appendItems(puzzleNotes, toSection: .puzzle)
+        snapshot.appendItems(puzzleBoard.launchpad, toSection: .puzzle)
 
 
         dataSource.apply(snapshot, animatingDifferences: false)
     }
-    
-    
-    func generateResultSequence() -> Array<Note>{
-        var result: [Note] = []
-        var count: Int = 0
-        
-        for launchpadNote in launchpadSequence {
-            if launchpadNote.name != "delete" {
-                if launchpadNote.name == sequenceNotes[count].name {
-                    let rightNote = Note(name: launchpadNote.name, soundFile: launchpadNote.soundFile, color: launchpadNote.color, type: "sequenceOn")
-                    result.append(rightNote)
-                } else {
-                    let wrongNote = Note(name: sequenceNotes[count].name, soundFile: sequenceNotes[count].soundFile, color: sequenceNotes[count].color, type: "invalid")
-                    result.append(wrongNote)
-                }
-                count += 1
-            }
-        }
-        return result
-    }
-    
-    func checkVictory(comparedArray: [Note]) -> Bool {
-        for note in comparedArray {
-            if note.image == UIImage(named: "seqGrayOn") {
-                return false
-            }
-        }
-        return true
-    }
-    
-    
-    
 
 }
 
@@ -278,15 +267,13 @@ extension PuzzleViewController: UICollectionViewDelegate {
         
         // se for da seção de tecla
         if indexPath.section == 2  {
-            print(puzzleNotes[indexPath[1]].name)
-            if puzzleNotes[indexPath[1]].image == UIImage(named: "keyGrayOff") {
+            print(puzzleBoard.launchpad[indexPath[1]].name)
+            if puzzleBoard.launchpad[indexPath[1]].image == UIImage(named: "keyGrayOff") {
                 // muda cor da tecla
-                puzzleNotes[indexPath[1]].turnOn()
-                launchpadVc.playNote(puzzleNotes[indexPath[1]].soundFile)
+                puzzleBoard.launchpad[indexPath[1]].turnOn()
+                launchpadVc.playNote(puzzleBoard.launchpad[indexPath[1]].soundFile)
                 // adiciona no array de sequencia
-                sequence.addNote(note: puzzleNotes[indexPath[1]])
-                // atualiza array de notas da sequencia (conectado à collection)
-                self.sequenceNotes = sequence.notes
+                sequence.addNote(note: puzzleBoard.launchpad[indexPath[1]])
                 
                 if sequence.isFull() {
                     btnCheck.isEnabled = true
@@ -316,11 +303,9 @@ extension PuzzleViewController: ButtonCellDelegate {
     func delete() {
         // retira a nota do vetor
         let erasedNote = sequence.eraseNote()
-        // atualiza as notas para aparecerem na collection
-        self.sequenceNotes = sequence.notes
         
         // acha a nota apagada e desliga ela do launchpad
-        for note in puzzleNotes {
+        for note in puzzleBoard.launchpad {
             if(note.name == erasedNote.name) {
                 note.turnOff()
             }
@@ -334,19 +319,19 @@ extension PuzzleViewController: ButtonCellDelegate {
     
     // toca a sequencia criada no puzzle
     func play() {
-        for note in sequenceNotes {
+        for note in sequence.notes {
             if(note.name != "off" && note.name != "delete") {
                 print(note.name)
             }
         }
         
-        launchpadVc.prepareToPlay(sequenceNotes: sequenceNotes)
+        launchpadVc.prepareToPlay(sequenceNotes: sequence.notes)
         launchpadVc.sequencePlayer?.seek(to: .zero)
         launchpadVc.sequencePlayer?.play()
     }
     
     func playLaunchpad() {
-        for note in sequenceNotes {
+        for note in sequence.notes {
             if(note.name != "off" && note.name != "delete") {
                 print(note.name)
             }
