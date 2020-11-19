@@ -10,7 +10,7 @@
         <!--Tutorial View Controller-->
         <scene sceneID="uS0-7C-6fW">
             <objects>
-                <viewController id="YbS-vD-RU7" customClass="TutorialViewController" customModule="Memu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TutorialViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YbS-vD-RU7" customClass="TutorialViewController" customModule="Memu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yOS-eh-t73">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,24 +30,17 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Zk-r6-Jpj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zk-r6-Jpj">
                                 <rect key="frame" x="168.5" y="815" width="77" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1Zk-r6-Jpj" secondAttribute="height" multiplier="77:47" id="pg8-AC-Bty"/>
                                 </constraints>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Jogar">
-                                            <attributes>
-                                                <color key="NSColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="30" name="SFCompactDisplay-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="30"/>
+                                <state key="normal" title="Jogar">
+                                    <color key="titleColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="playTutorial:" destination="YbS-vD-RU7" eventType="touchUpInside" id="RFj-aO-Rfc"/>
-                                    <segue destination="khY-bw-dYd" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="RRY-xs-oQ6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="11" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Wav-XQ-c9t">
@@ -173,20 +166,13 @@ A seguir, entenda como funciona:</string>
                             <constraint firstItem="1Zk-r6-Jpj" firstAttribute="centerX" secondItem="yOS-eh-t73" secondAttribute="centerX" id="vbz-2L-ITp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="1Zk-r6-Jpj" id="HVX-iv-Y9s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPM-H4-75E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="192.75362318840581" y="-31.473214285714285"/>
-        </scene>
-        <!--Launchpad-->
-        <scene sceneID="Gbt-X3-0Sy">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Launchpad" id="khY-bw-dYd" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="68p-N0-uUi"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Oze-b6-hcU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="941" y="187"/>
         </scene>
     </scenes>
     <resources>

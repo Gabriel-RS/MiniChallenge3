@@ -25,6 +25,7 @@
                                 <state key="normal" title="Menu" image="menu"/>
                                 <connections>
                                     <action selector="btnMenu:" destination="NIZ-Ik-7oU" eventType="touchUpInside" id="mgD-Mb-Xrr"/>
+                                    <segue destination="0PX-9p-qiY" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Ssh-BF-Qmx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wek-Cb-Lqq">
@@ -222,6 +223,14 @@
             </objects>
             <point key="canvasLocation" x="-149.27536231884059" y="176.78571428571428"/>
         </scene>
+        <!--Menu-->
+        <scene sceneID="W5N-ya-gR2">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I6h-NK-NaY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Menu" id="0PX-9p-qiY" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="370" y="-62"/>
+        </scene>
         <!--Completion-->
         <scene sceneID="ofN-aJ-HKr">
             <objects>
@@ -230,7 +239,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ht-mk-Vfh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="501" y="399"/>
+            <point key="canvasLocation" x="397" y="428"/>
         </scene>
     </scenes>
     <resources>

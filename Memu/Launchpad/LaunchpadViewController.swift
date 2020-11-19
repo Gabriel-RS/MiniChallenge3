@@ -56,7 +56,6 @@ class LaunchpadViewController: UIViewController {
     
     @IBAction func btnMenu(_ sender: Any) {
         print("Menu Button")
-        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func btnNotes(_ sender: Any) {
         print("Notes Button")

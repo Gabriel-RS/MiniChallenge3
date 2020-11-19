@@ -15,15 +15,19 @@ class MenuViewController: UIViewController {
     
     
     @IBAction func btnContinue(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func btnNewGame(_ sender: Any) {
+        performSegue(withIdentifier: "newGame", sender: self)
     }
     
     @IBAction func btnHome(_ sender: Any) {
+        performSegue(withIdentifier: "homeScreen", sender: self)
     }
     
     @IBAction func btnHelp(_ sender: Any) {
     }
     
 }
+
