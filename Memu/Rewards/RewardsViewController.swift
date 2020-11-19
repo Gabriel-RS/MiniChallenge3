@@ -31,6 +31,10 @@ class RewardsViewController: UIViewController {
         progressPlayer.transform = CGAffineTransform(scaleX: 1.0, y: 5.0)
         progressPlayer.setProgress(score, animated: true)
         
+        pvProgress.transform = CGAffineTransform(scaleX: 1.0, y: 5.0)
+        pvProgress.setProgress(score, animated: true)
+        pvProgress.progress = 1/3
+        
         if level == 0 || level == 1 {
             self.pointsToLevelUp = 100.0
         } else if level == 2 {
