@@ -8,14 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Notes-->
-        <scene sceneID="37b-qC-zZa">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Notes" id="8U2-bt-FeL" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UOl-wr-DMA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-701" y="400"/>
-        </scene>
         <!--Launchpad View Controller-->
         <scene sceneID="dlM-5D-0ZM">
             <objects>
@@ -44,7 +36,7 @@
                                 <state key="normal" title="Note" image="note"/>
                                 <connections>
                                     <action selector="btnNotes:" destination="8gh-7E-tSa" eventType="touchUpInside" id="nTO-iH-W7h"/>
-                                    <segue destination="8U2-bt-FeL" kind="presentation" id="Tvi-iz-sXM"/>
+                                    <segue destination="xK7-uN-vNd" kind="show" identifier="going2Notes" id="Ph9-iZ-dEx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noR-Ku-2iL">
@@ -140,6 +132,10 @@
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <size key="customSize" width="414" height="63"/>
+                                        <connections>
+                                            <outlet property="btnLock" destination="aa6-vE-JbY" id="Tnf-JZ-vzk"/>
+                                            <outlet property="btnPlay" destination="D3Z-nG-SSe" id="meX-JO-Wlv"/>
+                                        </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LaunchpadCell" id="k5u-Cd-eKh" customClass="LaunchpadCell" customModule="Memu" customModuleProvider="target">
                                         <rect key="frame" x="142" y="174" width="130" height="120"/>
@@ -187,12 +183,34 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnCheck" destination="noR-Ku-2iL" id="9Ji-GV-lr1"/>
                         <outlet property="collectionView" destination="NcY-Kg-mxs" id="wTP-7w-RZM"/>
+                        <segue destination="h4S-Xx-DZ9" kind="show" identifier="go2Puzzle" id="z7Z-Wm-FuI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pTq-fo-21N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-149.27536231884059" y="176.78571428571428"/>
+        </scene>
+        <!--Puzzle-->
+        <scene sceneID="FmG-fw-lr8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Puzzle" id="h4S-Xx-DZ9" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pH6-h0-0Yp"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aSF-zM-dnt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="650" y="163"/>
+        </scene>
+        <!--Notes-->
+        <scene sceneID="iWG-L5-WQn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Notes" id="xK7-uN-vNd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nus-nh-gme"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2vx-tg-cpf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-353" y="555"/>
         </scene>
     </scenes>
     <resources>

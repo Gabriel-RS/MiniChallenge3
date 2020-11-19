@@ -11,8 +11,8 @@ import AVFoundation
 
 class Notas: UIViewController {
     
-    var notesArray: [String] = []
-    var aux:Int = 4
+    var notes:[Note] = []
+    var aux:Int = 0
     @IBOutlet weak var btnDo: UIButton!
     @IBOutlet weak var btnRe: UIButton!
     @IBOutlet weak var btnMi: UIButton!
@@ -23,12 +23,17 @@ class Notas: UIViewController {
     @IBOutlet weak var lblAviso: UILabel!
     var audioPlayer = AVAudioPlayer()
     var vetorNotas = [AVAudioPlayer]()
+    var noteDo = Note(name: "do", soundFile: "marimba_nota_do", color: "Blue", type: "launchpad")
+    var noteRe = Note(name: "re", soundFile: "marimba_nota_re", color: "Green", type: "launchpad" )
+    var noteMi = Note(name: "mi", soundFile: "marimba_nota_mi", color: "Red", type: "launchpad" )
+    var noteFa = Note(name: "fa", soundFile: "marimba_nota_fa", color: "Pink", type: "launchpad" )
+    var noteSol = Note(name: "sol", soundFile: "marimba_nota_sol", color: "Purple", type: "launchpad" )
+    var noteLa = Note(name: "la", soundFile: "marimba_nota_la", color: "Orange", type: "launchpad" )
+    var noteSi = Note(name: "si", soundFile: "marimba_nota_si", color: "Yellow", type: "launchpad" )
     
     override func viewDidLoad() {
-        
+        aux = notes.count
     }
-    
-
     
     
     @IBAction func btnDo(_ sender: UIButton) {
@@ -67,57 +72,68 @@ class Notas: UIViewController {
         //se o vetor de notas tiver tamanho quatro, ele apenas poderá remover notas
         if(aux == 4) {
             
-                        lblAviso.isHidden = true
-                        if(btn.isSelected){
-                            btn.isSelected = false
-                            aux -= 1
-                        } else {
-                            lblAviso.isHidden = false
-                        }
-        
+            lblAviso.isHidden = true
+            if(btn.isSelected){
+                btn.isSelected = false
+                aux -= 1
+            } else {
+                lblAviso.isHidden = false
+            }
         //se o número de notas for menor que 4, ele poderá incluir notas ou remover outras que ainda existam
         } else if (aux < 4){
-            
-                        //se o botão não está selecionado e a houver um click, o botão passa a estar selecionado e a nota toca
-                        if(btn.isSelected == false) {
-                            btn.isSelected = true
-                            aux += 1
-                            playSound(note: note)
-                            //caso o botão já esteja selecionado e o usuário clicar, a nota é removida
-                        } else {
-                            btn.isSelected = false
-                            aux -= 1
-                            }
-            
+            //se o botão não está selecionado e a houver um click, o botão passa a estar selecionado e a nota toca
+            if(btn.isSelected == false) {
+                btn.isSelected = true
+                aux += 1
+                playSound(note: note)
+                //caso o botão já esteja selecionado e o usuário clicar, a nota é removida
+            } else {
+                btn.isSelected = false
+                aux -= 1
+                }
         } else {
-                    
-                        btn.isSelected = false
-                        lblAviso.isHidden = false
-            
+            btn.isSelected = false
+            lblAviso.isHidden = false
         }
         
         
     }
     
-    @IBAction func btnSegue(_ sender: Any) {
-        defineNotas(btn: btnDo, note: "do")
-        defineNotas(btn: btnRe, note: "re")
-        defineNotas(btn: btnMi, note: "mi")
-        defineNotas(btn: btnFa, note: "fa")
-        defineNotas(btn: btnSol, note: "sol")
-        defineNotas(btn: btnLa, note: "la")
-        defineNotas(btn: btnSi, note: "si")
-        performSegue(withIdentifier: "apresentaNotas", sender: self)
+    func checkMin() -> Bool{
+        if aux < 4 {
+            lblAviso.text = "Selecione 4 notas"
+            lblAviso.isHidden = false
+            return false
+        } else {
+            lblAviso.isHidden = true
+            return true
+        }
     }
     
+    @IBAction func btnSegue(_ sender: Any) {
+        if checkMin() {
+            defineNotas(btn: btnDo, note: noteDo)
+            defineNotas(btn: btnRe, note: noteRe)
+            defineNotas(btn: btnMi, note: noteMi)
+            defineNotas(btn: btnFa, note: noteFa)
+            defineNotas(btn: btnSol, note: noteSol)
+            defineNotas(btn: btnLa, note: noteLa)
+            defineNotas(btn: btnSi, note: noteSi)
+            performSegue(withIdentifier: "unwind", sender: self)
+        } 
+    }
+    
+    
     @IBAction func btnCancel(_ sender: Any) {
-        
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "apresentaNotas"){
-            let vc = segue.destination as! checkNotes
-            vc.notesArray = notesArray
+        if(segue.identifier == "unwind"){
+            let vc = segue.destination as! LaunchpadViewController
+            vc.sequence.reset()
+            vc.board.setNotes(notes: notes)
+            vc.collectionView.reloadData()
         }
     }
     
@@ -136,67 +152,17 @@ class Notas: UIViewController {
         
     }
     
-    func defineNotas(btn: UIButton, note: String){
+    func defineNotas(btn: UIButton, note: Note){
         if btn.isSelected {
-            notesArray.append(note)
+            notes.append(note)
         }
     }
     
     
-
-    
-}
-
-class checkNotes: UIViewController {
-    
-    var notesArray: [String] = []
-    @IBOutlet weak var btn1: UIButton!
-    @IBOutlet weak var btn2: UIButton!
-    @IBOutlet weak var btn3: UIButton!
-    @IBOutlet weak var btn4: UIButton!
-    
-    
-    override func viewDidLoad() {
-        defineNote(btn: btn1, note: notesArray[0])
-        defineNote(btn: btn2, note: notesArray[1])
-        defineNote(btn: btn3, note: notesArray[2])
-        defineNote(btn: btn4, note: notesArray[3])
-    }
-    
-    func defineNote(btn: UIButton, note: String){
-        switch(note){
-        case "do":
-            btn.setImage(UIImage(named: "keyBlueOff"), for: .normal)
-            break
-        case "re":
-            btn.setImage(UIImage(named: "keyGreenOff"), for: .normal)
-            break
-        case "mi":
-            btn.setImage(UIImage(named: "keyRedOff"), for: .normal)
-            break
-        case "fa":
-            btn.setImage(UIImage(named: "keyPinkOff"), for: .normal)
-            break
-        case "sol":
-            btn.setImage(UIImage(named: "keyPurpleOff"), for: .normal)
-            break
-        case "la":
-            btn.setImage(UIImage(named: "keyOrangeOff"), for: .normal)
-            break
-        case "si":
-            btn.setImage(UIImage(named: "keyYellowOff"), for: .normal)
-            break
-        default:
-            break
+    @IBAction func imprime(_ sender: Any) {
+        for note in notes {
+            print(note.color)
         }
-        
     }
-    
-    
-    @IBAction func backBttn(_ sender: Any) {
-       
-    }
-    
-    
     
 }

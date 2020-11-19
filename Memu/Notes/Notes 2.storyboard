@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6aB-an-ka7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yis-di-Y73">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -21,6 +21,9 @@
                                 <rect key="frame" x="172" y="407" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="6aB-an-ka7" kind="show" id="aCe-yn-IYx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ss3-1M-rAg"/>
@@ -28,6 +31,7 @@
                     </view>
                     <connections>
                         <segue destination="3Bg-3h-vFy" kind="show" identifier="segueCollection" id="tM6-XL-dUF"/>
+                        <segue destination="6aB-an-ka7" kind="show" identifier="segueNotas" id="fbj-ZQ-U1N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ogf-ca-695" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -39,88 +43,88 @@
             <objects>
                 <viewController id="6aB-an-ka7" customClass="Notas" customModule="Memu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9V8-fe-BGg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psM-U2-fAx">
-                                <rect key="frame" x="28" y="274" width="105" height="105"/>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psM-U2-fAx">
+                                <rect key="frame" x="28" y="220" width="105" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="105" id="F4B-Rv-x2l"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="pickBlueOff"/>
-                                <state key="selected" backgroundImage="pickBlueOn"/>
+                                <state key="normal" backgroundImage="noteCOff"/>
+                                <state key="selected" backgroundImage="noteCOn"/>
                                 <connections>
                                     <action selector="btnDo:" destination="6aB-an-ka7" eventType="touchUpInside" id="aWe-8j-zUp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBU-R3-Ml3">
-                                <rect key="frame" x="155" y="274" width="104" height="105"/>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBU-R3-Ml3">
+                                <rect key="frame" x="155" y="220" width="104" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="104" id="W1V-6N-Anc"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="pickGreenOff"/>
-                                <state key="selected" backgroundImage="pickGreenOn"/>
+                                <state key="normal" backgroundImage="noteDOff"/>
+                                <state key="selected" backgroundImage="noteDOn"/>
                                 <connections>
                                     <action selector="btnRe:" destination="6aB-an-ka7" eventType="touchUpInside" id="KAY-Pg-XJw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFp-8d-i2o">
-                                <rect key="frame" x="280" y="274" width="106" height="105"/>
-                                <state key="normal" backgroundImage="pickRedOff"/>
-                                <state key="selected" backgroundImage="pickRedOn"/>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFp-8d-i2o">
+                                <rect key="frame" x="280" y="220" width="106" height="105"/>
+                                <state key="normal" backgroundImage="noteEOff"/>
+                                <state key="selected" backgroundImage="noteEOn"/>
                                 <connections>
                                     <action selector="btnMi:" destination="6aB-an-ka7" eventType="touchUpInside" id="aB5-D7-Tcy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFa-It-kQi">
-                                <rect key="frame" x="28" y="414" width="105" height="105"/>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFa-It-kQi">
+                                <rect key="frame" x="28" y="360" width="105" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="105" id="vcw-me-q2l"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="pickPinkOff"/>
-                                <state key="selected" backgroundImage="pickPinkOn"/>
+                                <state key="normal" backgroundImage="noteFOff"/>
+                                <state key="selected" backgroundImage="noteFOn"/>
                                 <connections>
                                     <action selector="btnFa:" destination="6aB-an-ka7" eventType="touchUpInside" id="Vhh-sr-XSG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIW-9U-Q0k">
-                                <rect key="frame" x="155" y="414" width="104" height="105"/>
+                                <rect key="frame" x="155" y="360" width="104" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="104" id="DlI-SN-AaK"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="pickPurpleOff"/>
-                                <state key="selected" backgroundImage="pickPurpleOn"/>
+                                <state key="normal" backgroundImage="noteGOff"/>
+                                <state key="selected" backgroundImage="noteGOn"/>
                                 <connections>
                                     <action selector="btnSol:" destination="6aB-an-ka7" eventType="touchUpInside" id="ZyF-uL-zFP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAe-PO-TSD">
-                                <rect key="frame" x="280" y="414" width="106" height="105"/>
-                                <state key="normal" backgroundImage="pickOrangeOff"/>
-                                <state key="selected" backgroundImage="pickOrangeOn"/>
+                                <rect key="frame" x="280" y="360" width="106" height="105"/>
+                                <state key="normal" backgroundImage="noteAOff"/>
+                                <state key="selected" backgroundImage="noteAOn"/>
                                 <connections>
                                     <action selector="btnLa:" destination="6aB-an-ka7" eventType="touchUpInside" id="3KU-LA-l17"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqb-oO-0o5">
-                                <rect key="frame" x="155" y="554" width="104" height="105"/>
+                                <rect key="frame" x="155" y="500" width="104" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="104" id="g6Z-lO-GZA"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="pickYellowOff"/>
-                                <state key="selected" backgroundImage="pickYellowOn"/>
+                                <state key="normal" backgroundImage="noteBOff"/>
+                                <state key="selected" backgroundImage="noteBOn"/>
                                 <connections>
                                     <action selector="btnSi:" destination="6aB-an-ka7" eventType="touchUpInside" id="cAo-KY-WuV"/>
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Só é possível selecionar 4 notas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHu-w5-fMN">
-                                <rect key="frame" x="79" y="179" width="244" height="21"/>
+                                <rect key="frame" x="79" y="125" width="244" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.92711073160000002" green="0.33290818329999999" blue="0.39214605089999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.92711073160000002" green="0.33290818329999999" blue="0.39214605089999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNi-Nk-pL6">
-                                <rect key="frame" x="0.0" y="54" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="97p-DP-AH4"/>
                                 </constraints>
@@ -128,7 +132,7 @@
                                     <navigationItem title="Selecione suas notas" id="OXf-dP-8Zl">
                                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="K8u-gd-yva">
                                             <connections>
-                                                <action selector="btnCancel:" destination="6aB-an-ka7" id="sTM-Uz-648"/>
+                                                <action selector="btnCancel:" destination="6aB-an-ka7" id="mrb-Ma-3H4"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Concluído" id="jG7-ts-Ngd">
@@ -147,7 +151,6 @@
                             <constraint firstItem="sFa-It-kQi" firstAttribute="leading" secondItem="49p-L4-KBX" secondAttribute="leading" constant="28" id="2FW-0x-OPh"/>
                             <constraint firstItem="rqb-oO-0o5" firstAttribute="centerX" secondItem="wNi-Nk-pL6" secondAttribute="centerX" id="3CI-Im-5HO"/>
                             <constraint firstItem="psM-U2-fAx" firstAttribute="leading" secondItem="sFa-It-kQi" secondAttribute="leading" id="3cP-YS-M4f"/>
-                            <constraint firstItem="49p-L4-KBX" firstAttribute="trailing" secondItem="mHu-w5-fMN" secondAttribute="trailing" constant="91" id="A2d-9R-Knc"/>
                             <constraint firstItem="rqb-oO-0o5" firstAttribute="top" secondItem="iIW-9U-Q0k" secondAttribute="bottom" constant="35" id="AJk-C7-6tn"/>
                             <constraint firstItem="hFp-8d-i2o" firstAttribute="leading" secondItem="OBU-R3-Ml3" secondAttribute="trailing" constant="21" id="ATx-jb-7Ot"/>
                             <constraint firstItem="49p-L4-KBX" firstAttribute="trailing" secondItem="SAe-PO-TSD" secondAttribute="trailing" constant="28" id="CKl-aB-Ifn"/>
@@ -191,13 +194,89 @@
                         <outlet property="btnSi" destination="rqb-oO-0o5" id="4UZ-Iw-gtN"/>
                         <outlet property="btnSol" destination="iIW-9U-Q0k" id="JqR-r2-Wr5"/>
                         <outlet property="lblAviso" destination="mHu-w5-fMN" id="Tzv-v1-M6i"/>
-                        <segue destination="NIb-fE-CgP" kind="unwind" identifier="unwind" unwindAction="unwindSegueWithUnwindSegue:" id="K78-X2-fPk"/>
+                        <segue destination="i0W-rN-5qx" kind="show" identifier="apresentaNotas" id="Lsd-T8-IuB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXc-rA-jDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="NIb-fE-CgP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1178" y="895"/>
+        </scene>
+        <!--Check Notes-->
+        <scene sceneID="HPy-Gj-wuh">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="i0W-rN-5qx" customClass="checkNotes" customModule="Memu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wtz-MK-bXR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNW-6Y-Y3t">
+                                <rect key="frame" x="82" y="297" width="105" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="btn1">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <state key="selected" title="btn1">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnDo:" destination="6aB-an-ka7" eventType="touchUpInside" id="92q-MH-Ici"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndp-XK-9Wo">
+                                <rect key="frame" x="82" y="442" width="105" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="btn3">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <state key="selected" backgroundImage="noteCOn"/>
+                                <connections>
+                                    <action selector="btnDo:" destination="6aB-an-ka7" eventType="touchUpInside" id="S42-xf-vlm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mm-Kg-Eav">
+                                <rect key="frame" x="227" y="297" width="105" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="btn2">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnDo:" destination="6aB-an-ka7" eventType="touchUpInside" id="76F-bz-KxK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Clb-n4-mSk">
+                                <rect key="frame" x="227" y="442" width="105" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="btn4">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnDo:" destination="6aB-an-ka7" eventType="touchUpInside" id="aEj-Db-3Xv"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1s-Qe-KFn">
+                                <rect key="frame" x="326" y="112" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Voltar"/>
+                                <connections>
+                                    <action selector="backBttn:" destination="i0W-rN-5qx" eventType="touchUpInside" id="xox-7u-6bN"/>
+                                    <segue destination="6aB-an-ka7" kind="show" id="a55-Cx-GBp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fa5-XK-9OZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="p6t-1L-2R6"/>
+                    <connections>
+                        <outlet property="btn1" destination="sNW-6Y-Y3t" id="zjm-Ee-4XL"/>
+                        <outlet property="btn2" destination="5Mm-Kg-Eav" id="lfq-h7-2xy"/>
+                        <outlet property="btn3" destination="ndp-XK-9Wo" id="1ct-fv-0U9"/>
+                        <outlet property="btn4" destination="Clb-n4-mSk" id="P1R-gn-hKS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iuO-y6-Juq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-418" y="894"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dwv-ml-tON">
@@ -294,21 +373,27 @@
             <point key="canvasLocation" x="-455.07246376811599" y="180.80357142857142"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="a55-Cx-GBp"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <image name="pickBlueOff" width="161" height="161"/>
-        <image name="pickBlueOn" width="158" height="158"/>
-        <image name="pickGreenOff" width="161" height="161"/>
-        <image name="pickGreenOn" width="158" height="158"/>
-        <image name="pickOrangeOff" width="162.33000183105469" height="161"/>
-        <image name="pickOrangeOn" width="159.33000183105469" height="158"/>
-        <image name="pickPinkOff" width="161" height="161"/>
-        <image name="pickPinkOn" width="158" height="158"/>
-        <image name="pickPurpleOff" width="161" height="161"/>
-        <image name="pickPurpleOn" width="158" height="158"/>
-        <image name="pickRedOff" width="161" height="161"/>
-        <image name="pickRedOn" width="158" height="158"/>
-        <image name="pickYellowOff" width="161" height="161"/>
-        <image name="pickYellowOn" width="158" height="158"/>
+        <image name="noteAOff" width="162.33000183105469" height="161"/>
+        <image name="noteAOn" width="159.33000183105469" height="158"/>
+        <image name="noteBOff" width="161" height="161"/>
+        <image name="noteBOn" width="158" height="158"/>
+        <image name="noteCOff" width="161" height="161"/>
+        <image name="noteCOn" width="158" height="158"/>
+        <image name="noteDOff" width="161" height="161"/>
+        <image name="noteDOn" width="158" height="158"/>
+        <image name="noteEOff" width="161" height="161"/>
+        <image name="noteEOn" width="158" height="158"/>
+        <image name="noteFOff" width="161" height="161"/>
+        <image name="noteFOn" width="158" height="158"/>
+        <image name="noteGOff" width="161" height="161"/>
+        <image name="noteGOn" width="158" height="158"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
