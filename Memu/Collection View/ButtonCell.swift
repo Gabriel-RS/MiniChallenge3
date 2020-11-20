@@ -62,6 +62,7 @@ class ButtonCell: UICollectionViewCell {
     //Puzzle
     @IBAction func btnHearing(_ sender: Any) {
         print("Hearing Button")
+        delegate?.play()
     }
     
 }

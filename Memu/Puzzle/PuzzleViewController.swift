@@ -14,6 +14,7 @@ class PuzzleViewController: UIViewController {
     @IBOutlet weak var ear3: UIImageView!
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var btnCheck: UIButton!
     
     enum Section {
         case sequence
@@ -21,21 +22,51 @@ class PuzzleViewController: UIViewController {
         case puzzle
     }
     
+    // cria um tabuleiro puzzle para ser exibido e suas notas (do, re, mi, fa)
+    var puzzleBoard = Board(size: 4, instrument: "marimba", type: "puzzle")
+    var puzzleNotes = [Note]()
+    
+    // configura a sequencia do puzzle e suas notas
+    var sequence = Sequence(size: 4)
+    var sequenceNotes = [Note]()
+    
+    // recebe a sequencia de notas do launchpad
+    var launchpadSequence = [Note]()
+    
+    var board3 = Board(size: 1, instrument: "marimba", type: "puzzle")
+    var keyNotes3 = [Note]()
+    
     var dataSource: UICollectionViewDiffableDataSource<Section, Note>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.delegate = self
         collectionView.collectionViewLayout = configLayout()
+        
+        puzzleNotes = puzzleBoard.launchpad
+        sequenceNotes = sequence.notes
+        
+        // seção button
+        keyNotes3 = board3.launchpad
+        
+        configDataSource()
     }
     
     // MARK: - Button
-    
+    // toca a sequencia criada no launchpad
     @IBAction func btnPlay(_ sender: Any) {
         print("Play Button")
+        
+        for note in launchpadSequence {
+            if(note.name != "delete") {
+                print(note.name)
+            }
+        }
     }
     
     @IBAction func btnCheck(_ sender: Any) {
         print("Check Button")
+        print(checkVictory())
     }
     
     @IBAction func btnMenu(_ sender: Any) {
@@ -97,66 +128,114 @@ class PuzzleViewController: UIViewController {
     
     // MARK: - Collection View Data Source
     
-//    func configDataSource() {
-//        dataSource = UICollectionViewDiffableDataSource<Section, Note>(collectionView: self.collectionView, cellProvider: { (collectionView, IndexPath, image) -> UICollectionViewCell? in
-//
-//            guard let btnDeleteCell = collectionView.dequeueReusableCell(withReuseIdentifier: ButtonCell.reuseIdentifierDelete, for: IndexPath) as? ButtonCell else { fatalError("Cannot create delete button cell") }
-//
-//            guard let btnCell = collectionView.dequeueReusableCell(withReuseIdentifier: ButtonCell.reuseIdentifier, for: IndexPath) as? ButtonCell else { fatalError("Cannot create button cell") }
-//
-//            guard let puzzleCell = collectionView.dequeueReusableCell(withReuseIdentifier: LaunchpadCell.reuseIdentifier, for: IndexPath) as? LaunchpadCell else { fatalError("Cannot create key cell") }
-//
-//            if self.sequenceImg[IndexPath.row] == UIImage(named: "delete")! {
-//                return btnDeleteCell
-//            } else if IndexPath.section == 1  {
-//                return btnCell
-//            } else {
-//                if IndexPath.section == 0 {
-//                    print(IndexPath)
-//                    puzzleCell.keyOn.image = self.sequenceImg[IndexPath.row]
-//                    return puzzleCell
-//
-//                } else {
-//                    let note = self.keyNotes[IndexPath.row]
-//                    puzzleCell.setNoteKey(note: note)
-//                    return puzzleCell
-//                }
-//            }
-//
-//        })
-//
-//        var snapshot = NSDiffableDataSourceSnapshot<Section, Note>()
-//        snapshot.appendSections([.sequence, .button, .puzzle])
-//        snapshot.appendItems(keyNotes2, toSection: .sequence)
-//        snapshot.appendItems(keyNotes3, toSection: .button)
-//        snapshot.appendItems(keyNotes, toSection: .puzzle)
-//
-//
-//        dataSource.apply(snapshot, animatingDifferences: false)
-//    }
-//
+    func configDataSource() {
+        dataSource = UICollectionViewDiffableDataSource<Section, Note>(collectionView: self.collectionView, cellProvider: { (collectionView, IndexPath, image) -> UICollectionViewCell? in
+
+            guard let btnDeleteCell = collectionView.dequeueReusableCell(withReuseIdentifier: ButtonCell.reuseIdentifierDelete, for: IndexPath) as? ButtonCell else { fatalError("Cannot create delete button cell") }
+
+            guard let btnCell = collectionView.dequeueReusableCell(withReuseIdentifier: ButtonCell.reuseIdentifier, for: IndexPath) as? ButtonCell else { fatalError("Cannot create button cell") }
+
+            guard let puzzleCell = collectionView.dequeueReusableCell(withReuseIdentifier: LaunchpadCell.reuseIdentifier, for: IndexPath) as? LaunchpadCell else { fatalError("Cannot create key cell") }
+
+            if self.sequenceNotes[IndexPath.row].image == UIImage(named: "delete")! {
+                btnDeleteCell.delegate = self
+                return btnDeleteCell
+            } else if IndexPath.section == 1  {
+                // botão das ouvidas
+                btnCell.delegate = self
+                return btnCell
+            } else {
+                if IndexPath.section == 0 {
+                    // se for elemento da sequencia
+                    print(IndexPath)
+                    puzzleCell.setNoteKey(note: self.sequenceNotes[IndexPath.row])
+                    return puzzleCell
+
+                } else {
+                    // se for tecla do puzzle
+                    let note = self.puzzleNotes[IndexPath.row]
+                    puzzleCell.setNoteKey(note: note)
+                    return puzzleCell
+                }
+            }
+
+        })
+
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Note>()
+        snapshot.appendSections([.sequence, .button, .puzzle])
+        snapshot.appendItems(sequenceNotes, toSection: .sequence)
+        snapshot.appendItems(keyNotes3, toSection: .button)
+        snapshot.appendItems(puzzleNotes, toSection: .puzzle)
+
+
+        dataSource.apply(snapshot, animatingDifferences: false)
+    }
+    
+    
+    func compareSequence() -> Array<Note>{
+        var auxArray: [Note] = []
+        var count: Int = 0
+        let wrongNote = Note(name: "wrong", soundFile: "none", color: "Grey", type: "invalid")
+        for launchpadNote in launchpadSequence {
+            if launchpadNote.name != "delete"{
+            if launchpadNote.name == sequenceNotes[count].name {
+                    auxArray.append(sequenceNotes[count])
+                } else {
+                    auxArray.append(wrongNote)
+                }
+            count += 1
+        }
+        }
+        return auxArray
+    }
+    
+    
+    func checkVictory() -> Bool {
+        let comparedArray: [Note] = compareSequence()
+        var aux: Int = 0
+        for i in 0...comparedArray.count-1{
+            if comparedArray[i].name != "wrong" {
+                //codigo para mudar cor da sequencia = cor da nota aqui
+                aux += 1
+            } else {
+                //codigo para mudar cor da sequencia para cinza
+            }
+            
+        }
+        
+        //retorna pra saber e ganhou ou nao
+        return aux == 4 ? true : false
+    }
+
 }
 
-// MARK: - Delegate
+// MARK: - Delegates
 
 extension PuzzleViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Cell: \(indexPath[1])")
-//        print(keyNotes[indexPath[1]].name)
-//
-//        let selectedNote = keyNotes[indexPath[1]]
-//
-//        if indexPath.section == 2 && LaunchpadViewController.locked == false {
-//            if selectedNote.image == UIImage(named: "key\(selectedNote.color)Off") {
-//                selectedNote.turnOn()
-//                // TODO: Adicionar na sequência
-//                sequenceImg[indexPath.row] = selectedNote.image
-//            }
-//        }
-//
-//        collectionView.reloadData()
+        
+        // se for da seção de tecla
+        if indexPath.section == 2  {
+            print(puzzleNotes[indexPath[1]].name)
+            if puzzleNotes[indexPath[1]].image == UIImage(named: "keyGrayOff") {
+                // muda cor da tecla
+                puzzleNotes[indexPath[1]].turnOn()
+                
+                // adiciona no array de sequencia
+                sequence.addNote(note: puzzleNotes[indexPath[1]])
+                // atualiza array de notas da sequencia (conectado à collection)
+                self.sequenceNotes = sequence.notes
+                
+                if sequence.isFull() {
+                    btnCheck.isEnabled = true
+                }
+                
+                collectionView.reloadData()
+            }
+        }
     }
-    
+        
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
         if let keyCell = collectionView.cellForItem(at: indexPath) as? LaunchpadCell {
             keyCell.keyOn.isHighlighted = true
@@ -168,6 +247,36 @@ extension PuzzleViewController: UICollectionViewDelegate {
         if let keyCell = collectionView.cellForItem(at: indexPath) as? LaunchpadCell {
             keyCell.keyOn.isHighlighted = false
             keyCell.keyOn.alpha = 1.0
+        }
+    }
+}
+
+extension PuzzleViewController: ButtonCellDelegate {
+    func delete() {
+        // retira a nota do vetor
+        let erasedNote = sequence.eraseNote()
+        // atualiza as notas para aparecerem na collection
+        self.sequenceNotes = sequence.notes
+        
+        // acha a nota apagada e desliga ela do launchpad
+        for note in puzzleNotes {
+            if(note.name == erasedNote.name) {
+                note.turnOff()
+            }
+        }
+        
+        // se deletar qualquer nota, a sequencia já não vai estar cheia
+        btnCheck.isEnabled = false
+        
+        collectionView.reloadData()
+    }
+    
+    // toca a sequencia criada no puzzle
+    func play() {
+        for note in sequenceNotes {
+            if(note.name != "off" && note.name != "delete") {
+                print(note.name)
+            }
         }
     }
 }

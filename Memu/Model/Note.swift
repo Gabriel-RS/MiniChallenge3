@@ -32,17 +32,27 @@ class Note: Hashable {
             return UIImage(named: "keyGrayOff")!
         case "delete":
             return UIImage(named: "delete")!
+        case "invalid":
+            return UIImage(named: "seqGrayOn")!
         default:
             return UIImage(named: "key\(self.color)Off")!
         }
     }
     
     func turnOn() {
-        image = UIImage(named: "key\(color)On")!
+        if image == UIImage(named: "keyGrayOff") {
+            image = UIImage(named: "keyGrayOn")!
+        } else {
+            image = UIImage(named: "key\(color)On")!
+        }
     }
     
     func turnOff() {
-        image = UIImage(named: "key\(color)Off")!
+        if image == UIImage(named: "keyGrayOn") {
+            image = UIImage(named: "keyGrayOff")!
+        } else {
+            image = UIImage(named: "key\(color)Off")!
+        }
     }
     
     // MARK: Hashable Protocol Methods

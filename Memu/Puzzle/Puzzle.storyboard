@@ -209,6 +209,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnCheck" destination="fRO-4e-UoB" id="0nV-M7-caH"/>
                         <outlet property="collectionView" destination="qHE-aS-a23" id="S0m-kF-qgc"/>
                         <outlet property="ear1" destination="q7s-ci-lat" id="R5X-aX-zhW"/>
                         <outlet property="ear2" destination="tJA-eW-WJd" id="hCG-9v-Bgh"/>
