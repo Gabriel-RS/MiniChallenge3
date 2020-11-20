@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PuzzleViewController: UIViewController {
 
     @IBOutlet weak var ear1: UIImageView!
     @IBOutlet weak var ear2: UIImageView!
     @IBOutlet weak var ear3: UIImageView!
+    var ouvidas = Int()
+    var launchpadVc = LaunchpadViewController()
+    
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var btnCheck: UIButton!
@@ -24,11 +28,9 @@ class PuzzleViewController: UIViewController {
     
     // cria um tabuleiro puzzle para ser exibido e suas notas (do, re, mi, fa)
     var puzzleBoard = Board(size: 4, instrument: "marimba", type: "puzzle")
-    var puzzleNotes = [Note]()
     
     // configura a sequencia do puzzle e suas notas
     var sequence = Sequence(size: 4)
-    var sequenceNotes = [Note]()
     
     // recebe a sequencia de notas do launchpad
     var launchpadSequence = [Note]()
@@ -39,23 +41,25 @@ class PuzzleViewController: UIViewController {
     var dataSource: UICollectionViewDiffableDataSource<Section, Note>!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.collectionViewLayout = configLayout()
-        
-        puzzleNotes = puzzleBoard.launchpad
-        sequenceNotes = sequence.notes
-        
+                
         // seção button
         keyNotes3 = board3.launchpad
         
         configDataSource()
+        
+        //ouvidas
+        ouvidas = 3
     }
     
     // MARK: - Button
     // toca a sequencia criada no launchpad
     @IBAction func btnPlay(_ sender: Any) {
         print("Play Button")
+        playLaunchpad()
         
         for note in launchpadSequence {
             if(note.name != "delete") {
@@ -64,14 +68,95 @@ class PuzzleViewController: UIViewController {
         }
     }
     
+    @IBAction func btnHear(_ sender: Any) {
+        
+        if ouvidas > 0 {
+            switch(ouvidas){
+            case 3:
+                ear3.image = UIImage(named: "earOff")
+                ouvidas -= 1
+                play()
+                break
+            case 2:
+                ear2.image = UIImage(named: "earOff")
+                ouvidas -= 1
+                play()
+                break
+            case 1:
+                ear1.image = UIImage(named: "earOff")
+                ouvidas -= 1
+                play()
+                break
+            case 0:
+                break
+            default:
+                break
+                
+            }
+        } else {
+            let alert = UIAlertController(title: "Ouvidas", message: "\nVocê já gastou todas as suas ouvidas!", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    
     @IBAction func btnCheck(_ sender: Any) {
         print("Check Button")
-        print(checkVictory())
+        let sequenceResult: [Note] = generateResultSequence()
+        
+        if checkVictory(comparedArray: sequenceResult) {
+            // se sequencia estiver certa
+            performSegue(withIdentifier: "conclusionSegue", sender: self)
+        } else {
+            // atualiza sequencia do tabuleiro e sequencia conectada à collection view
+            sequence.notes = sequenceResult
+            sequence.notes.append(Note(name: "delete", soundFile: "", color: "", type: "delete"))
+            
+            btnCheck.isEnabled = false
+            
+            collectionView.reloadData()
+        }
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "conclusionSegue" {
+            let vc = segue.destination as! CompletionViewController
+            vc.resultSequence = generateResultSequence()
+        }
     }
     
     @IBAction func btnMenu(_ sender: Any) {
         print("Menu Button")
-        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func generateResultSequence() -> Array<Note>{
+        var result: [Note] = []
+        var count: Int = 0
+        
+        for launchpadNote in launchpadSequence {
+            if launchpadNote.name != "delete" {
+                if launchpadNote.name == sequence.notes[count].name {
+                    let rightNote = Note(name: launchpadNote.name, soundFile: launchpadNote.soundFile, color: launchpadNote.color, type: "sequenceOn")
+                    result.append(rightNote)
+                } else {
+                    let wrongNote = Note(name: sequence.notes[count].name, soundFile: sequence.notes[count].soundFile, color: sequence.notes[count].color, type: "invalid")
+                    result.append(wrongNote)
+                }
+                count += 1
+            }
+        }
+        return result
+    }
+    
+    func checkVictory(comparedArray: [Note]) -> Bool {
+        for note in comparedArray {
+            if note.image == UIImage(named: "seqGrayOn") {
+                return false
+            }
+        }
+        return true
     }
     
     // MARK: - Collection View Layout
@@ -137,7 +222,7 @@ class PuzzleViewController: UIViewController {
 
             guard let puzzleCell = collectionView.dequeueReusableCell(withReuseIdentifier: LaunchpadCell.reuseIdentifier, for: IndexPath) as? LaunchpadCell else { fatalError("Cannot create key cell") }
 
-            if self.sequenceNotes[IndexPath.row].image == UIImage(named: "delete")! {
+            if self.sequence.notes[IndexPath.row].image == UIImage(named: "delete")! {
                 btnDeleteCell.delegate = self
                 return btnDeleteCell
             } else if IndexPath.section == 1  {
@@ -148,12 +233,12 @@ class PuzzleViewController: UIViewController {
                 if IndexPath.section == 0 {
                     // se for elemento da sequencia
                     print(IndexPath)
-                    puzzleCell.setNoteKey(note: self.sequenceNotes[IndexPath.row])
+                    puzzleCell.setNoteKey(note: self.sequence.notes[IndexPath.row])
                     return puzzleCell
 
                 } else {
                     // se for tecla do puzzle
-                    let note = self.puzzleNotes[IndexPath.row]
+                    let note = self.puzzleBoard.launchpad[IndexPath.row]
                     puzzleCell.setNoteKey(note: note)
                     return puzzleCell
                 }
@@ -163,48 +248,12 @@ class PuzzleViewController: UIViewController {
 
         var snapshot = NSDiffableDataSourceSnapshot<Section, Note>()
         snapshot.appendSections([.sequence, .button, .puzzle])
-        snapshot.appendItems(sequenceNotes, toSection: .sequence)
+        snapshot.appendItems(sequence.notes, toSection: .sequence)
         snapshot.appendItems(keyNotes3, toSection: .button)
-        snapshot.appendItems(puzzleNotes, toSection: .puzzle)
+        snapshot.appendItems(puzzleBoard.launchpad, toSection: .puzzle)
 
 
         dataSource.apply(snapshot, animatingDifferences: false)
-    }
-    
-    
-    func compareSequence() -> Array<Note>{
-        var auxArray: [Note] = []
-        var count: Int = 0
-        let wrongNote = Note(name: "wrong", soundFile: "none", color: "Grey", type: "invalid")
-        for launchpadNote in launchpadSequence {
-            if launchpadNote.name != "delete"{
-            if launchpadNote.name == sequenceNotes[count].name {
-                    auxArray.append(sequenceNotes[count])
-                } else {
-                    auxArray.append(wrongNote)
-                }
-            count += 1
-        }
-        }
-        return auxArray
-    }
-    
-    
-    func checkVictory() -> Bool {
-        let comparedArray: [Note] = compareSequence()
-        var aux: Int = 0
-        for i in 0...comparedArray.count-1{
-            if comparedArray[i].name != "wrong" {
-                //codigo para mudar cor da sequencia = cor da nota aqui
-                aux += 1
-            } else {
-                //codigo para mudar cor da sequencia para cinza
-            }
-            
-        }
-        
-        //retorna pra saber e ganhou ou nao
-        return aux == 4 ? true : false
     }
 
 }
@@ -217,15 +266,13 @@ extension PuzzleViewController: UICollectionViewDelegate {
         
         // se for da seção de tecla
         if indexPath.section == 2  {
-            print(puzzleNotes[indexPath[1]].name)
-            if puzzleNotes[indexPath[1]].image == UIImage(named: "keyGrayOff") {
+            print(puzzleBoard.launchpad[indexPath[1]].name)
+            if puzzleBoard.launchpad[indexPath[1]].image == UIImage(named: "keyGrayOff") {
                 // muda cor da tecla
-                puzzleNotes[indexPath[1]].turnOn()
-                
+                puzzleBoard.launchpad[indexPath[1]].turnOn()
+                launchpadVc.playNote(puzzleBoard.launchpad[indexPath[1]].soundFile)
                 // adiciona no array de sequencia
-                sequence.addNote(note: puzzleNotes[indexPath[1]])
-                // atualiza array de notas da sequencia (conectado à collection)
-                self.sequenceNotes = sequence.notes
+                sequence.addNote(note: puzzleBoard.launchpad[indexPath[1]])
                 
                 if sequence.isFull() {
                     btnCheck.isEnabled = true
@@ -255,11 +302,9 @@ extension PuzzleViewController: ButtonCellDelegate {
     func delete() {
         // retira a nota do vetor
         let erasedNote = sequence.eraseNote()
-        // atualiza as notas para aparecerem na collection
-        self.sequenceNotes = sequence.notes
         
         // acha a nota apagada e desliga ela do launchpad
-        for note in puzzleNotes {
+        for note in puzzleBoard.launchpad {
             if(note.name == erasedNote.name) {
                 note.turnOff()
             }
@@ -273,10 +318,28 @@ extension PuzzleViewController: ButtonCellDelegate {
     
     // toca a sequencia criada no puzzle
     func play() {
-        for note in sequenceNotes {
+        for note in sequence.notes {
             if(note.name != "off" && note.name != "delete") {
                 print(note.name)
             }
         }
+        
+        launchpadVc.prepareToPlay(sequenceNotes: sequence.notes)
+        launchpadVc.sequencePlayer?.seek(to: .zero)
+        launchpadVc.sequencePlayer?.play()
     }
+    
+    func playLaunchpad() {
+        for note in sequence.notes {
+            if(note.name != "off" && note.name != "delete") {
+                print(note.name)
+            }
+        }
+        
+        launchpadVc.prepareToPlay(sequenceNotes: launchpadSequence)
+        launchpadVc.sequencePlayer?.seek(to: .zero)
+        launchpadVc.sequencePlayer?.play()
+    }
+    
+    
 }

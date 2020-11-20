@@ -15,6 +15,7 @@ class LaunchpadViewController: UIViewController {
     
     var dataSource: UICollectionViewDiffableDataSource<Section, Note>!
     
+    // seção da collection view
     enum Section: Hashable {
         case sequence
         case button
@@ -23,17 +24,13 @@ class LaunchpadViewController: UIViewController {
     
     // cria um tabuleiro para ser exibido (launchpad) e suas notas
     var board = Board(size: 4, instrument: "marimba", type: "launchpad")
-    var keyNotes = [Note]()
     
     // configura a sequencia e suas notas
     var sequence = Sequence(size: 4)
-    var sequenceNotes = [Note]()
-    
     
     // seção button
     var board3 = Board(size: 1, instrument: "marimba", type: "launchpad")
     var keyNotes3 = [Note]()
-    
     
     let btnImg: [UIImage] = [UIImage(named: "play")!]
     
@@ -49,9 +46,6 @@ class LaunchpadViewController: UIViewController {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.collectionViewLayout = configLayout()
-
-        keyNotes = board.launchpad
-        sequenceNotes = sequence.notes
         
         // seção button
         keyNotes3 = board3.launchpad
@@ -63,7 +57,6 @@ class LaunchpadViewController: UIViewController {
     
     @IBAction func btnMenu(_ sender: Any) {
         print("Menu Button")
-        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func btnNotes(_ sender: Any) {
         print("Notes Button")
@@ -74,7 +67,7 @@ class LaunchpadViewController: UIViewController {
     }
     
     func getSequenceNotes() -> [Note]{
-        return self.sequenceNotes
+        return self.sequence.notes
     }
     
     // MARK: - Collection View Layout
@@ -139,7 +132,7 @@ class LaunchpadViewController: UIViewController {
             
             guard let keyCell = collectionView.dequeueReusableCell(withReuseIdentifier: LaunchpadCell.reuseIdentifier, for: IndexPath) as? LaunchpadCell else { fatalError("Cannot create key cell") }
             
-            if self.sequenceNotes[IndexPath.row].image == UIImage(named: "delete")! {
+            if self.sequence.notes[IndexPath.row].image == UIImage(named: "delete")! {
                 btnDeleteCell.delegate = self
                 return btnDeleteCell
             } else if IndexPath.section == 1  {
@@ -150,13 +143,13 @@ class LaunchpadViewController: UIViewController {
                 // se for seção da sequencia
                 if IndexPath.section == 0 {
                     print(IndexPath)
-                    let sequenceNote = self.sequenceNotes[IndexPath.row]
+                    let sequenceNote = self.sequence.notes[IndexPath.row]
                     keyCell.setNoteKey(note: sequenceNote)
                     return keyCell
 
                 }else {
                     // se for seção do tabuleiro/launchpad
-                    let note = self.keyNotes[IndexPath.row]
+                    let note = self.board.launchpad[IndexPath.row]
                     keyCell.setNoteKey(note: note)
                     return keyCell
                 }
@@ -166,9 +159,9 @@ class LaunchpadViewController: UIViewController {
         
         var snapshot = NSDiffableDataSourceSnapshot<Section, Note>()
         snapshot.appendSections([.sequence, .button, .launchpad])
-        snapshot.appendItems(sequenceNotes, toSection: .sequence)
+        snapshot.appendItems(sequence.notes, toSection: .sequence)
         snapshot.appendItems(keyNotes3, toSection: .button)
-        snapshot.appendItems(keyNotes, toSection: .launchpad)
+        snapshot.appendItems(board.launchpad, toSection: .launchpad)
         
         
         dataSource.apply(snapshot, animatingDifferences: false)
@@ -181,8 +174,8 @@ class LaunchpadViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "go2Puzzle" {
             let vc = segue.destination as? PuzzleViewController
-            vc?.puzzleBoard.setPuzzleNotes(notes: keyNotes)
-            vc?.launchpadSequence = sequenceNotes
+            vc?.puzzleBoard.setPuzzleNotes(notes: board.launchpad)
+            vc?.launchpadSequence = sequence.notes
         }
     }
     
@@ -196,17 +189,13 @@ extension LaunchpadViewController: UICollectionViewDelegate {
         print("Cell: \(indexPath[1])")
         
         if indexPath.section == 2 && LaunchpadViewController.locked == false {
-            print(keyNotes[indexPath[1]].name)
-            if keyNotes[indexPath[1]].image == UIImage(named: "key\(keyNotes[indexPath[1]].color)Off") {
+            print(board.launchpad[indexPath[1]].name)
+            if board.launchpad[indexPath[1]].image == UIImage(named: "key\(board.launchpad[indexPath[1]].color)Off") {
                 // muda cor da tecla
-                keyNotes[indexPath[1]].turnOn()
-                playNote(keyNotes[indexPath[1]].soundFile)
+                board.launchpad[indexPath[1]].turnOn()
+                playNote(board.launchpad[indexPath[1]].soundFile)
                 // adiciona no array de sequencia
-                sequence.addNote(note: keyNotes[indexPath[1]])
-                //sequenceSong.append(keyNotes[indexPath[1]].name)
-                // atualiza array de notas da sequencia (conectado à collection)
-                self.sequenceNotes = sequence.notes
-
+                sequence.addNote(note: board.launchpad[indexPath[1]])
                 
                 if sequence.isFull() {
                     btnCheck.isEnabled = true
@@ -239,11 +228,9 @@ extension LaunchpadViewController: ButtonCellDelegate {
     func delete() {
         // retira a nota do vetor
         let erasedNote = sequence.eraseNote()
-        // atualiza as notas para aparecerem na collection
-        self.sequenceNotes = sequence.notes
         
         // acha a nota apagada e desliga ela do launchpad
-        for note in keyNotes {
+        for note in board.launchpad {
             if(note.name == erasedNote.name) {
                 note.turnOff()
             }
@@ -256,7 +243,7 @@ extension LaunchpadViewController: ButtonCellDelegate {
     }
     
     func play() {
-        for note in sequenceNotes {
+        for note in sequence.notes {
             if(note.name != "off" && note.name != "delete") {
                 print(note.name)
             }
@@ -272,7 +259,7 @@ extension LaunchpadViewController: ButtonCellDelegate {
         }
     }
     
-    func prepareToPlay() {
+    func prepareToPlay(sequenceNotes: Array<Note>) {
         
         if sequencePlayer != nil {
             sequencePlayer?.removeAllItems()

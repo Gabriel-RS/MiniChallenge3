@@ -14,8 +14,11 @@ class CompletionViewController: UIViewController {
     }
     
     @IBOutlet weak var collectionView: UICollectionView!
-    var dataSource: UICollectionViewDiffableDataSource<Section, UIImage>!
+    var dataSource: UICollectionViewDiffableDataSource<Section, Note>!
     
+    // recebe a sequencia final
+    var resultSequence = [Note]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,8 +27,12 @@ class CompletionViewController: UIViewController {
 
     }
     
+    @IBAction func btnNewGame(_ sender: Any) {
+        print("novo jogo")
+    }
+    
     @IBAction func btnHomeScreen(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
     
     func layout() -> UICollectionViewCompositionalLayout {
@@ -41,32 +48,22 @@ class CompletionViewController: UIViewController {
     }
     
     func sequenceDataSource() {
-        dataSource = UICollectionViewDiffableDataSource<Section, UIImage>(collectionView: self.collectionView, cellProvider: { (collectionView, IndexPath, image) -> UICollectionViewCell? in
+        dataSource = UICollectionViewDiffableDataSource<Section, Note>(collectionView: self.collectionView, cellProvider: { (collectionView, IndexPath, image) -> UICollectionViewCell? in
             guard let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: SequenceCell.reuseIdentifier, for: IndexPath) as? SequenceCell else {
                 fatalError("Cannot create new cell")
             }
             
-            cell.image.image = image
+            cell.setNoteKey(note: self.resultSequence[IndexPath.row])
             
             return cell
         })
         
-        var snapshot = NSDiffableDataSourceSnapshot<Section, UIImage>()
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Note>()
         snapshot.appendSections([.main])
-        let img: [UIImage] = [UIImage(named: "blueOn")!, UIImage(named: "greenOn")!, UIImage(named: "yellowOn")!, UIImage(named: "redOn")!]
-        snapshot.appendItems(img)
+        
+        snapshot.appendItems(resultSequence)
         
         dataSource.apply(snapshot, animatingDifferences: false)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -28,6 +28,8 @@ class Note: Hashable {
         switch(type){
         case "sequence":
             return UIImage(named: "seqOff")!
+        case "sequenceOn":
+            return UIImage(named: "seq\(self.color)On")!
         case "puzzle":
             return UIImage(named: "keyGrayOff")!
         case "delete":
@@ -40,18 +42,18 @@ class Note: Hashable {
     }
     
     func turnOn() {
-        if image == UIImage(named: "keyGrayOff") {
-            image = UIImage(named: "keyGrayOn")!
-        } else {
+        if image == UIImage(named: "key\(color)Off") {
             image = UIImage(named: "key\(color)On")!
+        } else {
+            image = UIImage(named: "keyGrayOn")!
         }
     }
     
     func turnOff() {
-        if image == UIImage(named: "keyGrayOn") {
-            image = UIImage(named: "keyGrayOff")!
-        } else {
+        if image == UIImage(named: "key\(color)On") {
             image = UIImage(named: "key\(color)Off")!
+        } else {
+            image = UIImage(named: "keyGrayOff")!
         }
     }
     

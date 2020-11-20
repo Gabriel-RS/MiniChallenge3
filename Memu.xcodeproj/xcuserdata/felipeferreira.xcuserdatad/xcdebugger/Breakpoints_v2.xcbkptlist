@@ -14,8 +14,8 @@
             filePath = "Memu/Puzzle/PuzzleViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
             landmarkName = "compareSequence()"
             landmarkType = "7">
          </BreakpointContent>
