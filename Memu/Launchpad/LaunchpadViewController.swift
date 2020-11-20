@@ -252,7 +252,7 @@ extension LaunchpadViewController: ButtonCellDelegate {
         if LaunchpadViewController.isPlaying == true {
             sequencePlayer?.pause()
         } else {
-            prepareToPlay()
+            prepareToPlay(sequenceNotes: sequence.notes)
             sequencePlayer?.seek(to: .zero)
             sequencePlayer?.play()
             sequencePlayer?.addObserver(self, forKeyPath: "timeControlStatus", options: [.old, .new], context: nil)

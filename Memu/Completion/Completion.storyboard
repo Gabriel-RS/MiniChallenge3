@@ -43,6 +43,7 @@
                                 <state key="normal" title="Menu Inicial" image="menuInicial"/>
                                 <connections>
                                     <action selector="btnHomeScreen:" destination="j3x-vK-EPw" eventType="touchUpInside" id="Na4-bd-ngM"/>
+                                    <segue destination="oaB-Ca-JFz" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="r9E-U2-Wal"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P5c-4U-eJj">
@@ -135,6 +136,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cgc-VW-XlU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="380" y="220"/>
+        </scene>
+        <!--HomeScreen-->
+        <scene sceneID="8fq-s9-IkZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeScreen" id="oaB-Ca-JFz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T0C-7x-YRf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="387" y="309"/>
         </scene>
     </scenes>
     <resources>

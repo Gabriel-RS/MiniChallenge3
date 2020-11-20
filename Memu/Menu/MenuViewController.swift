@@ -38,11 +38,11 @@ class MenuViewController: UIViewController {
         let alert = UIAlertController(title: msg, message: warning, preferredStyle: .alert)
         let cancel = UIAlertAction(title: "Cancelar", style: .default, handler: nil)
         let confirm = UIAlertAction(title: "Confirmar", style: .destructive) { (UIAlertAction) in
-            if segue == "homeScreen" {
-                self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
-            } else {
+//            if segue == "homeScreen" {
+//                self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+//            } else {
                 self.performSegue(withIdentifier: segue, sender: self)
-            }
+//            }
         }
         alert.addAction(cancel)
         alert.addAction(confirm)
