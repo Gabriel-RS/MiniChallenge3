@@ -49,6 +49,8 @@
 		5A6A09712551E6D700F143ED /* SequenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09702551E6D700F143ED /* SequenceCell.swift */; };
 		8536C6012559B2C200706EE7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536C6002559B2C200706EE7 /* Note.swift */; };
 		8536C6092559B39D00706EE7 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536C6082559B39D00706EE7 /* Board.swift */; };
+		8561EE1225686CA800E072B8 /* PlayerProgress+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8561EE0E25686CA800E072B8 /* PlayerProgress+CoreDataClass.swift */; };
+		8561EE1425686CA800E072B8 /* NoteProgress+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8561EE1025686CA800E072B8 /* NoteProgress+CoreDataClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +119,8 @@
 		5A6A09702551E6D700F143ED /* SequenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceCell.swift; sourceTree = "<group>"; };
 		8536C6002559B2C200706EE7 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		8536C6082559B39D00706EE7 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		8561EE0E25686CA800E072B8 /* PlayerProgress+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayerProgress+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8561EE1025686CA800E072B8 /* NoteProgress+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteProgress+CoreDataClass.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +333,8 @@
 		8536C5FF2559B2B600706EE7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8561EE0E25686CA800E072B8 /* PlayerProgress+CoreDataClass.swift */,
+				8561EE1025686CA800E072B8 /* NoteProgress+CoreDataClass.swift */,
 				8536C6002559B2C200706EE7 /* Note.swift */,
 				8536C6082559B39D00706EE7 /* Board.swift */,
 			);
@@ -496,6 +502,8 @@
 				5A6A094F2551D48C00F143ED /* NotesViewController.swift in Sources */,
 				5A6A094A2551D47B00F143ED /* LaunchpadViewController.swift in Sources */,
 				5A6A09682551D86900F143ED /* CompletionViewController.swift in Sources */,
+				8561EE1425686CA800E072B8 /* NoteProgress+CoreDataClass.swift in Sources */,
+				8561EE1225686CA800E072B8 /* PlayerProgress+CoreDataClass.swift in Sources */,
 				5A122FEA2547490C00417AEE /* SceneDelegate.swift in Sources */,
 				5A19B1A62554943E00C4F804 /* LaunchpadCell.swift in Sources */,
 				027EB5FF255DAA6A00DD7720 /* TutorialViewController.swift in Sources */,
