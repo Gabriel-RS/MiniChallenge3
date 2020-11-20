@@ -96,6 +96,7 @@
                                 <state key="normal" title="Novo Jogo" image="novoJogo"/>
                                 <connections>
                                     <action selector="btnNewGame:" destination="j3x-vK-EPw" eventType="touchUpInside" id="99r-Jk-iEf"/>
+                                    <segue destination="TVq-gs-5Y1" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="B7w-VE-aN1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -126,6 +127,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kAS-5Y-SNe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-162.31884057971016" y="130.58035714285714"/>
+        </scene>
+        <!--Launchpad-->
+        <scene sceneID="2wU-nt-u7A">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Launchpad" id="TVq-gs-5Y1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cgc-VW-XlU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="220"/>
         </scene>
     </scenes>
     <resources>
