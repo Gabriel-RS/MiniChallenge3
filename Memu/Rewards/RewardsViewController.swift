@@ -13,123 +13,143 @@ class RewardsViewController: UIViewController {
     @IBOutlet weak var ivImage: UIImageView!
     @IBOutlet weak var lbDescription: UILabel!
     @IBOutlet weak var pvPlayer: UIProgressView!
-    @IBOutlet weak var btProgressPlayer: UIButton!
+    @IBOutlet weak var btCheckProgress: UIButton!
     @IBOutlet weak var lbScore: UILabel!
     @IBOutlet weak var lbProgress: UILabel!
+    @IBOutlet weak var ivDo: UIImageView!
     @IBOutlet weak var pvDo: UIProgressView!
     @IBOutlet weak var btRewardDo: UIButton!
-    
-    
+    @IBOutlet weak var lbDo: UILabel!
     
     let titles: [String] = ["Desconhecido", "Explorador", "Músico amador", "Mestre dos sons", "Deus da música"]
+    let imgsNoteDo: [String] = ["inicianteC", "bronzeC", "prataC", "ouroC"]
     
-    var level: Int = 2
-    var pointsToLevelUp: Float = 0
-    //var count: Float = 0.0
-    var points: Float = 245.0
-    var noteDo: Float = 3.0
-    var levelNoteDo: Float = 3.0
+    var level: Int = 1
+    var levelDo: Int = 0
+    var pointsToLevelUp: Float = 100.0
+    var pointsTotal: Float = 10.0
+    var noteDo: Float = 12.0
+    var pvSizeDo: Float = 3.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pvPlayer.transform = CGAffineTransform(scaleX: 1.0, y: 5.0)
-        pvPlayer.setProgress(points, animated: true)
+        styleProgressView(pvPlayer)
+        styleProgressView(pvDo)
         
-        pvDo.transform = CGAffineTransform(scaleX: 1.0, y: 5.0)
-        pvDo.setProgress(points, animated: true)
-        pvDo.progress = noteDo/levelNoteDo
+        pvDo.progress = noteDo/pvSizeDo
         btRewardDo.isHidden = true
         
-        if level == 0 || level == 1 {
-            self.pointsToLevelUp = 100.0
-        } else if level == 2 {
+        progressPlayer()
+        //refreshPage(level)
+        
+    }
+    
+    func progressPlayer() {
+        if pointsTotal > 0.0 && pointsToLevelUp == 100.0 {
+            self.level = 1
+        }
+        
+        if pointsTotal >= pointsToLevelUp {
+            self.level+=1
+        }
+        
+        if level == 2 {
             self.pointsToLevelUp = 250.0
         } else if level == 3 {
             self.pointsToLevelUp = 450.0
         }
-        
-//        if pointsToLevelUp == score {
-//            btProgressPlayer.setImage(UIImage(named: "progressoOuro"), for: .normal)
-//        }
         checkProgressPlayer()
-        
-        progressPlayer()
         refreshPage(level)
-        
-        
-        //updateProgress()
-    }
-    
-    func progressPlayer() {
-        if points <= pointsToLevelUp {
-            pvPlayer.progress = points/pointsToLevelUp
-        }
-        lbScore.text = "\(Int(points))/\(Int(pointsToLevelUp))"
     }
     
     func checkProgressPlayer() {
-        if pointsToLevelUp == points {
-            btProgressPlayer.setImage(UIImage(named: "progressoOuro"), for: .normal)
+        lbScore.text = "\(Int(pointsTotal))/\(Int(pointsToLevelUp))"
+        if pointsTotal >= pointsToLevelUp {
+            btCheckProgress.setImage(UIImage(named: "progressoOuro"), for: .normal)
         }
+        checkNoteDo()
         
-        if noteDo >= levelNoteDo {
-            pvDo.isHidden = true
-            btRewardDo.isHidden = false
-            lbProgress.text = "Clique no botão para obter sua recompesa"
-        }
-        
+//        if noteDo >= pvSizeDo {
+////            self.levelDo+=1
+//            pvDo.isHidden = true
+//            btRewardDo.isHidden = false
+//            lbDo.text = "Clique no botão para obter sua recompesa"
+//            if noteDo == pvSizeDo {
+//                self.noteDo = 0
+//                self.pvSizeDo = 4
+//            } else if noteDo > pvSizeDo {
+//                noteDo = noteDo - pvSizeDo
+//                self.pvSizeDo = 4
+//            }
+//            //pvDo.progress = noteDo/pvSizeDo
+//        }
+//        else {
+//            if levelDo == 0 {
+//                self.pvSizeDo = 3
+//                ivDo.image = UIImage(named: "\(imgsNoteDo[levelDo])")
+//                lbDo.text = "Jogue mais \(Int(pvSizeDo-noteDo)) vezes com a nota Dó e alcance o nível bronze."
+//                pvDo.progress = noteDo/pvSizeDo
+//            } else if levelDo == 1 {
+//                self.pvSizeDo = 4
+//                ivDo.image = UIImage(named: "\(imgsNoteDo[levelDo])")
+//                lbDo.text = "Jogue mais \(Int(pvSizeDo-noteDo)) vezes com a nota Dó e alcance o nível prata."
+//            } else if levelDo == 2 {
+//                self.pvSizeDo = 5
+//                ivDo.image = UIImage(named: "\(imgsNoteDo[levelDo])")
+//                lbDo.text = "Jogue mais \(Int(pvSizeDo-noteDo)) vezes com a nota Dó e alcance o nível ouro."
+//            } else {
+//                ivDo.image = UIImage(named: "\(imgsNoteDo[levelDo])")
+//                lbDo.text = "Parabéns você é um Deus da nota Dó."
+//            }
+//
+//        }
+        pvPlayer.progress = pointsTotal/pointsToLevelUp
+        lbScore.text = "\(Int(pointsTotal))/\(Int(pointsToLevelUp))"
     }
     
-//    func updateProgress() {
-//        progressPlayer.transform = CGAffineTransform(scaleX: 1.0, y: 5.0)
-//        progressPlayer.setProgress(score, animated: true)
-//
-//        //perform(#selector(updateProgressPlayer), with: nil, afterDelay: 1.0)
-//    }
-//
-//    @objc func updateProgressPlayer() {
-//
-//        if level == 0 || level == 1 {
-//            self.pointsToLevelUp = 10.0
-//        } else if level == 2 {
-//            self.pointsToLevelUp = 25.0
-//        } else if level == 3 {
-//            self.pointsToLevelUp = 40.0
-//        }
-//
-//        progressPlayer.progress = score/pointsToLevelUp
-//        lbScore.text = "\(Int(score))/\(Int(pointsToLevelUp))"
-//
-//        if score <= pointsToLevelUp {
-//            levelUp(score, pointsToLevelUp)
-//            perform(#selector(updateProgressPlayer), with: nil, afterDelay: 2.0)
-//
-//            //perform(#selector(updateProgressPlayer))
-//
-//        } else {
-//            //perform(#selector(updateProgressPlayer), with: nil, afterDelay: 1.0)
-//        }
-//        refreshPage(level)
-//
-//    }
-//
-//    func levelUp(_ score: Float, _ pointsToLevelUp: Float) {
-//
-//
-//
-//        if level == 0 && score != 0 {
-//            level+=1
-//        }
-//        if score == pointsToLevelUp {
-//            self.level+=1
-//            self.score = 0
-//        }
-//        self.score+=1
-//    }
+    func checkNoteDo() {
+        if levelDo == 0 {
+            self.pvSizeDo = 3
+            ivDo.image = UIImage(named: "\(imgsNoteDo[levelDo])")
+            lbDo.text = "Jogue mais \(Int(pvSizeDo-noteDo)) vezes com a nota Dó e alcance o nível bronze."
+            pvDo.progress = noteDo/pvSizeDo
+        } else if levelDo == 1 {
+            self.pvSizeDo = 4
+            ivDo.image = UIImage(named: "\(imgsNoteDo[levelDo])")
+            lbDo.text = "Jogue mais \(Int(pvSizeDo-noteDo)) vezes com a nota Dó e alcance o nível prata."
+        } else if levelDo == 2 {
+            self.pvSizeDo = 5
+            ivDo.image = UIImage(named: "\(imgsNoteDo[levelDo])")
+            lbDo.text = "Jogue mais \(Int(pvSizeDo-noteDo)) vezes com a nota Dó e alcance o nível ouro."
+        } else {
+            self.pvSizeDo = 5
+            self.noteDo = 5
+            ivDo.image = UIImage(named: "\(imgsNoteDo[levelDo])")
+            lbDo.text = "Parabéns você é um Deus da nota Dó."
+            pvDo.progressTintColor = UIColor.yellow
+        }
+        if noteDo >= pvSizeDo && levelDo < 3 {
+            pvDo.isHidden = true
+            btRewardDo.isHidden = false
+            lbDo.text = "Toque em obter recompensa para descobrir quantos pontos você conseguiu."
+            if noteDo == pvSizeDo {
+                self.noteDo = 0
+                //self.pvSizeDo = 4
+            } else if noteDo > pvSizeDo {
+                noteDo = noteDo - pvSizeDo
+                //self.pvSizeDo = 4
+            }
+        }
+        pvDo.progress = noteDo/pvSizeDo
+    }
+    
+    func styleProgressView(_ pv: UIProgressView) {
+        pv.transform = CGAffineTransform(scaleX: 1.0, y: 5.0)
+        //pv.setProgress(points, animated: true)
+    }
     
     func refreshPage(_ level: Int) {
-        
         switch level {
         case 0:
             lbTitle.text = "\(titles[level])"
@@ -162,16 +182,31 @@ class RewardsViewController: UIViewController {
     }
     
     @IBAction func btCheckProgress(_ sender: Any) {
-        if level != 0 && level != 4  {
-            lbProgress.text = "Faltam \(Int(pointsToLevelUp-points)) para você conquistar o título de \(titles[level+1])."
+        if level != 0 && level < 4  {
+            lbProgress.text = "Faltam \(Int(pointsToLevelUp-pointsTotal)) para você conquistar o título de \(titles[level+1])."
+        }
+        if pointsTotal >= pointsToLevelUp {
+            btCheckProgress.setImage(UIImage(named: "progressoPadrao"), for: .normal)
+            progressPlayer()
+            refreshPage(level)
         }
     }
     
     @IBAction func rewardDo(_ sender: Any) {
-        points+=10
+        if levelDo == 0 {
+            pointsTotal+=10
+        } else if levelDo == 1 {
+            pointsTotal+=15
+        } else if levelDo == 2 {
+            pointsTotal+=20
+        }
+        
         btRewardDo.isHidden = true
         pvDo.isHidden = false
-        //refreshPage(level)
+        if levelDo < 3 {
+            self.levelDo+=1
+        }
+        //checkProgressPlayer()
         progressPlayer()
     }
     
