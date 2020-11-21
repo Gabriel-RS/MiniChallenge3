@@ -255,6 +255,7 @@ class RewardsViewController: UIViewController {
             player.level+=1
             print("Botão: \(player.level)")
             btCheckProgress.setImage(UIImage(named: "progressoPadrao"), for: .normal)
+            
         }
         loadStatusPlayer()
         loadPage()
