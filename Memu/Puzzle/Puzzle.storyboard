@@ -70,22 +70,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6W-Do-l9v">
-                                                    <rect key="frame" x="176.5" y="24.5" width="61" height="42"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Faf-v6-B29">
+                                                    <rect key="frame" x="182" y="28.5" width="50" height="34"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="61" id="2Pz-N7-bbT"/>
-                                                        <constraint firstAttribute="height" constant="42" id="cUK-XR-TZC"/>
-                                                        <constraint firstAttribute="width" secondItem="C6W-Do-l9v" secondAttribute="height" multiplier="61:42" id="fRB-1u-pxD"/>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="mpK-BB-t1Y"/>
+                                                        <constraint firstAttribute="width" secondItem="Faf-v6-B29" secondAttribute="height" multiplier="50:34" id="vST-8B-tdV"/>
                                                     </constraints>
                                                     <state key="normal" title="Delete" image="delete"/>
-                                                    <connections>
-                                                        <action selector="btnDelete:" destination="Xeo-C4-3fJ" eventType="touchUpInside" id="zkr-kx-lQz"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="C6W-Do-l9v" firstAttribute="centerX" secondItem="BqV-3I-6kF" secondAttribute="centerX" id="HYf-8w-Bjk"/>
-                                                <constraint firstItem="C6W-Do-l9v" firstAttribute="centerY" secondItem="BqV-3I-6kF" secondAttribute="centerY" id="wgI-hf-pQh"/>
+                                                <constraint firstItem="Faf-v6-B29" firstAttribute="width" secondItem="Faf-v6-B29" secondAttribute="height" multiplier="50:34" id="8vk-Ye-bQS"/>
+                                                <constraint firstItem="Faf-v6-B29" firstAttribute="centerY" secondItem="BqV-3I-6kF" secondAttribute="centerY" id="97X-Jf-qAg"/>
+                                                <constraint firstItem="Faf-v6-B29" firstAttribute="centerX" secondItem="BqV-3I-6kF" secondAttribute="centerX" id="dPe-8m-IOR"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="91"/>
@@ -125,9 +122,11 @@
                                             <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="wZp-79-lfC" firstAttribute="centerX" secondItem="RkX-hv-njW" secondAttribute="centerX" constant="50" id="86P-cZ-y3X"/>
+                                                <constraint firstItem="wZp-79-lfC" firstAttribute="centerY" secondItem="RkX-hv-njW" secondAttribute="centerY" id="CGp-tj-Bsq"/>
                                                 <constraint firstItem="54d-UK-G3b" firstAttribute="centerX" secondItem="RkX-hv-njW" secondAttribute="centerX" constant="-50" id="IHC-9V-Elc"/>
-                                                <constraint firstAttribute="bottom" secondItem="wZp-79-lfC" secondAttribute="bottom" constant="10" id="VFU-Np-aGw"/>
-                                                <constraint firstAttribute="bottom" secondItem="54d-UK-G3b" secondAttribute="bottom" constant="10" id="euJ-Tw-Fjq"/>
+                                                <constraint firstItem="wZp-79-lfC" firstAttribute="height" secondItem="54d-UK-G3b" secondAttribute="height" id="jgO-XC-Zkl"/>
+                                                <constraint firstItem="54d-UK-G3b" firstAttribute="centerY" secondItem="RkX-hv-njW" secondAttribute="centerY" id="mIg-lF-xWJ"/>
+                                                <constraint firstItem="wZp-79-lfC" firstAttribute="width" secondItem="54d-UK-G3b" secondAttribute="width" id="zdi-LX-9pw"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -154,8 +153,10 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
+                                                <constraint firstItem="0gK-Tq-ftB" firstAttribute="centerX" secondItem="EIt-nu-Yj1" secondAttribute="centerX" id="GYn-Gf-5OQ"/>
                                                 <constraint firstItem="0gK-Tq-ftB" firstAttribute="top" secondItem="EIt-nu-Yj1" secondAttribute="top" id="Mrn-5j-cdI"/>
                                                 <constraint firstAttribute="bottom" secondItem="0gK-Tq-ftB" secondAttribute="bottom" id="Mtd-wv-UFy"/>
+                                                <constraint firstItem="0gK-Tq-ftB" firstAttribute="centerY" secondItem="EIt-nu-Yj1" secondAttribute="centerY" id="UmH-EL-mcM"/>
                                                 <constraint firstItem="0gK-Tq-ftB" firstAttribute="leading" secondItem="EIt-nu-Yj1" secondAttribute="leading" constant="10" id="gEb-al-auz"/>
                                                 <constraint firstAttribute="trailing" secondItem="0gK-Tq-ftB" secondAttribute="trailing" constant="10" id="xBR-Dd-15V"/>
                                             </constraints>
@@ -196,16 +197,19 @@
                         <viewLayoutGuide key="safeArea" id="nuN-Wz-1GD"/>
                         <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="qHE-aS-a23" firstAttribute="top" secondItem="nuN-Wz-1GD" secondAttribute="top" constant="100" id="11H-6N-8hj"/>
-                            <constraint firstItem="nuN-Wz-1GD" firstAttribute="bottom" secondItem="qHE-aS-a23" secondAttribute="bottom" constant="95" id="7CX-53-PyH"/>
+                            <constraint firstItem="Wek-Cb-Lqq" firstAttribute="top" relation="lessThanOrEqual" secondItem="qHE-aS-a23" secondAttribute="bottom" constant="32" id="0sB-Cv-Kiz"/>
+                            <constraint firstItem="qHE-aS-a23" firstAttribute="trailing" secondItem="nuN-Wz-1GD" secondAttribute="trailing" id="1fO-5T-2po"/>
                             <constraint firstItem="SNE-Nf-fcx" firstAttribute="top" secondItem="nuN-Wz-1GD" secondAttribute="top" constant="32" id="FZV-3F-oDg"/>
                             <constraint firstItem="nuN-Wz-1GD" firstAttribute="bottom" secondItem="fRO-4e-UoB" secondAttribute="bottom" constant="20" id="GFW-6s-ccY"/>
+                            <constraint firstItem="qHE-aS-a23" firstAttribute="leading" secondItem="s9T-9B-W9A" secondAttribute="leading" id="Kpc-cy-NMr"/>
                             <constraint firstItem="qHE-aS-a23" firstAttribute="centerX" secondItem="s9T-9B-W9A" secondAttribute="centerX" id="SLR-Dw-ftI"/>
                             <constraint firstItem="Wek-Cb-Lqq" firstAttribute="leading" secondItem="nuN-Wz-1GD" secondAttribute="leading" constant="20" id="SeJ-Of-OF6"/>
+                            <constraint firstItem="qHE-aS-a23" firstAttribute="leading" secondItem="nuN-Wz-1GD" secondAttribute="leading" id="ZtL-zS-LrB"/>
                             <constraint firstItem="nuN-Wz-1GD" firstAttribute="trailing" secondItem="fRO-4e-UoB" secondAttribute="trailing" constant="20" id="e45-ty-qtb"/>
                             <constraint firstItem="SNE-Nf-fcx" firstAttribute="leading" secondItem="nuN-Wz-1GD" secondAttribute="leading" constant="20" id="egD-uc-5wk"/>
                             <constraint firstItem="nuN-Wz-1GD" firstAttribute="trailing" secondItem="JDi-oa-C6x" secondAttribute="trailing" constant="20" id="g5d-5i-KYs"/>
                             <constraint firstItem="JDi-oa-C6x" firstAttribute="top" secondItem="nuN-Wz-1GD" secondAttribute="top" constant="20" id="lnr-Fx-UfE"/>
+                            <constraint firstItem="qHE-aS-a23" firstAttribute="top" secondItem="JDi-oa-C6x" secondAttribute="bottom" constant="28" id="nDa-Ia-nkF"/>
                             <constraint firstItem="nuN-Wz-1GD" firstAttribute="bottom" secondItem="Wek-Cb-Lqq" secondAttribute="bottom" constant="20" id="vae-Ba-3j0"/>
                         </constraints>
                     </view>
