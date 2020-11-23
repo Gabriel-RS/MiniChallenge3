@@ -32,6 +32,7 @@ class Notas: UIViewController {
     var noteSi = Note(name: "si", soundFile: "marimba_nota_si", color: "Yellow", type: "launchpad" )
     
     override func viewDidLoad() {
+        audioPlayer.prepareToPlay()
         aux = notes.count
     }
     
@@ -120,7 +121,10 @@ class Notas: UIViewController {
             defineNotas(btn: btnLa, note: noteLa)
             defineNotas(btn: btnSi, note: noteSi)
             performSegue(withIdentifier: "unwind", sender: self)
-        } 
+        } else {
+            lblAviso.text = "Selecione 4 notas"
+            lblAviso.isHidden = false
+        }
     }
     
     
