@@ -16,6 +16,8 @@ class ButtonCell: UICollectionViewCell {
     @IBOutlet weak var btnLock: UIButton!
     @IBOutlet weak var btnPlay: UIButton!
     
+    let isPlaying = LaunchpadViewController.isPlaying
+
     func lockImg() {
         if PuzzleViewController.locked == false {
             btnLock.setImage(UIImage(named: "unlocked"), for: .normal)
@@ -46,7 +48,18 @@ class ButtonCell: UICollectionViewCell {
     //Launchpad
     @IBAction func btnPlay(_ sender: Any) {
         print("Play Button")
+        NotificationCenter.default.addObserver(self, selector: #selector(self.playImage(sender:)), name: NSNotification.Name.init("Playing"), object: nil)
         delegate?.play()
+    }
+    
+    @objc func playImage(sender: Notification) {
+        let isPlaying = LaunchpadViewController.isPlaying
+
+        if isPlaying == true {
+            btnPlay.setImage(UIImage(named: "pause"), for: .normal)
+        } else {
+            btnPlay.setImage(UIImage(named: "play"), for: .normal)
+        }
     }
     
     //Puzzle

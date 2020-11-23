@@ -11,7 +11,7 @@
         <!--Launchpad View Controller-->
         <scene sceneID="dlM-5D-0ZM">
             <objects>
-                <viewController id="8gh-7E-tSa" customClass="LaunchpadViewController" customModule="Memu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LaunchpadViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8gh-7E-tSa" customClass="LaunchpadViewController" customModule="Memu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N7g-gJ-Uhh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,6 +25,7 @@
                                 <state key="normal" title="Menu" image="menu"/>
                                 <connections>
                                     <action selector="btnMenu:" destination="8gh-7E-tSa" eventType="touchUpInside" id="MDE-8i-CbX"/>
+                                    <segue destination="29j-VX-wZk" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="yba-lp-Qra"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTA-pw-zyP">
@@ -36,7 +37,7 @@
                                 <state key="normal" title="Note" image="note"/>
                                 <connections>
                                     <action selector="btnNotes:" destination="8gh-7E-tSa" eventType="touchUpInside" id="nTO-iH-W7h"/>
-                                    <segue destination="xK7-uN-vNd" kind="show" identifier="going2Notes" id="Ph9-iZ-dEx"/>
+                                    <segue destination="xK7-uN-vNd" kind="presentation" identifier="going2Notes" id="Ph9-iZ-dEx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noR-Ku-2iL">
@@ -50,7 +51,7 @@
                                     <action selector="btnCheck:" destination="8gh-7E-tSa" eventType="touchUpInside" id="WuY-3z-gPP"/>
                                 </connections>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NcY-Kg-mxs">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NcY-Kg-mxs">
                                 <rect key="frame" x="0.0" y="144" width="414" height="623"/>
                                 <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -185,7 +186,7 @@
                     <connections>
                         <outlet property="btnCheck" destination="noR-Ku-2iL" id="9Ji-GV-lr1"/>
                         <outlet property="collectionView" destination="NcY-Kg-mxs" id="wTP-7w-RZM"/>
-                        <segue destination="h4S-Xx-DZ9" kind="show" identifier="go2Puzzle" id="z7Z-Wm-FuI"/>
+                        <segue destination="h4S-Xx-DZ9" kind="presentation" identifier="go2Puzzle" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="z7Z-Wm-FuI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pTq-fo-21N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -200,7 +201,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSF-zM-dnt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="650" y="163"/>
+            <point key="canvasLocation" x="413" y="177"/>
         </scene>
         <!--Notes-->
         <scene sceneID="iWG-L5-WQn">
@@ -210,7 +211,15 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2vx-tg-cpf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-353" y="555"/>
+            <point key="canvasLocation" x="-401" y="595"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="pnQ-02-s7k">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Menu" id="29j-VX-wZk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A5H-rQ-dWS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="370" y="-62"/>
         </scene>
     </scenes>
     <resources>

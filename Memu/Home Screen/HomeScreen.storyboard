@@ -7,6 +7,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Tutorial-->
+        <scene sceneID="mxJ-rd-nv1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tutorial" id="Vra-5s-wx9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OLu-IX-P6k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-438" y="518"/>
+        </scene>
+        <!--Rewards-->
+        <scene sceneID="P68-je-Jbj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Rewards" id="GY6-kM-68C" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Lr-yI-qQ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="589" y="386"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="zhG-ci-qJM">
             <objects>
@@ -57,7 +73,7 @@
                                     <color key="titleColor" red="0.9686403871" green="0.9686041474" blue="0.96862870450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="qOy-HD-MYn" kind="show" id="Lqw-qj-RrB"/>
+                                    <segue destination="qOy-HD-MYn" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Lqw-qj-RrB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UV8-re-Zny">
@@ -94,19 +110,6 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKn-C0-Ao6">
-                                <rect key="frame" x="248" y="311" width="43.5" height="71"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="U">
-                                        <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="60" name="SFCompactDisplay-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqM-sv-lF2">
                                 <rect key="frame" x="248" y="173" width="49" height="71"/>
                                 <constraints>
@@ -124,14 +127,38 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="reward" translatesAutoresizingMaskIntoConstraints="NO" id="kc1-YU-Ybe">
-                                <rect key="frame" x="215" y="657" width="71" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="help" translatesAutoresizingMaskIntoConstraints="NO" id="tXK-vH-FGq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKn-C0-Ao6">
+                                <rect key="frame" x="248" y="311" width="43.5" height="71"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="U">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="60" name="SFCompactDisplay-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAw-g3-yBf">
                                 <rect key="frame" x="127" y="657" width="71" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="bsB-My-tVV"/>
+                                    <constraint firstAttribute="height" constant="76" id="w9d-ZI-jT3"/>
+                                </constraints>
+                                <state key="normal" title="Help" image="help"/>
+                                <connections>
+                                    <segue destination="Vra-5s-wx9" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="BXO-3X-8Uw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJf-y0-NQ8">
+                                <rect key="frame" x="215" y="657" width="71" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="6L0-TC-wwa"/>
+                                    <constraint firstAttribute="height" constant="76" id="TTh-9f-qWA"/>
+                                </constraints>
+                                <state key="normal" title="Reward" image="reward"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rxn-5f-BrR"/>
                         <color key="backgroundColor" red="0.97256201509999995" green="0.972525537" blue="0.9725503325" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -147,10 +174,13 @@
                             <constraint firstItem="UV8-re-Zny" firstAttribute="top" secondItem="Rxn-5f-BrR" secondAttribute="top" constant="129" id="KQA-Tc-vD1"/>
                             <constraint firstItem="GTh-rZ-Nac" firstAttribute="bottom" secondItem="Fcy-YC-NYN" secondAttribute="bottom" id="LQc-s6-Vl6"/>
                             <constraint firstItem="jbc-9o-5Ia" firstAttribute="top" secondItem="GTh-rZ-Nac" secondAttribute="bottom" constant="37" id="MbW-QF-SdB"/>
+                            <constraint firstItem="dAw-g3-yBf" firstAttribute="top" secondItem="26v-XB-1xk" secondAttribute="bottom" constant="14" id="P8S-0R-OIN"/>
                             <constraint firstItem="BqM-sv-lF2" firstAttribute="top" secondItem="Rxn-5f-BrR" secondAttribute="top" constant="129" id="T49-7O-f0V"/>
                             <constraint firstItem="CrG-Bn-g0O" firstAttribute="bottom" secondItem="RSY-Up-fAa" secondAttribute="bottom" id="TFl-aP-sME"/>
                             <constraint firstItem="CrG-Bn-g0O" firstAttribute="top" secondItem="BqM-sv-lF2" secondAttribute="bottom" constant="44" id="TIy-hx-Q3F"/>
+                            <constraint firstItem="dAw-g3-yBf" firstAttribute="leading" secondItem="Rxn-5f-BrR" secondAttribute="leading" constant="127" id="U4h-qS-dFi"/>
                             <constraint firstItem="BqM-sv-lF2" firstAttribute="leading" secondItem="GTh-rZ-Nac" secondAttribute="trailing" constant="46" id="Wi5-EI-VWg"/>
+                            <constraint firstItem="Rxn-5f-BrR" firstAttribute="trailing" secondItem="nJf-y0-NQ8" secondAttribute="trailing" constant="128" id="ZQL-J5-hVf"/>
                             <constraint firstItem="GTh-rZ-Nac" firstAttribute="top" secondItem="Rxn-5f-BrR" secondAttribute="top" constant="106" id="dbt-jU-8FH"/>
                             <constraint firstItem="UV8-re-Zny" firstAttribute="leading" secondItem="Rxn-5f-BrR" secondAttribute="leading" constant="115" id="e3f-9a-APa"/>
                             <constraint firstItem="26v-XB-1xk" firstAttribute="centerX" secondItem="tpP-3Q-V8p" secondAttribute="centerX" id="eBl-MH-1sW"/>
@@ -163,6 +193,7 @@
                             <constraint firstItem="RSY-Up-fAa" firstAttribute="top" secondItem="GTh-rZ-Nac" secondAttribute="bottom" constant="15" id="tVi-Lt-zCg"/>
                             <constraint firstItem="Fcy-YC-NYN" firstAttribute="top" secondItem="Rxn-5f-BrR" secondAttribute="top" constant="106" id="wPf-JB-pLw"/>
                             <constraint firstItem="26v-XB-1xk" firstAttribute="top" secondItem="AKn-C0-Ao6" secondAttribute="bottom" constant="146" id="wyy-KM-Xks"/>
+                            <constraint firstItem="nJf-y0-NQ8" firstAttribute="top" secondItem="26v-XB-1xk" secondAttribute="bottom" constant="14" id="xWb-2U-Gs5"/>
                             <constraint firstItem="26v-XB-1xk" firstAttribute="leading" secondItem="Rxn-5f-BrR" secondAttribute="leading" constant="76" id="y87-py-vAW"/>
                             <constraint firstItem="26v-XB-1xk" firstAttribute="top" secondItem="RSY-Up-fAa" secondAttribute="bottom" constant="117" id="yH2-Pz-S2Y"/>
                             <constraint firstItem="GTh-rZ-Nac" firstAttribute="leading" secondItem="Rxn-5f-BrR" secondAttribute="leading" constant="82" id="zlr-EC-K3L"/>
@@ -173,10 +204,10 @@
             </objects>
             <point key="canvasLocation" x="53.623188405797109" y="167.41071428571428"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Launchpad-->
         <scene sceneID="aC6-mM-LJq">
             <objects>
-                <viewControllerPlaceholder id="qOy-HD-MYn" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Launchpad" id="qOy-HD-MYn" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="1Mi-1q-dNO"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="924-IE-TMF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -34,11 +34,12 @@ class LaunchpadViewController: UIViewController {
     
     let btnImg: [UIImage] = [UIImage(named: "play")!]
     
-    var sequenceSong: [String] = []
     var playerItem: [AVPlayerItem] = []
     var sequencePlayer: AVQueuePlayer?
     var notePlayer: AVAudioPlayer?
-        
+    
+    static var isPlaying = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
@@ -54,7 +55,6 @@ class LaunchpadViewController: UIViewController {
     
     @IBAction func btnMenu(_ sender: Any) {
         print("Menu Button")
-        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func btnNotes(_ sender: Any) {
         print("Notes Button")
@@ -135,7 +135,6 @@ class LaunchpadViewController: UIViewController {
                 return btnDeleteCell
             } else if IndexPath.section == 1  {
                 btnCell.delegate = self
-
                 return btnCell
             } else {
                 // se for seção da sequencia
@@ -247,9 +246,15 @@ extension LaunchpadViewController: ButtonCellDelegate {
                 print(note.name)
             }
         }
-        prepareToPlay(sequenceNotes: sequence.notes)
-        sequencePlayer?.seek(to: .zero)
-        sequencePlayer?.play()
+        
+        if LaunchpadViewController.isPlaying == true {
+            sequencePlayer?.pause()
+        } else {
+            prepareToPlay(sequenceNotes: sequence.notes)
+            sequencePlayer?.seek(to: .zero)
+            sequencePlayer?.play()
+            sequencePlayer?.addObserver(self, forKeyPath: "timeControlStatus", options: [.old, .new], context: nil)
+        }
     }
     
     func prepareToPlay(sequenceNotes: Array<Note>) {
@@ -283,6 +288,20 @@ extension LaunchpadViewController: ButtonCellDelegate {
             print(error)
         }
     }
-
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        
+        if object as AnyObject? === sequencePlayer {
+            if keyPath == "timeControlStatus" {
+                if ((sequencePlayer?.timeControlStatus) == .playing) {
+                    LaunchpadViewController.isPlaying = true
+                } else {
+                    LaunchpadViewController.isPlaying = false
+                }
+                NotificationCenter.default.post(name: NSNotification.Name.init("Playing"), object: nil)
+            }
+        }
+    }
+    
 }
 

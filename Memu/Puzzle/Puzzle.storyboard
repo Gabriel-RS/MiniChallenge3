@@ -25,6 +25,7 @@
                                 <state key="normal" title="Menu" image="menu"/>
                                 <connections>
                                     <action selector="btnMenu:" destination="NIZ-Ik-7oU" eventType="touchUpInside" id="mgD-Mb-Xrr"/>
+                                    <segue destination="0PX-9p-qiY" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Ssh-BF-Qmx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wek-Cb-Lqq">
@@ -49,7 +50,7 @@
                                     <action selector="btnCheck:" destination="NIZ-Ik-7oU" eventType="touchUpInside" id="jHZ-gr-tAV"/>
                                 </connections>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qHE-aS-a23">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qHE-aS-a23">
                                 <rect key="frame" x="0.0" y="144" width="414" height="623"/>
                                 <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -214,12 +215,20 @@
                         <outlet property="ear1" destination="q7s-ci-lat" id="R5X-aX-zhW"/>
                         <outlet property="ear2" destination="tJA-eW-WJd" id="hCG-9v-Bgh"/>
                         <outlet property="ear3" destination="hyp-1E-G3m" id="Jkj-CK-7CF"/>
-                        <segue destination="umK-vD-sBV" kind="show" identifier="conclusionSegue" id="CYE-eq-0bH"/>
+                        <segue destination="umK-vD-sBV" kind="presentation" identifier="conclusionSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="CYE-eq-0bH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="foD-Ar-4nc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-149.27536231884059" y="176.78571428571428"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="W5N-ya-gR2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Menu" id="0PX-9p-qiY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I6h-NK-NaY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="370" y="-62"/>
         </scene>
         <!--Completion-->
         <scene sceneID="ofN-aJ-HKr">
@@ -229,7 +238,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ht-mk-Vfh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="501" y="399"/>
+            <point key="canvasLocation" x="397" y="428"/>
         </scene>
     </scenes>
     <resources>
