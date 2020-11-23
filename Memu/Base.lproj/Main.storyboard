@@ -31,14 +31,6 @@
                                     <segue destination="FML-dX-fMp" kind="show" id="S5X-dS-Nob"/>
                                 </connections>
                             </button>
-
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Swp-br-lgn">
-                                <rect key="frame" x="159" y="277" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Recompensas"/>
-                                <connections>
-                                    <segue destination="s45-h5-a8E" kind="show" id="f29-la-vJE"/>
-
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3u-1b-6XF">
                                 <rect key="frame" x="184" y="471" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -46,7 +38,6 @@
                                 <connections>
                                     <segue destination="OSF-dV-GAZ" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="6ZR-Yw-5Rt"/>
                                 </connections>
-                              
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -61,17 +52,6 @@
             </objects>
             <point key="canvasLocation" x="139" y="125"/>
         </scene>
-
-        <!--Rewards-->
-        <scene sceneID="IuH-Se-qta">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Rewards" id="s45-h5-a8E" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="ps3-7e-23q"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IKT-oC-rfP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="623" y="-72"/>
-
         <!--Puzzle-->
         <scene sceneID="hF3-2o-7Yr">
             <objects>
@@ -79,8 +59,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0uI-SD-c7q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="731" y="147"/>
-
-          </scene>
+        </scene>
         <!--Launchpad-->
         <scene sceneID="Vdb-UT-xCA">
             <objects>
@@ -106,3 +85,4 @@
         </systemColor>
     </resources>
 </document>
+

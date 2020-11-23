@@ -158,6 +158,9 @@
                                     <constraint firstAttribute="height" constant="76" id="TTh-9f-qWA"/>
                                 </constraints>
                                 <state key="normal" title="Reward" image="reward"/>
+                                <connections>
+                                    <segue destination="GY6-kM-68C" kind="presentation" id="qDa-hH-wMZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rxn-5f-BrR"/>
@@ -212,7 +215,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="924-IE-TMF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="638" y="262"/>
+            <point key="canvasLocation" x="599" y="263"/>
         </scene>
     </scenes>
     <resources>
