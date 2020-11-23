@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSJ-8n-bc7">
-                                <rect key="frame" x="184" y="433" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="168.5" y="433" width="77" height="30"/>
+                                <state key="normal" title="Launchpad"/>
                                 <connections>
-                                    <segue destination="YgH-xL-GwR" kind="presentation" modalPresentationStyle="fullScreen" id="ClE-DG-TeA"/>
+                                    <segue destination="YgH-xL-GwR" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ClE-DG-TeA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQz-ja-Xj1">
@@ -29,6 +29,14 @@
                                 <state key="normal" title="Notas"/>
                                 <connections>
                                     <segue destination="FML-dX-fMp" kind="show" id="S5X-dS-Nob"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3u-1b-6XF">
+                                <rect key="frame" x="184" y="471" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Puzzle"/>
+                                <connections>
+                                    <segue destination="OSF-dV-GAZ" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="6ZR-Yw-5Rt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -44,13 +52,21 @@
             </objects>
             <point key="canvasLocation" x="139" y="125"/>
         </scene>
+        <!--Puzzle-->
+        <scene sceneID="hF3-2o-7Yr">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Puzzle" id="OSF-dV-GAZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0uI-SD-c7q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="731" y="147"/>
+        </scene>
         <!--Launchpad-->
         <scene sceneID="Vdb-UT-xCA">
             <objects>
                 <viewControllerPlaceholder storyboardName="Launchpad" id="YgH-xL-GwR" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Rc-EO-0J8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="762" y="122"/>
+            <point key="canvasLocation" x="763" y="106"/>
         </scene>
         <!--Notes-->
         <scene sceneID="YKt-70-83O">
@@ -69,3 +85,4 @@
         </systemColor>
     </resources>
 </document>
+

@@ -15,20 +15,46 @@ class Note: Hashable {
     var color: String
     var image: UIImage
     
-    init(name: String, soundFile: String, color: String) {
+    init(name: String, soundFile: String, color: String, type: String) {
         self.name = name
         self.soundFile = soundFile
         self.color = color
-        // começa sempre desligado
-        image = UIImage(named: "key\(self.color)Off")!
+        image = UIImage()
+        
+        image = setInitialImage(type: type)
+    }
+    
+    func setInitialImage(type: String) -> UIImage{
+        switch(type){
+        case "sequence":
+            return UIImage(named: "seqOff")!
+        case "sequenceOn":
+            return UIImage(named: "seq\(self.color)On")!
+        case "puzzle":
+            return UIImage(named: "keyGrayOff")!
+        case "delete":
+            return UIImage(named: "delete")!
+        case "invalid":
+            return UIImage(named: "seqGrayOn")!
+        default:
+            return UIImage(named: "key\(self.color)Off")!
+        }
     }
     
     func turnOn() {
-        image = UIImage(named: "key\(color)On")!
+        if image == UIImage(named: "key\(color)Off") {
+            image = UIImage(named: "key\(color)On")!
+        } else {
+            image = UIImage(named: "keyGrayOn")!
+        }
     }
     
     func turnOff() {
-        image = UIImage(named: "key\(color)Off")!
+        if image == UIImage(named: "key\(color)On") {
+            image = UIImage(named: "key\(color)Off")!
+        } else {
+            image = UIImage(named: "keyGrayOff")!
+        }
     }
     
     // MARK: Hashable Protocol Methods
