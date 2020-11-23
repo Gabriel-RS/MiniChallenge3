@@ -15,7 +15,7 @@ class Board {
     var size: Int
     var instrument: String
     
-    init(size: Int, instrument: String, isLaunchpad: Bool) {
+    init(size: Int, instrument: String, type: String) {
         self.size = size
         self.instrument = instrument
         self.launchpad = [Note]()
@@ -23,43 +23,59 @@ class Board {
         let possibleNotes = ["do", "re", "mi", "fa", "sol", "la", "si"]
         
         let possibleColors = ["Blue","Green","Red","Pink","Purple", "Orange","Yellow"]
-
+        
         for i in 0..<size {
-            let note = Note(name: possibleNotes[i], soundFile: "\(instrument)_nota_\(possibleNotes[i])", color: possibleColors[i])
+            let note = Note(name: possibleNotes[i], soundFile: "\(instrument)_nota_\(possibleNotes[i])", color: possibleColors[i], type: type)
             launchpad.append(note)
         }
 
     }
     
-    // pega as cores para ser apresentado na collection view do launchpad
-    func getKeyImagesLaunchpad() -> [UIImage] {
-        var images = [UIImage]()
-        for note in launchpad {
-            print(note.image)
-            images.append(note.image)
+    // reseta como se fosse primeira vez jogando launchpad (do re mi fa)
+    func reset() {
+        self.launchpad = [Note]()
+        let possibleNotes = ["do", "re", "mi", "fa", "sol", "la", "si"]
+        
+        let possibleColors = ["Blue","Green","Red","Pink","Purple", "Orange","Yellow"]
+        
+        for i in 0..<size {
+            let note = Note(name: possibleNotes[i], soundFile: "\(instrument)_nota_\(possibleNotes[i])", color: possibleColors[i], type: "launchpad")
+            launchpad.append(note)
         }
-        return images
     }
     
     // para ser chamado quando alterar as notas musicais
-//    func setNotes(notes: [Note]) {
-//        self.launchpad = notes
-//    }
-//
-//    func getNotes() -> [Note] {
-//        return self.launchpad
-//    }
-//
+    func setNotes(notes: [Note]) {
+        self.launchpad = notes
+    }
     
-    // as notas vão ser as mesmas, mas a imagem será alterada
-//    func getKeyImagesPuzzle() -> [UIImage] {
-//        var puzzleImages = [UIImage]()
-//        for _ in launchpad {
-//            let grayKey = UIImage(named: "keyGrayOn")!
-//            puzzleImages.append(grayKey)
-//        }
-//
-//        return puzzleImages
-//    }
-//
+    // para ser chamado quando passar do launchpad para o puzzle
+    func setPuzzleNotes(notes: [Note]) {
+        let puzzleNotes = notes
+        
+        // atualiza as imagens sem alterar a cor
+        for note in puzzleNotes {
+            note.image = UIImage(named: "keyGrayOff")!
+        }
+        
+        self.launchpad = puzzleNotes
+    }
+
+    // não tá sendo chamado
+    func getNotes() -> [Note] {
+        return self.launchpad
+    }
+    
+    // não tá sendo chamado
+    func turnOffWrong(notes: [Note]) {
+        for i in 0..<notes.count {
+            if notes[i].image == UIImage(named: "seqGrayOn") {
+                launchpad[i].turnOff()
+            }
+        }
+    }
+    
+    func shuffleBoard() {
+        launchpad.shuffle()
+    }
 }

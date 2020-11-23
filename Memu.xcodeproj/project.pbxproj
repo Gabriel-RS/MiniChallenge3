@@ -49,8 +49,15 @@
 		5A6A09712551E6D700F143ED /* SequenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09702551E6D700F143ED /* SequenceCell.swift */; };
 		8536C6012559B2C200706EE7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536C6002559B2C200706EE7 /* Note.swift */; };
 		8536C6092559B39D00706EE7 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536C6082559B39D00706EE7 /* Board.swift */; };
+
 		8561EE1225686CA800E072B8 /* PlayerProgress+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8561EE0E25686CA800E072B8 /* PlayerProgress+CoreDataClass.swift */; };
 		8561EE1425686CA800E072B8 /* NoteProgress+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8561EE1025686CA800E072B8 /* NoteProgress+CoreDataClass.swift */; };
+
+		A3992E812568A93000775982 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3992E802568A93000775982 /* PlayerManager.swift */; };
+		A3E79FE82568893F00D5FAD7 /* ViewControlle+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E79FE72568893F00D5FAD7 /* ViewControlle+CoreData.swift */; };
+
+		85B4A5F6255EFFFD0019D0EF /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4A5F5255EFFFD0019D0EF /* Sequence.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,8 +126,14 @@
 		5A6A09702551E6D700F143ED /* SequenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceCell.swift; sourceTree = "<group>"; };
 		8536C6002559B2C200706EE7 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		8536C6082559B39D00706EE7 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+
 		8561EE0E25686CA800E072B8 /* PlayerProgress+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayerProgress+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8561EE1025686CA800E072B8 /* NoteProgress+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteProgress+CoreDataClass.swift"; sourceTree = "<group>"; };
+
+		A3992E802568A93000775982 /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
+		A3E79FE72568893F00D5FAD7 /* ViewControlle+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControlle+CoreData.swift"; sourceTree = "<group>"; };
+		85B4A5F5255EFFFD0019D0EF /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +350,9 @@
 				8561EE1025686CA800E072B8 /* NoteProgress+CoreDataClass.swift */,
 				8536C6002559B2C200706EE7 /* Note.swift */,
 				8536C6082559B39D00706EE7 /* Board.swift */,
+				A3E79FE72568893F00D5FAD7 /* ViewControlle+CoreData.swift */,
+				A3992E802568A93000775982 /* PlayerManager.swift */,
+				85B4A5F5255EFFFD0019D0EF /* Sequence.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -491,8 +507,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3E79FE82568893F00D5FAD7 /* ViewControlle+CoreData.swift in Sources */,
 				5A122FEC2547490C00417AEE /* ViewController.swift in Sources */,
 				5A6A09552551D4AA00F143ED /* PuzzleViewController.swift in Sources */,
+				85B4A5F6255EFFFD0019D0EF /* Sequence.swift in Sources */,
 				5A6A09712551E6D700F143ED /* SequenceCell.swift in Sources */,
 				5A6A093D2551D41300F143ED /* MenuViewController.swift in Sources */,
 				5A122FF22547490C00417AEE /* Memu.xcdatamodeld in Sources */,
@@ -507,6 +525,7 @@
 				5A122FEA2547490C00417AEE /* SceneDelegate.swift in Sources */,
 				5A19B1A62554943E00C4F804 /* LaunchpadCell.swift in Sources */,
 				027EB5FF255DAA6A00DD7720 /* TutorialViewController.swift in Sources */,
+				A3992E812568A93000775982 /* PlayerManager.swift in Sources */,
 				5A6A09452551D44800F143ED /* HomeScreenViewController.swift in Sources */,
 				8536C6092559B39D00706EE7 /* Board.swift in Sources */,
 				5A19B1AE2554988A00C4F804 /* ButtonCell.swift in Sources */,
