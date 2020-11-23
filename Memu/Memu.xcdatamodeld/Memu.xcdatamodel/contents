@@ -1,4 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19H2" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="NoteProgress" representedClassName="NoteProgress" syncable="YES" codeGenerationType="category">
+        <attribute name="gamesPlayed" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="gamesToPlay" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="instruction" optional="YES" attributeType="String"/>
+        <attribute name="level" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="medal" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="rewardPoints" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="player" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlayerProgress" inverseName="notes" inverseEntity="PlayerProgress"/>
+    </entity>
+    <entity name="PlayerProgress" representedClassName="PlayerProgress" syncable="YES" codeGenerationType="category">
+        <attribute name="instruction" optional="YES" attributeType="String"/>
+        <attribute name="level" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="points" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="pointsToLevelUp" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="titleDescription" optional="YES" attributeType="String"/>
+        <attribute name="titleFlag" optional="YES" attributeType="String"/>
+        <relationship name="notes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="NoteProgress" inverseName="player" inverseEntity="NoteProgress"/>
+    </entity>
+    <elements>
+        <element name="NoteProgress" positionX="-63" positionY="-18" width="128" height="163"/>
+        <element name="PlayerProgress" positionX="201.26171875" positionY="4.078125" width="128" height="163"/>
+
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="20B29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="NoteGame" representedClassName="NoteGame" syncable="YES" codeGenerationType="class">
         <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
@@ -22,5 +48,6 @@
     <elements>
         <element name="NoteGame" positionX="-54" positionY="45" width="128" height="119"/>
         <element name="Player" positionX="-63" positionY="-18" width="128" height="164"/>
+
     </elements>
 </model>
