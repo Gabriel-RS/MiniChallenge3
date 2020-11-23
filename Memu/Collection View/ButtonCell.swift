@@ -16,11 +16,10 @@ class ButtonCell: UICollectionViewCell {
     @IBOutlet weak var btnLock: UIButton!
     @IBOutlet weak var btnPlay: UIButton!
     
-    let locked = LaunchpadViewController.locked
     let isPlaying = LaunchpadViewController.isPlaying
-    
+
     func lockImg() {
-        if locked == false {
+        if PuzzleViewController.locked == false {
             btnLock.setImage(UIImage(named: "unlocked"), for: .normal)
         } else {
             btnLock.setImage(UIImage(named: "locked"), for: .normal)
@@ -33,12 +32,16 @@ class ButtonCell: UICollectionViewCell {
     }
     
     @IBAction func btnLock(_ sender: Any) {
-        if locked == false {
-            LaunchpadViewController.locked = true
+        if PuzzleViewController.locked {
+            PuzzleViewController.locked = false
+            btnLock.setImage(UIImage(named: "unlocked"), for: .normal)
+        } else if PuzzleViewController.locked == false && PuzzleViewController.timesLocked == 0 {
+            PuzzleViewController.locked = true
+            PuzzleViewController.timesLocked += 1
             btnLock.setImage(UIImage(named: "locked"), for: .normal)
         } else {
-            LaunchpadViewController.locked = false
-            btnLock.setImage(UIImage(named: "unlocked"), for: .normal)
+            print("não é possível bloquear mais de uma vez")
+            // TODO: emitir som de tecla bloqueada
         }
     }
     

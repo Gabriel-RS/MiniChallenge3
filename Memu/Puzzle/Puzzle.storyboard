@@ -106,7 +106,6 @@
                                                     </constraints>
                                                     <state key="normal" title="Play" image="hearing"/>
                                                     <connections>
-                                                        <action selector="btnHear:" destination="NIZ-Ik-7oU" eventType="touchUpInside" id="Wn8-Iq-mwp"/>
                                                         <action selector="btnHearing:" destination="lYZ-Ra-cll" eventType="touchUpInside" id="H3D-ac-fLm"/>
                                                     </connections>
                                                 </button>
