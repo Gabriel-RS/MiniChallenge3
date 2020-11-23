@@ -9,6 +9,10 @@ import UIKit
 
 class RewardsViewController: UIViewController {
     
+    // TESTE MÉTODOS CLASSE CORE DATA
+    var playerProgress = PlayerProgress()
+    var noteProgress = NoteProgress()
+    
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var ivImage: UIImageView!
     @IBOutlet weak var lbDescription: UILabel!
@@ -42,6 +46,11 @@ class RewardsViewController: UIViewController {
         
         progressPlayer()
         //refreshPage(level)
+        
+        // TESTE MÉTODOS CLASSE CORE DATA
+        print(playerProgress.getImageName(level: 2))
+        print(noteProgress.getRewardPoints(level: 2))
+        print(noteProgress.getMedalName(level: 3, name: "re"))
         
     }
     
