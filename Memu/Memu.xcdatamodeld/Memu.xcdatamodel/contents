@@ -24,8 +24,7 @@
     <elements>
         <element name="NoteProgress" positionX="-63" positionY="-18" width="128" height="163"/>
         <element name="PlayerProgress" positionX="201.26171875" positionY="4.078125" width="128" height="163"/>
-
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="20B29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+	</elements>
     <entity name="NoteGame" representedClassName="NoteGame" syncable="YES" codeGenerationType="class">
         <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="medal" optional="YES" attributeType="Transformable"/>
