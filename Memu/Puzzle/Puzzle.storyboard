@@ -53,9 +53,6 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qHE-aS-a23">
                                 <rect key="frame" x="0.0" y="144" width="414" height="623"/>
                                 <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="qHE-aS-a23" secondAttribute="height" multiplier="414:623" id="VhV-tq-TOM"/>
-                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hVI-hg-x3r">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -197,11 +194,10 @@
                         <viewLayoutGuide key="safeArea" id="nuN-Wz-1GD"/>
                         <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Wek-Cb-Lqq" firstAttribute="top" relation="lessThanOrEqual" secondItem="qHE-aS-a23" secondAttribute="bottom" constant="32" id="0sB-Cv-Kiz"/>
                             <constraint firstItem="qHE-aS-a23" firstAttribute="trailing" secondItem="nuN-Wz-1GD" secondAttribute="trailing" id="1fO-5T-2po"/>
+                            <constraint firstItem="fRO-4e-UoB" firstAttribute="top" secondItem="qHE-aS-a23" secondAttribute="bottom" constant="23" id="7Uf-ek-Q1I"/>
                             <constraint firstItem="SNE-Nf-fcx" firstAttribute="top" secondItem="nuN-Wz-1GD" secondAttribute="top" constant="32" id="FZV-3F-oDg"/>
                             <constraint firstItem="nuN-Wz-1GD" firstAttribute="bottom" secondItem="fRO-4e-UoB" secondAttribute="bottom" constant="20" id="GFW-6s-ccY"/>
-                            <constraint firstItem="qHE-aS-a23" firstAttribute="leading" secondItem="s9T-9B-W9A" secondAttribute="leading" id="Kpc-cy-NMr"/>
                             <constraint firstItem="qHE-aS-a23" firstAttribute="centerX" secondItem="s9T-9B-W9A" secondAttribute="centerX" id="SLR-Dw-ftI"/>
                             <constraint firstItem="Wek-Cb-Lqq" firstAttribute="leading" secondItem="nuN-Wz-1GD" secondAttribute="leading" constant="20" id="SeJ-Of-OF6"/>
                             <constraint firstItem="qHE-aS-a23" firstAttribute="leading" secondItem="nuN-Wz-1GD" secondAttribute="leading" id="ZtL-zS-LrB"/>
