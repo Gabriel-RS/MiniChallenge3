@@ -136,29 +136,25 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LaunchpadCell" id="ETQ-ik-fhh" customClass="LaunchpadCell" customModule="Memu" customModuleProvider="target">
-                                        <rect key="frame" x="142" y="174" width="130" height="120"/>
+                                        <rect key="frame" x="143" y="174" width="128" height="158"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="EIt-nu-Yj1">
-                                            <rect key="frame" x="0.0" y="0.0" width="130" height="120"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="158"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="keyGrayOn" translatesAutoresizingMaskIntoConstraints="NO" id="0gK-Tq-ftB">
-                                                    <rect key="frame" x="10" y="0.0" width="110" height="120"/>
+                                                    <rect key="frame" x="9" y="0.0" width="110" height="158"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="0gK-Tq-ftB" secondAttribute="height" multiplier="11:12" id="8DJ-fi-RYj"/>
                                                         <constraint firstAttribute="width" constant="110" id="g3S-px-lUD"/>
-                                                        <constraint firstAttribute="height" constant="120" id="kab-cY-6G6"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstItem="0gK-Tq-ftB" firstAttribute="centerX" secondItem="EIt-nu-Yj1" secondAttribute="centerX" id="GYn-Gf-5OQ"/>
-                                                <constraint firstItem="0gK-Tq-ftB" firstAttribute="top" secondItem="EIt-nu-Yj1" secondAttribute="top" id="Mrn-5j-cdI"/>
-                                                <constraint firstAttribute="bottom" secondItem="0gK-Tq-ftB" secondAttribute="bottom" id="Mtd-wv-UFy"/>
-                                                <constraint firstItem="0gK-Tq-ftB" firstAttribute="centerY" secondItem="EIt-nu-Yj1" secondAttribute="centerY" id="UmH-EL-mcM"/>
-                                                <constraint firstItem="0gK-Tq-ftB" firstAttribute="leading" secondItem="EIt-nu-Yj1" secondAttribute="leading" constant="10" id="gEb-al-auz"/>
-                                                <constraint firstAttribute="trailing" secondItem="0gK-Tq-ftB" secondAttribute="trailing" constant="10" id="xBR-Dd-15V"/>
+                                                <constraint firstItem="0gK-Tq-ftB" firstAttribute="leading" secondItem="EIt-nu-Yj1" secondAttribute="leading" constant="9" id="Pvx-Jr-LmN"/>
+                                                <constraint firstAttribute="bottom" secondItem="0gK-Tq-ftB" secondAttribute="bottom" id="R18-Td-Wre"/>
+                                                <constraint firstAttribute="trailing" secondItem="0gK-Tq-ftB" secondAttribute="trailing" constant="9" id="fJE-cx-DuJ"/>
+                                                <constraint firstItem="0gK-Tq-ftB" firstAttribute="top" secondItem="EIt-nu-Yj1" secondAttribute="top" id="uan-gw-TM8"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
