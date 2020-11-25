@@ -1,12 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "pause.svg",
+      "filename" : "medalhaMestreOff.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "pause 2.svg",
+      "filename" : "medalhaMestreOff-1.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },

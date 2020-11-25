@@ -135,8 +135,9 @@ class Notas: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "unwind"){
             let vc = segue.destination as! LaunchpadViewController
-            vc.sequence.reset()
-            vc.board.setNotes(notes: notes)
+            vc.sequence.newSequence()
+            vc.board.setLaunchpad(notes: notes)
+            vc.btnCheck.isEnabled = false
             vc.collectionView.reloadData()
         }
     }
@@ -165,7 +166,7 @@ class Notas: UIViewController {
     
     @IBAction func imprime(_ sender: Any) {
         for note in notes {
-            print(note.color)
+            print(note.getColor())
         }
     }
     

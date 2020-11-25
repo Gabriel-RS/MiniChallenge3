@@ -16,7 +16,7 @@ class LaunchpadCell: UICollectionViewCell {
     
     func setNoteKey(note: Note) {
         self.noteKey = note
-        keyOn.image = note.image
+        keyOn.image = note.getImage()
     }
     
 }
