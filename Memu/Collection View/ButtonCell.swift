@@ -15,6 +15,7 @@ class ButtonCell: UICollectionViewCell {
 
     @IBOutlet weak var btnLock: UIButton!
     @IBOutlet weak var btnPlay: UIButton!
+    @IBOutlet weak var btnHearing: UIButton!
     
     let isPlaying = LaunchpadViewController.isPlaying
 
@@ -26,6 +27,12 @@ class ButtonCell: UICollectionViewCell {
             }
         } else {
             btnLock.setImage(UIImage(named: "locked"), for: .normal)
+        }
+    }
+    
+    func disableBtnHearing() {
+        if PuzzleViewController.ouvidas == 0 {
+            btnHearing.isEnabled = false
         }
     }
     
@@ -66,6 +73,7 @@ class ButtonCell: UICollectionViewCell {
     @IBAction func btnHearing(_ sender: Any) {
         print("Hearing Button")
         delegate?.play()
+        disableBtnHearing()
     }
     
 }

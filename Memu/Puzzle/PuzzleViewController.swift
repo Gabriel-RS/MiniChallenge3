@@ -13,7 +13,7 @@ class PuzzleViewController: UIViewController {
     @IBOutlet weak var ear1: UIImageView!
     @IBOutlet weak var ear2: UIImageView!
     @IBOutlet weak var ear3: UIImageView!
-    var ouvidas = 3
+    
     
     var launchpadVc = LaunchpadViewController()
     
@@ -26,8 +26,10 @@ class PuzzleViewController: UIViewController {
         case puzzle
     }
     
+    // variaveis usadas no ButtonCell
     static var locked = false
     static var timesLocked = 0
+    static var ouvidas = 3
     
     // cria um tabuleiro puzzle para ser exibido e suas notas (do, re, mi, fa)
     var puzzleBoard = Board(size: 4, instrument: "marimba", type: "puzzle")
@@ -60,7 +62,7 @@ class PuzzleViewController: UIViewController {
         configDataSource()
         
         //ouvidas
-        ouvidas = 3
+        PuzzleViewController.ouvidas = 3
     }
     
     // MARK: - Button
@@ -140,18 +142,18 @@ class PuzzleViewController: UIViewController {
     }
     
     func updateOuvidas() {
-        switch(ouvidas) {
+        switch(PuzzleViewController.ouvidas) {
         case 3:
             ear3.image = UIImage(named: "earOff")
-            ouvidas -= 1
+            PuzzleViewController.ouvidas -= 1
             break
         case 2:
             ear2.image = UIImage(named: "earOff")
-            ouvidas -= 1
+            PuzzleViewController.ouvidas -= 1
             break
         case 1:
             ear1.image = UIImage(named: "earOff")
-            ouvidas -= 1
+            PuzzleViewController.ouvidas -= 1
             break
         default:
             break
@@ -237,6 +239,7 @@ class PuzzleViewController: UIViewController {
             } else if IndexPath.section == 1  {
                 // botão das ouvidas
                 btnCell.delegate = self
+                btnCell.disableBtnHearing()
                 
                 // botao de cadeado
                 btnCell.lockImg()
@@ -336,15 +339,9 @@ extension PuzzleViewController: ButtonCellDelegate {
     
     // toca a sequencia criada no puzzle
     func play() {
-        if ouvidas > 0 {
+        if PuzzleViewController.ouvidas > 0 {
             updateOuvidas()
             playSequence()
-        } else {
-            let alert = UIAlertController(title: "Ouvidas", message: "\nVocê já gastou todas as suas ouvidas!", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            
-            // TODO: emitir som tecla bloqueada
         }
     }
     

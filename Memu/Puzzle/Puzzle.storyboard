@@ -132,6 +132,7 @@
                                         <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <size key="customSize" width="414" height="63"/>
                                         <connections>
+                                            <outlet property="btnHearing" destination="54d-UK-G3b" id="KOW-2G-yXG"/>
                                             <outlet property="btnLock" destination="wZp-79-lfC" id="3gE-D9-OMO"/>
                                         </connections>
                                     </collectionViewCell>
