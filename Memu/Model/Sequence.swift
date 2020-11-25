@@ -9,24 +9,17 @@ import Foundation
 import UIKit
 
 class Sequence {
-    var size: Int
-    var notes: [Note]
+    private var size: Int
+    private var notes: [Note]
     
     init(size: Int) {
         self.size = size
         self.notes = [Note]()
         
-        for _ in 0..<size {
-            let note = Note(name: "off", soundFile: "", color: "", type: "sequence")
-            notes.append(note)
-        }
-        
-        // adiciona botão de deletar como ultimo elemento do array (fora do tamanho)
-        let deleteNote = Note(name: "delete", soundFile: "", color: "", type: "delete")
-        notes.append(deleteNote)
+        newSequence()
     }
     
-    func reset() {
+    func newSequence() {
         self.notes = [Note]()
         for _ in 0..<size {
             let note = Note(name: "off", soundFile: "", color: "", type: "sequence")
@@ -34,23 +27,22 @@ class Sequence {
         }
         
         // adiciona botão de deletar como ultimo elemento do array (fora do tamanho)
-        let deleteNote = Note(name: "delete", soundFile: "", color: "", type: "delete")
-        notes.append(deleteNote)
+        addDeleteButton()
     }
     
     func addNote(note: Note) {
         // cria uma nota do tipo sequencia
-        let sequenceNote = Note(name: note.name, soundFile: note.soundFile, color: note.color, type: "sequence")
+        let sequenceNote = Note(name: note.getName(), soundFile: note.getSoundFile(), color: note.getColor(), type: "sequence")
         
         // se a sequencia não estiver cheia
         if findFirstOffIndex() != -1 {
             // se for tecla do launchpad
-            if(note.image == UIImage(named: "key\(note.color)On")) {
-                sequenceNote.image = UIImage(named: "seq\(sequenceNote.color)On")!
+            if(note.getImage() == UIImage(named: "key\(note.getColor())On")) {
+                sequenceNote.setImage(image: UIImage(named: "seq\(sequenceNote.getColor())On")!)
                 
             } else {
                 // se for tecla do puzzle
-                sequenceNote.image = UIImage(named: "seqGrayOn")!
+                sequenceNote.setImage(image: UIImage(named: "seqGrayOn")!)
             }
             
             notes[findFirstOffIndex()] = sequenceNote
@@ -58,12 +50,19 @@ class Sequence {
         }
     }
     
+    func addDeleteButton() {
+        let deleteButton = Note(name: "delete", soundFile: "", color: "", type: "delete")
+        notes.append(deleteButton)
+    }
+    
     func eraseNote() -> Note{
         let blankNote = Note(name: "off", soundFile: "", color: "", type: "sequence")
         
+        // acha a ultima nota existente na sequencia
         let lastNoteIndex = findLastNoteIndex() - 1
         
-        if(lastNoteIndex != -1) {
+        // se sequencia não estiver vazia
+        if (lastNoteIndex != -1) {
             let erasedNote = notes[lastNoteIndex]
             notes[lastNoteIndex] = blankNote
             return erasedNote
@@ -75,7 +74,7 @@ class Sequence {
     // acha o primeiro elemento cujo nome é off para nota ser adicionada no lugar dele
     func findFirstOffIndex() -> Int{
         for i in 0..<size {
-            if notes[i].name == "off"{
+            if notes[i].getName() == "off"{
                 return i
             }
         }
@@ -85,7 +84,7 @@ class Sequence {
     // pega a primeira nota da sequencia que pode ser excluída
     func findLastNoteIndex() -> Int {
         var index = 0
-        while (notes[index].name != "off" && index < size) {
+        while (notes[index].getName() != "off" && index < size) {
             index+=1
         }
         
@@ -94,10 +93,24 @@ class Sequence {
     
     func isFull() -> Bool {
         for note in notes {
-            if note.name == "off" && note.name != "delete" {
+            if note.getName() == "off" && note.getName() != "delete" {
                 return false
             }
         }
         return true
     }
+    
+    // MARK: Getters e Setters
+    func getSize() -> Int {
+        return size
+    }
+    
+    func getNotes() -> [Note] {
+        return notes
+    }
+    
+    func setNotes(notes: [Note]) {
+        self.notes = notes
+    }
+
 }

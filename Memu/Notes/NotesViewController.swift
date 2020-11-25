@@ -32,6 +32,7 @@ class Notas: UIViewController {
     var noteSi = Note(name: "si", soundFile: "marimba_nota_si", color: "Yellow", type: "launchpad" )
     
     override func viewDidLoad() {
+        audioPlayer.prepareToPlay()
         aux = notes.count
     }
     
@@ -120,7 +121,10 @@ class Notas: UIViewController {
             defineNotas(btn: btnLa, note: noteLa)
             defineNotas(btn: btnSi, note: noteSi)
             performSegue(withIdentifier: "unwind", sender: self)
-        } 
+        } else {
+            lblAviso.text = "Selecione 4 notas"
+            lblAviso.isHidden = false
+        }
     }
     
     
@@ -131,8 +135,9 @@ class Notas: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "unwind"){
             let vc = segue.destination as! LaunchpadViewController
-            vc.sequence.reset()
-            vc.board.setNotes(notes: notes)
+            vc.sequence.newSequence()
+            vc.board.setLaunchpad(notes: notes)
+            vc.btnCheck.isEnabled = false
             vc.collectionView.reloadData()
         }
     }
@@ -161,7 +166,7 @@ class Notas: UIViewController {
     
     @IBAction func imprime(_ sender: Any) {
         for note in notes {
-            print(note.color)
+            print(note.getColor())
         }
     }
     
