@@ -74,6 +74,9 @@
                                                         <constraint firstAttribute="width" secondItem="Faf-v6-B29" secondAttribute="height" multiplier="50:34" id="vST-8B-tdV"/>
                                                     </constraints>
                                                     <state key="normal" title="Delete" image="delete"/>
+                                                    <connections>
+                                                        <action selector="btnDelete:" destination="Xeo-C4-3fJ" eventType="touchUpInside" id="iCZ-Gi-PE5"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
