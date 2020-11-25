@@ -10,10 +10,10 @@ import UIKit
 
 class Note: Hashable {
     var id = UUID()
-    var name: String
-    var soundFile: String
-    var color: String
-    var image: UIImage
+    private var name: String
+    private var soundFile: String
+    private var color: String
+    private var image: UIImage
     
     init(name: String, soundFile: String, color: String, type: String) {
         self.name = name
@@ -55,6 +55,39 @@ class Note: Hashable {
         } else {
             image = UIImage(named: "keyGrayOff")!
         }
+    }
+    
+    // MARK: Getters e Setters
+    func getName() -> String {
+        return self.name
+    }
+    
+    func setName(name: String) {
+        self.name = name
+    }
+    
+    func getSoundFile() -> String {
+        return self.soundFile
+    }
+    
+    func setSoundFile(soundFile: String) {
+        self.soundFile = soundFile
+    }
+    
+    func getColor() -> String {
+        return self.color
+    }
+    
+    func setColor(color: String) {
+        self.soundFile = color
+    }
+    
+    func getImage() -> UIImage {
+        return image
+    }
+    
+    func setImage(image: UIImage) {
+        self.image = image
     }
     
     // MARK: Hashable Protocol Methods
