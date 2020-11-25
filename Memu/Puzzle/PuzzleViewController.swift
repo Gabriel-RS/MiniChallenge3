@@ -79,14 +79,18 @@ class PuzzleViewController: UIViewController {
         let sequenceResult: [Note] = generateResultSequence()
         // se estiver tudo certo -> tela de conclusão
         if checkVictory(comparedArray: sequenceResult) {
+            // TODO: DOUGLAS, INSERE AQUI -> sequenceResult tem as notas utilizadas
+            
+            
+            
             // se sequencia estiver certa
             performSegue(withIdentifier: "conclusionSegue", sender: self)
             
-            // TODO: emitir som de feedback positivo
+            // TODO: JULIANA emitir som de feedback positivo (nao sei se aqui ou na conclusao)
             
         } else {
             updatePuzzle(notes: sequenceResult)
-            // TODO: emitir som de feedback negativo
+            // TODO: JULIANA emitir som de feedback negativo
             
             collectionView.reloadData()
         }
@@ -274,7 +278,7 @@ class PuzzleViewController: UIViewController {
 
 }
 
-// MARK: - Delegates
+// MARK: - Delegate Collection View
 
 extension PuzzleViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -318,6 +322,7 @@ extension PuzzleViewController: UICollectionViewDelegate {
     }
 }
 
+// MARK: Delegate botão
 extension PuzzleViewController: ButtonCellDelegate {
     
     func delete() {
