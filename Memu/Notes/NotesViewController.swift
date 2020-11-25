@@ -137,6 +137,7 @@ class Notas: UIViewController {
             let vc = segue.destination as! LaunchpadViewController
             vc.sequence.newSequence()
             vc.board.setLaunchpad(notes: notes)
+            vc.btnCheck.isEnabled = false
             vc.collectionView.reloadData()
         }
     }
