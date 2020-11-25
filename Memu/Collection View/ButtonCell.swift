@@ -63,7 +63,7 @@ class ButtonCell: UICollectionViewCell {
         let isPlaying = LaunchpadViewController.isPlaying
 
         if isPlaying == true {
-            btnPlay.setImage(UIImage(named: "pause"), for: .normal)
+            btnPlay.setImage(UIImage(named: "stop"), for: .normal)
         } else {
             btnPlay.setImage(UIImage(named: "play"), for: .normal)
         }
