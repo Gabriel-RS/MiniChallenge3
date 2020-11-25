@@ -52,6 +52,8 @@ class PuzzleViewController: UIViewController {
         // seção button
         keyNotes3 = board3.getLaunchpad()
         
+        PuzzleViewController.timesLocked = 0
+        
         // randomiza as teclas
         puzzleBoard.shuffleBoard()
         
