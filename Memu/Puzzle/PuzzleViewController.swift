@@ -17,7 +17,6 @@ class PuzzleViewController: UIViewController {
     
     var launchpadVc = LaunchpadViewController()
     
-    
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var btnCheck: UIButton!
     
@@ -69,12 +68,6 @@ class PuzzleViewController: UIViewController {
         launchpadVc.prepareToPlay(sequenceNotes: launchpadSequence)
         launchpadVc.sequencePlayer?.seek(to: .zero)
         launchpadVc.sequencePlayer?.play()
-        
-        for note in launchpadSequence {
-            if(note.getName() != "delete") {
-                print(note.getName())
-            }
-        }
     }
     
     @IBAction func btnCheck(_ sender: Any) {
@@ -88,13 +81,7 @@ class PuzzleViewController: UIViewController {
             // TODO: emitir som de feedback positivo
             
         } else {
-            // atualiza sequencia do tabuleiro e sequencia conectada à collection view
-            sequence.setNotes(notes: sequenceResult)
-            sequence.addDeleteButton()
-            // retira uma ouvida e bloqueia o botão de checar
-            updateOuvidas()
-            btnCheck.isEnabled = false
-            
+            updatePuzzle(notes: sequenceResult)
             // TODO: emitir som de feedback negativo
             
             collectionView.reloadData()
@@ -113,6 +100,9 @@ class PuzzleViewController: UIViewController {
         print("Menu Button")
     }
     
+    // MARK: Logic
+    
+    // gera uma nova sequencia para ser apresentada na conclusão ou na sequencia do puzzle
     func generateResultSequence() -> Array<Note>{
         var result: [Note] = []
         var count: Int = 0
@@ -142,12 +132,6 @@ class PuzzleViewController: UIViewController {
     }
     
     func playSequence() {
-        for note in sequence.getNotes() {
-            if(note.getName() != "off" && note.getName() != "delete") {
-                print(note.getName())
-            }
-        }
-        
         launchpadVc.prepareToPlay(sequenceNotes: sequence.getNotes())
         launchpadVc.sequencePlayer?.seek(to: .zero)
         launchpadVc.sequencePlayer?.play()
@@ -170,6 +154,16 @@ class PuzzleViewController: UIViewController {
         default:
             break
         }
+    }
+    
+    
+    func updatePuzzle(notes: [Note]) {
+        // atualiza sequencia do tabuleiro e sequencia conectada à collection view
+        sequence.setNotes(notes: notes)
+        sequence.addDeleteButton()
+        // retira uma ouvida e bloqueia o botão de checar
+        updateOuvidas()
+        btnCheck.isEnabled = false
     }
     
     // MARK: - Collection View Layout
@@ -282,9 +276,8 @@ extension PuzzleViewController: UICollectionViewDelegate {
         print("Cell: \(indexPath[1])")
 
         // se for da seção de tecla e o tabuleiro nao estiver bloqueado
-        if indexPath.section == 2 && !PuzzleViewController.locked {
-            print(puzzleBoard.getLaunchpad()[indexPath[1]].getName())
-            if puzzleBoard.getLaunchpad()[indexPath[1]].getImage() == UIImage(named: "keyGrayOff") {
+        if indexPath.section == 2 {
+            if puzzleBoard.getLaunchpad()[indexPath[1]].getImage() == UIImage(named: "keyGrayOff") && !PuzzleViewController.locked {
                 // muda cor da tecla
                 puzzleBoard.getLaunchpad()[indexPath[1]].turnOn()
                 launchpadVc.playNote(puzzleBoard.getLaunchpad()[indexPath[1]].getSoundFile())
@@ -296,11 +289,11 @@ extension PuzzleViewController: UICollectionViewDelegate {
                 }
                 
                 collectionView.reloadData()
+            } else if PuzzleViewController.locked {
+                // toca a nota selecionada
+                launchpadVc.playNote(puzzleBoard.getLaunchpad()[indexPath[1]].getSoundFile())
             }
             
-        } else {
-            // se o tabuleiro estiver bloqueado, apenas toca a tecla
-            launchpadVc.playNote(puzzleBoard.getLaunchpad()[indexPath[1]].getSoundFile())
         }
         
     }

@@ -64,9 +64,18 @@ class LaunchpadViewController: UIViewController {
         performSegue(withIdentifier: "go2Puzzle", sender: self)
     }
     
-    func getSequenceNotes() -> [Note]{
-        return self.sequence.getNotes()
+    @IBAction func unwindSegue(unwindSegue: UIStoryboardSegue){
+        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "go2Puzzle" {
+            let vc = segue.destination as? PuzzleViewController
+            vc?.puzzleBoard.setPuzzleNotes(notes: board.getLaunchpad())
+            vc?.launchpadSequence = sequence.getNotes()
+        }
+    }
+    
     
     // MARK: - Collection View Layout
     
@@ -164,19 +173,6 @@ class LaunchpadViewController: UIViewController {
         dataSource.apply(snapshot, animatingDifferences: false)
     }
     
-    @IBAction func unwindSegue(unwindSegue: UIStoryboardSegue){
-        
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "go2Puzzle" {
-            let vc = segue.destination as? PuzzleViewController
-            vc?.puzzleBoard.setPuzzleNotes(notes: board.getLaunchpad())
-            vc?.launchpadSequence = sequence.getNotes()
-        }
-    }
-    
-
 }
 
 // MARK: - Delegate
@@ -186,23 +182,22 @@ extension LaunchpadViewController: UICollectionViewDelegate {
         print("Cell: \(indexPath[1])")
         
         // se for a seção das teclas
-        if indexPath.section == 2 {
-            print(board.getLaunchpad()[indexPath[1]].getName())
-            if board.getLaunchpad()[indexPath[1]].getImage() == UIImage(named: "key\(board.getLaunchpad()[indexPath[1]].getColor())Off") {
-                // muda cor da tecla
-                board.getLaunchpad()[indexPath[1]].turnOn()
-                
-                playNote(board.getLaunchpad()[indexPath[1]].getSoundFile())
-                // adiciona no array de sequencia
-                sequence.addNote(note: board.getLaunchpad()[indexPath[1]])
-                
-                if sequence.isFull() {
-                    btnCheck.isEnabled = true
-                }
-                
-                collectionView.reloadData()
+        if indexPath.section == 2 && board.getLaunchpad()[indexPath[1]].getImage() == UIImage(named: "key\(board.getLaunchpad()[indexPath[1]].getColor())Off") {
+            // muda cor da tecla
+            board.getLaunchpad()[indexPath[1]].turnOn()
+            
+            playNote(board.getLaunchpad()[indexPath[1]].getSoundFile())
+            
+            // adiciona no array de sequencia
+            sequence.addNote(note: board.getLaunchpad()[indexPath[1]])
+            
+            if sequence.isFull() {
+                btnCheck.isEnabled = true
             }
+            
+            collectionView.reloadData()
         }
+        
         
     }
     
@@ -241,11 +236,6 @@ extension LaunchpadViewController: ButtonCellDelegate {
     }
     
     func play() {
-        for note in sequence.getNotes() {
-            if(note.getName() != "off" && note.getName() != "delete") {
-                print(note.getName())
-            }
-        }
         
         if LaunchpadViewController.isPlaying == true {
             sequencePlayer?.pause()
