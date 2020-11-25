@@ -168,7 +168,6 @@
                                                         </constraints>
                                                         <state key="normal" image="obterRecompensa"/>
                                                         <connections>
-                                                            <action selector="rewardDo:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="h4m-WM-brH"/>
                                                             <action selector="rewardRe:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="3p8-we-cBa"/>
                                                         </connections>
                                                     </button>
@@ -224,7 +223,6 @@
                                                         </constraints>
                                                         <state key="normal" image="obterRecompensa"/>
                                                         <connections>
-                                                            <action selector="rewardDo:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="3st-rK-CGj"/>
                                                             <action selector="rewardMi:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="e3l-bp-D8k"/>
                                                         </connections>
                                                     </button>
@@ -280,8 +278,7 @@
                                                         </constraints>
                                                         <state key="normal" image="obterRecompensa"/>
                                                         <connections>
-                                                            <action selector="rewardDo:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="zxz-S5-ta6"/>
-                                                            <action selector="rewardFa:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="GwS-Jb-e9p"/>
+                                                            <action selector="rewardFa:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="0yk-NF-jMh"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -336,7 +333,6 @@
                                                         </constraints>
                                                         <state key="normal" image="obterRecompensa"/>
                                                         <connections>
-                                                            <action selector="rewardDo:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="4i9-o8-LDg"/>
                                                             <action selector="rewardSol:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="21u-aF-S0r"/>
                                                         </connections>
                                                     </button>
@@ -392,7 +388,6 @@
                                                         </constraints>
                                                         <state key="normal" image="obterRecompensa"/>
                                                         <connections>
-                                                            <action selector="rewardDo:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="e5U-aq-5TO"/>
                                                             <action selector="rewardLa:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="4fu-c9-Avm"/>
                                                         </connections>
                                                     </button>
@@ -448,7 +443,6 @@
                                                         </constraints>
                                                         <state key="normal" image="obterRecompensa"/>
                                                         <connections>
-                                                            <action selector="rewardDo:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="8aY-OM-iy1"/>
                                                             <action selector="rewardSi:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="6vs-LT-LMO"/>
                                                         </connections>
                                                     </button>
