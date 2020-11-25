@@ -123,29 +123,22 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LaunchpadCell" id="k5u-Cd-eKh" customClass="LaunchpadCell" customModule="Memu" customModuleProvider="target">
-                                        <rect key="frame" x="142" y="174" width="130" height="120"/>
+                                        <rect key="frame" x="119" y="174" width="176" height="158"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="VE3-G0-lLQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="130" height="120"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="176" height="158"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="keyBlueOn" translatesAutoresizingMaskIntoConstraints="NO" id="WaD-pR-xFn">
-                                                    <rect key="frame" x="10" y="0.0" width="110" height="120"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="120" id="Eh4-9F-bY9"/>
-                                                        <constraint firstAttribute="width" secondItem="WaD-pR-xFn" secondAttribute="height" multiplier="11:12" id="Ihc-Tp-w3V"/>
-                                                        <constraint firstAttribute="width" constant="110" id="d94-wZ-bhM"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="9" y="0.0" width="158" height="158"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="WaD-pR-xFn" secondAttribute="trailing" constant="10" id="Cek-cm-gHZ"/>
-                                                <constraint firstItem="WaD-pR-xFn" firstAttribute="top" secondItem="VE3-G0-lLQ" secondAttribute="top" id="EPu-1G-XH4"/>
-                                                <constraint firstItem="WaD-pR-xFn" firstAttribute="centerX" secondItem="VE3-G0-lLQ" secondAttribute="centerX" id="Fne-dZ-fIE"/>
-                                                <constraint firstItem="WaD-pR-xFn" firstAttribute="centerY" secondItem="VE3-G0-lLQ" secondAttribute="centerY" id="Jn1-x6-wh5"/>
-                                                <constraint firstAttribute="bottom" secondItem="WaD-pR-xFn" secondAttribute="bottom" id="fd1-Uo-sCd"/>
-                                                <constraint firstItem="WaD-pR-xFn" firstAttribute="leading" secondItem="VE3-G0-lLQ" secondAttribute="leading" constant="10" id="iL5-Jd-EjO"/>
+                                                <constraint firstAttribute="trailing" secondItem="WaD-pR-xFn" secondAttribute="trailing" constant="9" id="Dtb-9I-1im"/>
+                                                <constraint firstAttribute="bottom" secondItem="WaD-pR-xFn" secondAttribute="bottom" id="P6C-1c-fOi"/>
+                                                <constraint firstItem="WaD-pR-xFn" firstAttribute="leading" secondItem="VE3-G0-lLQ" secondAttribute="leading" constant="9" id="Sdl-mt-AIA"/>
+                                                <constraint firstItem="WaD-pR-xFn" firstAttribute="top" secondItem="VE3-G0-lLQ" secondAttribute="top" id="w8b-Sq-tdj"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
