@@ -13,14 +13,14 @@
             <objects>
                 <viewController id="wqY-Wh-Wjv" customClass="RewardsViewController" customModule="Memu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9nu-Js-QRl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1430"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5G-NH-G8g">
-                                <rect key="frame" x="0.0" y="44" width="414" height="1422"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="1352"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rc7-xm-QZG">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                                        <rect key="frame" x="0.0" y="-8" width="414" height="1400"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inicio" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxN-a0-Ry7">
                                                 <rect key="frame" x="14" y="20" width="386" height="56.5"/>
@@ -478,12 +478,11 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="5Y6-Xs-bDn" secondAttribute="trailing" constant="14" id="0Fj-9D-uVA"/>
                                             <constraint firstItem="Ye3-7B-FdB" firstAttribute="leading" secondItem="COW-Jp-9ND" secondAttribute="leading" id="0Xn-io-hau"/>
                                             <constraint firstItem="TlS-fe-UvL" firstAttribute="centerX" secondItem="xxN-a0-Ry7" secondAttribute="centerX" id="0gH-Ba-AOP"/>
-                                            <constraint firstAttribute="height" constant="1500" id="0xU-Et-STZ"/>
+                                            <constraint firstAttribute="height" constant="1400" id="0xU-Et-STZ"/>
                                             <constraint firstItem="lwA-CA-X0P" firstAttribute="leading" secondItem="5Fo-2e-AdV" secondAttribute="leading" id="1A1-m2-IHN"/>
                                             <constraint firstItem="998-8b-k8p" firstAttribute="leading" secondItem="rc7-xm-QZG" secondAttribute="leading" constant="14" id="4ne-9h-ghf"/>
                                             <constraint firstItem="UGY-yV-CGc" firstAttribute="top" secondItem="Ye3-7B-FdB" secondAttribute="bottom" constant="10" id="5Gc-Gt-pWv"/>
@@ -516,7 +515,7 @@
                                             <constraint firstItem="5Y6-Xs-bDn" firstAttribute="top" secondItem="EiT-X5-WfP" secondAttribute="bottom" constant="20" id="vXT-HM-jxz"/>
                                             <constraint firstAttribute="trailing" secondItem="xxN-a0-Ry7" secondAttribute="trailing" constant="14" id="wEU-97-bq0"/>
                                             <constraint firstAttribute="trailing" secondItem="s6o-MR-8qL" secondAttribute="trailing" constant="80" id="xSN-wl-axD"/>
-                                            <constraint firstAttribute="bottom" secondItem="998-8b-k8p" secondAttribute="bottom" constant="953" id="xtT-Wk-0SX"/>
+                                            <constraint firstAttribute="bottom" secondItem="998-8b-k8p" secondAttribute="bottom" constant="853" id="xtT-Wk-0SX"/>
                                             <constraint firstAttribute="trailing" secondItem="998-8b-k8p" secondAttribute="trailing" constant="14" id="yGW-fj-hwC"/>
                                             <constraint firstItem="xxN-a0-Ry7" firstAttribute="top" secondItem="rc7-xm-QZG" secondAttribute="top" constant="20" id="yP0-7k-2pB"/>
                                             <constraint firstItem="Ye3-7B-FdB" firstAttribute="top" secondItem="COW-Jp-9ND" secondAttribute="bottom" constant="10" id="ygW-Ri-fP9"/>
@@ -526,10 +525,10 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="rc7-xm-QZG" secondAttribute="bottom" id="X5v-DC-J6Q"/>
+                                    <constraint firstAttribute="bottom" secondItem="rc7-xm-QZG" secondAttribute="bottom" constant="30" id="X5v-DC-J6Q"/>
                                     <constraint firstAttribute="trailing" secondItem="rc7-xm-QZG" secondAttribute="trailing" id="h2L-yk-JWa"/>
                                     <constraint firstItem="rc7-xm-QZG" firstAttribute="leading" secondItem="Y5G-NH-G8g" secondAttribute="leading" id="kOP-NO-hwT"/>
-                                    <constraint firstItem="rc7-xm-QZG" firstAttribute="top" secondItem="Y5G-NH-G8g" secondAttribute="top" id="tyR-iT-4Dc"/>
+                                    <constraint firstItem="rc7-xm-QZG" firstAttribute="top" secondItem="Y5G-NH-G8g" secondAttribute="top" constant="-8" id="tyR-iT-4Dc"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -543,7 +542,7 @@
                             <constraint firstItem="WYv-Bz-S6A" firstAttribute="bottom" secondItem="Y5G-NH-G8g" secondAttribute="bottom" id="xF8-Kv-UYA"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="414" height="1500"/>
+                    <size key="freeformSize" width="414" height="1430"/>
                     <connections>
                         <outlet property="btCheckProgress" destination="jKE-wR-5nT" id="ACz-mr-PZr"/>
                         <outlet property="buttonRewardDo" destination="i32-b7-oKc" id="zLb-nf-EI2"/>

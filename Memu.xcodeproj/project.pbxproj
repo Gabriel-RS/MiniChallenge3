@@ -50,6 +50,7 @@
 		8536C6012559B2C200706EE7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536C6002559B2C200706EE7 /* Note.swift */; };
 		8536C6092559B39D00706EE7 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536C6082559B39D00706EE7 /* Board.swift */; };
 		85B4A5F6255EFFFD0019D0EF /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4A5F5255EFFFD0019D0EF /* Sequence.swift */; };
+		A30765C3256E93AB00579822 /* PlayerProgressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30765C2256E93AB00579822 /* PlayerProgressManager.swift */; };
 		A3E79FE82568893F00D5FAD7 /* ViewControlle+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E79FE72568893F00D5FAD7 /* ViewControlle+CoreData.swift */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +121,7 @@
 		8536C6002559B2C200706EE7 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		8536C6082559B39D00706EE7 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		85B4A5F5255EFFFD0019D0EF /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
+		A30765C2256E93AB00579822 /* PlayerProgressManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProgressManager.swift; sourceTree = "<group>"; };
 		A3E79FE72568893F00D5FAD7 /* ViewControlle+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControlle+CoreData.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -337,6 +339,7 @@
 				8536C6082559B39D00706EE7 /* Board.swift */,
 				A3E79FE72568893F00D5FAD7 /* ViewControlle+CoreData.swift */,
 				85B4A5F5255EFFFD0019D0EF /* Sequence.swift */,
+				A30765C2256E93AB00579822 /* PlayerProgressManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				5A6A09682551D86900F143ED /* CompletionViewController.swift in Sources */,
 				5A122FEA2547490C00417AEE /* SceneDelegate.swift in Sources */,
 				5A19B1A62554943E00C4F804 /* LaunchpadCell.swift in Sources */,
+				A30765C3256E93AB00579822 /* PlayerProgressManager.swift in Sources */,
 				027EB5FF255DAA6A00DD7720 /* TutorialViewController.swift in Sources */,
 				5A6A09452551D44800F143ED /* HomeScreenViewController.swift in Sources */,
 				8536C6092559B39D00706EE7 /* Board.swift in Sources */,
