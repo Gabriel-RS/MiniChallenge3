@@ -11,7 +11,6 @@ import CoreData
 class RewardsViewController: UIViewController {
     
     var launchpadVc = LaunchpadViewController()
-    
     var fetchedResultController: NSFetchedResultsController<PlayerProgress>!
     var playerProgress: PlayerProgress!
     var notesManager = NotesManager.shared
@@ -72,11 +71,8 @@ class RewardsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadProgressPlayer()
-        //playerProgress.points+=65
         loadStatusPlayer()
         loadNotes()
-        
-        
         checkNote(0, progressViewDo, medalNoteDo, noteDescriptionDo, buttonRewardDo)
         checkNote(1, progressViewFa, medalNoteFa, noteDescriptionFa, buttonRewardFa)
         checkNote(2, progressViewLa, medalNoteLa, noteDescriptionLa, buttonRewardLa)
@@ -163,11 +159,15 @@ class RewardsViewController: UIViewController {
             default:
                 print("default")
         }
+        
         // checa se os pontos do jogar é maior/igual ao quantidade necessária para subir de level e muda imagem do botão
         if playerProgress.points >= playerProgress.pointsLevelUp && playerProgress.level < 4 {
             btCheckProgress.setImage(UIImage(named: "progressoOuro"), for: .normal)
         }
+        
+        // modifica tamanho da ProgressView
         progressViewPlayer.transform = CGAffineTransform(scaleX: 1.0, y: 5.0)
+        
         // salva progresso no CoreData
         do {
             try context.save()
@@ -179,11 +179,6 @@ class RewardsViewController: UIViewController {
     // carrega as informações das Notas
     func loadNotes() {
         notesManager.loadNotes(with: context)
-        
-        print("Count notes: \(notesManager.notes.count)")
-//        if notesManager.notes.count == 0 {
-//            initNotes()
-//        }
         do {
             try context.save()
         } catch {
@@ -222,7 +217,7 @@ class RewardsViewController: UIViewController {
             notesManager.notes[index].points = 5
             medalNote.image = UIImage(named: "\(imagesNote[Int(notesManager.notes[index].level)])\(noteSelect!)")
             noteDescription.text = "Parabéns você é um Deus da nota \(notesManager.notes[index].name!)."
-            progressView.progressTintColor = UIColor.yellow
+            progressView.progressTintColor = UIColor(red: 237, green: 203, blue: 105, alpha: 1)
         }
         
         if notesManager.notes[index].points >= notesManager.notes[index].pointsLevelUp && notesManager.notes[index].level < 3 {
@@ -288,9 +283,7 @@ class RewardsViewController: UIViewController {
         if playerProgress.pointsLevelUp-playerProgress.points < 0 {
             lbProgress.text = "Você conquistou a medalha ouro de \(playerTitles[Int(playerProgress.level)]). Clique no botão no final da barra de progresso para subir de nível."
         }
-        print(playerProgress.level)
         loadStatusPlayer()
-        //loadPage()
         if playerProgress.level < 4 && playerProgress.points < playerProgress.pointsLevelUp {
             loadPage()
             lbProgress.text = "Faltam \(Int(playerProgress.pointsLevelUp-playerProgress.points)) para você conquistar o título de \(playerTitles[Int(playerProgress.level)+1])."
@@ -339,11 +332,5 @@ class RewardsViewController: UIViewController {
 extension RewardsViewController: NSFetchedResultsControllerDelegate {
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         
-        switch type {
-            case .update:
-                print("Atualizado")
-            default:
-                print("Default")
-        }
     }
 }
