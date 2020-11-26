@@ -7,15 +7,18 @@
 
 import UIKit
 import AVFoundation
+import CoreData
 
-class PuzzleViewController: UIViewController {
+class PuzzleViewController: UIViewController, NSFetchedResultsControllerDelegate {
 
     @IBOutlet weak var ear1: UIImageView!
     @IBOutlet weak var ear2: UIImageView!
     @IBOutlet weak var ear3: UIImageView!
     
-    
     var launchpadVc = LaunchpadViewController()
+    var fetchedResultController: NSFetchedResultsController<PlayerProgress>!
+    var playerProgress: PlayerProgress!
+    var notesManager = NotesManager.shared
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var btnCheck: UIButton!
@@ -50,6 +53,10 @@ class PuzzleViewController: UIViewController {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.collectionViewLayout = configLayout()
+        
+        // carrega infos do CoreData
+        loadProgressPlayer()
+        loadNotes()
                 
         // seção button
         keyNotes3 = board3.getLaunchpad()
@@ -79,9 +86,36 @@ class PuzzleViewController: UIViewController {
         let sequenceResult: [Note] = generateResultSequence()
         // se estiver tudo certo -> tela de conclusão
         if checkVictory(comparedArray: sequenceResult) {
-            // TODO: DOUGLAS, INSERE AQUI -> sequenceResult tem as notas utilizadas
+            // checa quais notas foram usadas e dá 1 ponto por cada nota usada
+            for note in sequenceResult {
+                print("Nome nota: \(note.getName())")
+                if note.getName() == "do" {
+                    notesManager.notes[0].points+=1
+                } else if note.getName() == "re" {
+                    notesManager.notes[4].points+=1
+                } else if note.getName() == "mi" {
+                    notesManager.notes[3].points+=1
+                } else if note.getName() == "fa" {
+                    notesManager.notes[1].points+=1
+                } else if note.getName() == "sol" {
+                    notesManager.notes[6].points+=1
+                } else if note.getName() == "la" {
+                    notesManager.notes[2].points+=1
+                } else if note.getName() == "si" {
+                    notesManager.notes[5].points+=1
+                }
+            }
             
-            
+            // checa e dá a pontuação para o usuário de acordo com as ouvidas usadas
+            if PuzzleViewController.ouvidas == 3 {
+                playerProgress.points+=5
+            } else if PuzzleViewController.ouvidas == 2 {
+                playerProgress.points+=4
+            } else if PuzzleViewController.ouvidas == 1 {
+                playerProgress.points+=3
+            } else if PuzzleViewController.ouvidas == 0 {
+                playerProgress.points+=2
+            }
             
             // se sequencia estiver certa
             performSegue(withIdentifier: "conclusionSegue", sender: self)
@@ -109,6 +143,36 @@ class PuzzleViewController: UIViewController {
     }
     
     // MARK: Logic
+    
+    // recupera a pontuaçõão do Player do CoreData
+    func loadProgressPlayer() {
+        let fetchRequest: NSFetchRequest<PlayerProgress> = PlayerProgress.fetchRequest()
+        let sortDescritor = NSSortDescriptor(key: "title", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescritor]
+        fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultController.delegate = self
+        do {
+            try fetchedResultController.performFetch()
+        } catch {
+            print(error.localizedDescription)
+        }
+        playerProgress = fetchedResultController.fetchedObjects?.first
+        if playerProgress == nil {
+            playerProgress = PlayerProgress(context: context)
+            playerProgress.level = 0
+        }
+    }
+    
+    // recupera a pontuação de cada Nota do CoreData
+    func loadNotes() {
+        notesManager.loadNotes(with: context)
+        print("Count notes: \(notesManager.notes.count)")
+        do {
+            try context.save()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
     
     // gera uma nova sequencia para ser apresentada na conclusão ou na sequencia do puzzle
     func generateResultSequence() -> Array<Note>{
