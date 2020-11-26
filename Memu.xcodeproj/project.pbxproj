@@ -51,7 +51,7 @@
 		8536C6092559B39D00706EE7 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536C6082559B39D00706EE7 /* Board.swift */; };
 		85B4A5F6255EFFFD0019D0EF /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4A5F5255EFFFD0019D0EF /* Sequence.swift */; };
 		A30765C9256EB3FF00579822 /* NotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30765C8256EB3FF00579822 /* NotesManager.swift */; };
-		A3E79FE82568893F00D5FAD7 /* ViewControlle+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E79FE72568893F00D5FAD7 /* ViewControlle+CoreData.swift */; };
+		A3E79FE82568893F00D5FAD7 /* ViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E79FE72568893F00D5FAD7 /* ViewController+CoreData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,7 +122,7 @@
 		8536C6082559B39D00706EE7 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		85B4A5F5255EFFFD0019D0EF /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
 		A30765C8256EB3FF00579822 /* NotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesManager.swift; sourceTree = "<group>"; };
-		A3E79FE72568893F00D5FAD7 /* ViewControlle+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControlle+CoreData.swift"; sourceTree = "<group>"; };
+		A3E79FE72568893F00D5FAD7 /* ViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CoreData.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,7 +337,7 @@
 			children = (
 				8536C6002559B2C200706EE7 /* Note.swift */,
 				8536C6082559B39D00706EE7 /* Board.swift */,
-				A3E79FE72568893F00D5FAD7 /* ViewControlle+CoreData.swift */,
+				A3E79FE72568893F00D5FAD7 /* ViewController+CoreData.swift */,
 				85B4A5F5255EFFFD0019D0EF /* Sequence.swift */,
 				A30765C8256EB3FF00579822 /* NotesManager.swift */,
 			);
@@ -494,7 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3E79FE82568893F00D5FAD7 /* ViewControlle+CoreData.swift in Sources */,
+				A3E79FE82568893F00D5FAD7 /* ViewController+CoreData.swift in Sources */,
 				5A122FEC2547490C00417AEE /* ViewController.swift in Sources */,
 				5A6A09552551D4AA00F143ED /* PuzzleViewController.swift in Sources */,
 				85B4A5F6255EFFFD0019D0EF /* Sequence.swift in Sources */,
