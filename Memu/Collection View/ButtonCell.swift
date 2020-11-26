@@ -15,14 +15,24 @@ class ButtonCell: UICollectionViewCell {
 
     @IBOutlet weak var btnLock: UIButton!
     @IBOutlet weak var btnPlay: UIButton!
+    @IBOutlet weak var btnHearing: UIButton!
     
     let isPlaying = LaunchpadViewController.isPlaying
 
     func lockImg() {
         if PuzzleViewController.locked == false {
             btnLock.setImage(UIImage(named: "unlocked"), for: .normal)
+            if PuzzleViewController.timesLocked > 0 {
+                btnLock.isEnabled = false
+            }
         } else {
             btnLock.setImage(UIImage(named: "locked"), for: .normal)
+        }
+    }
+    
+    func disableBtnHearing() {
+        if PuzzleViewController.ouvidas == 0 {
+            btnHearing.isEnabled = false
         }
     }
     
@@ -32,12 +42,10 @@ class ButtonCell: UICollectionViewCell {
     }
     
     @IBAction func btnLock(_ sender: Any) {
-        if PuzzleViewController.locked {
-            PuzzleViewController.locked = false
-            btnLock.setImage(UIImage(named: "unlocked"), for: .normal)
-        } else if PuzzleViewController.locked == false && PuzzleViewController.timesLocked == 0 {
+        if PuzzleViewController.locked == false && PuzzleViewController.timesLocked == 0 {
             PuzzleViewController.locked = true
             PuzzleViewController.timesLocked += 1
+
             btnLock.setImage(UIImage(named: "locked"), for: .normal)
             
             delegate?.playNote("feedback_bloqueada")
@@ -45,6 +53,12 @@ class ButtonCell: UICollectionViewCell {
         } else {
             print("não é possível bloquear mais de uma vez")
             // TODO: emitir som de tecla bloqueada
+
+            lockImg()
+        } else if PuzzleViewController.locked {
+            PuzzleViewController.locked = false
+            lockImg()
+
         }
     }
     
@@ -59,7 +73,7 @@ class ButtonCell: UICollectionViewCell {
         let isPlaying = LaunchpadViewController.isPlaying
 
         if isPlaying == true {
-            btnPlay.setImage(UIImage(named: "pause"), for: .normal)
+            btnPlay.setImage(UIImage(named: "stop"), for: .normal)
         } else {
             btnPlay.setImage(UIImage(named: "play"), for: .normal)
         }
@@ -69,6 +83,7 @@ class ButtonCell: UICollectionViewCell {
     @IBAction func btnHearing(_ sender: Any) {
         print("Hearing Button")
         delegate?.play()
+        disableBtnHearing()
     }
     
 }

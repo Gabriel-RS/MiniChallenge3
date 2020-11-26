@@ -1,302 +1,399 @@
-////
-////  RewardsViewController.swift
-////  Memu
-////
-////  Created by Gabriel Rodrigues da Silva on 03/11/20.
-////
 //
-//import UIKit
+//  RewardsViewController.swift
+//  Memu
 //
-//class RewardsViewController: UIViewController {
-//    
-//    // TESTE MÉTODOS CLASSE CORE DATA
-//    var playerProgress = PlayerProgress()
-//    var noteProgress = NoteProgress()
-//    
-//    @IBOutlet weak var lbTitle: UILabel!
-//    @IBOutlet weak var ivImage: UIImageView!
-//    @IBOutlet weak var lbDescription: UILabel!
-//    @IBOutlet weak var pvPlayer: UIProgressView!
-//    @IBOutlet weak var btCheckProgress: UIButton!
-//    @IBOutlet weak var lbScore: UILabel!
-//    @IBOutlet weak var lbProgress: UILabel!
-//    @IBOutlet weak var ivDo: UIImageView!
-//    @IBOutlet weak var pvDo: UIProgressView!
-//    @IBOutlet weak var btRewardDo: UIButton!
-//    @IBOutlet weak var lbDo: UILabel!
-//    
-//    var player: Player!
-//    var noteDo: NoteGame!
-//    var noteRe: NoteGame!
-//    var noteMi: NoteGame!
-//    var noteFa: NoteGame!
-//    var noteSol: NoteGame!
-//    var noteLa: NoteGame!
-//    var noteSi: NoteGame!
-//    var playerManager = PlayerManager.shared
-//    
-//    let playerTitles: [String] = ["Desconhecido", "Explorador", "Músico amador", "Mestre dos sons", "Deus da música"]
-//    let imgsNoteDo: [String] = ["inicianteC", "bronzeC", "prataC", "ouroC"]
-//    
-//    //var level: Int = 1
-//    //var levelDo: Int = 0
-//    //var pointsToLevelUp: Float = 100.0
-//    //var pointsTotal: Float = 10.0
-//    //var noteDo: Float = 12.0
-//    //var pvSizeDo: Float = 3.0
-//    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        loadStatusPlayer()
-//        loadPage()
-//        loadProgressViews()
-//        btRewardDo.isHidden = true
+//  Created by Gabriel Rodrigues da Silva on 03/11/20.
 //
-//        
-//        progressPlayer()
-//        //refreshPage(level)
-//        
-//        // TESTE MÉTODOS CLASSE CORE DATA
-//        print(playerProgress.getImageName(level: 2))
-//        print(noteProgress.getRewardPoints(level: 2))
-//        print(noteProgress.getMedalName(level: 3, name: "re"))
-//        
-//
-////        
-////        progressPlayer()
-//
-//    }
-//    
-//    func loadStatusPlayer() {
-//        if player == nil {
-//            player = Player(context: context)
-//            player.level = 1
-//            player.points = 150
+
+import UIKit
+import CoreData
+
+class RewardsViewController: UIViewController {
+    
+    var fetchedResultController: NSFetchedResultsController<PlayerProgress>!
+    var playerProgress: PlayerProgress!
+    var notesManager = NotesManager.shared
+    
+//    var noteDo: NoteProgress!
+//    var noteRe: NoteProgress!
+//    var noteMi: NoteProgress!
+//    var noteFa: NoteProgress!
+//    var noteSol: NoteProgress!
+//    var noteLa: NoteProgress!
+//    var noteSi: NoteProgress!
+    
+    // Player
+    @IBOutlet weak var lbTitle: UILabel!
+    @IBOutlet weak var ivImage: UIImageView!
+    @IBOutlet weak var lbDescription: UILabel!
+    @IBOutlet weak var progressViewPlayer: UIProgressView!
+    @IBOutlet weak var btCheckProgress: UIButton!
+    @IBOutlet weak var lbScore: UILabel!
+    @IBOutlet weak var lbProgress: UILabel!
+    
+    // Nota Dó
+    @IBOutlet weak var medalNoteDo: UIImageView!
+    @IBOutlet weak var progressViewDo: UIProgressView!
+    @IBOutlet weak var buttonRewardDo: UIButton!
+    @IBOutlet weak var noteDescriptionDo: UILabel!
+    
+    // Nota Ré
+    @IBOutlet weak var medalNoteRe: UIImageView!
+    @IBOutlet weak var progressViewRe: UIProgressView!
+    @IBOutlet weak var buttonRewardRe: UIButton!
+    @IBOutlet weak var noteDescriptionRe: UILabel!
+    
+    // Nota Mi
+    @IBOutlet weak var medalNoteMi: UIImageView!
+    @IBOutlet weak var progressViewMi: UIProgressView!
+    @IBOutlet weak var buttonRewardMi: UIButton!
+    @IBOutlet weak var noteDescriptionMi: UILabel!
+    
+    // Nota Fá
+    @IBOutlet weak var medalNoteFa: UIImageView!
+    @IBOutlet weak var progressViewFa: UIProgressView!
+    @IBOutlet weak var buttonRewardFa: UIButton!
+    @IBOutlet weak var noteDescriptionFa: UILabel!
+    
+    // Nota Sol
+    @IBOutlet weak var medalNoteSol: UIImageView!
+    @IBOutlet weak var progressViewSol: UIProgressView!
+    @IBOutlet weak var buttonRewardSol: UIButton!
+    @IBOutlet weak var noteDescriptionSol: UILabel!
+    
+    // Nota Lá
+    @IBOutlet weak var medalNoteLa: UIImageView!
+    @IBOutlet weak var progressViewLa: UIProgressView!
+    @IBOutlet weak var buttonRewardLa: UIButton!
+    @IBOutlet weak var noteDescriptionLa: UILabel!
+    
+    // Nota Si
+    @IBOutlet weak var medalNoteSi: UIImageView!
+    @IBOutlet weak var progressViewSi: UIProgressView!
+    @IBOutlet weak var buttonRewardSi: UIButton!
+    @IBOutlet weak var noteDescriptionSi: UILabel!
+    
+    let playerTitles: [String] = ["Desconhecido", "Explorador", "Músico amador", "Mestre dos sons", "Deus da música"]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadProgressPlayer()
+        //playerProgress.points+=65
+        loadStatusPlayer()
+        loadNotes()
+        
+        
+        checkNote(0, progressViewDo, medalNoteDo, noteDescriptionDo, buttonRewardDo)
+        checkNote(1, progressViewFa, medalNoteFa, noteDescriptionFa, buttonRewardFa)
+        checkNote(2, progressViewLa, medalNoteLa, noteDescriptionLa, buttonRewardLa)
+        checkNote(3, progressViewMi, medalNoteMi, noteDescriptionMi, buttonRewardMi)
+        checkNote(4, progressViewRe, medalNoteRe, noteDescriptionRe, buttonRewardRe)
+        checkNote(5, progressViewSi, medalNoteSi, noteDescriptionSi, buttonRewardSi)
+        checkNote(6, progressViewSol, medalNoteSol, noteDescriptionSol, buttonRewardSol)
+        loadPage()
+    }
+    
+    // carrega as informações do Player
+    func loadProgressPlayer() {
+        let fetchRequest: NSFetchRequest<PlayerProgress> = PlayerProgress.fetchRequest()
+        let sortDescritor = NSSortDescriptor(key: "title", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescritor]
+        fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultController.delegate = self
+        do {
+            try fetchedResultController.performFetch()
+        } catch {
+            print(error.localizedDescription)
+        }
+        playerProgress = fetchedResultController.fetchedObjects?.first
+        if playerProgress == nil {
+            playerProgress = PlayerProgress(context: context)
+            playerProgress.level = 0
+        }
+    }
+    
+    // de acordo com o nível do Player exibi as informações na tela
+    func loadStatusPlayer() {
+        if playerProgress.points != 0 && playerProgress.level == 0 {
+            playerProgress.level = 1
+        }
+        switch playerProgress.level {
+            case 0:
+                playerProgress.title = "\(playerTitles[Int(playerProgress.level)])"
+                playerProgress.medal = UIImage(named: "medalhaAmadorOff") // imagem para testar
+                playerProgress.descriptionTitle = "Comece a explorar as notas e os sons que elas tem."
+                playerProgress.pointsLevelUp = 100.0
+                playerProgress.score = "\(Int(playerProgress.points))/\(Int(playerProgress.pointsLevelUp))"
+                playerProgress.descriptionPoints = "Jogue a primeira vez para ganhar sua primeira medalha de ouro."
+            case 1:
+                playerProgress.title = "\(playerTitles[Int(playerProgress.level)])"
+                playerProgress.medal = UIImage(named: "medalhaExplorador")
+                playerProgress.descriptionTitle = "Você busca conhecer os sons e explorar cada um deles."
+                playerProgress.pointsLevelUp = 100.0
+                playerProgress.score = "\(Int(playerProgress.points))/\(Int(playerProgress.pointsLevelUp))"
+                if playerProgress.points < playerProgress.pointsLevelUp {
+                    playerProgress.descriptionPoints = "Acumule \(Int(playerProgress.pointsLevelUp)) pontos para conquistar o título de \(playerTitles[Int(playerProgress.level)])."
+                } else {
+                    playerProgress.descriptionPoints = "Você conquistou a medalha ouro de \(playerTitles[Int(playerProgress.level)]). Clique no botão no final da barra de progresso para subir de nível."
+                }
+            case 2:
+                playerProgress.title = "\(playerTitles[Int(playerProgress.level)])"
+                playerProgress.medal = UIImage(named: "medalhaAmador")
+                playerProgress.descriptionTitle = "Você é amador."
+                playerProgress.pointsLevelUp = 250.0
+                playerProgress.score = "\(Int(playerProgress.points))/\(Int(playerProgress.pointsLevelUp))"
+                if playerProgress.points < playerProgress.pointsLevelUp {
+                    playerProgress.descriptionPoints = "Acumule \(Int(playerProgress.pointsLevelUp)) pontos para conquistar o título de \(playerTitles[Int(playerProgress.level)])."
+                } else {
+                    playerProgress.descriptionPoints = "Você conquistou a medalha ouro de \(playerTitles[Int(playerProgress.level)]). Clique no botão no final da barra de progresso para subir de nível."
+                }
+            case 3:
+                playerProgress.title = "\(playerTitles[Int(playerProgress.level)])"
+                playerProgress.medal = UIImage(named: "medalhaMestre")
+                playerProgress.descriptionTitle = "Você é mestre."
+                playerProgress.pointsLevelUp = 450.0
+                playerProgress.score = "\(Int(playerProgress.points))/\(Int(playerProgress.pointsLevelUp))"
+                if playerProgress.points < playerProgress.pointsLevelUp {
+                    playerProgress.descriptionPoints = "Acumule \(Int(playerProgress.pointsLevelUp)) pontos para conquistar o título de \(playerTitles[Int(playerProgress.level)])."
+                } else {
+                    playerProgress.descriptionPoints = "Você conquistou a medalha ouro de \(playerTitles[Int(playerProgress.level)]). Clique no botão no final da barra de progresso para subir de nível."
+                }
+            case 4:
+                playerProgress.title = "\(playerTitles[Int(playerProgress.level)])"
+                playerProgress.medal = UIImage(named: "medalhaDeus")
+                playerProgress.descriptionTitle = "Você é Deus da música."
+                playerProgress.pointsLevelUp = 450.0
+                playerProgress.score = "\(Int(playerProgress.points))/\(Int(playerProgress.pointsLevelUp))"
+                playerProgress.descriptionPoints = "Parabéns você agora é um Deus da música."
+                //lbScore.isHidden = true
+            default:
+                print("default")
+        }
+        // checa se os pontos do jogar é maior/igual ao quantidade necessária para subir de level e muda imagem do botão
+        if playerProgress.points >= playerProgress.pointsLevelUp && playerProgress.level < 4 {
+            btCheckProgress.setImage(UIImage(named: "progressoOuro"), for: .normal)
+        }
+        progressViewPlayer.transform = CGAffineTransform(scaleX: 1.0, y: 5.0)
+        // salva progresso no CoreData
+        do {
+            try context.save()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    // carrega as informações das Notas
+    func loadNotes() {
+        notesManager.loadNotes(with: context)
+        
+        print("Count notes: \(notesManager.notes.count)")
+//        if notesManager.notes.count == 0 {
+//            initNotes()
 //        }
-//        
-//        if player.points != 0 && player.pointsLevelUp == 100.0 {
-//            player.level = 1
+        do {
+            try context.save()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    // inicializas as Notas
+//    func initNotes() {
+//        if noteDo == nil {
+//            noteDo = NoteProgress(context: context)
+//            noteDo.setValue("Dó", forKey: "name")
+//            noteDo.setValue(0, forKey: "level")
+//            notesManager.notes.append(noteDo)
 //        }
-//        print("loadStatusPlayer: \(player.level)")
-//        
-//        switch player.level {
-//            case 0:
-//                player.title = "\(playerTitles[Int(player.level)])"
-//                player.medal = UIImage(named: "help") // imagem para testar
-//                player.descriptionTitle = "Comece a explorar as notas e os sons que elas tem."
-//                player.pointsLevelUp = 100.0
-//                player.score = "\(Int(player.points))/\(Int(player.pointsLevelUp))"
-//                player.descriptionPoints = "Jogue a primeira vez para ganhar sua primeira medalha."
-//            case 1:
-//                player.title = "\(playerTitles[Int(player.level)])"
-//                player.medal = UIImage(named: "medalhaExplorador")
-//                player.descriptionTitle = "Você busca conhecer os sons e explorar cada um deles."
-//                player.pointsLevelUp = 100.0
-//                player.score = "\(Int(player.points))/\(Int(player.pointsLevelUp))"
-//                if player.points < player.pointsLevelUp {
-//                    player.descriptionPoints = "Acumule \(Int(player.pointsLevelUp)) pontos para conquistar o título de \(playerTitles[Int(player.level)])."
-//                } else {
-//                    player.descriptionPoints = "Clique no botão para subir de nível."
-//                }
-//            case 2:
-//                player.title = "\(playerTitles[Int(player.level)])"
-//                player.medal = UIImage(named: "medalhaAmador")
-//                player.descriptionTitle = "Você é amador."
-//                player.pointsLevelUp = 250.0
-//                player.score = "\(Int(player.points))/\(Int(player.pointsLevelUp))"
-//                if player.points < player.pointsLevelUp {
-//                    player.descriptionPoints = "Acumule \(Int(player.pointsLevelUp)) pontos para conquistar o título de \(playerTitles[Int(player.level)])."
-//                } else {
-//                    player.descriptionPoints = "Clique no botão para subir de nível."
-//                }
-//            case 3:
-//                player.title = "\(playerTitles[Int(player.level)])"
-//                player.medal = UIImage(named: "medalhaMestre")
-//                player.descriptionTitle = "Você é mestre."
-//                player.pointsLevelUp = 450.0
-//                player.score = "\(Int(player.points))/\(Int(player.pointsLevelUp))"
-//                if player.points < player.pointsLevelUp {
-//                    player.descriptionPoints = "Acumule \(Int(player.pointsLevelUp)) pontos para conquistar o título de \(playerTitles[Int(player.level)])."
-//                } else {
-//                    player.descriptionPoints = "Clique no botão para subir de nível."
-//                }
-//            case 4:
-//                player.title = "\(playerTitles[Int(player.level)])"
-//                player.medal = UIImage(named: "medalhaDeus")
-//                player.descriptionTitle = "Você é Deus da música."
-//                player.pointsLevelUp = 450.0
-//                player.score = "\(Int(player.points))/\(Int(player.pointsLevelUp))"
-//                player.descriptionPoints = "Parabéns você agora é um Deus da música."
-//                //lbScore.isHidden = true
-//            default:
-//                print("default")
+//        if noteRe == nil {
+//            noteRe = NoteProgress(context: context)
+//            noteRe.setValue("Ré", forKey: "name")
+//            noteRe.setValue(0, forKey: "level")
+//            notesManager.notes.append(noteRe)
 //        }
-//        
-//        // salva progresso no CoreData
-////        do {
-////            try context.save()
-////        } catch {
-////            print(error.localizedDescription)
-////        }
-//    }
-//    
-//    func loadPage() {
-//        lbTitle.text = player.title
-//        ivImage.image = player.medal as! UIImage
-//        lbDescription.text = player.descriptionTitle
-//        lbScore.text = player.score
-//        lbProgress.text = player.descriptionPoints
-//        pvPlayer.progress = player.points/player.pointsLevelUp
-//    }
-//    
-//    func loadProgressViews() {
-//        // Progress View do Jogador
-//        pvPlayer.transform = CGAffineTransform(scaleX: 1.0, y: 5.0)
-//        
-//        // Progress View da nota Dó
-//        pvDo.transform = CGAffineTransform(scaleX: 1.0, y: 5.0)
-//    }
-//    
-//    func loadNota(_ nota: NoteGame) {
-//        
-//    }
-//    
-////    func progressPlayer() {
-////        if pointsTotal > 0.0 && pointsToLevelUp == 100.0 {
-////            self.level = 1
-////        }
-////
-////        if pointsTotal >= pointsToLevelUp {
-////            self.level+=1
-////        }
-////
-////        if level == 2 {
-////            self.pointsToLevelUp = 250.0
-////        } else if level == 3 {
-////            self.pointsToLevelUp = 450.0
-////        }
-////        checkProgressPlayer()
-////        //refreshPage(level)
-////    }
-////
-////    func checkProgressPlayer() {
-////        lbScore.text = "\(Int(pointsTotal))/\(Int(pointsToLevelUp))"
-////        if pointsTotal >= pointsToLevelUp {
-////            btCheckProgress.setImage(UIImage(named: "progressoOuro"), for: .normal)
-////        }
-////        checkNoteDo()
-////
-////        pvPlayer.progress = pointsTotal/pointsToLevelUp
-////        lbScore.text = "\(Int(pointsTotal))/\(Int(pointsToLevelUp))"
-////    }
-////
-////    func checkNoteDo() {
-////        if levelDo == 0 {
-////            self.pvSizeDo = 3
-////            ivDo.image = UIImage(named: "\(imgsNoteDo[levelDo])")
-////            lbDo.text = "Jogue mais \(Int(pvSizeDo-noteDo)) vezes com a nota Dó e alcance o nível bronze."
-////            pvDo.progress = noteDo/pvSizeDo
-////        } else if levelDo == 1 {
-////            self.pvSizeDo = 4
-////            ivDo.image = UIImage(named: "\(imgsNoteDo[levelDo])")
-////            lbDo.text = "Jogue mais \(Int(pvSizeDo-noteDo)) vezes com a nota Dó e alcance o nível prata."
-////        } else if levelDo == 2 {
-////            self.pvSizeDo = 5
-////            ivDo.image = UIImage(named: "\(imgsNoteDo[levelDo])")
-////            lbDo.text = "Jogue mais \(Int(pvSizeDo-noteDo)) vezes com a nota Dó e alcance o nível ouro."
-////        } else {
-////            self.pvSizeDo = 5
-////            self.noteDo = 5
-////            ivDo.image = UIImage(named: "\(imgsNoteDo[levelDo])")
-////            lbDo.text = "Parabéns você é um Deus da nota Dó."
-////            pvDo.progressTintColor = UIColor.yellow
-////        }
-////        if noteDo >= pvSizeDo && levelDo < 3 {
-////            pvDo.isHidden = true
-////            btRewardDo.isHidden = false
-////            lbDo.text = "Toque em obter recompensa para descobrir quantos pontos você conseguiu."
-////            if noteDo == pvSizeDo {
-////                self.noteDo = 0
-////                //self.pvSizeDo = 4
-////            } else if noteDo > pvSizeDo {
-////                noteDo = noteDo - pvSizeDo
-////                //self.pvSizeDo = 4
-////            }
-////        }
-////        pvDo.progress = noteDo/pvSizeDo
-////    }
-////
-////    func styleProgressView(_ pv: UIProgressView) {
-////        pv.transform = CGAffineTransform(scaleX: 1.0, y: 5.0)
-////        //pv.setProgress(points, animated: true)
-////    }
-//    
-////    func refreshPage(_ level: Int) {
-////        switch level {
-////        case 0:
-////            lbTitle.text = "\(playerTitles[level])"
-////            lbDescription.text = "Comece a explorar as notas e os sons que elas tem."
-////            lbProgress.text = "Jogue a primeira vez para ganhar sua primeira medalha."
-////        case 1:
-////            lbTitle.text = "\(playerTitles[level])"
-////            ivImage.image = UIImage(named: "medalhaExplorador")
-////            lbDescription.text = "Você busca conhecer os sons e explorar cada um deles."
-////            lbProgress.text = "Acumule \(Int(pointsToLevelUp)) pontos para conquistar o título de \(playerTitles[level+1])."
-////        case 2:
-////            lbTitle.text = "\(playerTitles[level])"
-////            ivImage.image = UIImage(named: "medalhaAmador")
-////            lbDescription.text = "Amador."
-////            lbProgress.text = "Acumule \(Int(pointsToLevelUp)) pontos para conquistar o título de \(playerTitles[level+1])."
-////        case 3:
-////            lbTitle.text = "\(playerTitles[level])"
-////            ivImage.image = UIImage(named: "medalhaMestre")
-////            lbDescription.text = "Mestre."
-////            lbProgress.text = "Acumule \(Int(pointsToLevelUp)) pontos para conquistar o título de \(playerTitles[level+1])."
-////        case 4:
-////            lbTitle.text = "\(playerTitles[level])"
-////            ivImage.image = UIImage(named: "medalhaDeus")
-////            lbDescription.text = "Deus."
-////            lbProgress.text = "Parabéns você agora é um Deus da música."
-////            lbScore.isHidden = true
-////        default:
-////            print("default")
-////        }
-////    }
-//    
-//    @IBAction func btCheckProgress(_ sender: Any) {
-//        if player.level != 0 && player.level < 4  {
-//            lbProgress.text = "Faltam \(Int(player.points-player.pointsLevelUp)) para você conquistar o título de \(playerTitles[Int(player.level)+1])."
+//        if noteMi == nil {
+//            noteMi = NoteProgress(context: context)
+//            noteMi.setValue("Mi", forKey: "name")
+//            noteMi.setValue(0, forKey: "level")
+//            notesManager.notes.append(noteMi)
 //        }
-//        if player.points >= player.pointsLevelUp {
-//            player.level+=1
-//            print("Botão: \(player.level)")
-//            btCheckProgress.setImage(UIImage(named: "progressoPadrao"), for: .normal)
-//            
+//        if noteFa == nil {
+//            noteFa = NoteProgress(context: context)
+//            noteFa.setValue("Fá", forKey: "name")
+//            noteFa.setValue(0, forKey: "level")
+//            notesManager.notes.append(noteFa)
 //        }
-//        loadStatusPlayer()
-//        loadPage()
+//        if noteSol == nil {
+//            noteSol = NoteProgress(context: context)
+//            noteSol.setValue("Sol", forKey: "name")
+//            noteSol.setValue(0, forKey: "level")
+//            notesManager.notes.append(noteSol)
+//        }
+//        if noteLa == nil {
+//            noteLa = NoteProgress(context: context)
+//            noteLa.setValue("Lá", forKey: "name")
+//            noteLa.setValue(0, forKey: "level")
+//            notesManager.notes.append(noteLa)
+//        }
+//        if noteSi == nil {
+//            noteSi = NoteProgress(context: context)
+//            noteSi.setValue("Si", forKey: "name")
+//            noteSi.setValue(0, forKey: "level")
+//            notesManager.notes.append(noteSi)
+//        }
 //    }
-//    
-//    @IBAction func rewardDo(_ sender: Any) {
-//        
-//        
-//        
-////        if levelDo == 0 {
-////            pointsTotal+=10
-////        } else if levelDo == 1 {
-////            pointsTotal+=15
-////        } else if levelDo == 2 {
-////            pointsTotal+=20
-////        }
-////
-////        btRewardDo.isHidden = true
-////        pvDo.isHidden = false
-////        if levelDo < 3 {
-////            self.levelDo+=1
-////        }
-////        checkProgressPlayer()
-////        progressPlayer()
-//    }
-//    
-//
-//}
+    
+    // método que verifica o progresso de cada Nota e exibe infos de acordo com o level que o Player está na Nota
+    func checkNote(_ index: Int, _ progressView: UIProgressView, _ medalNote: UIImageView, _ noteDescription: UILabel, _ buttonReward: UIButton) {
+        let noteName = [
+            "Dó": "C",
+            "Ré": "D",
+            "Mi": "E",
+            "Fá": "F",
+            "Sol": "G",
+            "Lá": "A",
+            "Si": "B",
+        ]
+        let noteSelect = noteName[notesManager.notes[index].name!]
+        let imagesNote: [String] = ["iniciante", "bronze", "prata", "ouro"]
+        
+        if notesManager.notes[index].level == 0 {
+            notesManager.notes[index].pointsLevelUp = 3.0
+            medalNote.image = UIImage(named: "\(imagesNote[Int(notesManager.notes[index].level)])\(noteSelect!)")
+            noteDescription.text = "Jogue mais \(Int(notesManager.notes[index].pointsLevelUp-notesManager.notes[index].points)) vezes com a nota \(notesManager.notes[index].name!) e alcance o nível \(imagesNote[Int(notesManager.notes[index].level)+1])."
+        } else if notesManager.notes[index].level == 1 {
+            notesManager.notes[index].pointsLevelUp = 4
+            medalNote.image = UIImage(named: "\(imagesNote[Int(notesManager.notes[index].level)])\(noteSelect!)")
+            noteDescription.text = "Jogue mais \(Int(notesManager.notes[index].pointsLevelUp-notesManager.notes[index].points)) vezes com a nota \(notesManager.notes[index].name!) e alcance o nível \(imagesNote[Int(notesManager.notes[index].level)+1])."
+        } else if notesManager.notes[index].level == 2 {
+            notesManager.notes[index].pointsLevelUp = 5
+            medalNote.image = UIImage(named: "\(imagesNote[Int(notesManager.notes[index].level)])\(noteSelect!)")
+            noteDescription.text = "Jogue mais \(Int(notesManager.notes[index].pointsLevelUp-notesManager.notes[index].points)) vezes com a nota \(notesManager.notes[index].name!) e alcance o nível \(imagesNote[Int(notesManager.notes[index].level)+1])."
+        } else {
+            notesManager.notes[index].pointsLevelUp = 5
+            notesManager.notes[index].points = 5
+            medalNote.image = UIImage(named: "\(imagesNote[Int(notesManager.notes[index].level)])\(noteSelect!)")
+            noteDescription.text = "Parabéns você é um Deus da nota \(notesManager.notes[index].name!)."
+            progressView.progressTintColor = UIColor.yellow
+        }
+        
+        if notesManager.notes[index].points >= notesManager.notes[index].pointsLevelUp && notesManager.notes[index].level < 3 {
+            progressView.isHidden = true
+            buttonReward.isHidden = false
+            noteDescription.text = "Toque em obter recompensa para descobrir quantos pontos você conseguiu."
+        } else {
+            buttonReward.isHidden = true
+        }
+        progressView.transform = CGAffineTransform(scaleX: 1.0, y: 5.0)
+        progressView.progress = notesManager.notes[index].points/notesManager.notes[index].pointsLevelUp
+        do {
+            try context.save()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    // carrega infos do Jogador na Tela
+    func loadPage() {
+        // Infos do Player
+        lbTitle.text = playerProgress.title
+        ivImage.image = playerProgress.medal as? UIImage
+        lbDescription.text = playerProgress.descriptionTitle
+        lbScore.text = playerProgress.score
+        lbProgress.text = playerProgress.descriptionPoints
+        progressViewPlayer.progress = playerProgress.points/playerProgress.pointsLevelUp
+    }
+    
+    // método que checa se o Player tem recompensa para receber da Nota
+    func refreshRewardNote(_ index: Int, _ progressView: UIProgressView, _ medalNote: UIImageView, _ noteDescription: UILabel, _ buttonReward: UIButton) {
+        if notesManager.notes[index].level == 0 {
+            playerProgress.points+=10
+        } else if notesManager.notes[index].level == 1 {
+            playerProgress.points+=15
+        } else if notesManager.notes[index].level == 2 {
+            playerProgress.points+=20
+        }
+        buttonReward.isHidden = true
+        progressView.isHidden = false
+        if notesManager.notes[index].level < 3 {
+            notesManager.notes[index].level+=1
+        }
+        if notesManager.notes[index].points == notesManager.notes[index].pointsLevelUp {
+            notesManager.notes[index].points = 0
+        } else if notesManager.notes[index].points > notesManager.notes[index].pointsLevelUp {
+            notesManager.notes[index].points = notesManager.notes[index].points - notesManager.notes[index].pointsLevelUp
+        }
+        loadStatusPlayer()
+        loadNotes()
+        loadPage()
+        checkNote(index, progressView, medalNote, noteDescription, buttonReward)
+    }
+    
+    @IBAction func btCheckProgress(_ sender: Any) {
+        if playerProgress.points >= playerProgress.pointsLevelUp && playerProgress.level > 0 && playerProgress.level < 4  {
+            playerProgress.level+=1
+            btCheckProgress.setImage(UIImage(named: "progressoPadrao"), for: .normal)
+            if playerProgress.level >= 4 {
+                btCheckProgress.setImage(UIImage(named: "progressoOuro"), for: .normal)
+            }
+        }
+        if playerProgress.pointsLevelUp-playerProgress.points < 0 {
+            lbProgress.text = "Você conquistou a medalha ouro de \(playerTitles[Int(playerProgress.level)]). Clique no botão no final da barra de progresso para subir de nível."
+        }
+        print(playerProgress.level)
+        loadStatusPlayer()
+        //loadPage()
+        if playerProgress.level < 4 && playerProgress.points < playerProgress.pointsLevelUp {
+            loadPage()
+            lbProgress.text = "Faltam \(Int(playerProgress.pointsLevelUp-playerProgress.points)) para você conquistar o título de \(playerTitles[Int(playerProgress.level)+1])."
+        } else {
+            loadPage()
+        }
+        
+        
+//        if playerProgress.level > 0 && playerProgress.level < 4  {
+//            lbProgress.text = "Faltam \(Int(playerProgress.pointsLevelUp-playerProgress.points)) para você conquistar o título de \(playerTitles[Int(playerProgress.level)+1])."
+//        }
+    }
+    
+    @IBAction func rewardDo(_ sender: Any) {
+        refreshRewardNote(0, progressViewDo, medalNoteDo, noteDescriptionDo, buttonRewardDo)
+    }
+    
+    @IBAction func rewardRe(_ sender: Any) {
+        refreshRewardNote(4, progressViewRe, medalNoteRe, noteDescriptionRe, buttonRewardRe)
+    }
+    
+    @IBAction func rewardMi(_ sender: Any) {
+        refreshRewardNote(3, progressViewMi, medalNoteMi, noteDescriptionMi, buttonRewardMi)
+    }
+    
+    @IBAction func rewardFa(_ sender: Any) {
+        refreshRewardNote(1, progressViewFa, medalNoteFa, noteDescriptionFa, buttonRewardFa)
+    }
+    
+    @IBAction func rewardSol(_ sender: Any) {
+        refreshRewardNote(6, progressViewSol, medalNoteSol, noteDescriptionSol, buttonRewardSol)
+    }
+    
+    @IBAction func rewardLa(_ sender: Any) {
+        refreshRewardNote(2, progressViewLa, medalNoteLa, noteDescriptionLa, buttonRewardLa)
+    }
+    
+    @IBAction func rewardSi(_ sender: Any) {
+        refreshRewardNote(5, progressViewSi, medalNoteSi, noteDescriptionSi, buttonRewardSi)
+    }
+    
+}
+
+extension RewardsViewController: NSFetchedResultsControllerDelegate {
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        
+        switch type {
+            case .update:
+                print("Atualizado")
+            default:
+                print("Default")
+        }
+    }
+}

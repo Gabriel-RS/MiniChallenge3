@@ -16,6 +16,6 @@ class SequenceCell: UICollectionViewCell {
     
     func setNoteKey(note: Note) {
         self.noteKey = note
-        image.image = note.image
+        image.image = note.getImage()
     }
 }

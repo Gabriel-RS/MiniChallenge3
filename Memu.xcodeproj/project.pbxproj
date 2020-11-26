@@ -49,11 +49,17 @@
 		5A6A09712551E6D700F143ED /* SequenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09702551E6D700F143ED /* SequenceCell.swift */; };
 		8536C6012559B2C200706EE7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536C6002559B2C200706EE7 /* Note.swift */; };
 		8536C6092559B39D00706EE7 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536C6082559B39D00706EE7 /* Board.swift */; };
+<<<<<<< HEAD
 		8561EE1225686CA800E072B8 /* PlayerProgress+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8561EE0E25686CA800E072B8 /* PlayerProgress+CoreDataClass.swift */; };
 		8561EE1425686CA800E072B8 /* NoteProgress+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8561EE1025686CA800E072B8 /* NoteProgress+CoreDataClass.swift */; };
 		85B4A5F6255EFFFD0019D0EF /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4A5F5255EFFFD0019D0EF /* Sequence.swift */; };
 		A3992E812568A93000775982 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3992E802568A93000775982 /* PlayerManager.swift */; };
 		A3E79FE82568893F00D5FAD7 /* ViewControlle+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E79FE72568893F00D5FAD7 /* ViewControlle+CoreData.swift */; };
+=======
+		85B4A5F6255EFFFD0019D0EF /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4A5F5255EFFFD0019D0EF /* Sequence.swift */; };
+		A30765C9256EB3FF00579822 /* NotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30765C8256EB3FF00579822 /* NotesManager.swift */; };
+		A3E79FE82568893F00D5FAD7 /* ViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E79FE72568893F00D5FAD7 /* ViewController+CoreData.swift */; };
+>>>>>>> merge
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,11 +128,17 @@
 		5A6A09702551E6D700F143ED /* SequenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceCell.swift; sourceTree = "<group>"; };
 		8536C6002559B2C200706EE7 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		8536C6082559B39D00706EE7 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		8561EE0E25686CA800E072B8 /* PlayerProgress+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayerProgress+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8561EE1025686CA800E072B8 /* NoteProgress+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteProgress+CoreDataClass.swift"; sourceTree = "<group>"; };
 		85B4A5F5255EFFFD0019D0EF /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
 		A3992E802568A93000775982 /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
 		A3E79FE72568893F00D5FAD7 /* ViewControlle+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControlle+CoreData.swift"; sourceTree = "<group>"; };
+=======
+		85B4A5F5255EFFFD0019D0EF /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
+		A30765C8256EB3FF00579822 /* NotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesManager.swift; sourceTree = "<group>"; };
+		A3E79FE72568893F00D5FAD7 /* ViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CoreData.swift"; sourceTree = "<group>"; };
+>>>>>>> merge
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,13 +351,11 @@
 		8536C5FF2559B2B600706EE7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8561EE0E25686CA800E072B8 /* PlayerProgress+CoreDataClass.swift */,
-				8561EE1025686CA800E072B8 /* NoteProgress+CoreDataClass.swift */,
 				8536C6002559B2C200706EE7 /* Note.swift */,
 				8536C6082559B39D00706EE7 /* Board.swift */,
-				A3E79FE72568893F00D5FAD7 /* ViewControlle+CoreData.swift */,
-				A3992E802568A93000775982 /* PlayerManager.swift */,
+				A3E79FE72568893F00D5FAD7 /* ViewController+CoreData.swift */,
 				85B4A5F5255EFFFD0019D0EF /* Sequence.swift */,
+				A30765C8256EB3FF00579822 /* NotesManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -500,7 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3E79FE82568893F00D5FAD7 /* ViewControlle+CoreData.swift in Sources */,
+				A3E79FE82568893F00D5FAD7 /* ViewController+CoreData.swift in Sources */,
 				5A122FEC2547490C00417AEE /* ViewController.swift in Sources */,
 				5A6A09552551D4AA00F143ED /* PuzzleViewController.swift in Sources */,
 				85B4A5F6255EFFFD0019D0EF /* Sequence.swift in Sources */,
@@ -510,15 +520,13 @@
 				8536C6012559B2C200706EE7 /* Note.swift in Sources */,
 				5A122FE82547490C00417AEE /* AppDelegate.swift in Sources */,
 				5A6A095D2551D4C300F143ED /* RewardsViewController.swift in Sources */,
+				A30765C9256EB3FF00579822 /* NotesManager.swift in Sources */,
 				5A6A094F2551D48C00F143ED /* NotesViewController.swift in Sources */,
 				5A6A094A2551D47B00F143ED /* LaunchpadViewController.swift in Sources */,
 				5A6A09682551D86900F143ED /* CompletionViewController.swift in Sources */,
-				8561EE1425686CA800E072B8 /* NoteProgress+CoreDataClass.swift in Sources */,
-				8561EE1225686CA800E072B8 /* PlayerProgress+CoreDataClass.swift in Sources */,
 				5A122FEA2547490C00417AEE /* SceneDelegate.swift in Sources */,
 				5A19B1A62554943E00C4F804 /* LaunchpadCell.swift in Sources */,
 				027EB5FF255DAA6A00DD7720 /* TutorialViewController.swift in Sources */,
-				A3992E812568A93000775982 /* PlayerManager.swift in Sources */,
 				5A6A09452551D44800F143ED /* HomeScreenViewController.swift in Sources */,
 				8536C6092559B39D00706EE7 /* Board.swift in Sources */,
 				5A19B1AE2554988A00C4F804 /* ButtonCell.swift in Sources */,
@@ -627,7 +635,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -682,7 +690,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -698,7 +706,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VWA99NR7DU;
 				INFOPLIST_FILE = Memu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -717,7 +725,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VWA99NR7DU;
 				INFOPLIST_FILE = Memu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
