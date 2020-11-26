@@ -84,7 +84,7 @@ A seguir, entenda como funciona:</string>
                                     <constraint firstAttribute="width" secondItem="oo7-L0-apu" secondAttribute="height" multiplier="49:51" id="oYD-zU-YXy"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dá play/stop na melodia gerada" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ZAa-Cw-7o7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toca a melodia criada na primeira vez" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ZAa-Cw-7o7">
                                 <rect key="frame" x="126" y="541" width="236.5" height="54.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZAa-Cw-7o7" secondAttribute="height" multiplier="118:27" id="wIk-oH-lOP"/>
@@ -99,7 +99,7 @@ A seguir, entenda como funciona:</string>
                                     <constraint firstAttribute="width" secondItem="0qQ-i4-bzG" secondAttribute="height" multiplier="59:13" id="xem-lu-Asn"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment content="Bloqueia a sequência em andamento">
+                                    <fragment content="Permite ouvir o som sem adicionar à melodia">
                                         <attributes>
                                             <color key="NSColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="22" name="SFProRounded-Regular"/>
@@ -128,7 +128,7 @@ A seguir, entenda como funciona:</string>
                                     <constraint firstAttribute="width" secondItem="HS0-hU-CHq" secondAttribute="height" multiplier="49:52" id="DFE-2A-wuv"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mostra a quantidade de ouvidas restantes" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="dvW-Vb-Kbk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indica quantas vezes pode ouvir a melodia do puzzle" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="dvW-Vb-Kbk">
                                 <rect key="frame" x="126" y="622" width="236.5" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dvW-Vb-Kbk" secondAttribute="height" multiplier="59:13" id="8I1-9n-7SV"/>

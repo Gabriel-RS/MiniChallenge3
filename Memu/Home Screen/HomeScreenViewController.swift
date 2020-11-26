@@ -15,7 +15,19 @@ class HomeScreenViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    var launchpadVc = LaunchpadViewController()
+    
+    @IBAction func btnPlay(_ sender: Any) {
+        launchpadVc.playNote("feedback_interface")
+    }
+    
+    @IBAction func btnHelp(_ sender: Any) {
+        launchpadVc.playNote("feedback_interface")
+    }
+    
+    @IBAction func btnRewards(_ sender: Any) {
+        launchpadVc.playNote("feedback_interface")
+    }
     /*
     // MARK: - Navigation
 

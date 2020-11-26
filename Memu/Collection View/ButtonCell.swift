@@ -12,13 +12,13 @@ class ButtonCell: UICollectionViewCell {
     static let reuseIdentifierDelete = "DeleteCell"
     
     weak var delegate: ButtonCellDelegate?
-
+    
     @IBOutlet weak var btnLock: UIButton!
     @IBOutlet weak var btnPlay: UIButton!
     @IBOutlet weak var btnHearing: UIButton!
     
     let isPlaying = LaunchpadViewController.isPlaying
-
+    
     func lockImg() {
         if PuzzleViewController.locked == false {
             btnLock.setImage(UIImage(named: "unlocked"), for: .normal)
@@ -45,9 +45,23 @@ class ButtonCell: UICollectionViewCell {
         if PuzzleViewController.locked == false && PuzzleViewController.timesLocked == 0 {
             PuzzleViewController.locked = true
             PuzzleViewController.timesLocked += 1
-            lockImg()
-        } else if PuzzleViewController.locked {
+            
+            btnLock.setImage(UIImage(named: "locked"), for: .normal)
+            
+            delegate?.playNote("feedback_bloqueada")
+        }
+        
+        else if PuzzleViewController.locked {
             PuzzleViewController.locked = false
+            lockImg()
+            
+            
+            
+            
+        } else {
+            print("não é possível bloquear mais de uma vez")
+            // TODO: emitir som de tecla bloqueada
+            
             lockImg()
         }
     }
@@ -61,7 +75,7 @@ class ButtonCell: UICollectionViewCell {
     
     @objc func playImage(sender: Notification) {
         let isPlaying = LaunchpadViewController.isPlaying
-
+        
         if isPlaying == true {
             btnPlay.setImage(UIImage(named: "stop"), for: .normal)
         } else {
@@ -81,4 +95,7 @@ class ButtonCell: UICollectionViewCell {
 protocol ButtonCellDelegate: class {
     func delete()
     func play()
+    //    func setFeedback(completionName: String)
+    //    func playFeedback(feedbackType: String)
+    func playNote(_ song: String)
 }

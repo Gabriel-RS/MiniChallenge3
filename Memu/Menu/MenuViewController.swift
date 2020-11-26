@@ -13,24 +13,29 @@ class MenuViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    var launchpadVc = LaunchpadViewController()
     
     @IBAction func btnContinue(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+        launchpadVc.playNote("feedback_interface")
     }
     
     @IBAction func btnNewGame(_ sender: Any) {
         let segue = "newGame"
         let msg = "Deseja realmente iniciar um novo jogo?"
         alert(segue, msg)
+        launchpadVc.playNote("feedback_interface")
     }
     
     @IBAction func btnHome(_ sender: Any) {
         let segue = "homeScreen"
         let msg = "Deseja realmente voltar ao menu inicial?"
         alert(segue, msg)
+        launchpadVc.playNote("feedback_interface")
     }
     
     @IBAction func btnHelp(_ sender: Any) {
+        launchpadVc.playNote("feedback_interface")
     }
     
     func alert(_ segue: String, _ msg: String) {
