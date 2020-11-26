@@ -10,17 +10,11 @@ import CoreData
 
 class RewardsViewController: UIViewController {
     
+    var launchpadVc = LaunchpadViewController()
+    
     var fetchedResultController: NSFetchedResultsController<PlayerProgress>!
     var playerProgress: PlayerProgress!
     var notesManager = NotesManager.shared
-    
-//    var noteDo: NoteProgress!
-//    var noteRe: NoteProgress!
-//    var noteMi: NoteProgress!
-//    var noteFa: NoteProgress!
-//    var noteSol: NoteProgress!
-//    var noteLa: NoteProgress!
-//    var noteSi: NoteProgress!
     
     // Player
     @IBOutlet weak var lbTitle: UILabel!
@@ -197,52 +191,6 @@ class RewardsViewController: UIViewController {
         }
     }
     
-    // inicializas as Notas
-//    func initNotes() {
-//        if noteDo == nil {
-//            noteDo = NoteProgress(context: context)
-//            noteDo.setValue("Dó", forKey: "name")
-//            noteDo.setValue(0, forKey: "level")
-//            notesManager.notes.append(noteDo)
-//        }
-//        if noteRe == nil {
-//            noteRe = NoteProgress(context: context)
-//            noteRe.setValue("Ré", forKey: "name")
-//            noteRe.setValue(0, forKey: "level")
-//            notesManager.notes.append(noteRe)
-//        }
-//        if noteMi == nil {
-//            noteMi = NoteProgress(context: context)
-//            noteMi.setValue("Mi", forKey: "name")
-//            noteMi.setValue(0, forKey: "level")
-//            notesManager.notes.append(noteMi)
-//        }
-//        if noteFa == nil {
-//            noteFa = NoteProgress(context: context)
-//            noteFa.setValue("Fá", forKey: "name")
-//            noteFa.setValue(0, forKey: "level")
-//            notesManager.notes.append(noteFa)
-//        }
-//        if noteSol == nil {
-//            noteSol = NoteProgress(context: context)
-//            noteSol.setValue("Sol", forKey: "name")
-//            noteSol.setValue(0, forKey: "level")
-//            notesManager.notes.append(noteSol)
-//        }
-//        if noteLa == nil {
-//            noteLa = NoteProgress(context: context)
-//            noteLa.setValue("Lá", forKey: "name")
-//            noteLa.setValue(0, forKey: "level")
-//            notesManager.notes.append(noteLa)
-//        }
-//        if noteSi == nil {
-//            noteSi = NoteProgress(context: context)
-//            noteSi.setValue("Si", forKey: "name")
-//            noteSi.setValue(0, forKey: "level")
-//            notesManager.notes.append(noteSi)
-//        }
-//    }
-    
     // método que verifica o progresso de cada Nota e exibe infos de acordo com o level que o Player está na Nota
     func checkNote(_ index: Int, _ progressView: UIProgressView, _ medalNote: UIImageView, _ noteDescription: UILabel, _ buttonReward: UIButton) {
         let noteName = [
@@ -349,39 +297,41 @@ class RewardsViewController: UIViewController {
         } else {
             loadPage()
         }
-        
-        
-//        if playerProgress.level > 0 && playerProgress.level < 4  {
-//            lbProgress.text = "Faltam \(Int(playerProgress.pointsLevelUp-playerProgress.points)) para você conquistar o título de \(playerTitles[Int(playerProgress.level)+1])."
-//        }
     }
     
     @IBAction func rewardDo(_ sender: Any) {
         refreshRewardNote(0, progressViewDo, medalNoteDo, noteDescriptionDo, buttonRewardDo)
+        launchpadVc.playNote("feedback_recompensa")
     }
     
     @IBAction func rewardRe(_ sender: Any) {
         refreshRewardNote(4, progressViewRe, medalNoteRe, noteDescriptionRe, buttonRewardRe)
+        launchpadVc.playNote("feedback_recompensa")
     }
     
     @IBAction func rewardMi(_ sender: Any) {
         refreshRewardNote(3, progressViewMi, medalNoteMi, noteDescriptionMi, buttonRewardMi)
+        launchpadVc.playNote("feedback_recompensa")
     }
     
     @IBAction func rewardFa(_ sender: Any) {
         refreshRewardNote(1, progressViewFa, medalNoteFa, noteDescriptionFa, buttonRewardFa)
+        launchpadVc.playNote("feedback_recompensa")
     }
     
     @IBAction func rewardSol(_ sender: Any) {
         refreshRewardNote(6, progressViewSol, medalNoteSol, noteDescriptionSol, buttonRewardSol)
+        launchpadVc.playNote("feedback_recompensa")
     }
     
     @IBAction func rewardLa(_ sender: Any) {
         refreshRewardNote(2, progressViewLa, medalNoteLa, noteDescriptionLa, buttonRewardLa)
+        launchpadVc.playNote("feedback_recompensa")
     }
     
     @IBAction func rewardSi(_ sender: Any) {
         refreshRewardNote(5, progressViewSi, medalNoteSi, noteDescriptionSi, buttonRewardSi)
+        launchpadVc.playNote("feedback_recompensa")
     }
     
 }

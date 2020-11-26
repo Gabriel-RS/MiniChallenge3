@@ -10,12 +10,9 @@ import AVFoundation
 import CoreData
 
 
-class PuzzleViewController: UIViewController {
+class PuzzleViewController: UIViewController{
     
-    var audioPlayerFeedback = AVAudioPlayer()
-
-class PuzzleViewController: UIViewController, NSFetchedResultsControllerDelegate {
-
+  //  var audioPlayerFeedback = AVAudioPlayer()
 
     @IBOutlet weak var ear1: UIImageView!
     @IBOutlet weak var ear2: UIImageView!
@@ -455,6 +452,18 @@ extension PuzzleViewController: ButtonCellDelegate {
     func playNote(_ song: String) {
         
         launchpadVc.playNote(song)
+    }
+}
+
+extension PuzzleViewController: NSFetchedResultsControllerDelegate {
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+
+        switch type {
+            case .update:
+                print("Atualizado")
+            default:
+                print("Default")
+        }
     }
 }
 
