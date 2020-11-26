@@ -9,6 +9,8 @@ import UIKit
 import AVFoundation
 
 class PuzzleViewController: UIViewController {
+    
+    var audioPlayerFeedback = AVAudioPlayer()
 
     @IBOutlet weak var ear1: UIImageView!
     @IBOutlet weak var ear2: UIImageView!
@@ -86,6 +88,9 @@ class PuzzleViewController: UIViewController {
             performSegue(withIdentifier: "conclusionSegue", sender: self)
             
             // TODO: emitir som de feedback positivo
+            //playFeedback(feedbackType: "positivo")
+            
+            playNote("feedback_positivo")
             
         } else {
             // atualiza sequencia do tabuleiro e sequencia conectada à collection view
@@ -97,10 +102,15 @@ class PuzzleViewController: UIViewController {
             
             // TODO: emitir som de feedback negativo
             
+            //playFeedback(feedbackType: "negativo")
+            
+            playNote("feedback_negativo")
+            
             collectionView.reloadData()
         }
 
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "conclusionSegue" {
@@ -111,6 +121,7 @@ class PuzzleViewController: UIViewController {
     
     @IBAction func btnMenu(_ sender: Any) {
         print("Menu Button")
+        playNote("feedback_interface")
     }
     
     func generateResultSequence() -> Array<Note>{
@@ -330,6 +341,7 @@ extension PuzzleViewController: ButtonCellDelegate {
         for note in puzzleBoard.launchpad {
             if(note.name == erasedNote.name) {
                 note.turnOff()
+                playNote("feedback_interface")
             }
         }
         
@@ -352,5 +364,28 @@ extension PuzzleViewController: ButtonCellDelegate {
             // TODO: emitir som tecla bloqueada
         }
     }
+   
+//    func setFeedback(completionName: String){
+//        
+//        let feedbackSound = Bundle.main.path(forResource: "feedback_\(completionName)", ofType: "mp3")
+//        
+//        do{
+//            audioPlayerFeedback = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: feedbackSound!))
+//        }
+//        catch{
+//            print(error)
+//        }
+//    }
+//    
+//    func playFeedback(feedbackType: String) {
+//        
+//        setFeedback(completionName: feedbackType)
+//        audioPlayerFeedback.play()
+//    }
     
+    func playNote(_ song: String) {
+        
+        launchpadVc.playNote(song)
+    }
 }
+

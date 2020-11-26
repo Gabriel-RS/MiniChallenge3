@@ -14,11 +14,11 @@
 		022EF284255C8A1B00C393AC /* marimba_nota_fa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 022EF26B255C8A1B00C393AC /* marimba_nota_fa.mp3 */; };
 		022EF285255C8A1B00C393AC /* feedback_positivo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 022EF26C255C8A1B00C393AC /* feedback_positivo.mp3 */; };
 		022EF286255C8A1B00C393AC /* marimba_nota_do.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 022EF26D255C8A1B00C393AC /* marimba_nota_do.mp3 */; };
-		022EF287255C8A1B00C393AC /* tecla_bloqueada.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 022EF26E255C8A1B00C393AC /* tecla_bloqueada.mp3 */; };
+		022EF287255C8A1B00C393AC /* feedback_bloqueada.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 022EF26E255C8A1B00C393AC /* feedback_bloqueada.mp3 */; };
 		022EF288255C8A1B00C393AC /* marimba_nota_sol.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 022EF26F255C8A1B00C393AC /* marimba_nota_sol.mp3 */; };
 		022EF289255C8A1B00C393AC /* marimba_nota_si.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 022EF270255C8A1B00C393AC /* marimba_nota_si.mp3 */; };
 		022EF291255C8A1B00C393AC /* feedback_recompensa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 022EF279255C8A1B00C393AC /* feedback_recompensa.mp3 */; };
-		022EF292255C8A1B00C393AC /* default_interface.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 022EF27A255C8A1B00C393AC /* default_interface.mp3 */; };
+		022EF292255C8A1B00C393AC /* feedback_interface.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 022EF27A255C8A1B00C393AC /* feedback_interface.mp3 */; };
 		022EF293255C8A1B00C393AC /* marimba_nota_mi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 022EF27B255C8A1B00C393AC /* marimba_nota_mi.mp3 */; };
 		027EB5FF255DAA6A00DD7720 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027EB5FD255DAA6900DD7720 /* TutorialViewController.swift */; };
 		027EB600255DAA6A00DD7720 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027EB5FE255DAA6900DD7720 /* Tutorial.storyboard */; };
@@ -49,15 +49,11 @@
 		5A6A09712551E6D700F143ED /* SequenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09702551E6D700F143ED /* SequenceCell.swift */; };
 		8536C6012559B2C200706EE7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536C6002559B2C200706EE7 /* Note.swift */; };
 		8536C6092559B39D00706EE7 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536C6082559B39D00706EE7 /* Board.swift */; };
-
 		8561EE1225686CA800E072B8 /* PlayerProgress+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8561EE0E25686CA800E072B8 /* PlayerProgress+CoreDataClass.swift */; };
 		8561EE1425686CA800E072B8 /* NoteProgress+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8561EE1025686CA800E072B8 /* NoteProgress+CoreDataClass.swift */; };
-
+		85B4A5F6255EFFFD0019D0EF /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4A5F5255EFFFD0019D0EF /* Sequence.swift */; };
 		A3992E812568A93000775982 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3992E802568A93000775982 /* PlayerManager.swift */; };
 		A3E79FE82568893F00D5FAD7 /* ViewControlle+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E79FE72568893F00D5FAD7 /* ViewControlle+CoreData.swift */; };
-
-		85B4A5F6255EFFFD0019D0EF /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4A5F5255EFFFD0019D0EF /* Sequence.swift */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,11 +81,11 @@
 		022EF26B255C8A1B00C393AC /* marimba_nota_fa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_fa.mp3; sourceTree = "<group>"; };
 		022EF26C255C8A1B00C393AC /* feedback_positivo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feedback_positivo.mp3; sourceTree = "<group>"; };
 		022EF26D255C8A1B00C393AC /* marimba_nota_do.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_do.mp3; sourceTree = "<group>"; };
-		022EF26E255C8A1B00C393AC /* tecla_bloqueada.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tecla_bloqueada.mp3; sourceTree = "<group>"; };
+		022EF26E255C8A1B00C393AC /* feedback_bloqueada.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feedback_bloqueada.mp3; sourceTree = "<group>"; };
 		022EF26F255C8A1B00C393AC /* marimba_nota_sol.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_sol.mp3; sourceTree = "<group>"; };
 		022EF270255C8A1B00C393AC /* marimba_nota_si.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_si.mp3; sourceTree = "<group>"; };
 		022EF279255C8A1B00C393AC /* feedback_recompensa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feedback_recompensa.mp3; sourceTree = "<group>"; };
-		022EF27A255C8A1B00C393AC /* default_interface.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = default_interface.mp3; sourceTree = "<group>"; };
+		022EF27A255C8A1B00C393AC /* feedback_interface.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feedback_interface.mp3; sourceTree = "<group>"; };
 		022EF27B255C8A1B00C393AC /* marimba_nota_mi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_mi.mp3; sourceTree = "<group>"; };
 		027EB5FD255DAA6900DD7720 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		027EB5FE255DAA6900DD7720 /* Tutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
@@ -126,14 +122,11 @@
 		5A6A09702551E6D700F143ED /* SequenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceCell.swift; sourceTree = "<group>"; };
 		8536C6002559B2C200706EE7 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		8536C6082559B39D00706EE7 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
-
 		8561EE0E25686CA800E072B8 /* PlayerProgress+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayerProgress+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8561EE1025686CA800E072B8 /* NoteProgress+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteProgress+CoreDataClass.swift"; sourceTree = "<group>"; };
-
+		85B4A5F5255EFFFD0019D0EF /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
 		A3992E802568A93000775982 /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
 		A3E79FE72568893F00D5FAD7 /* ViewControlle+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControlle+CoreData.swift"; sourceTree = "<group>"; };
-		85B4A5F5255EFFFD0019D0EF /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,9 +315,9 @@
 			children = (
 				022EF269255C8A1B00C393AC /* feedback_negativo.mp3 */,
 				022EF26C255C8A1B00C393AC /* feedback_positivo.mp3 */,
-				022EF26E255C8A1B00C393AC /* tecla_bloqueada.mp3 */,
+				022EF26E255C8A1B00C393AC /* feedback_bloqueada.mp3 */,
 				022EF279255C8A1B00C393AC /* feedback_recompensa.mp3 */,
-				022EF27A255C8A1B00C393AC /* default_interface.mp3 */,
+				022EF27A255C8A1B00C393AC /* feedback_interface.mp3 */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -470,14 +463,14 @@
 				5A6A09262551D2EB00F143ED /* Puzzle.storyboard in Resources */,
 				022EF286255C8A1B00C393AC /* marimba_nota_do.mp3 in Resources */,
 				022EF282255C8A1B00C393AC /* feedback_negativo.mp3 in Resources */,
-				022EF292255C8A1B00C393AC /* default_interface.mp3 in Resources */,
+				022EF292255C8A1B00C393AC /* feedback_interface.mp3 in Resources */,
 				022EF293255C8A1B00C393AC /* marimba_nota_mi.mp3 in Resources */,
 				5A122FF72547490D00417AEE /* LaunchScreen.storyboard in Resources */,
 				5A6A09122551D2B600F143ED /* HomeScreen.storyboard in Resources */,
 				5A6A091C2551D2D200F143ED /* Launchpad.storyboard in Resources */,
 				022EF288255C8A1B00C393AC /* marimba_nota_sol.mp3 in Resources */,
 				5A122FF42547490D00417AEE /* Assets.xcassets in Resources */,
-				022EF287255C8A1B00C393AC /* tecla_bloqueada.mp3 in Resources */,
+				022EF287255C8A1B00C393AC /* feedback_bloqueada.mp3 in Resources */,
 				022EF23D255C859300C393AC /* Notes.storyboard in Resources */,
 				022EF284255C8A1B00C393AC /* marimba_nota_fa.mp3 in Resources */,
 				022EF27C255C8A1B00C393AC /* marimba_nota_la.mp3 in Resources */,

@@ -39,6 +39,9 @@ class ButtonCell: UICollectionViewCell {
             PuzzleViewController.locked = true
             PuzzleViewController.timesLocked += 1
             btnLock.setImage(UIImage(named: "locked"), for: .normal)
+            
+            delegate?.playNote("feedback_bloqueada")
+            
         } else {
             print("não é possível bloquear mais de uma vez")
             // TODO: emitir som de tecla bloqueada
@@ -73,4 +76,7 @@ class ButtonCell: UICollectionViewCell {
 protocol ButtonCellDelegate: class {
     func delete()
     func play()
+//    func setFeedback(completionName: String)
+//    func playFeedback(feedbackType: String)
+    func playNote(_ song: String)
 }

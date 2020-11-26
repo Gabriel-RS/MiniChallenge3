@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wnR-8y-xY7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wnR-8y-xY7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="589" y="386"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Screen View Controller-->
         <scene sceneID="zhG-ci-qJM">
             <objects>
-                <viewController id="wnR-8y-xY7" sceneMemberID="viewController">
+                <viewController id="wnR-8y-xY7" customClass="HomeScreenViewController" customModule="Memu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tpP-3Q-V8p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,6 +40,7 @@
                                     <color key="titleColor" red="0.9686403871" green="0.9686041474" blue="0.96862870450000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
+                                    <action selector="btnPlay:" destination="wnR-8y-xY7" eventType="touchUpInside" id="X50-jj-7qz"/>
                                     <segue destination="qOy-HD-MYn" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Lqw-qj-RrB"/>
                                 </connections>
                             </button>
@@ -52,6 +53,7 @@
                                 </constraints>
                                 <state key="normal" title="Help" image="help"/>
                                 <connections>
+                                    <action selector="btnHelp:" destination="wnR-8y-xY7" eventType="touchUpInside" id="hNo-WE-BRE"/>
                                     <segue destination="Vra-5s-wx9" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="BXO-3X-8Uw"/>
                                 </connections>
                             </button>
@@ -62,6 +64,7 @@
                                 </constraints>
                                 <state key="normal" title="Reward" image="reward"/>
                                 <connections>
+                                    <action selector="btnRewards:" destination="wnR-8y-xY7" eventType="touchUpInside" id="4hz-r6-e9p"/>
                                     <segue destination="GY6-kM-68C" kind="presentation" id="qDa-hH-wMZ"/>
                                 </connections>
                             </button>

@@ -55,12 +55,15 @@ class LaunchpadViewController: UIViewController {
     
     @IBAction func btnMenu(_ sender: Any) {
         print("Menu Button")
+        playNote("feedback_interface")
     }
     @IBAction func btnNotes(_ sender: Any) {
         print("Notes Button")
+        playNote("feedback_interface")
     }
     @IBAction func btnCheck(_ sender: Any) {
         print("Check Button")
+        playNote("feedback_interface")
         performSegue(withIdentifier: "go2Puzzle", sender: self)
     }
     
@@ -231,6 +234,7 @@ extension LaunchpadViewController: ButtonCellDelegate {
         for note in board.launchpad {
             if(note.name == erasedNote.name) {
                 note.turnOff()
+                playNote("feedback_interface")
             }
         }
         
