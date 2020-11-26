@@ -78,7 +78,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nzz-bh-snM"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ADY-8x-eBy" firstAttribute="centerY" secondItem="d8w-6I-qCD" secondAttribute="centerY" id="03r-O7-CpG"/>
                             <constraint firstItem="ADY-8x-eBy" firstAttribute="centerX" secondItem="d8w-6I-qCD" secondAttribute="centerX" id="tW1-Sq-abb"/>
@@ -125,9 +125,6 @@
         <image name="novoJogo" width="517.5" height="133.44000244140625"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
