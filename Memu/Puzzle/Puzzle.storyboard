@@ -137,17 +137,14 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LaunchpadCell" id="ETQ-ik-fhh" customClass="LaunchpadCell" customModule="Memu" customModuleProvider="target">
-                                        <rect key="frame" x="143" y="174" width="128" height="158"/>
+                                        <rect key="frame" x="119" y="174" width="176" height="158"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="EIt-nu-Yj1">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="158"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="176" height="158"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="keyGrayOn" translatesAutoresizingMaskIntoConstraints="NO" id="0gK-Tq-ftB">
-                                                    <rect key="frame" x="9" y="0.0" width="110" height="158"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="110" id="g3S-px-lUD"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="9" y="0.0" width="158" height="158"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
