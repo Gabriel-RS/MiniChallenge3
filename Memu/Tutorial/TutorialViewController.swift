@@ -11,6 +11,8 @@ class TutorialViewController: UIViewController {
 
     @IBOutlet weak var button: UIButton!
     
+    var launchpadVc = LaunchpadViewController()
+    
     let tutorialHasLaunched: Bool = UserDefaults.standard.bool(forKey: "tutorialHasLaunched")
 
     
@@ -24,6 +26,8 @@ class TutorialViewController: UIViewController {
 
     @IBAction func playTutorial(_ sender: Any) {
         print("hora de jogar")
+        
+        launchpadVc.playNote("feedback_interface")
         
         if tutorialHasLaunched == false {
             let storyboard = UIStoryboard(name: "Launchpad", bundle: nil)

@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="589" y="386"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Screen View Controller-->
         <scene sceneID="zhG-ci-qJM">
             <objects>
-                <viewController id="wnR-8y-xY7" sceneMemberID="viewController">
+                <viewController id="wnR-8y-xY7" customClass="HomeScreenViewController" customModule="Memu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tpP-3Q-V8p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,7 +80,7 @@
                                     <constraint firstItem="nJf-y0-NQ8" firstAttribute="top" secondItem="26v-XB-1xk" secondAttribute="bottom" constant="15" id="vS1-aw-dWA"/>
                                     <constraint firstAttribute="trailing" secondItem="26v-XB-1xk" secondAttribute="trailing" id="x7W-i7-00Q"/>
                                 </constraints>
-                            </view>
+
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="Krs-In-53W">
                                 <rect key="frame" x="63" y="38" width="288" height="488.5"/>
                             </imageView>
