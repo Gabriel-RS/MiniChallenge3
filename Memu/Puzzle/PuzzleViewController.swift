@@ -120,6 +120,13 @@ class PuzzleViewController: UIViewController{
                 playerProgress.points+=2
             }
             
+            // salva progresso no CoreData
+            do {
+                try context.save()
+            } catch {
+                print(error.localizedDescription)
+            }
+            
             // se sequencia estiver certa
             performSegue(withIdentifier: "conclusionSegue", sender: self)
             
@@ -150,6 +157,7 @@ class PuzzleViewController: UIViewController{
         if segue.identifier == "conclusionSegue" {
             let vc = segue.destination as! CompletionViewController
             vc.resultSequence = generateResultSequence()
+            vc.ouvidas = PuzzleViewController.ouvidas
         }
     }
     

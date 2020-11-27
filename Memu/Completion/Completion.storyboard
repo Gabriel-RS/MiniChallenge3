@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j3x-vK-EPw">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j3x-vK-EPw">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,23 +13,23 @@
             <objects>
                 <viewController title="Completion" id="j3x-vK-EPw" customClass="CompletionViewController" customModule="Memu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i9s-OT-zta">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parabéns! Você solucionou o puzzle!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="29" translatesAutoresizingMaskIntoConstraints="NO" id="SDr-69-dmP">
-                                <rect key="frame" x="26" y="32" width="323" height="82"/>
+                                <rect key="frame" x="26" y="76" width="362" height="82"/>
                                 <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="35"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.42745098039215684" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Essa é sua melodia:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="28" translatesAutoresizingMaskIntoConstraints="NO" id="P6G-OK-SIX">
-                                <rect key="frame" x="26" y="134" width="323" height="41"/>
+                                <rect key="frame" x="26" y="178" width="362" height="41"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="35"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.42745098039215684" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3LW-gR-mai">
-                                <rect key="frame" x="43.5" y="537" width="288" height="80"/>
+                                <rect key="frame" x="63" y="732" width="288" height="80"/>
                                 <state key="normal" title="Menu Inicial" image="menuInicial"/>
                                 <connections>
                                     <action selector="btnHomeScreen:" destination="j3x-vK-EPw" eventType="touchUpInside" id="Na4-bd-ngM"/>
@@ -37,7 +37,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P5c-4U-eJj">
-                                <rect key="frame" x="26" y="195" width="323" height="224"/>
+                                <rect key="frame" x="26" y="239" width="362" height="73"/>
                                 <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a1x-Nl-pJ4">
                                     <size key="itemSize" width="90" height="80"/>
@@ -47,7 +47,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SequenceCell" id="QZX-Ca-Wph" customClass="SequenceCell" customModule="Memu" customModuleProvider="target">
-                                        <rect key="frame" x="0.5" y="0.0" width="322" height="50"/>
+                                        <rect key="frame" x="20" y="0.0" width="322" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1Z2-rQ-dVo">
                                             <rect key="frame" x="0.0" y="0.0" width="322" height="50"/>
@@ -76,7 +76,7 @@
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9L-NR-CFO">
-                                <rect key="frame" x="43.5" y="427" width="288" height="80"/>
+                                <rect key="frame" x="63" y="622" width="288" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" priority="990" constant="80" id="EhQ-YA-zXb"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" secondItem="D9L-NR-CFO" secondAttribute="height" multiplier="18:5" id="SG9-rL-Xaa"/>
@@ -87,31 +87,106 @@
                                     <segue destination="TVq-gs-5Y1" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="B7w-VE-aN1"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pqk-Cx-bEC">
+                                <rect key="frame" x="14" y="503" width="386" height="4"/>
+                                <color key="progressTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHk-SF-ADE">
+                                <rect key="frame" x="165" y="527" width="49.5" height="20"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="0">
+                                        <attributes>
+                                            <color key="NSColor" red="0.39235633609999998" green="0.42674070600000003" blue="0.47451752419999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="17" name="SFCompactDisplay-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPQ-wE-HJH">
+                                <rect key="frame" x="214.5" y="527" width="34.5" height="20"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="/100">
+                                        <attributes>
+                                            <color key="NSColor" red="0.39235633609999998" green="0.42674070600000003" blue="0.47451752419999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="17" name="SFCompactDisplay-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ak-RJ-Qba">
+                                <rect key="frame" x="50" y="362" width="314" height="28"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Pontuação da partida:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.39215686274509803" green="0.42745098039215684" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="24" name="SFCompactRounded-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6O-mP-tJ6">
+                                <rect key="frame" x="50" y="460" width="314" height="28"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Seu progresso">
+                                        <attributes>
+                                            <color key="NSColor" red="0.39235633609999998" green="0.42674070600000003" blue="0.47451752419999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="24" name="SFCompactRounded-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vuc-AJ-P40"/>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Vuc-AJ-P40" firstAttribute="trailing" secondItem="P6O-mP-tJ6" secondAttribute="trailing" constant="50" id="2x2-7O-zuZ"/>
                             <constraint firstItem="P5c-4U-eJj" firstAttribute="top" secondItem="P6G-OK-SIX" secondAttribute="bottom" constant="20" id="3qw-aD-eQP"/>
                             <constraint firstItem="P5c-4U-eJj" firstAttribute="centerX" secondItem="i9s-OT-zta" secondAttribute="centerX" id="4Bb-rC-lRy"/>
+                            <constraint firstItem="P6O-mP-tJ6" firstAttribute="top" secondItem="1Ak-RJ-Qba" secondAttribute="bottom" constant="70" id="51S-Gn-ezg"/>
+                            <constraint firstItem="Vuc-AJ-P40" firstAttribute="trailing" secondItem="1Ak-RJ-Qba" secondAttribute="trailing" constant="50" id="5x3-HP-yqK"/>
                             <constraint firstItem="3LW-gR-mai" firstAttribute="width" secondItem="D9L-NR-CFO" secondAttribute="width" id="8h4-Hu-iwa"/>
                             <constraint firstItem="3LW-gR-mai" firstAttribute="centerX" secondItem="D9L-NR-CFO" secondAttribute="centerX" id="C6j-hm-xAW"/>
+                            <constraint firstItem="Vuc-AJ-P40" firstAttribute="trailing" secondItem="pqk-Cx-bEC" secondAttribute="trailing" constant="14" id="FWz-bU-ri1"/>
+                            <constraint firstItem="1Ak-RJ-Qba" firstAttribute="top" secondItem="P5c-4U-eJj" secondAttribute="bottom" constant="50" id="NPd-rC-K6M"/>
                             <constraint firstItem="P5c-4U-eJj" firstAttribute="leading" secondItem="P6G-OK-SIX" secondAttribute="leading" id="OlD-Yb-342"/>
+                            <constraint firstItem="iPQ-wE-HJH" firstAttribute="leading" secondItem="jHk-SF-ADE" secondAttribute="trailing" id="P4r-bg-qCr"/>
                             <constraint firstItem="3LW-gR-mai" firstAttribute="top" secondItem="D9L-NR-CFO" secondAttribute="bottom" constant="30" id="Qi8-rd-0Ql"/>
-                            <constraint firstItem="D9L-NR-CFO" firstAttribute="top" secondItem="P5c-4U-eJj" secondAttribute="bottom" constant="8" id="S3N-Zz-fmE"/>
+                            <constraint firstItem="D9L-NR-CFO" firstAttribute="top" secondItem="iPQ-wE-HJH" secondAttribute="bottom" constant="75" id="RVO-n0-gjc"/>
+                            <constraint firstItem="Vuc-AJ-P40" firstAttribute="trailing" secondItem="iPQ-wE-HJH" secondAttribute="trailing" constant="165" id="T3O-Kz-BEs"/>
+                            <constraint firstItem="1Ak-RJ-Qba" firstAttribute="leading" secondItem="Vuc-AJ-P40" secondAttribute="leading" constant="50" id="Ufa-47-ZkP"/>
                             <constraint firstItem="SDr-69-dmP" firstAttribute="top" secondItem="Vuc-AJ-P40" secondAttribute="top" constant="32" id="WRk-F2-Sik"/>
                             <constraint firstItem="P5c-4U-eJj" firstAttribute="trailing" secondItem="P6G-OK-SIX" secondAttribute="trailing" id="Yru-3f-4Jc"/>
                             <constraint firstItem="Vuc-AJ-P40" firstAttribute="bottom" secondItem="3LW-gR-mai" secondAttribute="bottom" constant="50" id="a5C-1O-kT8"/>
+                            <constraint firstItem="jHk-SF-ADE" firstAttribute="top" secondItem="pqk-Cx-bEC" secondAttribute="bottom" constant="20" id="b3N-Q8-8de"/>
                             <constraint firstItem="P6G-OK-SIX" firstAttribute="top" secondItem="SDr-69-dmP" secondAttribute="bottom" constant="20" id="doo-un-qr3"/>
+                            <constraint firstItem="jHk-SF-ADE" firstAttribute="leading" secondItem="Vuc-AJ-P40" secondAttribute="leading" constant="165" id="efw-aa-NFk"/>
+                            <constraint firstItem="pqk-Cx-bEC" firstAttribute="leading" secondItem="Vuc-AJ-P40" secondAttribute="leading" constant="14" id="egw-8y-06o"/>
+                            <constraint firstItem="iPQ-wE-HJH" firstAttribute="top" secondItem="pqk-Cx-bEC" secondAttribute="bottom" constant="20" id="fgJ-UL-RpW"/>
                             <constraint firstItem="3LW-gR-mai" firstAttribute="height" secondItem="D9L-NR-CFO" secondAttribute="height" id="gwU-nL-DMW"/>
+                            <constraint firstItem="pqk-Cx-bEC" firstAttribute="top" secondItem="P6O-mP-tJ6" secondAttribute="bottom" constant="15" id="jqF-jw-Js8"/>
                             <constraint firstItem="P5c-4U-eJj" firstAttribute="leading" secondItem="Vuc-AJ-P40" secondAttribute="leading" constant="26" id="jtt-ID-esG"/>
                             <constraint firstItem="P5c-4U-eJj" firstAttribute="centerX" secondItem="P6G-OK-SIX" secondAttribute="centerX" id="q97-EO-6kl"/>
                             <constraint firstItem="D9L-NR-CFO" firstAttribute="centerX" secondItem="i9s-OT-zta" secondAttribute="centerX" id="sfy-g8-IPA"/>
                             <constraint firstItem="P5c-4U-eJj" firstAttribute="leading" secondItem="SDr-69-dmP" secondAttribute="leading" id="tnN-Nn-XNZ"/>
+                            <constraint firstItem="D9L-NR-CFO" firstAttribute="top" secondItem="jHk-SF-ADE" secondAttribute="bottom" constant="75" id="vMI-zm-dcx"/>
+                            <constraint firstItem="P6O-mP-tJ6" firstAttribute="leading" secondItem="Vuc-AJ-P40" secondAttribute="leading" constant="50" id="wv2-zE-T5E"/>
                             <constraint firstItem="P5c-4U-eJj" firstAttribute="trailing" secondItem="SDr-69-dmP" secondAttribute="trailing" id="ygd-ce-WBd"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="P5c-4U-eJj" id="hzt-qf-5wC"/>
+                        <outlet property="lbGamePoints" destination="1Ak-RJ-Qba" id="lhT-rL-1g8"/>
+                        <outlet property="lbPoints" destination="jHk-SF-ADE" id="UaZ-4c-paa"/>
+                        <outlet property="lbPointsLevelUp" destination="iPQ-wE-HJH" id="JAD-V5-n24"/>
+                        <outlet property="progressViewPlayer" destination="pqk-Cx-bEC" id="8jZ-jg-ZXT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kAS-5Y-SNe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
