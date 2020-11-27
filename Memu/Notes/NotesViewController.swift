@@ -78,6 +78,7 @@ class Notas: UIViewController {
                 btn.isSelected = false
                 aux -= 1
             } else {
+                lblAviso.text = "Só é possível selecionar 4 notas"
                 lblAviso.isHidden = false
             }
         //se o número de notas for menor que 4, ele poderá incluir notas ou remover outras que ainda existam
@@ -94,6 +95,7 @@ class Notas: UIViewController {
                 }
         } else {
             btn.isSelected = false
+            lblAviso.text = "Só é possível selecionar 4 notas"
             lblAviso.isHidden = false
         }
         
