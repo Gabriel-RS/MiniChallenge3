@@ -49,17 +49,9 @@
 		5A6A09712551E6D700F143ED /* SequenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09702551E6D700F143ED /* SequenceCell.swift */; };
 		8536C6012559B2C200706EE7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536C6002559B2C200706EE7 /* Note.swift */; };
 		8536C6092559B39D00706EE7 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536C6082559B39D00706EE7 /* Board.swift */; };
-
-		8561EE1225686CA800E072B8 /* PlayerProgress+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8561EE0E25686CA800E072B8 /* PlayerProgress+CoreDataClass.swift */; };
-		8561EE1425686CA800E072B8 /* NoteProgress+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8561EE1025686CA800E072B8 /* NoteProgress+CoreDataClass.swift */; };
-		85B4A5F6255EFFFD0019D0EF /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4A5F5255EFFFD0019D0EF /* Sequence.swift */; };
-		A3992E812568A93000775982 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3992E802568A93000775982 /* PlayerManager.swift */; };
-		A3E79FE82568893F00D5FAD7 /* ViewControlle+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E79FE72568893F00D5FAD7 /* ViewControlle+CoreData.swift */; };
-
 		85B4A5F6255EFFFD0019D0EF /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4A5F5255EFFFD0019D0EF /* Sequence.swift */; };
 		A30765C9256EB3FF00579822 /* NotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30765C8256EB3FF00579822 /* NotesManager.swift */; };
 		A3E79FE82568893F00D5FAD7 /* ViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E79FE72568893F00D5FAD7 /* ViewController+CoreData.swift */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,17 +120,9 @@
 		5A6A09702551E6D700F143ED /* SequenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceCell.swift; sourceTree = "<group>"; };
 		8536C6002559B2C200706EE7 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		8536C6082559B39D00706EE7 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
-
-		8561EE0E25686CA800E072B8 /* PlayerProgress+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayerProgress+CoreDataClass.swift"; sourceTree = "<group>"; };
-		8561EE1025686CA800E072B8 /* NoteProgress+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteProgress+CoreDataClass.swift"; sourceTree = "<group>"; };
-		85B4A5F5255EFFFD0019D0EF /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
-		A3992E802568A93000775982 /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
-		A3E79FE72568893F00D5FAD7 /* ViewControlle+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControlle+CoreData.swift"; sourceTree = "<group>"; };
-
 		85B4A5F5255EFFFD0019D0EF /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
 		A30765C8256EB3FF00579822 /* NotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesManager.swift; sourceTree = "<group>"; };
 		A3E79FE72568893F00D5FAD7 /* ViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CoreData.swift"; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,8 +162,8 @@
 		027EB5FC255DAA6900DD7720 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				027EB5FD255DAA6900DD7720 /* TutorialViewController.swift */,
 				027EB5FE255DAA6900DD7720 /* Tutorial.storyboard */,
+				027EB5FD255DAA6900DD7720 /* TutorialViewController.swift */,
 			);
 			name = Tutorial;
 			path = Memu/Tutorial;
