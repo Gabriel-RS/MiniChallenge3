@@ -11,7 +11,6 @@ class TutorialViewController: UIViewController {
 
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var btnClose: UIButton!
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var bottomNavView: UIView!
     
@@ -25,7 +24,6 @@ class TutorialViewController: UIViewController {
         if tutorialHasLaunched == false {
             button.isHidden = false
             titleLabel.isHidden = false
-            btnClose.isHidden = true
             navBar.isHidden = true
             bottomNavView.isHidden = true
         }

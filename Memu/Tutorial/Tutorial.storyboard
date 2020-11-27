@@ -15,6 +15,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5WO-u1-Ozv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Ajuda" id="PQI-ac-wKu">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="PAi-Ji-ub6">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ehn-bo-TUL">
+                                                <rect key="frame" x="320" y="10" width="74" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" image="x.circle.fill" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="close:" destination="YbS-vD-RU7" eventType="touchUpInside" id="5ov-hb-22K"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="EXz-0I-xLe">
                                 <rect key="frame" x="133.5" y="72" width="147" height="35"/>
                                 <constraints>
@@ -137,37 +162,12 @@ A seguir, entenda como funciona:</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9GJ-5z-8K6">
-                                <rect key="frame" x="0.0" y="62" width="414" height="1"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="1"/>
                                 <color key="backgroundColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="jpP-1o-tFD"/>
                                 </constraints>
                             </view>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5WO-u1-Ozv">
-                                <rect key="frame" x="0.0" y="44" width="414" height="18"/>
-                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="barTintColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Ajuda" id="PQI-ac-wKu">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="PAi-Ji-ub6">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ehn-bo-TUL">
-                                                <rect key="frame" x="320" y="10" width="74" height="24"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="tintColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" image="x.circle.fill" catalog="system">
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="close:" destination="YbS-vD-RU7" eventType="touchUpInside" id="5ov-hb-22K"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ujk-3F-9Mn"/>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
@@ -183,7 +183,6 @@ A seguir, entenda como funciona:</string>
                             <constraint firstItem="0qQ-i4-bzG" firstAttribute="leading" secondItem="ZAa-Cw-7o7" secondAttribute="leading" id="FBM-bO-esN"/>
                             <constraint firstItem="5WO-u1-Ozv" firstAttribute="leading" secondItem="ujk-3F-9Mn" secondAttribute="leading" id="I7R-dJ-btl"/>
                             <constraint firstItem="ujk-3F-9Mn" firstAttribute="trailing" secondItem="0qQ-i4-bzG" secondAttribute="trailing" constant="51.5" id="Jtv-49-0qa"/>
-                            <constraint firstItem="EXz-0I-xLe" firstAttribute="top" secondItem="5WO-u1-Ozv" secondAttribute="bottom" constant="10" id="KHN-gA-ZUU"/>
                             <constraint firstItem="ZAa-Cw-7o7" firstAttribute="top" secondItem="QuF-ps-81x" secondAttribute="bottom" constant="23" id="LqG-c2-Ngc"/>
                             <constraint firstItem="0qQ-i4-bzG" firstAttribute="trailing" secondItem="ZAa-Cw-7o7" secondAttribute="trailing" id="OSU-Go-4XD"/>
                             <constraint firstAttribute="trailing" secondItem="9GJ-5z-8K6" secondAttribute="trailing" id="QMV-nQ-bDo"/>
@@ -217,7 +216,6 @@ A seguir, entenda como funciona:</string>
                     </view>
                     <connections>
                         <outlet property="bottomNavView" destination="9GJ-5z-8K6" id="Poo-S3-FJM"/>
-                        <outlet property="btnClose" destination="Ehn-bo-TUL" id="5zm-si-rHC"/>
                         <outlet property="button" destination="1Zk-r6-Jpj" id="HVX-iv-Y9s"/>
                         <outlet property="navBar" destination="5WO-u1-Ozv" id="tnm-fm-MYm"/>
                         <outlet property="titleLabel" destination="EXz-0I-xLe" id="0rH-Dh-Xr4"/>
