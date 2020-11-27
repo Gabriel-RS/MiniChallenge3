@@ -76,7 +76,7 @@
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Recompensas" id="o15-6S-ee2">
+                                    <navigationItem title="Menu" id="o15-6S-ee2">
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="vg1-Em-SHj">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ohp-0B-CNk">
                                                 <rect key="frame" x="320" y="10" width="74" height="24"/>
