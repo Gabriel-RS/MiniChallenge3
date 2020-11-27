@@ -100,6 +100,15 @@ class Sequence {
         return true
     }
     
+    func allNotesWrong(resultSequence: [Note]) -> Bool {
+        for note in resultSequence {
+            if note.getImage() != UIImage(named: "seqGrayOn") && note.getName() != "delete" {
+                return false
+            }
+        }
+        return true
+    }
+    
     // MARK: Getters e Setters
     func getSize() -> Int {
         return size

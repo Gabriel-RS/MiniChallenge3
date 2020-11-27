@@ -12,8 +12,6 @@ import CoreData
 
 class PuzzleViewController: UIViewController{
     
-  //  var audioPlayerFeedback = AVAudioPlayer()
-
     @IBOutlet weak var ear1: UIImageView!
     @IBOutlet weak var ear2: UIImageView!
     @IBOutlet weak var ear3: UIImageView!
@@ -123,23 +121,16 @@ class PuzzleViewController: UIViewController{
             // se sequencia estiver certa
             performSegue(withIdentifier: "conclusionSegue", sender: self)
             
-
-            // TODO: emitir som de feedback positivo
-            //playFeedback(feedbackType: "positivo")
-            
             playNote("feedback_positivo")
-
-            // TODO: JULIANA emitir som de feedback positivo (nao sei se aqui ou na conclusao)
-
             
         } else {
+            
+            // toca a sequencia só se erra tudo
+//            if sequence.allNotesWrong(resultSequence: sequenceResult) {
+                playNote("feedback_negativo")
+//            }
+            
             updatePuzzle(notes: sequenceResult)
-            // TODO: JULIANA emitir som de feedback negativo
-            
-            //playFeedback(feedbackType: "negativo")
-            
-            playNote("feedback_negativo")
-            
             collectionView.reloadData()
         }
 
@@ -158,7 +149,7 @@ class PuzzleViewController: UIViewController{
         playNote("feedback_interface")
     }
     
-    // MARK: Logic
+    // MARK: Core data
     
     // recupera a pontuaçõão do Player do CoreData
     func loadProgressPlayer() {
@@ -189,6 +180,8 @@ class PuzzleViewController: UIViewController{
             print(error.localizedDescription)
         }
     }
+    
+    // MARK: Logic
     
     // gera uma nova sequencia para ser apresentada na conclusão ou na sequencia do puzzle
     func generateResultSequence() -> Array<Note>{
@@ -430,25 +423,7 @@ extension PuzzleViewController: ButtonCellDelegate {
             playSequence()
         }
     }
-   
-//    func setFeedback(completionName: String){
-//        
-//        let feedbackSound = Bundle.main.path(forResource: "feedback_\(completionName)", ofType: "mp3")
-//        
-//        do{
-//            audioPlayerFeedback = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: feedbackSound!))
-//        }
-//        catch{
-//            print(error)
-//        }
-//    }
-//    
-//    func playFeedback(feedbackType: String) {
-//        
-//        setFeedback(completionName: feedbackType)
-//        audioPlayerFeedback.play()
-//    }
-    
+
     func playNote(_ song: String) {
         
         launchpadVc.playNote(song)
