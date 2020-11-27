@@ -18,8 +18,7 @@ class CompletionViewController: UIViewController, NSFetchedResultsControllerDele
     var playerProgress: PlayerProgress!
     
     @IBOutlet weak var progressViewPlayer: UIProgressView!
-    @IBOutlet weak var lbPoints: UILabel!
-    @IBOutlet weak var lbPointsLevelUp: UILabel!
+    @IBOutlet weak var lbProgress: UILabel!
     @IBOutlet weak var lbGamePoints: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Note>!
@@ -77,8 +76,7 @@ class CompletionViewController: UIViewController, NSFetchedResultsControllerDele
         progressViewPlayer.transform = CGAffineTransform(scaleX: 1.0, y: 5.0)
         progressViewPlayer.progress = playerProgress.points/playerProgress.pointsLevelUp
         
-        lbPoints.text = "\(Int(playerProgress.points))"
-        lbPointsLevelUp.text = "/\(Int(playerProgress.pointsLevelUp))"
+        lbProgress.text = "\(Int(playerProgress.points))/\(Int(playerProgress.pointsLevelUp))"
     }
     
     func layout() -> UICollectionViewCompositionalLayout {
