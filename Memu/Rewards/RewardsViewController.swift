@@ -129,7 +129,7 @@ class RewardsViewController: UIViewController {
             case 2:
                 playerProgress.title = "\(playerTitles[Int(playerProgress.level)])"
                 playerProgress.medal = UIImage(named: "medalhaAmador")
-                playerProgress.descriptionTitle = "Você é amador."
+                playerProgress.descriptionTitle = "Você agora é um músico amador e já tem dominio algumas das notas musicais."
                 playerProgress.pointsLevelUp = 250.0
                 playerProgress.score = "\(Int(playerProgress.points))/\(Int(playerProgress.pointsLevelUp))"
                 if playerProgress.points < playerProgress.pointsLevelUp {
@@ -217,13 +217,15 @@ class RewardsViewController: UIViewController {
             notesManager.notes[index].points = 5
             medalNote.image = UIImage(named: "\(imagesNote[Int(notesManager.notes[index].level)])\(noteSelect!)")
             noteDescription.text = "Parabéns você é um Deus da nota \(notesManager.notes[index].name!)."
-            progressView.progressTintColor = UIColor(red: 237, green: 203, blue: 105, alpha: 1)
+            progressView.progressTintColor = UIColor(named: "pvOuro")
         }
         
+        // verifica se o Player tem recompensa para obter da Nota, se sim esconde a progress view e mostra o botão da recompensa
         if notesManager.notes[index].points >= notesManager.notes[index].pointsLevelUp && notesManager.notes[index].level < 3 {
             progressView.isHidden = true
             buttonReward.isHidden = false
-            noteDescription.text = "Toque em obter recompensa para descobrir quantos pontos você conseguiu."
+            noteDescription.isHidden = true
+            //noteDescription.text = "Toque em obter recompensa para descobrir quantos pontos você conseguiu."
         } else {
             buttonReward.isHidden = true
         }
