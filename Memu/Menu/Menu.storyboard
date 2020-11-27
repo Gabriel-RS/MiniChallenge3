@@ -63,7 +63,7 @@
                                         </state>
                                         <connections>
                                             <action selector="btnHelp:" destination="Abo-YD-lzX" eventType="touchUpInside" id="DMq-xQ-zxS"/>
-                                            <segue destination="qp3-rX-sK6" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="GL3-Ur-mZI"/>
+                                            <segue destination="qp3-rX-sK6" kind="presentation" id="GL3-Ur-mZI"/>
                                         </connections>
                                     </button>
                                 </subviews>

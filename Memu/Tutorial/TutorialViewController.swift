@@ -10,6 +10,10 @@ import UIKit
 class TutorialViewController: UIViewController {
 
     @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var btnClose: UIButton!
+    @IBOutlet weak var navBar: UINavigationBar!
+    @IBOutlet weak var bottomNavView: UIView!
     
     var launchpadVc = LaunchpadViewController()
     
@@ -18,10 +22,13 @@ class TutorialViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if tutorialHasLaunched {
-            button.setTitle("Continuar", for: .normal)
+        if tutorialHasLaunched == false {
+            button.isHidden = false
+            titleLabel.isHidden = false
+            btnClose.isHidden = true
+            navBar.isHidden = true
+            bottomNavView.isHidden = true
         }
-        //button.setAttributedTitle(NSAttributedString(string: "Continuar"), for: .normal)
     }
 
     @IBAction func playTutorial(_ sender: Any) {
@@ -38,5 +45,9 @@ class TutorialViewController: UIViewController {
         } else {
             self.dismiss(animated: true, completion: nil)
         }
+    }
+    
+    @IBAction func close(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
