@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Abo-YD-lzX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="tGt-od-COX">
+            <objects>
+                <viewController storyboardIdentifier="MenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Abo-YD-lzX" customClass="MenuViewController" customModule="Memu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d8w-6I-qCD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ADY-8x-eBy">
+                                <rect key="frame" x="57.5" y="213" width="299" height="470"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gS2-aB-vOq">
+                                        <rect key="frame" x="0.0" y="0.0" width="299" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="jlx-Vf-iHh"/>
+                                            <constraint firstAttribute="width" secondItem="gS2-aB-vOq" secondAttribute="height" multiplier="48:13" constant="4" id="nYP-bf-kPz"/>
+                                        </constraints>
+                                        <state key="normal" image="continuar">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnContinue:" destination="Abo-YD-lzX" eventType="touchUpInside" id="ROd-Kl-TEV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2F-V3-Gkz">
+                                        <rect key="frame" x="0.0" y="130" width="299" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="C2F-V3-Gkz" secondAttribute="height" multiplier="48:13" constant="4" id="b2W-fi-bgE"/>
+                                        </constraints>
+                                        <state key="normal" image="novoJogo">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnNewGame:" destination="Abo-YD-lzX" eventType="touchUpInside" id="DRd-04-1ng"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVp-Hh-9Uo">
+                                        <rect key="frame" x="0.0" y="260" width="299" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gVp-Hh-9Uo" secondAttribute="height" multiplier="48:13" constant="4" id="6Pt-Dn-vpj"/>
+                                        </constraints>
+                                        <state key="normal" image="menuInicial">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnHome:" destination="Abo-YD-lzX" eventType="touchUpInside" id="AhA-h5-H5B"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sZ-0O-WlE">
+                                        <rect key="frame" x="0.0" y="390" width="299" height="80"/>
+                                        <state key="normal" image="ajuda">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnHelp:" destination="Abo-YD-lzX" eventType="touchUpInside" id="DMq-xQ-zxS"/>
+                                            <segue destination="qp3-rX-sK6" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="GL3-Ur-mZI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="gVp-Hh-9Uo" firstAttribute="height" secondItem="gS2-aB-vOq" secondAttribute="height" id="9va-fB-N5i"/>
+                                    <constraint firstItem="9sZ-0O-WlE" firstAttribute="height" secondItem="gS2-aB-vOq" secondAttribute="height" id="IJ4-XP-jzc"/>
+                                    <constraint firstItem="C2F-V3-Gkz" firstAttribute="width" secondItem="gS2-aB-vOq" secondAttribute="width" id="QmO-3V-e4T"/>
+                                    <constraint firstItem="gVp-Hh-9Uo" firstAttribute="width" secondItem="gS2-aB-vOq" secondAttribute="width" id="XL2-wh-LAg"/>
+                                    <constraint firstItem="9sZ-0O-WlE" firstAttribute="width" secondItem="gS2-aB-vOq" secondAttribute="width" id="fRo-g2-iBw"/>
+                                    <constraint firstItem="C2F-V3-Gkz" firstAttribute="height" secondItem="gS2-aB-vOq" secondAttribute="height" id="xcJ-1U-TaZ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nzz-bh-snM"/>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ADY-8x-eBy" firstAttribute="centerY" secondItem="d8w-6I-qCD" secondAttribute="centerY" id="03r-O7-CpG"/>
+                            <constraint firstItem="ADY-8x-eBy" firstAttribute="centerX" secondItem="d8w-6I-qCD" secondAttribute="centerX" id="tW1-Sq-abb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="bHa-TK-ktJ" kind="presentation" identifier="newGame" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="m8y-wX-A7J"/>
+                        <segue destination="Fjc-lV-bTH" kind="presentation" identifier="homeScreen" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Mee-6s-9Yz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ztx-gA-4a1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-371.01449275362324" y="29.464285714285712"/>
+        </scene>
+        <!--Launchpad-->
+        <scene sceneID="eM1-hg-bGn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Launchpad" id="bHa-TK-ktJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iuU-r3-AaU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173" y="-50"/>
+        </scene>
+        <!--HomeScreen-->
+        <scene sceneID="eCW-PL-nrQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeScreen" id="Fjc-lV-bTH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vQs-7u-fik" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181" y="78"/>
+        </scene>
+        <!--Tutorial-->
+        <scene sceneID="Xxk-Nl-TGg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tutorial" id="qp3-rX-sK6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="97Y-NP-aEp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="159" y="212"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ajuda" width="517.5" height="133.44000244140625"/>
+        <image name="continuar" width="517.5" height="133.44000244140625"/>
+        <image name="menuInicial" width="517.5" height="133.44000244140625"/>
+        <image name="novoJogo" width="517.5" height="133.44000244140625"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
