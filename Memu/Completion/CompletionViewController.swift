@@ -60,6 +60,7 @@ class CompletionViewController: UIViewController, NSFetchedResultsControllerDele
         if playerProgress == nil {
             playerProgress = PlayerProgress(context: context)
             playerProgress.level = 0
+            playerProgress.pointsLevelUp = 100.0
         }
         
         if ouvidas == 3 {

@@ -184,6 +184,7 @@ class PuzzleViewController: UIViewController{
         if playerProgress == nil {
             playerProgress = PlayerProgress(context: context)
             playerProgress.level = 0
+            playerProgress.pointsLevelUp = 100.0
         }
     }
     
