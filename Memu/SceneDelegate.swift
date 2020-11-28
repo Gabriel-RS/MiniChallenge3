@@ -13,7 +13,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var tutorialHasLaunched: Bool = UserDefaults.standard.bool(forKey: "tutorialHasLaunched")
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -25,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 window.rootViewController = UIStoryboard(name: "Tutorial", bundle: nil).instantiateInitialViewController()
                 self.window = window
                 window.makeKeyAndVisible()
-                UserDefaults.standard.set(true, forKey: "tutorialHasLaunched")
+//                UserDefaults.standard.set(true, forKey: "tutorialHasLaunched")
             }
         } else {
             guard let _ = (scene as? UIWindowScene) else { return }

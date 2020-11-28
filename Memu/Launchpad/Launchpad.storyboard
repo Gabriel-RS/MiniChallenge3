@@ -147,6 +147,19 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiL-AE-fSp">
+                                <rect key="frame" x="120.5" y="108" width="173" height="26"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Crie uma melodia">
+                                        <attributes>
+                                            <color key="NSColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="22" name="SFProRounded-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f5S-ZT-9q4"/>
                         <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -157,8 +170,10 @@
                             <constraint firstItem="f5S-ZT-9q4" firstAttribute="bottom" secondItem="noR-Ku-2iL" secondAttribute="bottom" constant="20" id="ArX-xS-s0R"/>
                             <constraint firstItem="f5S-ZT-9q4" firstAttribute="trailing" secondItem="EZz-k9-FG1" secondAttribute="trailing" constant="20" id="HVk-5s-tFY"/>
                             <constraint firstItem="f5S-ZT-9q4" firstAttribute="bottom" secondItem="MTA-pw-zyP" secondAttribute="bottom" constant="20" id="X7G-Tn-4Pr"/>
+                            <constraint firstItem="OiL-AE-fSp" firstAttribute="centerX" secondItem="NcY-Kg-mxs" secondAttribute="centerX" id="a3l-n7-tSY"/>
                             <constraint firstItem="EZz-k9-FG1" firstAttribute="top" secondItem="f5S-ZT-9q4" secondAttribute="top" constant="20" id="d49-ai-hFh"/>
                             <constraint firstItem="NcY-Kg-mxs" firstAttribute="leading" secondItem="f5S-ZT-9q4" secondAttribute="leading" id="kQX-18-TDK"/>
+                            <constraint firstItem="OiL-AE-fSp" firstAttribute="top" secondItem="f5S-ZT-9q4" secondAttribute="top" constant="64" id="mKa-ML-K8j"/>
                             <constraint firstItem="MTA-pw-zyP" firstAttribute="top" secondItem="NcY-Kg-mxs" secondAttribute="bottom" constant="23" id="rEp-G1-QCO"/>
                             <constraint firstItem="NcY-Kg-mxs" firstAttribute="top" secondItem="EZz-k9-FG1" secondAttribute="bottom" constant="28" id="xDG-FN-iUN"/>
                             <constraint firstItem="MTA-pw-zyP" firstAttribute="leading" secondItem="f5S-ZT-9q4" secondAttribute="leading" constant="20" id="xal-9M-WkK"/>
@@ -167,6 +182,7 @@
                     <connections>
                         <outlet property="btnCheck" destination="noR-Ku-2iL" id="9Ji-GV-lr1"/>
                         <outlet property="collectionView" destination="NcY-Kg-mxs" id="wTP-7w-RZM"/>
+                        <outlet property="instructionLabel" destination="OiL-AE-fSp" id="2Wh-dF-yKw"/>
                         <segue destination="h4S-Xx-DZ9" kind="presentation" identifier="go2Puzzle" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="z7Z-Wm-FuI"/>
                     </connections>
                 </viewController>
