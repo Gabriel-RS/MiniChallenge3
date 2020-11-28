@@ -14,6 +14,7 @@ class RewardsViewController: UIViewController {
     var fetchedResultController: NSFetchedResultsController<PlayerProgress>!
     var playerProgress: PlayerProgress!
     var notesManager = NotesManager.shared
+    var differenceScore = 0
     
     // Player
     @IBOutlet weak var lbTitle: UILabel!
@@ -22,6 +23,7 @@ class RewardsViewController: UIViewController {
     @IBOutlet weak var progressViewPlayer: UIProgressView!
     @IBOutlet weak var btCheckProgress: UIButton!
     @IBOutlet weak var lbScore: UILabel!
+    @IBOutlet weak var lbDynamicScore: UILabel!
     @IBOutlet weak var lbProgress: UILabel!
     
     // Nota Dó
@@ -80,7 +82,9 @@ class RewardsViewController: UIViewController {
         checkNote(4, progressViewRe, medalNoteRe, noteDescriptionRe, buttonRewardRe)
         checkNote(5, progressViewSi, medalNoteSi, noteDescriptionSi, buttonRewardSi)
         checkNote(6, progressViewSol, medalNoteSol, noteDescriptionSol, buttonRewardSol)
-        loadPage()
+       // loadPage()
+        
+        
     }
     
     // carrega as informações do Player
@@ -104,22 +108,40 @@ class RewardsViewController: UIViewController {
     
     // de acordo com o nível do Player exibi as informações na tela
     func loadStatusPlayer() {
+        
+        let actualScore = Int(playerProgress.points)
+        updateScore(difference: 0, actualScore: actualScore)
+        
         if playerProgress.points != 0 && playerProgress.level == 0 {
             playerProgress.level = 1
+            let actualScore = Int(playerProgress.points)
+            updateScore(difference: 0, actualScore: actualScore)
         }
         switch playerProgress.level {
             case 0:
-                playerProgress.title = "\(playerTitles[Int(playerProgress.level)])"
-                playerProgress.medal = UIImage(named: "medalhaAmadorOff") // imagem para testar
-                playerProgress.descriptionTitle = "Comece a explorar as notas e os sons que elas tem."
-                playerProgress.pointsLevelUp = 100.0
+                //playerProgress.title = "\(playerTitles[Int(playerProgress.level)])"
+                lbTitle.text = "\(playerTitles[Int(playerProgress.level)])"
+                //playerProgress.medal = UIImage(named: "medalhaAmadorOff") // imagem para testar
+                ivImage.image = UIImage(named: "medalhaAmadorOff")
+                //playerProgress.descriptionTitle = "Comece a explorar as notas e os sons que elas tem."
+                lbDescription.text = "Comece a explorar as notas e os sons que elas tem."
+                //playerProgress.pointsLevelUp = 100.0
+                lbScore.text = " / 100"
                 playerProgress.score = "\(Int(playerProgress.points))/\(Int(playerProgress.pointsLevelUp))"
                 playerProgress.descriptionPoints = "Jogue a primeira vez para ganhar sua primeira medalha de ouro."
+                //differenceScore = Int(playerProgress.pointsLevelUp)
+                let actualScore = Int(playerProgress.points)
+                updateScore(difference: 0, actualScore: actualScore)
             case 1:
                 playerProgress.title = "\(playerTitles[Int(playerProgress.level)])"
-                playerProgress.medal = UIImage(named: "medalhaExplorador")
-                playerProgress.descriptionTitle = "Você busca conhecer os sons e explorar cada um deles."
-                playerProgress.pointsLevelUp = 100.0
+                //playerProgress.medal = UIImage(named: "medalhaExplorador")
+                ivImage.image = UIImage(named: "medalhaExplorador")
+//                playerProgress.descriptionTitle = "Você busca conhecer os sons e explorar cada um deles."
+                lbDescription.text = "Você busca conhecer os sons e explorar cada um deles."
+               // playerProgress.pointsLevelUp = 100.0
+                lbScore.text = " / 100"
+                let actualScore = Int(playerProgress.points)
+                updateScore(difference: 0, actualScore: actualScore)
                 playerProgress.score = "\(Int(playerProgress.points))/\(Int(playerProgress.pointsLevelUp))"
                 if playerProgress.points < playerProgress.pointsLevelUp {
                     playerProgress.descriptionPoints = "Acumule \(Int(playerProgress.pointsLevelUp)) pontos para conquistar o título de \(playerTitles[Int(playerProgress.level)])."
@@ -128,9 +150,14 @@ class RewardsViewController: UIViewController {
                 }
             case 2:
                 playerProgress.title = "\(playerTitles[Int(playerProgress.level)])"
-                playerProgress.medal = UIImage(named: "medalhaAmador")
-                playerProgress.descriptionTitle = "Você agora é um músico amador e já tem dominio algumas das notas musicais."
-                playerProgress.pointsLevelUp = 250.0
+                //playerProgress.medal = UIImage(named: "medalhaAmador")
+                ivImage.image = UIImage(named: "medalhaAmador")
+//                playerProgress.descriptionTitle = "Você agora é um músico amador e já tem dominio algumas das notas musicais."
+                lbDescription.text = "Você agora é um músico amador e já tem dominio algumas das notas musicais."
+                //playerProgress.pointsLevelUp = 250.0
+                lbScore.text = " / 250"
+                let actualScore = Int(playerProgress.points)
+                updateScore(difference: 0, actualScore: actualScore)
                 playerProgress.score = "\(Int(playerProgress.points))/\(Int(playerProgress.pointsLevelUp))"
                 if playerProgress.points < playerProgress.pointsLevelUp {
                     playerProgress.descriptionPoints = "Acumule \(Int(playerProgress.pointsLevelUp)) pontos para conquistar o título de \(playerTitles[Int(playerProgress.level)])."
@@ -139,9 +166,14 @@ class RewardsViewController: UIViewController {
                 }
             case 3:
                 playerProgress.title = "\(playerTitles[Int(playerProgress.level)])"
-                playerProgress.medal = UIImage(named: "medalhaMestre")
-                playerProgress.descriptionTitle = "Você é mestre."
-                playerProgress.pointsLevelUp = 450.0
+                //playerProgress.medal = UIImage(named: "medalhaMestre")
+                ivImage.image = UIImage(named: "medalhaMestre")
+//                playerProgress.descriptionTitle = "Você é mestre."
+                lbDescription.text = "Você é mestre."
+//                playerProgress.pointsLevelUp = 450.0
+                lbScore.text = " / 450"
+                let actualScore = Int(playerProgress.points)
+                updateScore(difference: 0, actualScore: actualScore)
                 playerProgress.score = "\(Int(playerProgress.points))/\(Int(playerProgress.pointsLevelUp))"
                 if playerProgress.points < playerProgress.pointsLevelUp {
                     playerProgress.descriptionPoints = "Acumule \(Int(playerProgress.pointsLevelUp)) pontos para conquistar o título de \(playerTitles[Int(playerProgress.level)])."
@@ -150,9 +182,14 @@ class RewardsViewController: UIViewController {
                 }
             case 4:
                 playerProgress.title = "\(playerTitles[Int(playerProgress.level)])"
-                playerProgress.medal = UIImage(named: "medalhaDeus")
-                playerProgress.descriptionTitle = "Você é Deus da música."
-                playerProgress.pointsLevelUp = 450.0
+                //playerProgress.medal = UIImage(named: "medalhaDeus")
+                ivImage.image = UIImage(named: "medalhaDeus")
+//                playerProgress.descriptionTitle = "Você é Deus da música."
+                lbDescription.text = "Você é Deus da música."
+//                playerProgress.pointsLevelUp = 450.0
+                lbScore.text = " / 450"
+                let actualScore = Int(playerProgress.points)
+                updateScore(difference: 0, actualScore: actualScore)
                 playerProgress.score = "\(Int(playerProgress.points))/\(Int(playerProgress.pointsLevelUp))"
                 playerProgress.descriptionPoints = "Parabéns você agora é um Deus da música."
                 //lbScore.isHidden = true
@@ -239,24 +276,29 @@ class RewardsViewController: UIViewController {
     }
     
     // carrega infos do Jogador na Tela
-    func loadPage() {
-        // Infos do Player
-        lbTitle.text = playerProgress.title
-        ivImage.image = playerProgress.medal as? UIImage
-        lbDescription.text = playerProgress.descriptionTitle
-        lbScore.text = playerProgress.score
-        lbProgress.text = playerProgress.descriptionPoints
-        progressViewPlayer.progress = playerProgress.points/playerProgress.pointsLevelUp
-    }
+//    func loadPage() {
+//        // Infos do Player
+//        lbTitle.text = playerProgress.title
+//        ivImage.image = playerProgress.medal as? UIImage
+//        lbDescription.text = playerProgress.descriptionTitle
+//        lbScore.text = playerProgress.score
+//        lbProgress.text = playerProgress.descriptionPoints
+//        progressViewPlayer.progress = playerProgress.points/playerProgress.pointsLevelUp
+//    }
     
     // método que checa se o Player tem recompensa para receber da Nota
     func refreshRewardNote(_ index: Int, _ progressView: UIProgressView, _ medalNote: UIImageView, _ noteDescription: UILabel, _ buttonReward: UIButton) {
+        
+        let actualScore = Int(playerProgress.points)
         if notesManager.notes[index].level == 0 {
             playerProgress.points+=10
+            updateScore(difference: 10, actualScore: actualScore)
         } else if notesManager.notes[index].level == 1 {
             playerProgress.points+=15
+            updateScore(difference: 15, actualScore: actualScore)
         } else if notesManager.notes[index].level == 2 {
             playerProgress.points+=20
+            updateScore(difference: 20, actualScore: actualScore)
         }
         buttonReward.isHidden = true
         progressView.isHidden = false
@@ -270,7 +312,7 @@ class RewardsViewController: UIViewController {
         }
         loadStatusPlayer()
         loadNotes()
-        loadPage()
+       // loadPage()
         checkNote(index, progressView, medalNote, noteDescription, buttonReward)
     }
     
@@ -287,10 +329,10 @@ class RewardsViewController: UIViewController {
         }
         loadStatusPlayer()
         if playerProgress.level < 4 && playerProgress.points < playerProgress.pointsLevelUp {
-            loadPage()
+           // loadPage()
             lbProgress.text = "Faltam \(Int(playerProgress.pointsLevelUp-playerProgress.points)) para você conquistar o título de \(playerTitles[Int(playerProgress.level)+1])."
         } else {
-            loadPage()
+            //loadPage()
         }
     }
     
@@ -327,6 +369,33 @@ class RewardsViewController: UIViewController {
     @IBAction func rewardSi(_ sender: Any) {
         refreshRewardNote(5, progressViewSi, medalNoteSi, noteDescriptionSi, buttonRewardSi)
         launchpadVc.playNote("feedback_recompensa")
+    }
+    
+    func updateScore(difference: Int, actualScore: Int) {
+
+        let actualScore = actualScore
+        let addScore = difference
+        
+        let totalScore = actualScore + difference
+
+        print(difference)
+        print(actualScore)
+        
+
+        animateIncrement(difference: difference, actualScore: actualScore, addScore: addScore, totalScore: totalScore)
+
+
+
+    }
+
+    func animateIncrement(difference: Int, actualScore: Int, addScore: Int, totalScore: Int) {
+        
+
+        if actualScore > totalScore {return}
+        lbDynamicScore.text = "\(actualScore + addScore)"
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.animateIncrement(difference: difference, actualScore: actualScore + 1, addScore: addScore, totalScore: totalScore)
+        }
     }
     
 }
