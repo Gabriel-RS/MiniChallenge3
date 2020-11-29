@@ -125,21 +125,22 @@ class RewardsViewController: UIViewController {
                 ivImage.image = UIImage(named: "medalhaAmadorOff")
                 //playerProgress.descriptionTitle = "Comece a explorar as notas e os sons que elas tem."
                 lbDescription.text = "Comece a explorar as notas e os sons que elas tem."
-                //playerProgress.pointsLevelUp = 100.0
-                lbScore.text = " / 100"
+                playerProgress.pointsLevelUp = 100.0
+                lbScore.text = " / \(Int(playerProgress.pointsLevelUp))"
                 playerProgress.score = "\(Int(playerProgress.points))/\(Int(playerProgress.pointsLevelUp))"
                 playerProgress.descriptionPoints = "Jogue a primeira vez para ganhar sua primeira medalha de ouro."
                 //differenceScore = Int(playerProgress.pointsLevelUp)
                 let actualScore = Int(playerProgress.points)
                 updateScore(difference: 0, actualScore: actualScore)
             case 1:
-                playerProgress.title = "\(playerTitles[Int(playerProgress.level)])"
+                //playerProgress.title = "\(playerTitles[Int(playerProgress.level)])"
+                lbTitle.text = "\(playerTitles[Int(playerProgress.level)])"
                 //playerProgress.medal = UIImage(named: "medalhaExplorador")
                 ivImage.image = UIImage(named: "medalhaExplorador")
 //                playerProgress.descriptionTitle = "Você busca conhecer os sons e explorar cada um deles."
                 lbDescription.text = "Você busca conhecer os sons e explorar cada um deles."
-               // playerProgress.pointsLevelUp = 100.0
-                lbScore.text = " / 100"
+                playerProgress.pointsLevelUp = 100.0
+                lbScore.text = " / \(Int(playerProgress.pointsLevelUp))"
                 let actualScore = Int(playerProgress.points)
                 updateScore(difference: 0, actualScore: actualScore)
                 playerProgress.score = "\(Int(playerProgress.points))/\(Int(playerProgress.pointsLevelUp))"
@@ -149,13 +150,14 @@ class RewardsViewController: UIViewController {
                     playerProgress.descriptionPoints = "Você conquistou a medalha ouro de \(playerTitles[Int(playerProgress.level)]). Clique no botão no final da barra de progresso para subir de nível."
                 }
             case 2:
-                playerProgress.title = "\(playerTitles[Int(playerProgress.level)])"
+                //playerProgress.title = "\(playerTitles[Int(playerProgress.level)])"
+                lbTitle.text = "\(playerTitles[Int(playerProgress.level)])"
                 //playerProgress.medal = UIImage(named: "medalhaAmador")
                 ivImage.image = UIImage(named: "medalhaAmador")
 //                playerProgress.descriptionTitle = "Você agora é um músico amador e já tem dominio algumas das notas musicais."
-                lbDescription.text = "Você agora é um músico amador e já tem dominio algumas das notas musicais."
-                //playerProgress.pointsLevelUp = 250.0
-                lbScore.text = " / 250"
+                lbDescription.text = "Todo profissional já foi um amador, continue treinando e aprendendo!"
+                playerProgress.pointsLevelUp = 250.0
+                lbScore.text = " / \(Int(playerProgress.pointsLevelUp))"
                 let actualScore = Int(playerProgress.points)
                 updateScore(difference: 0, actualScore: actualScore)
                 playerProgress.score = "\(Int(playerProgress.points))/\(Int(playerProgress.pointsLevelUp))"
@@ -165,13 +167,14 @@ class RewardsViewController: UIViewController {
                     playerProgress.descriptionPoints = "Você conquistou a medalha ouro de \(playerTitles[Int(playerProgress.level)]). Clique no botão no final da barra de progresso para subir de nível."
                 }
             case 3:
-                playerProgress.title = "\(playerTitles[Int(playerProgress.level)])"
+                //playerProgress.title = "\(playerTitles[Int(playerProgress.level)])"
+                lbTitle.text = "\(playerTitles[Int(playerProgress.level)])"
                 //playerProgress.medal = UIImage(named: "medalhaMestre")
                 ivImage.image = UIImage(named: "medalhaMestre")
 //                playerProgress.descriptionTitle = "Você é mestre."
-                lbDescription.text = "Você é mestre."
-//                playerProgress.pointsLevelUp = 450.0
-                lbScore.text = " / 450"
+                lbDescription.text = "Você é um mestre dos sons, conhece todos eles e sabe diferenciá-los."
+                playerProgress.pointsLevelUp = 450.0
+                lbScore.text = " / \(Int(playerProgress.pointsLevelUp))"
                 let actualScore = Int(playerProgress.points)
                 updateScore(difference: 0, actualScore: actualScore)
                 playerProgress.score = "\(Int(playerProgress.points))/\(Int(playerProgress.pointsLevelUp))"
@@ -181,13 +184,14 @@ class RewardsViewController: UIViewController {
                     playerProgress.descriptionPoints = "Você conquistou a medalha ouro de \(playerTitles[Int(playerProgress.level)]). Clique no botão no final da barra de progresso para subir de nível."
                 }
             case 4:
-                playerProgress.title = "\(playerTitles[Int(playerProgress.level)])"
+                //playerProgress.title = "\(playerTitles[Int(playerProgress.level)])"
+                lbTitle.text = "\(playerTitles[Int(playerProgress.level)])"
                 //playerProgress.medal = UIImage(named: "medalhaDeus")
                 ivImage.image = UIImage(named: "medalhaDeus")
 //                playerProgress.descriptionTitle = "Você é Deus da música."
-                lbDescription.text = "Você é Deus da música."
-//                playerProgress.pointsLevelUp = 450.0
-                lbScore.text = " / 450"
+                lbDescription.text = "Você atingiu o nível mais alto de todos: o Deus da música! Agora o céu é o limite."
+                playerProgress.pointsLevelUp = 450.0
+                lbScore.text = " / \(Int(playerProgress.pointsLevelUp))"
                 let actualScore = Int(playerProgress.points)
                 updateScore(difference: 0, actualScore: actualScore)
                 playerProgress.score = "\(Int(playerProgress.points))/\(Int(playerProgress.pointsLevelUp))"
@@ -196,6 +200,8 @@ class RewardsViewController: UIViewController {
             default:
                 print("default")
         }
+        
+        progressViewPlayer.progress = playerProgress.points/playerProgress.pointsLevelUp
         
         // checa se os pontos do jogar é maior/igual ao quantidade necessária para subir de level e muda imagem do botão
         if playerProgress.points >= playerProgress.pointsLevelUp && playerProgress.level < 4 {
@@ -302,6 +308,7 @@ class RewardsViewController: UIViewController {
         }
         buttonReward.isHidden = true
         progressView.isHidden = false
+        noteDescription.isHidden = false
         if notesManager.notes[index].level < 3 {
             notesManager.notes[index].level+=1
         }
@@ -377,6 +384,8 @@ class RewardsViewController: UIViewController {
         let addScore = difference
         
         let totalScore = actualScore + difference
+        
+        playerProgress.points = Float(totalScore)
 
         print(difference)
         print(actualScore)
