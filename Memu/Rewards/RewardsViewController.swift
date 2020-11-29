@@ -140,7 +140,7 @@ class RewardsViewController: UIViewController {
                 playerProgress.pointsLevelUp = 100.0
                 lbScore.text = " / \(Int(playerProgress.pointsLevelUp))"
                 if playerProgress.points < playerProgress.pointsLevelUp {
-                    lbProgress.text = "Acumule \(Int(playerProgress.pointsLevelUp)) pontos para conquistar o título de \(playerTitles[Int(playerProgress.level)])."
+                    lbProgress.text = "Acumule \(Int(playerProgress.pointsLevelUp)) pontos para conquistar o título de \(playerTitles[Int(playerProgress.level)+1])."
                 } else {
                     lbProgress.text = "Você conquistou a medalha ouro de \(playerTitles[Int(playerProgress.level)]). Clique no botão no final da barra de progresso para subir de nível."
                 }
@@ -153,7 +153,7 @@ class RewardsViewController: UIViewController {
                 playerProgress.pointsLevelUp = 250.0
                 lbScore.text = " / \(Int(playerProgress.pointsLevelUp))"
                 if playerProgress.points < playerProgress.pointsLevelUp {
-                    lbProgress.text = "Acumule \(Int(playerProgress.pointsLevelUp)) pontos para conquistar o título de \(playerTitles[Int(playerProgress.level)])."
+                    lbProgress.text = "Acumule \(Int(playerProgress.pointsLevelUp)) pontos para conquistar o título de \(playerTitles[Int(playerProgress.level)+1])."
                 } else {
                     lbProgress.text = "Você conquistou a medalha ouro de \(playerTitles[Int(playerProgress.level)]). Clique no botão no final da barra de progresso para subir de nível."
                 }
@@ -166,7 +166,7 @@ class RewardsViewController: UIViewController {
                 playerProgress.pointsLevelUp = 450.0
                 lbScore.text = " / \(Int(playerProgress.pointsLevelUp))"
                 if playerProgress.points < playerProgress.pointsLevelUp {
-                    lbProgress.text = "Acumule \(Int(playerProgress.pointsLevelUp)) pontos para conquistar o título de \(playerTitles[Int(playerProgress.level)])."
+                    lbProgress.text = "Acumule \(Int(playerProgress.pointsLevelUp)) pontos para conquistar o título de \(playerTitles[Int(playerProgress.level)+1])."
                 } else {
                     lbProgress.text = "Você conquistou a medalha ouro de \(playerTitles[Int(playerProgress.level)]). Clique no botão no final da barra de progresso para subir de nível."
                 }
