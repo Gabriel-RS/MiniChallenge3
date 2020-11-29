@@ -404,7 +404,7 @@ class RewardsViewController: UIViewController {
         
 
         if actualScore > totalScore {return}
-        lbDynamicScore.text = "\(actualScore + addScore)"
+        lbDynamicScore.text = "\(actualScore)"
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.animateIncrement(difference: difference, actualScore: actualScore + 1, addScore: addScore, totalScore: totalScore)
         }
