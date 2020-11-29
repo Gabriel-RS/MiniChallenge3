@@ -82,6 +82,9 @@ class RewardsViewController: UIViewController {
         checkNote(6, progressViewSol, medalNoteSol, noteDescriptionSol, buttonRewardSol)
         loadPage()
     }
+    @IBAction func btnClose(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     // carrega as informações do Player
     func loadProgressPlayer() {
