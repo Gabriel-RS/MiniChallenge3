@@ -102,18 +102,25 @@ class PuzzleViewController: UIViewController{
                 print("Nome nota: \(note.getName())")
                 if note.getName() == "do" {
                     notesManager.notes[0].points+=1
+                    print(notesManager.notes[0].name!)
                 } else if note.getName() == "re" {
                     notesManager.notes[4].points+=1
+                    print(notesManager.notes[4].name!)
                 } else if note.getName() == "mi" {
                     notesManager.notes[3].points+=1
+                    print(notesManager.notes[3].name!)
                 } else if note.getName() == "fa" {
                     notesManager.notes[1].points+=1
+                    print(notesManager.notes[1].name!)
                 } else if note.getName() == "sol" {
                     notesManager.notes[6].points+=1
+                    print(notesManager.notes[6].name!)
                 } else if note.getName() == "la" {
                     notesManager.notes[2].points+=1
+                    print(notesManager.notes[2].name!)
                 } else if note.getName() == "si" {
                     notesManager.notes[5].points+=1
+                    print(notesManager.notes[5].name!)
                 }
             }
             
