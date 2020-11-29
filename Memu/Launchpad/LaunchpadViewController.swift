@@ -12,6 +12,9 @@ class LaunchpadViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var btnCheck: UIButton!
+    @IBOutlet weak var instructionLabel: UILabel!
+    
+    let tutorialHasLaunched: Bool = UserDefaults.standard.bool(forKey: "tutorialHasLaunched")
     
     var dataSource: UICollectionViewDiffableDataSource<Section, Note>!
     
@@ -47,6 +50,10 @@ class LaunchpadViewController: UIViewController {
         
         // seção button
         keyNotes3 = board3.getLaunchpad()
+        
+        if !tutorialHasLaunched {
+            instructionLabel.isHidden = false
+        }
         
         configDataSource()
     }

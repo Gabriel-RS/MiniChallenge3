@@ -17,6 +17,9 @@ class PuzzleViewController: UIViewController{
     @IBOutlet weak var ear1: UIImageView!
     @IBOutlet weak var ear2: UIImageView!
     @IBOutlet weak var ear3: UIImageView!
+    @IBOutlet weak var instructionLabel: UILabel!
+    
+    let tutorialHasLaunched: Bool = UserDefaults.standard.bool(forKey: "tutorialHasLaunched")
     
     var launchpadVc = LaunchpadViewController()
     var fetchedResultController: NSFetchedResultsController<PlayerProgress>!
@@ -73,6 +76,11 @@ class PuzzleViewController: UIViewController{
         
         //ouvidas
         PuzzleViewController.ouvidas = 3
+        
+        if !tutorialHasLaunched {
+            UserDefaults.standard.set(true, forKey: "tutorialHasLaunched")
+            instructionLabel.isHidden = false
+        }
     }
     
     // MARK: - Button

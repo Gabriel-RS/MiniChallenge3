@@ -187,6 +187,19 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dla-G2-0Zh">
+                                <rect key="frame" x="107" y="110" width="200.5" height="26"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Agora tente recriá-la">
+                                        <attributes>
+                                            <color key="NSColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="22" name="SFProRounded-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nuN-Wz-1GD"/>
                         <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -195,6 +208,7 @@
                             <constraint firstItem="fRO-4e-UoB" firstAttribute="top" secondItem="qHE-aS-a23" secondAttribute="bottom" constant="23" id="7Uf-ek-Q1I"/>
                             <constraint firstItem="SNE-Nf-fcx" firstAttribute="top" secondItem="nuN-Wz-1GD" secondAttribute="top" constant="32" id="FZV-3F-oDg"/>
                             <constraint firstItem="nuN-Wz-1GD" firstAttribute="bottom" secondItem="fRO-4e-UoB" secondAttribute="bottom" constant="20" id="GFW-6s-ccY"/>
+                            <constraint firstItem="Dla-G2-0Zh" firstAttribute="centerX" secondItem="qHE-aS-a23" secondAttribute="centerX" id="NQp-CF-IHx"/>
                             <constraint firstItem="qHE-aS-a23" firstAttribute="centerX" secondItem="s9T-9B-W9A" secondAttribute="centerX" id="SLR-Dw-ftI"/>
                             <constraint firstItem="Wek-Cb-Lqq" firstAttribute="leading" secondItem="nuN-Wz-1GD" secondAttribute="leading" constant="20" id="SeJ-Of-OF6"/>
                             <constraint firstItem="qHE-aS-a23" firstAttribute="leading" secondItem="nuN-Wz-1GD" secondAttribute="leading" id="ZtL-zS-LrB"/>
@@ -203,6 +217,7 @@
                             <constraint firstItem="nuN-Wz-1GD" firstAttribute="trailing" secondItem="JDi-oa-C6x" secondAttribute="trailing" constant="20" id="g5d-5i-KYs"/>
                             <constraint firstItem="JDi-oa-C6x" firstAttribute="top" secondItem="nuN-Wz-1GD" secondAttribute="top" constant="20" id="lnr-Fx-UfE"/>
                             <constraint firstItem="qHE-aS-a23" firstAttribute="top" secondItem="JDi-oa-C6x" secondAttribute="bottom" constant="28" id="nDa-Ia-nkF"/>
+                            <constraint firstItem="qHE-aS-a23" firstAttribute="top" secondItem="Dla-G2-0Zh" secondAttribute="bottom" constant="8" id="nb1-T5-BA7"/>
                             <constraint firstItem="nuN-Wz-1GD" firstAttribute="bottom" secondItem="Wek-Cb-Lqq" secondAttribute="bottom" constant="20" id="vae-Ba-3j0"/>
                         </constraints>
                     </view>
@@ -212,6 +227,7 @@
                         <outlet property="ear1" destination="q7s-ci-lat" id="R5X-aX-zhW"/>
                         <outlet property="ear2" destination="tJA-eW-WJd" id="hCG-9v-Bgh"/>
                         <outlet property="ear3" destination="hyp-1E-G3m" id="Jkj-CK-7CF"/>
+                        <outlet property="instructionLabel" destination="Dla-G2-0Zh" id="ScC-7O-cLM"/>
                         <segue destination="umK-vD-sBV" kind="presentation" identifier="conclusionSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="CYE-eq-0bH"/>
                     </connections>
                 </viewController>
