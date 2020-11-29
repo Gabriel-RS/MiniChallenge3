@@ -2,7 +2,6 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="20B29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="NoteProgress" representedClassName="NoteProgress" syncable="YES" codeGenerationType="class">
         <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="medal" optional="YES" attributeType="Transformable"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="noteDescription" optional="YES" attributeType="String"/>
         <attribute name="points" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
@@ -13,7 +12,6 @@
         <attribute name="descriptionPoints" optional="YES" attributeType="String"/>
         <attribute name="descriptionTitle" optional="YES" attributeType="String"/>
         <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="medal" optional="YES" attributeType="Transformable"/>
         <attribute name="points" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="pointsLevelUp" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="score" optional="YES" attributeType="String"/>
@@ -21,7 +19,7 @@
         <relationship name="noteProgress" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NoteProgress" inverseName="playerProgress" inverseEntity="NoteProgress"/>
     </entity>
     <elements>
-        <element name="NoteProgress" positionX="-54" positionY="45" width="128" height="134"/>
-        <element name="PlayerProgress" positionX="-63" positionY="-18" width="128" height="164"/>
+        <element name="NoteProgress" positionX="-54" positionY="45" width="128" height="119"/>
+        <element name="PlayerProgress" positionX="-63" positionY="-18" width="128" height="149"/>
     </elements>
 </model>
