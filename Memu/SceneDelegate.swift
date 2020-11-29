@@ -24,7 +24,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 window.rootViewController = UIStoryboard(name: "Tutorial", bundle: nil).instantiateInitialViewController()
                 self.window = window
                 window.makeKeyAndVisible()
-//                UserDefaults.standard.set(true, forKey: "tutorialHasLaunched")
             }
         } else {
             guard let _ = (scene as? UIWindowScene) else { return }

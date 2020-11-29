@@ -149,7 +149,7 @@ class RewardsViewController: UIViewController {
             case 2:
                 lbTitle.text = "\(playerTitles[Int(playerProgress.level)])"
                 ivImage.image = UIImage(named: "medalhaAmador")
-                lbDescription.text = "Todo profissional já foi um amador, continue treinando e aprendendo!"
+                lbDescription.text = "Todo profissional já foi um amador, continue treinando"
                 playerProgress.pointsLevelUp = 250.0
                 lbScore.text = " / \(Int(playerProgress.pointsLevelUp))"
                 if playerProgress.points < playerProgress.pointsLevelUp {
@@ -162,7 +162,7 @@ class RewardsViewController: UIViewController {
             case 3:
                 lbTitle.text = "\(playerTitles[Int(playerProgress.level)])"
                 ivImage.image = UIImage(named: "medalhaMestre")
-                lbDescription.text = "Você é um mestre dos sons, conhece todos eles e sabe diferenciá-los."
+                lbDescription.text = "Você é um mestre dos sons, pelo menos sabe diferenciá-los."
                 playerProgress.pointsLevelUp = 450.0
                 lbScore.text = " / \(Int(playerProgress.pointsLevelUp))"
                 if playerProgress.points < playerProgress.pointsLevelUp {
@@ -175,7 +175,7 @@ class RewardsViewController: UIViewController {
             case 4:
                 lbTitle.text = "\(playerTitles[Int(playerProgress.level)])"
                 ivImage.image = UIImage(named: "medalhaDeus")
-                lbDescription.text = "Você atingiu o nível mais alto de todos: o Deus da música! Agora o céu é o limite."
+                lbDescription.text = "Você atingiu o nível de Deus da música! Agora o céu é o limite."
                 playerProgress.pointsLevelUp = 450.0
                 lbScore.text = " / \(Int(playerProgress.pointsLevelUp))"
                 lbProgress.text = "Parabéns você agora é um Deus da música."

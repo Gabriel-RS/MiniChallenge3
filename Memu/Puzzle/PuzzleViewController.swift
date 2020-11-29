@@ -12,8 +12,6 @@ import CoreData
 
 class PuzzleViewController: UIViewController{
     
-  //  var audioPlayerFeedback = AVAudioPlayer()
-
     @IBOutlet weak var ear1: UIImageView!
     @IBOutlet weak var ear2: UIImageView!
     @IBOutlet weak var ear3: UIImageView!
@@ -454,24 +452,6 @@ extension PuzzleViewController: ButtonCellDelegate {
             playSequence()
         }
     }
-   
-//    func setFeedback(completionName: String){
-//        
-//        let feedbackSound = Bundle.main.path(forResource: "feedback_\(completionName)", ofType: "mp3")
-//        
-//        do{
-//            audioPlayerFeedback = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: feedbackSound!))
-//        }
-//        catch{
-//            print(error)
-//        }
-//    }
-//    
-//    func playFeedback(feedbackType: String) {
-//        
-//        setFeedback(completionName: feedbackType)
-//        audioPlayerFeedback.play()
-//    }
     
     func playNote(_ song: String) {
         
