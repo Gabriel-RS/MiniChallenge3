@@ -6,21 +6,31 @@
 //
 
 import UIKit
+import CoreData
 
-class CompletionViewController: UIViewController {
+class CompletionViewController: UIViewController, NSFetchedResultsControllerDelegate {
     
     enum Section {
         case main
     }
     
+    var fetchedResultController: NSFetchedResultsController<PlayerProgress>!
+    var playerProgress: PlayerProgress!
+    
+    @IBOutlet weak var progressViewPlayer: UIProgressView!
+    @IBOutlet weak var lbProgress: UILabel!
+    @IBOutlet weak var lbGamePoints: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Note>!
     
     // recebe a sequencia final
     var resultSequence = [Note]()
+    var ouvidas = Int()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadProgressPlayer()
         
         collectionView.collectionViewLayout = layout()
         sequenceDataSource()
@@ -33,6 +43,41 @@ class CompletionViewController: UIViewController {
     
     @IBAction func btnHomeScreen(_ sender: Any) {
         //self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    func loadProgressPlayer() {
+        let fetchRequest: NSFetchRequest<PlayerProgress> = PlayerProgress.fetchRequest()
+        let sortDescritor = NSSortDescriptor(key: "title", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescritor]
+        fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultController.delegate = self
+        do {
+            try fetchedResultController.performFetch()
+        } catch {
+            print(error.localizedDescription)
+        }
+        playerProgress = fetchedResultController.fetchedObjects?.first
+        if playerProgress == nil {
+            playerProgress = PlayerProgress(context: context)
+            playerProgress.level = 0
+            playerProgress.pointsLevelUp = 100.0
+        }
+        
+        if ouvidas == 3 {
+            lbGamePoints.text = "Pontuação da partida: 5"
+        } else if ouvidas == 2 {
+            lbGamePoints.text = "Pontuação da partida: 4"
+        } else if ouvidas == 1 {
+            lbGamePoints.text = "Pontuação da partida: 3"
+        } else if ouvidas == 0 {
+            lbGamePoints.text = "Pontuação da partida: 2"
+        }
+        
+        // modifica tamanho da ProgressView
+        progressViewPlayer.transform = CGAffineTransform(scaleX: 1.0, y: 5.0)
+        progressViewPlayer.progress = playerProgress.points/playerProgress.pointsLevelUp
+        
+        lbProgress.text = "\(Int(playerProgress.points))/\(Int(playerProgress.pointsLevelUp))"
     }
     
     func layout() -> UICollectionViewCompositionalLayout {
@@ -67,3 +112,9 @@ class CompletionViewController: UIViewController {
     }
 
 }
+
+//extension RewardsViewController: NSFetchedResultsControllerDelegate {
+//    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+//
+//    }
+//}
