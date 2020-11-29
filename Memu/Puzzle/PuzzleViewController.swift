@@ -17,6 +17,9 @@ class PuzzleViewController: UIViewController{
     @IBOutlet weak var ear1: UIImageView!
     @IBOutlet weak var ear2: UIImageView!
     @IBOutlet weak var ear3: UIImageView!
+    @IBOutlet weak var instructionLabel: UILabel!
+    
+    let tutorialHasLaunched: Bool = UserDefaults.standard.bool(forKey: "tutorialHasLaunched")
     
     var launchpadVc = LaunchpadViewController()
     var fetchedResultController: NSFetchedResultsController<PlayerProgress>!
@@ -73,6 +76,11 @@ class PuzzleViewController: UIViewController{
         
         //ouvidas
         PuzzleViewController.ouvidas = 3
+        
+        if !tutorialHasLaunched {
+            UserDefaults.standard.set(true, forKey: "tutorialHasLaunched")
+            instructionLabel.isHidden = false
+        }
     }
     
     // MARK: - Button
@@ -94,18 +102,25 @@ class PuzzleViewController: UIViewController{
                 print("Nome nota: \(note.getName())")
                 if note.getName() == "do" {
                     notesManager.notes[0].points+=1
+                    print(notesManager.notes[0].name!)
                 } else if note.getName() == "re" {
                     notesManager.notes[4].points+=1
+                    print(notesManager.notes[4].name!)
                 } else if note.getName() == "mi" {
                     notesManager.notes[3].points+=1
+                    print(notesManager.notes[3].name!)
                 } else if note.getName() == "fa" {
                     notesManager.notes[1].points+=1
+                    print(notesManager.notes[1].name!)
                 } else if note.getName() == "sol" {
                     notesManager.notes[6].points+=1
+                    print(notesManager.notes[6].name!)
                 } else if note.getName() == "la" {
                     notesManager.notes[2].points+=1
+                    print(notesManager.notes[2].name!)
                 } else if note.getName() == "si" {
                     notesManager.notes[5].points+=1
+                    print(notesManager.notes[5].name!)
                 }
             }
             
@@ -118,6 +133,13 @@ class PuzzleViewController: UIViewController{
                 playerProgress.points+=3
             } else if PuzzleViewController.ouvidas == 0 {
                 playerProgress.points+=2
+            }
+            
+            // salva progresso no CoreData
+            do {
+                try context.save()
+            } catch {
+                print(error.localizedDescription)
             }
             
             // se sequencia estiver certa
@@ -150,6 +172,7 @@ class PuzzleViewController: UIViewController{
         if segue.identifier == "conclusionSegue" {
             let vc = segue.destination as! CompletionViewController
             vc.resultSequence = generateResultSequence()
+            vc.ouvidas = PuzzleViewController.ouvidas
         }
     }
     
@@ -176,6 +199,7 @@ class PuzzleViewController: UIViewController{
         if playerProgress == nil {
             playerProgress = PlayerProgress(context: context)
             playerProgress.level = 0
+            playerProgress.pointsLevelUp = 100.0
         }
     }
     
