@@ -32,17 +32,6 @@ class NotesManager {
         }
     }
     
-//    func loadNotes(context: NSManagedObjectContext) {
-//        if notes.count == 0 {
-//            initNotes(context: context)
-//        }
-//        do {
-//            try context.save()
-//        } catch {
-//            print(error.localizedDescription)
-//        }
-//    }
-    
     // inicializas as Notas
     func initNotes(context: NSManagedObjectContext) {
         if noteDo == nil {
