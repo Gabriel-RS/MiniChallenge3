@@ -22,24 +22,26 @@ class NotesManager {
         let fetchRequest: NSFetchRequest<NoteProgress> = NoteProgress.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
-        loadNotes(context: context)
         do {
             notes = try context.fetch(fetchRequest)
         } catch {
             print(error.localizedDescription)
         }
-    }
-    
-    func loadNotes(context: NSManagedObjectContext) {
-        if notes.count == 0 {
+        if notes.isEmpty {
             initNotes(context: context)
         }
-        do {
-            try context.save()
-        } catch {
-            print(error.localizedDescription)
-        }
     }
+    
+//    func loadNotes(context: NSManagedObjectContext) {
+//        if notes.count == 0 {
+//            initNotes(context: context)
+//        }
+//        do {
+//            try context.save()
+//        } catch {
+//            print(error.localizedDescription)
+//        }
+//    }
     
     // inicializas as Notas
     func initNotes(context: NSManagedObjectContext) {

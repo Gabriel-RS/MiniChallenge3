@@ -207,6 +207,7 @@ class RewardsViewController: UIViewController {
     // carrega as informações das Notas
     func loadNotes() {
         notesManager.loadNotes(with: context)
+        print("Count notes: \(notesManager.notes.count)")
         do {
             try context.save()
         } catch {
@@ -354,8 +355,8 @@ class RewardsViewController: UIViewController {
         
         //playerProgress.points = Float(totalScore)
 
-        print(difference)
-        print(actualScore)
+        //print(difference)
+        //print(actualScore)
         
         animateIncrement(difference: difference, actualScore: actualScore, addScore: addScore, totalScore: totalScore)
     }
