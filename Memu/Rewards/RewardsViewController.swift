@@ -82,10 +82,8 @@ class RewardsViewController: UIViewController {
         checkNote(4, progressViewRe, medalNoteRe, noteDescriptionRe, buttonRewardRe)
         checkNote(5, progressViewSi, medalNoteSi, noteDescriptionSi, buttonRewardSi)
         checkNote(6, progressViewSol, medalNoteSol, noteDescriptionSol, buttonRewardSol)
-       // loadPage()
-        
-        
     }
+    
     @IBAction func btnClose(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -111,17 +109,9 @@ class RewardsViewController: UIViewController {
     
     // de acordo com o nível do Player exibi as informações na tela
     func loadStatusPlayer() {
-        
-//        let actualScore = Int(playerProgress.points)
-//        updateScore(difference: 0, actualScore: actualScore)
-        
         if playerProgress.points != 0 && playerProgress.level == 0 {
             playerProgress.level = 1
-//            let actualScore = Int(playerProgress.points)
-//            updateScore(difference: 0, actualScore: actualScore)
         }
-        
-        
         
         switch playerProgress.level {
             case 0:
@@ -179,6 +169,7 @@ class RewardsViewController: UIViewController {
                 playerProgress.pointsLevelUp = 450.0
                 lbScore.text = " / \(Int(playerProgress.pointsLevelUp))"
                 lbProgress.text = "Parabéns você agora é um Deus da música."
+                btCheckProgress.setImage(UIImage(named: "progressoOuro"), for: .normal)
                 let actualScore = Int(playerProgress.points)
                 updateScore(difference: 0, actualScore: actualScore)
                 //lbScore.isHidden = true
@@ -207,6 +198,7 @@ class RewardsViewController: UIViewController {
     // carrega as informações das Notas
     func loadNotes() {
         notesManager.loadNotes(with: context)
+        print("Count notes: \(notesManager.notes.count)")
         do {
             try context.save()
         } catch {
@@ -351,11 +343,8 @@ class RewardsViewController: UIViewController {
         let actualScore = actualScore
         let addScore = difference
         let totalScore = actualScore + difference
-        
-        //playerProgress.points = Float(totalScore)
-
-        print(difference)
-        print(actualScore)
+        //print(difference)
+        //print(actualScore)
         
         animateIncrement(difference: difference, actualScore: actualScore, addScore: addScore, totalScore: totalScore)
     }
