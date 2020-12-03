@@ -77,7 +77,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Menu" id="o15-6S-ee2">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="vg1-Em-SHj">
+                                        <barButtonItem key="rightBarButtonItem" style="done" id="vg1-Em-SHj">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ohp-0B-CNk">
                                                 <rect key="frame" x="320" y="10" width="74" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

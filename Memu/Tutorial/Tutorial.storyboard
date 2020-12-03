@@ -24,7 +24,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Ajuda" id="PQI-ac-wKu">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="PAi-Ji-ub6">
+                                        <barButtonItem key="rightBarButtonItem" style="done" id="PAi-Ji-ub6">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ehn-bo-TUL">
                                                 <rect key="frame" x="320" y="10" width="74" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
