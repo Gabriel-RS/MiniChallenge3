@@ -76,13 +76,22 @@
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i32-b7-oKc">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i32-b7-oKc">
                                                         <rect key="frame" x="148" y="30" width="180" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="HOc-2c-KrE"/>
                                                             <constraint firstAttribute="width" constant="180" id="q5d-NB-gcW"/>
                                                         </constraints>
-                                                        <state key="normal" image="obterRecompensa"/>
+                                                        <state key="normal" backgroundImage="obterRecompensa">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Obter recompensa">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" size="18" name="SFCompactDisplay-Bold"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
                                                         <connections>
                                                             <action selector="rewardDo:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="EFN-jl-a99"/>
                                                         </connections>
@@ -137,13 +146,22 @@
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coR-Td-atd">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="coR-Td-atd">
                                                         <rect key="frame" x="148" y="30" width="180" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="TQD-Tq-9cY"/>
                                                             <constraint firstAttribute="width" constant="180" id="smA-9d-q62"/>
                                                         </constraints>
-                                                        <state key="normal" image="obterRecompensa"/>
+                                                        <state key="normal" backgroundImage="obterRecompensa">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Obter recompensa">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" size="18" name="SFCompactDisplay-Bold"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
                                                         <connections>
                                                             <action selector="rewardRe:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="3p8-we-cBa"/>
                                                         </connections>
@@ -198,13 +216,22 @@
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NR-8g-zqO">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3NR-8g-zqO">
                                                         <rect key="frame" x="148" y="30" width="180" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="EDt-H3-G2o"/>
                                                             <constraint firstAttribute="width" constant="180" id="bct-1f-jAx"/>
                                                         </constraints>
-                                                        <state key="normal" image="obterRecompensa"/>
+                                                        <state key="normal" backgroundImage="obterRecompensa">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Obter recompensa">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" size="18" name="SFCompactDisplay-Bold"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
                                                         <connections>
                                                             <action selector="rewardMi:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="e3l-bp-D8k"/>
                                                         </connections>
@@ -259,13 +286,22 @@
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35b-P4-FTw">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="35b-P4-FTw">
                                                         <rect key="frame" x="148" y="30" width="180" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="BOD-cK-LMq"/>
                                                             <constraint firstAttribute="width" constant="180" id="TFD-Yd-kws"/>
                                                         </constraints>
-                                                        <state key="normal" image="obterRecompensa"/>
+                                                        <state key="normal" backgroundImage="obterRecompensa">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Obter recompensa">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" size="18" name="SFCompactDisplay-Bold"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
                                                         <connections>
                                                             <action selector="rewardFa:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="0yk-NF-jMh"/>
                                                         </connections>
@@ -320,13 +356,22 @@
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lE-2d-vIr">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7lE-2d-vIr">
                                                         <rect key="frame" x="148" y="30" width="180" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="9yS-VK-8ia"/>
                                                             <constraint firstAttribute="width" constant="180" id="vC6-aV-Xd8"/>
                                                         </constraints>
-                                                        <state key="normal" image="obterRecompensa"/>
+                                                        <state key="normal" backgroundImage="obterRecompensa">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Obter recompensa">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" size="18" name="SFCompactDisplay-Bold"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
                                                         <connections>
                                                             <action selector="rewardSol:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="21u-aF-S0r"/>
                                                         </connections>
@@ -381,13 +426,22 @@
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsq-0R-Zcx">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qsq-0R-Zcx">
                                                         <rect key="frame" x="148" y="30" width="180" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="180" id="LHI-EG-VmK"/>
                                                             <constraint firstAttribute="height" constant="40" id="oe5-SJ-NtK"/>
                                                         </constraints>
-                                                        <state key="normal" image="obterRecompensa"/>
+                                                        <state key="normal" backgroundImage="obterRecompensa">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Obter recompensa">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" size="18" name="SFCompactDisplay-Bold"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
                                                         <connections>
                                                             <action selector="rewardLa:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="4fu-c9-Avm"/>
                                                         </connections>
@@ -442,13 +496,22 @@
                                                         </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phi-B6-wEY">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="phi-B6-wEY">
                                                         <rect key="frame" x="148" y="30" width="180" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="b7c-GB-UTv"/>
                                                             <constraint firstAttribute="width" constant="180" id="d9d-mB-g0G"/>
                                                         </constraints>
-                                                        <state key="normal" image="obterRecompensa"/>
+                                                        <state key="normal" backgroundImage="obterRecompensa">
+                                                            <attributedString key="attributedTitle">
+                                                                <fragment content="Obter recompensa">
+                                                                    <attributes>
+                                                                        <color key="NSColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                        <font key="NSFont" size="18" name="SFCompactDisplay-Bold"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                        </state>
                                                         <connections>
                                                             <action selector="rewardSi:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="6vs-LT-LMO"/>
                                                         </connections>
