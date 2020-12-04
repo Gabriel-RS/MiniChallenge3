@@ -1,12 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "obterRecompensa.svg",
+      "filename" : "btnReward.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "obterRecompensa-1.svg",
+      "filename" : "btnReward-1.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
