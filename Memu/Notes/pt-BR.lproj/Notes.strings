@@ -1,0 +1,33 @@
+
+/* Class = "UIBarButtonItem"; title = "Cancelar"; ObjectID = "K8u-gd-yva"; */
+"K8u-gd-yva.title" = "Cancelar";
+
+/* Class = "UIButton"; normalTitle = "D (ré)"; ObjectID = "OBU-R3-Ml3"; */
+"OBU-R3-Ml3.normalTitle" = "D (ré)";
+
+/* Class = "UINavigationItem"; title = "Selecione as notas"; ObjectID = "OXf-dP-8Zl"; */
+"OXf-dP-8Zl.title" = "Selecione as notas";
+
+/* Class = "UIButton"; normalTitle = "A (lá)"; ObjectID = "SAe-PO-TSD"; */
+"SAe-PO-TSD.normalTitle" = "A (lá)";
+
+/* Class = "UIButton"; normalTitle = "E (mi)"; ObjectID = "hFp-8d-i2o"; */
+"hFp-8d-i2o.normalTitle" = "E (mi)";
+
+/* Class = "UIButton"; normalTitle = "G (sol)"; ObjectID = "iIW-9U-Q0k"; */
+"iIW-9U-Q0k.normalTitle" = "G (sol)";
+
+/* Class = "UIBarButtonItem"; title = "Concluído"; ObjectID = "jG7-ts-Ngd"; */
+"jG7-ts-Ngd.title" = "Concluído";
+
+/* Class = "UILabel"; text = "Só é possível selecionar 4 notas"; ObjectID = "mHu-w5-fMN"; */
+"mHu-w5-fMN.text" = "Só é possível selecionar 4 notas";
+
+/* Class = "UIButton"; normalTitle = "C (dó)"; ObjectID = "psM-U2-fAx"; */
+"psM-U2-fAx.normalTitle" = "C (dó)";
+
+/* Class = "UIButton"; normalTitle = "B (si)"; ObjectID = "rqb-oO-0o5"; */
+"rqb-oO-0o5.normalTitle" = "B (si)";
+
+/* Class = "UIButton"; normalTitle = "F (fá)"; ObjectID = "sFa-It-kQi"; */
+"sFa-It-kQi.normalTitle" = "F (fá)";
