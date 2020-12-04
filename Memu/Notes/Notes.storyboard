@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6aB-an-ka7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -48,63 +49,133 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wM2-n4-ubV">
                                 <rect key="frame" x="28" y="278" width="358" height="393"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psM-U2-fAx">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="psM-U2-fAx">
                                         <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="psM-U2-fAx" secondAttribute="height" multiplier="1:1" id="bH4-8J-hhU"/>
                                         </constraints>
-                                        <state key="normal" backgroundImage="pickBlueOff"/>
+                                        <state key="normal" backgroundImage="pickBlueOff">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="C (dó)">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="24" name="SFCompactDisplay-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
                                         <state key="selected" backgroundImage="pickBlueOn"/>
                                         <connections>
                                             <action selector="btnDo:" destination="6aB-an-ka7" eventType="touchUpInside" id="aWe-8j-zUp"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBU-R3-Ml3">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OBU-R3-Ml3">
                                         <rect key="frame" x="127" y="0.0" width="105" height="105"/>
-                                        <state key="normal" backgroundImage="pickGreenOff"/>
+                                        <state key="normal" backgroundImage="pickGreenOff">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="D (ré)">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="24" name="SFCompactDisplay-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
                                         <state key="selected" backgroundImage="pickGreenOn"/>
                                         <connections>
                                             <action selector="btnRe:" destination="6aB-an-ka7" eventType="touchUpInside" id="KAY-Pg-XJw"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAe-PO-TSD">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SAe-PO-TSD">
                                         <rect key="frame" x="253" y="140" width="105" height="105"/>
-                                        <state key="normal" backgroundImage="pickOrangeOff"/>
+                                        <state key="normal" backgroundImage="pickOrangeOff">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="A (lá)">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="24" name="SFCompactDisplay-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
                                         <state key="selected" backgroundImage="pickOrangeOn"/>
                                         <connections>
                                             <action selector="btnLa:" destination="6aB-an-ka7" eventType="touchUpInside" id="3KU-LA-l17"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFp-8d-i2o">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hFp-8d-i2o">
                                         <rect key="frame" x="253" y="0.0" width="105" height="105"/>
-                                        <state key="normal" backgroundImage="pickRedOff"/>
+                                        <state key="normal" backgroundImage="pickRedOff">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="E (mi)">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="24" name="SFCompactDisplay-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
                                         <state key="selected" backgroundImage="pickRedOn"/>
                                         <connections>
                                             <action selector="btnMi:" destination="6aB-an-ka7" eventType="touchUpInside" id="aB5-D7-Tcy"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIW-9U-Q0k">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iIW-9U-Q0k">
                                         <rect key="frame" x="127" y="140" width="105" height="105"/>
-                                        <state key="normal" backgroundImage="pickPurpleOff"/>
+                                        <state key="normal" backgroundImage="pickPurpleOff">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="G (sol)">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="24" name="SFCompactDisplay-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
                                         <state key="selected" backgroundImage="pickPurpleOn"/>
                                         <connections>
                                             <action selector="btnSol:" destination="6aB-an-ka7" eventType="touchUpInside" id="ZyF-uL-zFP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqb-oO-0o5">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rqb-oO-0o5">
                                         <rect key="frame" x="127" y="280" width="105" height="105"/>
-                                        <state key="normal" backgroundImage="pickYellowOff"/>
+                                        <state key="normal" backgroundImage="pickYellowOff">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="B (si)">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="24" name="SFCompactDisplay-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
                                         <state key="selected" backgroundImage="pickYellowOn"/>
                                         <connections>
                                             <action selector="btnSi:" destination="6aB-an-ka7" eventType="touchUpInside" id="cAo-KY-WuV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFa-It-kQi">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sFa-It-kQi">
                                         <rect key="frame" x="0.0" y="140" width="105" height="105"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="sFa-It-kQi" secondAttribute="height" multiplier="1:1" id="U2L-m9-VbP"/>
                                         </constraints>
-                                        <state key="normal" backgroundImage="pickPinkOff"/>
+                                        <state key="normal" backgroundImage="pickPinkOff">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="F (fá)">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="24" name="SFCompactDisplay-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
                                         <state key="selected" backgroundImage="pickPinkOn"/>
                                         <connections>
                                             <action selector="btnFa:" destination="6aB-an-ka7" eventType="touchUpInside" id="Vhh-sr-XSG"/>

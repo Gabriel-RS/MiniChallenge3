@@ -18,35 +18,57 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="ADY-8x-eBy">
                                 <rect key="frame" x="57.5" y="258" width="299" height="380"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2F-V3-Gkz">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C2F-V3-Gkz">
                                         <rect key="frame" x="0.0" y="0.0" width="299" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="An7-iw-9Hv"/>
                                             <constraint firstAttribute="width" secondItem="C2F-V3-Gkz" secondAttribute="height" multiplier="48:13" constant="4" id="b2W-fi-bgE"/>
                                         </constraints>
-                                        <state key="normal" image="novoJogo">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" backgroundImage="novoJogo">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Novo jogo">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="30" name="SFCompactDisplay-Bold"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                         </state>
                                         <connections>
                                             <action selector="btnNewGame:" destination="Abo-YD-lzX" eventType="touchUpInside" id="DRd-04-1ng"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVp-Hh-9Uo">
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gVp-Hh-9Uo">
                                         <rect key="frame" x="0.0" y="150" width="299" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="gVp-Hh-9Uo" secondAttribute="height" multiplier="48:13" constant="4" id="6Pt-Dn-vpj"/>
                                         </constraints>
-                                        <state key="normal" image="menuInicial">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" backgroundImage="menuInicial">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Menu Inicial">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="30" name="SFCompactDisplay-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                         </state>
                                         <connections>
                                             <action selector="btnHome:" destination="Abo-YD-lzX" eventType="touchUpInside" id="AhA-h5-H5B"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sZ-0O-WlE">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9sZ-0O-WlE">
                                         <rect key="frame" x="0.0" y="300" width="299" height="80"/>
-                                        <state key="normal" image="ajuda">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" backgroundImage="ajuda">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Ajuda">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="30" name="SFCompactDisplay-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                         </state>
                                         <connections>
                                             <action selector="btnHelp:" destination="Abo-YD-lzX" eventType="touchUpInside" id="DMq-xQ-zxS"/>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j3x-vK-EPw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j3x-vK-EPw">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -109,23 +109,41 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9L-NR-CFO">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D9L-NR-CFO">
                                         <rect key="frame" x="63" y="486" width="288" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="bbM-zk-zio"/>
                                         </constraints>
-                                        <state key="normal" title="Novo Jogo" image="novoJogo"/>
+                                        <state key="normal" backgroundImage="novoJogo">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Novo Jogo">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="30" name="SFCompactDisplay-Bold"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
                                         <connections>
                                             <action selector="btnNewGame:" destination="j3x-vK-EPw" eventType="touchUpInside" id="99r-Jk-iEf"/>
                                             <segue destination="TVq-gs-5Y1" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="B7w-VE-aN1"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3LW-gR-mai">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3LW-gR-mai">
                                         <rect key="frame" x="63" y="581" width="288" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="iV7-WY-WA9"/>
                                         </constraints>
-                                        <state key="normal" title="Menu Inicial" image="menuInicial"/>
+                                        <state key="normal" backgroundImage="menuInicial">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Menu Inicial">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="30" name="SFCompactDisplay-Bold"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
                                         <connections>
                                             <action selector="btnHomeScreen:" destination="j3x-vK-EPw" eventType="touchUpInside" id="Na4-bd-ngM"/>
                                             <segue destination="oaB-Ca-JFz" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="r9E-U2-Wal"/>
