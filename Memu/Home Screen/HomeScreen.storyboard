@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Compact-Display-Bold.otf">
+            <string>SFCompactDisplay-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Tutorial-->
         <scene sceneID="mxJ-rd-nv1">
@@ -45,19 +50,12 @@
                                             <segue destination="GY6-kM-68C" kind="presentation" id="qDa-hH-wMZ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="26v-XB-1xk">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26v-XB-1xk">
                                         <rect key="frame" x="0.0" y="-2" width="260" height="114.5"/>
-                                        <state key="normal" backgroundImage="jogar">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Jogar">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.31764705882352939" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <font key="NSFont" size="30" name="SFCompactDisplay-Black"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="38"/>
+                                        <state key="normal" title="Jogar" backgroundImage="jogar">
+                                            <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                         </state>
                                         <connections>
                                             <action selector="btnPlay:" destination="wnR-8y-xY7" eventType="touchUpInside" id="e1S-j6-rXl"/>
