@@ -1,21 +1,21 @@
 
 /* Class = "UIButton"; normalTitle = "Play"; ObjectID = "54d-UK-G3b"; */
-"54d-UK-G3b.normalTitle" = "Play";
+"54d-UK-G3b.normalTitle" = "Tocar";
 
 /* Class = "UILabel"; text = "Agora tente recriá-la"; ObjectID = "Dla-G2-0Zh"; */
 "Dla-G2-0Zh.text" = "Agora tente recriá-la";
 
 /* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "Faf-v6-B29"; */
-"Faf-v6-B29.normalTitle" = "Delete";
+"Faf-v6-B29.normalTitle" = "Apagar";
 
 /* Class = "UIButton"; normalTitle = "Menu"; ObjectID = "JDi-oa-C6x"; */
 "JDi-oa-C6x.normalTitle" = "Menu";
 
 /* Class = "UIButton"; normalTitle = "Note"; ObjectID = "Wek-Cb-Lqq"; */
-"Wek-Cb-Lqq.normalTitle" = "Note";
+"Wek-Cb-Lqq.normalTitle" = "Nota";
 
 /* Class = "UIButton"; normalTitle = "Check"; ObjectID = "fRO-4e-UoB"; */
-"fRO-4e-UoB.normalTitle" = "Check";
+"fRO-4e-UoB.normalTitle" = "Checar";
 
 /* Class = "UIButton"; normalTitle = "Lock"; ObjectID = "wZp-79-lfC"; */
-"wZp-79-lfC.normalTitle" = "Lock";
+"wZp-79-lfC.normalTitle" = "Bloquear";

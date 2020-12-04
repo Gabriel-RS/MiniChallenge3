@@ -45,7 +45,7 @@
 		83616521257AD945001D6D8A /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83616523257AD945001D6D8A /* Notes.storyboard */; };
 		8361652B257ADAFD001D6D8A /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8361652D257ADAFD001D6D8A /* Tutorial.storyboard */; };
 		83616535257ADBF2001D6D8A /* Puzzle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83616537257ADBF2001D6D8A /* Puzzle.storyboard */; };
-		8361654C257AE12D001D6D8A /* Launchpad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8361654B257AE12D001D6D8A /* Launchpad.storyboard */; };
+		83616550257AE1A4001D6D8A /* Launchpad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83616552257AE1A4001D6D8A /* Launchpad.storyboard */; };
 		83F4666525730D6200C42430 /* feedback_interface.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83F4666425730D6200C42430 /* feedback_interface.mp3 */; };
 		8536C6012559B2C200706EE7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536C6002559B2C200706EE7 /* Note.swift */; };
 		8536C6092559B39D00706EE7 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536C6082559B39D00706EE7 /* Board.swift */; };
@@ -128,7 +128,9 @@
 		83616536257ADBF2001D6D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Puzzle.storyboard; sourceTree = "<group>"; };
 		8361653C257ADBF9001D6D8A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Puzzle.strings; sourceTree = "<group>"; };
 		8361653E257ADC02001D6D8A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Puzzle.strings"; sourceTree = "<group>"; };
-		8361654B257AE12D001D6D8A /* Launchpad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launchpad.storyboard; sourceTree = "<group>"; };
+		83616551257AE1A4001D6D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Launchpad.storyboard; sourceTree = "<group>"; };
+		83616559257AE1AE001D6D8A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Launchpad.strings; sourceTree = "<group>"; };
+		8361655D257AE1E6001D6D8A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Launchpad.strings"; sourceTree = "<group>"; };
 		83F4666425730D6200C42430 /* feedback_interface.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feedback_interface.mp3; sourceTree = "<group>"; };
 		8536C6002559B2C200706EE7 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		8536C6082559B39D00706EE7 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
@@ -267,7 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				5A6A09492551D47B00F143ED /* LaunchpadViewController.swift */,
-				8361654B257AE12D001D6D8A /* Launchpad.storyboard */,
+				83616552257AE1A4001D6D8A /* Launchpad.storyboard */,
 			);
 			path = Launchpad;
 			sourceTree = "<group>";
@@ -480,7 +482,7 @@
 				83616521257AD945001D6D8A /* Notes.storyboard in Resources */,
 				022EF284255C8A1B00C393AC /* marimba_nota_fa.mp3 in Resources */,
 				022EF27C255C8A1B00C393AC /* marimba_nota_la.mp3 in Resources */,
-				8361654C257AE12D001D6D8A /* Launchpad.storyboard in Resources */,
+				83616550257AE1A4001D6D8A /* Launchpad.storyboard in Resources */,
 				022EF289255C8A1B00C393AC /* marimba_nota_si.mp3 in Resources */,
 				5A122FEF2547490C00417AEE /* Main.storyboard in Resources */,
 			);
@@ -628,6 +630,16 @@
 				8361653E257ADC02001D6D8A /* pt-BR */,
 			);
 			name = Puzzle.storyboard;
+			sourceTree = "<group>";
+		};
+		83616552257AE1A4001D6D8A /* Launchpad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83616551257AE1A4001D6D8A /* Base */,
+				83616559257AE1AE001D6D8A /* en */,
+				8361655D257AE1E6001D6D8A /* pt-BR */,
+			);
+			name = Launchpad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

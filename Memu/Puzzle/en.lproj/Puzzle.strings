@@ -3,7 +3,7 @@
 "54d-UK-G3b.normalTitle" = "Play";
 
 /* Class = "UILabel"; text = "Agora tente recriá-la"; ObjectID = "Dla-G2-0Zh"; */
-"Dla-G2-0Zh.text" = "Now ";
+"Dla-G2-0Zh.text" = "Now try to recreate it";
 
 /* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "Faf-v6-B29"; */
 "Faf-v6-B29.normalTitle" = "Delete";
