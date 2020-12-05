@@ -97,9 +97,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3Z-nG-SSe">
-                                                    <rect key="frame" x="187" y="10" width="40" height="43"/>
+                                                    <rect key="frame" x="191.5" y="15" width="31" height="33"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="D3Z-nG-SSe" secondAttribute="height" multiplier="40:43" id="ED8-Pm-xGK"/>
+                                                        <constraint firstAttribute="width" secondItem="D3Z-nG-SSe" secondAttribute="height" multiplier="40:43" id="Eb0-lF-o6Q"/>
+                                                        <constraint firstAttribute="width" constant="31" id="n70-dG-91D"/>
                                                     </constraints>
                                                     <state key="normal" title="Play" image="play"/>
                                                     <connections>
@@ -111,7 +112,6 @@
                                             <constraints>
                                                 <constraint firstItem="D3Z-nG-SSe" firstAttribute="centerY" secondItem="Ony-fY-sUN" secondAttribute="centerY" id="Oek-Bs-a1i"/>
                                                 <constraint firstItem="D3Z-nG-SSe" firstAttribute="centerY" secondItem="Ony-fY-sUN" secondAttribute="centerY" id="XCe-x3-2lP"/>
-                                                <constraint firstAttribute="bottom" secondItem="D3Z-nG-SSe" secondAttribute="bottom" constant="10" id="mKG-Fh-aEJ"/>
                                                 <constraint firstItem="D3Z-nG-SSe" firstAttribute="centerX" secondItem="Ony-fY-sUN" secondAttribute="centerX" id="pK5-oQ-cdk"/>
                                                 <constraint firstItem="D3Z-nG-SSe" firstAttribute="centerX" secondItem="Ony-fY-sUN" secondAttribute="centerX" id="tdl-4L-H3F"/>
                                             </constraints>
