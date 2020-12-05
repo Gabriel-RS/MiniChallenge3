@@ -576,13 +576,6 @@
                                     <constraint firstItem="rc7-xm-QZG" firstAttribute="top" secondItem="Y5G-NH-G8g" secondAttribute="top" constant="-8" id="tyR-iT-4Dc"/>
                                 </constraints>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVV-Wt-von">
-                                <rect key="frame" x="0.0" y="44" width="414" height="1"/>
-                                <color key="backgroundColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="Izb-Hs-aMs"/>
-                                </constraints>
-                            </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aQH-Lg-UBC">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -614,16 +607,12 @@
                         <constraints>
                             <constraint firstItem="aQH-Lg-UBC" firstAttribute="top" secondItem="9nu-Js-QRl" secondAttribute="top" id="5cK-Wt-OXl"/>
                             <constraint firstItem="aQH-Lg-UBC" firstAttribute="leading" secondItem="9nu-Js-QRl" secondAttribute="leading" id="A4o-GV-8Sj"/>
-                            <constraint firstItem="QVV-Wt-von" firstAttribute="leading" secondItem="9nu-Js-QRl" secondAttribute="leading" id="TEf-Xm-Fhe"/>
-                            <constraint firstItem="QVV-Wt-von" firstAttribute="top" secondItem="aQH-Lg-UBC" secondAttribute="bottom" id="VqE-hd-chZ"/>
-                            <constraint firstItem="QVV-Wt-von" firstAttribute="top" secondItem="aQH-Lg-UBC" secondAttribute="bottom" id="Zyn-jR-6kC"/>
                             <constraint firstItem="Y5G-NH-G8g" firstAttribute="top" secondItem="WYv-Bz-S6A" secondAttribute="top" id="fYb-RT-g68"/>
                             <constraint firstItem="rc7-xm-QZG" firstAttribute="width" secondItem="9nu-Js-QRl" secondAttribute="width" id="k4T-Dx-tCT"/>
                             <constraint firstItem="Y5G-NH-G8g" firstAttribute="leading" secondItem="WYv-Bz-S6A" secondAttribute="leading" id="lXR-UF-JHM"/>
                             <constraint firstItem="WYv-Bz-S6A" firstAttribute="trailing" secondItem="Y5G-NH-G8g" secondAttribute="trailing" id="rT7-bc-DBh"/>
                             <constraint firstAttribute="trailing" secondItem="aQH-Lg-UBC" secondAttribute="trailing" id="rgz-ym-5Dg"/>
                             <constraint firstItem="WYv-Bz-S6A" firstAttribute="bottom" secondItem="Y5G-NH-G8g" secondAttribute="bottom" id="xF8-Kv-UYA"/>
-                            <constraint firstAttribute="trailing" secondItem="QVV-Wt-von" secondAttribute="trailing" id="xI7-3B-53Z"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="1430"/>

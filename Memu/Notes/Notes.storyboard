@@ -23,15 +23,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Só é possível selecionar 4 notas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHu-w5-fMN">
-                                <rect key="frame" x="28" y="171" width="358" height="21"/>
-                                <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="18"/>
-                                <color key="textColor" red="0.92711073160000002" green="0.33290818329999999" blue="0.39214605089999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="highlightedColor" red="0.92711073160000002" green="0.33290818329999999" blue="0.39214605089999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNi-Nk-pL6">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </textAttributes>
@@ -54,14 +48,14 @@
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wM2-n4-ubV">
-                                <rect key="frame" x="28" y="278" width="358" height="393"/>
+                                <rect key="frame" x="28" y="281.5" width="358" height="393"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psM-U2-fAx">
                                         <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="psM-U2-fAx" secondAttribute="height" multiplier="1:1" id="bH4-8J-hhU"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="22"/>
                                         <state key="normal" title="C (dó)" backgroundImage="pickBlueOff">
                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -72,7 +66,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBU-R3-Ml3">
                                         <rect key="frame" x="127" y="0.0" width="105" height="105"/>
-                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="22"/>
                                         <state key="normal" title="D (ré)" backgroundImage="pickGreenOff">
                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -83,7 +77,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAe-PO-TSD">
                                         <rect key="frame" x="253" y="140" width="105" height="105"/>
-                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="22"/>
                                         <state key="normal" title="A (lá)" backgroundImage="pickOrangeOff">
                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -94,7 +88,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFp-8d-i2o">
                                         <rect key="frame" x="253" y="0.0" width="105" height="105"/>
-                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="22"/>
                                         <state key="normal" title="E (mi)" backgroundImage="pickRedOff">
                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -105,7 +99,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIW-9U-Q0k">
                                         <rect key="frame" x="127" y="140" width="105" height="105"/>
-                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="22"/>
                                         <state key="normal" title="G (sol)" backgroundImage="pickPurpleOff">
                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -116,7 +110,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqb-oO-0o5">
                                         <rect key="frame" x="127" y="280" width="105" height="105"/>
-                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="22"/>
                                         <state key="normal" title="B (si)" backgroundImage="pickYellowOff">
                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -130,7 +124,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="sFa-It-kQi" secondAttribute="height" multiplier="1:1" id="U2L-m9-VbP"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="22"/>
                                         <state key="normal" title="F (fá)" backgroundImage="pickPinkOff">
                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -175,17 +169,24 @@
                                     <constraint firstItem="iIW-9U-Q0k" firstAttribute="height" secondItem="psM-U2-fAx" secondAttribute="height" id="z0Z-c3-CTc"/>
                                 </constraints>
                             </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Só é possível selecionar 4 notas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHu-w5-fMN">
+                                <rect key="frame" x="28" y="210.5" width="358" height="21"/>
+                                <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="18"/>
+                                <color key="textColor" red="0.92711073160000002" green="0.33290818329999999" blue="0.39214605089999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="highlightedColor" red="0.92711073160000002" green="0.33290818329999999" blue="0.39214605089999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="49p-L4-KBX"/>
                         <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="mHu-w5-fMN" firstAttribute="leading" secondItem="49p-L4-KBX" secondAttribute="leading" constant="28" id="1t1-98-NJS"/>
-                            <constraint firstItem="wM2-n4-ubV" firstAttribute="top" secondItem="mHu-w5-fMN" secondAttribute="bottom" constant="86" id="NeV-0V-Gwp"/>
+                            <constraint firstItem="wM2-n4-ubV" firstAttribute="centerY" secondItem="9V8-fe-BGg" secondAttribute="centerY" constant="30" id="5oj-KR-RIG"/>
+                            <constraint firstItem="wM2-n4-ubV" firstAttribute="centerX" secondItem="9V8-fe-BGg" secondAttribute="centerX" id="Dfk-P9-n1l"/>
                             <constraint firstItem="wNi-Nk-pL6" firstAttribute="leading" secondItem="49p-L4-KBX" secondAttribute="leading" id="RCA-Vg-5oa"/>
                             <constraint firstItem="wNi-Nk-pL6" firstAttribute="top" secondItem="49p-L4-KBX" secondAttribute="top" id="Saf-MT-XoN"/>
                             <constraint firstItem="wM2-n4-ubV" firstAttribute="leading" secondItem="49p-L4-KBX" secondAttribute="leading" constant="28" id="bK3-DN-K6h"/>
-                            <constraint firstItem="49p-L4-KBX" firstAttribute="bottom" secondItem="wM2-n4-ubV" secondAttribute="bottom" constant="191" id="dij-7P-Jfk"/>
                             <constraint firstItem="49p-L4-KBX" firstAttribute="trailing" secondItem="wM2-n4-ubV" secondAttribute="trailing" constant="28" id="dvR-0A-sUK"/>
+                            <constraint firstItem="wM2-n4-ubV" firstAttribute="top" secondItem="mHu-w5-fMN" secondAttribute="bottom" priority="750" constant="50" id="hGR-UY-DUG"/>
                             <constraint firstItem="49p-L4-KBX" firstAttribute="trailing" secondItem="mHu-w5-fMN" secondAttribute="trailing" constant="28" id="iId-xI-IIf"/>
                             <constraint firstItem="wNi-Nk-pL6" firstAttribute="centerX" secondItem="mHu-w5-fMN" secondAttribute="centerX" id="sDH-nL-dft"/>
                         </constraints>

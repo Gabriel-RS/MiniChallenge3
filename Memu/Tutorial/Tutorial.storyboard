@@ -147,13 +147,6 @@ A seguir, entenda como funciona:</string>
                                 <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9GJ-5z-8K6">
-                                <rect key="frame" x="0.0" y="88" width="414" height="1"/>
-                                <color key="backgroundColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="jpP-1o-tFD"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ujk-3F-9Mn"/>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
@@ -171,7 +164,6 @@ A seguir, entenda como funciona:</string>
                             <constraint firstItem="ujk-3F-9Mn" firstAttribute="trailing" secondItem="0qQ-i4-bzG" secondAttribute="trailing" constant="51.5" id="Jtv-49-0qa"/>
                             <constraint firstItem="ZAa-Cw-7o7" firstAttribute="top" secondItem="QuF-ps-81x" secondAttribute="bottom" constant="23" id="LqG-c2-Ngc"/>
                             <constraint firstItem="0qQ-i4-bzG" firstAttribute="trailing" secondItem="ZAa-Cw-7o7" secondAttribute="trailing" id="OSU-Go-4XD"/>
-                            <constraint firstAttribute="trailing" secondItem="9GJ-5z-8K6" secondAttribute="trailing" id="QMV-nQ-bDo"/>
                             <constraint firstItem="0qQ-i4-bzG" firstAttribute="trailing" secondItem="QuF-ps-81x" secondAttribute="trailing" id="RP0-Gb-G0s"/>
                             <constraint firstItem="Wav-XQ-c9t" firstAttribute="leading" secondItem="ujk-3F-9Mn" secondAttribute="leading" constant="36" id="UDy-We-gmi"/>
                             <constraint firstItem="0qQ-i4-bzG" firstAttribute="leading" secondItem="ARt-2K-gty" secondAttribute="trailing" constant="25" id="X2n-xd-fLE"/>
@@ -181,7 +173,6 @@ A seguir, entenda como funciona:</string>
                             <constraint firstItem="ujk-3F-9Mn" firstAttribute="trailing" secondItem="1Zk-r6-Jpj" secondAttribute="trailing" constant="119" id="auI-Yx-4J1"/>
                             <constraint firstItem="0qQ-i4-bzG" firstAttribute="trailing" secondItem="dvW-Vb-Kbk" secondAttribute="trailing" id="fx8-GG-Usu"/>
                             <constraint firstItem="5WO-u1-Ozv" firstAttribute="top" secondItem="ujk-3F-9Mn" secondAttribute="top" id="gq5-bQ-vaL"/>
-                            <constraint firstItem="9GJ-5z-8K6" firstAttribute="leading" secondItem="yOS-eh-t73" secondAttribute="leading" id="hZT-g1-P47"/>
                             <constraint firstItem="HS0-hU-CHq" firstAttribute="top" secondItem="oo7-L0-apu" secondAttribute="bottom" constant="26.5" id="heC-9L-7ug"/>
                             <constraint firstItem="1Zk-r6-Jpj" firstAttribute="leading" secondItem="ujk-3F-9Mn" secondAttribute="leading" constant="119" id="jyf-Dm-qal"/>
                             <constraint firstItem="EXz-0I-xLe" firstAttribute="centerX" secondItem="yOS-eh-t73" secondAttribute="centerX" id="lgr-2T-Bci"/>
@@ -193,7 +184,6 @@ A seguir, entenda como funciona:</string>
                             <constraint firstItem="ARt-2K-gty" firstAttribute="trailing" secondItem="HS0-hU-CHq" secondAttribute="trailing" id="rED-gC-NX2"/>
                             <constraint firstItem="ARt-2K-gty" firstAttribute="leading" secondItem="HS0-hU-CHq" secondAttribute="leading" id="rln-k4-hXt"/>
                             <constraint firstItem="0qQ-i4-bzG" firstAttribute="leading" secondItem="dvW-Vb-Kbk" secondAttribute="leading" id="sxz-Yj-zeB"/>
-                            <constraint firstItem="9GJ-5z-8K6" firstAttribute="top" secondItem="5WO-u1-Ozv" secondAttribute="bottom" id="uJy-ak-Eti"/>
                             <constraint firstItem="1Zk-r6-Jpj" firstAttribute="centerX" secondItem="yOS-eh-t73" secondAttribute="centerX" id="vbz-2L-ITp"/>
                             <constraint firstItem="ARt-2K-gty" firstAttribute="leading" secondItem="oo7-L0-apu" secondAttribute="leading" id="xnn-NV-qEJ"/>
                             <constraint firstItem="oo7-L0-apu" firstAttribute="bottom" secondItem="ZAa-Cw-7o7" secondAttribute="bottom" id="yIf-9Y-HgN"/>
@@ -201,7 +191,6 @@ A seguir, entenda como funciona:</string>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bottomNavView" destination="9GJ-5z-8K6" id="Poo-S3-FJM"/>
                         <outlet property="button" destination="1Zk-r6-Jpj" id="HVX-iv-Y9s"/>
                         <outlet property="navBar" destination="5WO-u1-Ozv" id="tnm-fm-MYm"/>
                         <outlet property="titleLabel" destination="EXz-0I-xLe" id="0rH-Dh-Xr4"/>

@@ -69,13 +69,6 @@
                                     <constraint firstItem="gVp-Hh-9Uo" firstAttribute="width" secondItem="C2F-V3-Gkz" secondAttribute="width" id="zBS-Ba-3iD"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNn-Ym-pMe">
-                                <rect key="frame" x="0.0" y="88" width="414" height="1"/>
-                                <color key="backgroundColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="3rv-yC-8YP"/>
-                                </constraints>
-                            </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFD-kw-cIt">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -106,15 +99,10 @@
                         <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ADY-8x-eBy" firstAttribute="centerY" secondItem="d8w-6I-qCD" secondAttribute="centerY" id="03r-O7-CpG"/>
-                            <constraint firstItem="XNn-Ym-pMe" firstAttribute="top" secondItem="WFD-kw-cIt" secondAttribute="bottom" id="LNX-Gv-ERV"/>
                             <constraint firstItem="WFD-kw-cIt" firstAttribute="trailing" secondItem="nzz-bh-snM" secondAttribute="trailing" id="cyb-js-Qjh"/>
                             <constraint firstItem="WFD-kw-cIt" firstAttribute="top" secondItem="nzz-bh-snM" secondAttribute="top" id="foa-O4-JWP"/>
-                            <constraint firstItem="XNn-Ym-pMe" firstAttribute="top" secondItem="WFD-kw-cIt" secondAttribute="bottom" id="qLY-Ss-pCp"/>
                             <constraint firstItem="WFD-kw-cIt" firstAttribute="leading" secondItem="nzz-bh-snM" secondAttribute="leading" id="qgq-Y6-pLu"/>
                             <constraint firstItem="ADY-8x-eBy" firstAttribute="centerX" secondItem="d8w-6I-qCD" secondAttribute="centerX" id="tW1-Sq-abb"/>
-                            <constraint firstAttribute="trailing" secondItem="XNn-Ym-pMe" secondAttribute="trailing" id="tmk-uz-JEo"/>
-                            <constraint firstItem="XNn-Ym-pMe" firstAttribute="leading" secondItem="d8w-6I-qCD" secondAttribute="leading" id="xSz-31-c3w"/>
-                            <constraint firstItem="XNn-Ym-pMe" firstAttribute="top" secondItem="WFD-kw-cIt" secondAttribute="bottom" id="zdd-ZC-8Hd"/>
                         </constraints>
                     </view>
                     <connections>
