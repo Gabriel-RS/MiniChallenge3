@@ -1,12 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "inicianteA.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "inicianteA-1.svg",
+      "filename" : "inicianteA.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },

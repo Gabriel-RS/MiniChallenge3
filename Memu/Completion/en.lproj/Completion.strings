@@ -3,7 +3,7 @@
 "1Ak-RJ-Qba.text" = "Game score:";
 
 /* Class = "UIButton"; normalTitle = "Menu Inicial"; ObjectID = "3LW-gR-mai"; */
-"3LW-gR-mai.normalTitle" = "Initial Menu ";
+"3LW-gR-mai.normalTitle" = "Home Screen";
 
 /* Class = "UIButton"; normalTitle = "Novo Jogo"; ObjectID = "D9L-NR-CFO"; */
 "D9L-NR-CFO.normalTitle" = "New Game";
