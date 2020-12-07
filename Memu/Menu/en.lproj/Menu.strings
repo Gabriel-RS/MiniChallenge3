@@ -6,7 +6,7 @@
 "C2F-V3-Gkz.normalTitle" = "New Game";
 
 /* Class = "UIButton"; normalTitle = "Menu Inicial"; ObjectID = "gVp-Hh-9Uo"; */
-"gVp-Hh-9Uo.normalTitle" = "Initial Menu";
+"gVp-Hh-9Uo.normalTitle" = "Home Screen";
 
 /* Class = "UINavigationItem"; title = "Menu"; ObjectID = "o15-6S-ee2"; */
 "o15-6S-ee2.title" = "Menu";
