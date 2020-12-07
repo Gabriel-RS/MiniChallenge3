@@ -45,7 +45,7 @@
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="350" id="34E-qW-Re9"/>
                                             <constraint firstAttribute="width" secondItem="Krs-In-53W" secondAttribute="height" multiplier="144:175" id="h5Y-jg-lQD"/>
                                         </constraints>
-HEAD:Memu/Home Screen/HomeScreen.storyboard
+
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="KAi-7H-dye">
                                         <rect key="frame" x="0.0" y="430" width="288" height="216"/>
@@ -128,7 +128,7 @@ HEAD:Memu/Home Screen/HomeScreen.storyboard
                                             <segue destination="Vra-5s-wx9" kind="presentation" id="BXO-3X-8Uw"/>
                                         </connections>
                                     </button>
-origin/MergeFixCopy:Memu/Home Screen/Base.lproj/HomeScreen.storyboard
+
                                 </subviews>
                             </stackView>
                         </subviews>

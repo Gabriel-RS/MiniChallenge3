@@ -70,11 +70,11 @@
 Monte uma melodia e tente recriá-la em um puzzle que testa sua memória.
  
 A seguir, entenda como funciona:</string>
-HEAD:Memu/Tutorial/Tutorial.storyboard
+
                                 <fontDescription key="fontDescription" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="22"/>
 
                                 <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="22"/>
-origin/MergeFixCopy:Memu/Tutorial/Base.lproj/Tutorial.storyboard
+
                                 <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -128,15 +128,13 @@ origin/MergeFixCopy:Memu/Tutorial/Base.lproj/Tutorial.storyboard
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1Zk-r6-Jpj" secondAttribute="height" multiplier="77:47" constant="48.212765957446805" id="pg8-AC-Bty"/>
                                 </constraints>
-HEAD:Memu/Tutorial/Tutorial.storyboard
+
                                 <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="24"/>
                                 <state key="normal" title="Jogar" backgroundImage="jogar">
                                     <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 
                                 <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="30"/>
-                                <state key="normal" title="Jogar" backgroundImage="jogar">
-                                    <color key="titleColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-origin/MergeFixCopy:Memu/Tutorial/Base.lproj/Tutorial.storyboard
+
                                 </state>
                                 <connections>
                                     <action selector="playTutorial:" destination="YbS-vD-RU7" eventType="touchUpInside" id="RFj-aO-Rfc"/>

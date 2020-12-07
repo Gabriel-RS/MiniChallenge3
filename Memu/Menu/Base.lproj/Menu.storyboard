@@ -31,11 +31,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="30"/>
                                         <state key="normal" title="Novo jogo" backgroundImage="novoJogo">
-
                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-
-                                            <color key="titleColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-
                                         </state>
                                         <connections>
                                             <action selector="btnNewGame:" destination="Abo-YD-lzX" eventType="touchUpInside" id="DRd-04-1ng"/>
@@ -46,15 +42,9 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="gVp-Hh-9Uo" secondAttribute="height" multiplier="48:13" constant="4" id="6Pt-Dn-vpj"/>
                                         </constraints>
-
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="30"/>
                                         <state key="normal" title="Menu Inicial" backgroundImage="menuInicial">
                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-
-                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="30"/>
-                                        <state key="normal" title="Menu Inicial" backgroundImage="menuInicial">
-                                            <color key="titleColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-
                                         </state>
                                         <connections>
                                             <action selector="btnHome:" destination="Abo-YD-lzX" eventType="touchUpInside" id="AhA-h5-H5B"/>
@@ -64,11 +54,7 @@
                                         <rect key="frame" x="0.0" y="300" width="299" height="80"/>
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="30"/>
                                         <state key="normal" title="Ajuda" backgroundImage="ajuda">
-
                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-
-                                            <color key="titleColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-
                                         </state>
                                         <connections>
                                             <action selector="btnHelp:" destination="Abo-YD-lzX" eventType="touchUpInside" id="DMq-xQ-zxS"/>
