@@ -57,7 +57,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="22"/>
                                         <state key="normal" title="C (dó)" backgroundImage="pickBlueOff">
-                                            <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" red="0.396078431372549" green="0.42745098039215684" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <state key="selected" backgroundImage="pickBlueOn"/>
                                         <connections>
