@@ -52,7 +52,7 @@
                                 </items>
                             </navigationBar>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Bem Vindo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="EXz-0I-xLe">
-                                <rect key="frame" x="133.5" y="72" width="147" height="35"/>
+                                <rect key="frame" x="133" y="72" width="148.5" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="vab-KM-UkQ"/>
                                 </constraints>
@@ -70,11 +70,7 @@
 Monte uma melodia e tente recriá-la em um puzzle que testa sua memória.
  
 A seguir, entenda como funciona:</string>
-
                                 <fontDescription key="fontDescription" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="22"/>
-
-                                <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="22"/>
-
                                 <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -128,13 +124,9 @@ A seguir, entenda como funciona:</string>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1Zk-r6-Jpj" secondAttribute="height" multiplier="77:47" constant="48.212765957446805" id="pg8-AC-Bty"/>
                                 </constraints>
-
                                 <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="24"/>
                                 <state key="normal" title="Jogar" backgroundImage="jogar">
                                     <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-
-                                <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="30"/>
-
                                 </state>
                                 <connections>
                                     <action selector="playTutorial:" destination="YbS-vD-RU7" eventType="touchUpInside" id="RFj-aO-Rfc"/>
