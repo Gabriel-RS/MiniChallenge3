@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6aB-an-ka7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6aB-an-ka7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+HEAD:Memu/Notes/Notes.storyboard
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+origin/MergeFixCopy:Memu/Notes/Base.lproj/Notes.storyboard
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -55,9 +59,24 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="psM-U2-fAx" secondAttribute="height" multiplier="1:1" id="bH4-8J-hhU"/>
                                         </constraints>
+HEAD:Memu/Notes/Notes.storyboard
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="22"/>
                                         <state key="normal" title="C (dó)" backgroundImage="pickBlueOff">
                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="24"/>
+                                        <state key="normal" title="C (dó)" backgroundImage="pickBlueOff">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="C (dó)">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <font key="NSFont" size="24" name="SFCompactDisplay-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="titleColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+origin/MergeFixCopy:Memu/Notes/Base.lproj/Notes.storyboard
                                         </state>
                                         <state key="selected" backgroundImage="pickBlueOn"/>
                                         <connections>
@@ -66,9 +85,15 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBU-R3-Ml3">
                                         <rect key="frame" x="127" y="0.0" width="105" height="105"/>
+HEAD:Memu/Notes/Notes.storyboard
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="22"/>
                                         <state key="normal" title="D (ré)" backgroundImage="pickGreenOff">
                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="24"/>
+                                        <state key="normal" title="D (ré)" backgroundImage="pickGreenOff">
+                                            <color key="titleColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+origin/MergeFixCopy:Memu/Notes/Base.lproj/Notes.storyboard
                                         </state>
                                         <state key="selected" backgroundImage="pickGreenOn"/>
                                         <connections>
@@ -77,9 +102,15 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAe-PO-TSD">
                                         <rect key="frame" x="253" y="140" width="105" height="105"/>
+HEAD:Memu/Notes/Notes.storyboard
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="22"/>
                                         <state key="normal" title="A (lá)" backgroundImage="pickOrangeOff">
                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="24"/>
+                                        <state key="normal" title="A (lá)" backgroundImage="pickOrangeOff">
+                                            <color key="titleColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+ origin/MergeFixCopy:Memu/Notes/Base.lproj/Notes.storyboard
                                         </state>
                                         <state key="selected" backgroundImage="pickOrangeOn"/>
                                         <connections>
@@ -88,9 +119,15 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFp-8d-i2o">
                                         <rect key="frame" x="253" y="0.0" width="105" height="105"/>
+HEAD:Memu/Notes/Notes.storyboard
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="22"/>
                                         <state key="normal" title="E (mi)" backgroundImage="pickRedOff">
                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="24"/>
+                                        <state key="normal" title="E (mi)" backgroundImage="pickRedOff">
+                                            <color key="titleColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+origin/MergeFixCopy:Memu/Notes/Base.lproj/Notes.storyboard
                                         </state>
                                         <state key="selected" backgroundImage="pickRedOn"/>
                                         <connections>
@@ -99,9 +136,15 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIW-9U-Q0k">
                                         <rect key="frame" x="127" y="140" width="105" height="105"/>
+HEAD:Memu/Notes/Notes.storyboard
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="22"/>
                                         <state key="normal" title="G (sol)" backgroundImage="pickPurpleOff">
                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="24"/>
+                                        <state key="normal" title="G (sol)" backgroundImage="pickPurpleOff">
+                                            <color key="titleColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+origin/MergeFixCopy:Memu/Notes/Base.lproj/Notes.storyboard
                                         </state>
                                         <state key="selected" backgroundImage="pickPurpleOn"/>
                                         <connections>
@@ -110,9 +153,15 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqb-oO-0o5">
                                         <rect key="frame" x="127" y="280" width="105" height="105"/>
+HEAD:Memu/Notes/Notes.storyboard
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="22"/>
                                         <state key="normal" title="B (si)" backgroundImage="pickYellowOff">
                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="24"/>
+                                        <state key="normal" title="B (si)" backgroundImage="pickYellowOff">
+                                            <color key="titleColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+origin/MergeFixCopy:Memu/Notes/Base.lproj/Notes.storyboard
                                         </state>
                                         <state key="selected" backgroundImage="pickYellowOn"/>
                                         <connections>
@@ -124,9 +173,15 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="sFa-It-kQi" secondAttribute="height" multiplier="1:1" id="U2L-m9-VbP"/>
                                         </constraints>
+HEAD:Memu/Notes/Notes.storyboard
                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="22"/>
                                         <state key="normal" title="F (fá)" backgroundImage="pickPinkOff">
                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+
+                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="24"/>
+                                        <state key="normal" title="F (fá)" backgroundImage="pickPinkOff">
+                                            <color key="titleColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+origin/MergeFixCopy:Memu/Notes/Base.lproj/Notes.storyboard
                                         </state>
                                         <state key="selected" backgroundImage="pickPinkOn"/>
                                         <connections>

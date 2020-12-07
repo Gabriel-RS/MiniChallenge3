@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wnR-8y-xY7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wnR-8y-xY7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,6 +45,7 @@
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="350" id="34E-qW-Re9"/>
                                             <constraint firstAttribute="width" secondItem="Krs-In-53W" secondAttribute="height" multiplier="144:175" id="h5Y-jg-lQD"/>
                                         </constraints>
+HEAD:Memu/Home Screen/HomeScreen.storyboard
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="KAi-7H-dye">
                                         <rect key="frame" x="0.0" y="430" width="288" height="216"/>
@@ -97,6 +98,37 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
+
+                                        <state key="normal" title="Reward" image="reward"/>
+                                        <connections>
+                                            <action selector="btnRewards:" destination="wnR-8y-xY7" eventType="touchUpInside" id="vuX-oJ-bJh"/>
+                                            <segue destination="GY6-kM-68C" kind="presentation" id="qDa-hH-wMZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26v-XB-1xk">
+                                        <rect key="frame" x="0.0" y="-2" width="260" height="114.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Jogar" backgroundImage="jogar">
+                                            <color key="titleColor" red="0.31764705882352939" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnPlay:" destination="wnR-8y-xY7" eventType="touchUpInside" id="e1S-j6-rXl"/>
+                                            <segue destination="qOy-HD-MYn" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Lqw-qj-RrB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAw-g3-yBf">
+                                        <rect key="frame" x="50" y="127.5" width="71" height="76"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="dAw-g3-yBf" secondAttribute="height" multiplier="71:76" id="MwO-wy-zYo"/>
+                                        </constraints>
+                                        <state key="normal" title="Help" image="help"/>
+                                        <connections>
+                                            <action selector="btnHelp:" destination="wnR-8y-xY7" eventType="touchUpInside" id="TrN-4T-Ldo"/>
+                                            <segue destination="Vra-5s-wx9" kind="presentation" id="BXO-3X-8Uw"/>
+                                        </connections>
+                                    </button>
+origin/MergeFixCopy:Memu/Home Screen/Base.lproj/HomeScreen.storyboard
                                 </subviews>
                             </stackView>
                         </subviews>

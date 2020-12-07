@@ -1,0 +1,18 @@
+
+/* Class = "UIButton"; normalTitle = "Play"; ObjectID = "D3Z-nG-SSe"; */
+"D3Z-nG-SSe.normalTitle" = "Play";
+
+/* Class = "UIButton"; normalTitle = "Menu"; ObjectID = "EZz-k9-FG1"; */
+"EZz-k9-FG1.normalTitle" = "Menu";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "Ey9-cO-jpw"; */
+"Ey9-cO-jpw.normalTitle" = "Delete";
+
+/* Class = "UIButton"; normalTitle = "Note"; ObjectID = "MTA-pw-zyP"; */
+"MTA-pw-zyP.normalTitle" = "Note";
+
+/* Class = "UILabel"; text = "Crie uma melodia"; ObjectID = "OiL-AE-fSp"; */
+"OiL-AE-fSp.text" = "Create a melody";
+
+/* Class = "UIButton"; normalTitle = "Check"; ObjectID = "noR-Ku-2iL"; */
+"noR-Ku-2iL.normalTitle" = "Check";

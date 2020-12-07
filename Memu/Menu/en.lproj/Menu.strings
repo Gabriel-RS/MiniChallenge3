@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; normalTitle = "Ajuda"; ObjectID = "9sZ-0O-WlE"; */
+"9sZ-0O-WlE.normalTitle" = "Help";
+
+/* Class = "UIButton"; normalTitle = "Novo jogo"; ObjectID = "C2F-V3-Gkz"; */
+"C2F-V3-Gkz.normalTitle" = "New Game";
+
+/* Class = "UIButton"; normalTitle = "Menu Inicial"; ObjectID = "gVp-Hh-9Uo"; */
+"gVp-Hh-9Uo.normalTitle" = "Initial Menu";
+
+/* Class = "UINavigationItem"; title = "Menu"; ObjectID = "o15-6S-ee2"; */
+"o15-6S-ee2.title" = "Menu";

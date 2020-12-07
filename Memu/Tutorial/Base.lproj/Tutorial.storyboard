@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YbS-vD-RU7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YbS-vD-RU7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -70,7 +70,11 @@
 Monte uma melodia e tente recriá-la em um puzzle que testa sua memória.
  
 A seguir, entenda como funciona:</string>
+HEAD:Memu/Tutorial/Tutorial.storyboard
                                 <fontDescription key="fontDescription" name="SFCompactDisplay-Regular" family="SF Compact Display" pointSize="22"/>
+
+                                <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="22"/>
+origin/MergeFixCopy:Memu/Tutorial/Base.lproj/Tutorial.storyboard
                                 <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -124,9 +128,15 @@ A seguir, entenda como funciona:</string>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1Zk-r6-Jpj" secondAttribute="height" multiplier="77:47" constant="48.212765957446805" id="pg8-AC-Bty"/>
                                 </constraints>
+HEAD:Memu/Tutorial/Tutorial.storyboard
                                 <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="24"/>
                                 <state key="normal" title="Jogar" backgroundImage="jogar">
                                     <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+
+                                <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="30"/>
+                                <state key="normal" title="Jogar" backgroundImage="jogar">
+                                    <color key="titleColor" red="0.31803518530000002" green="0.34060508010000001" blue="0.37647563220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+origin/MergeFixCopy:Memu/Tutorial/Base.lproj/Tutorial.storyboard
                                 </state>
                                 <connections>
                                     <action selector="playTutorial:" destination="YbS-vD-RU7" eventType="touchUpInside" id="RFj-aO-Rfc"/>

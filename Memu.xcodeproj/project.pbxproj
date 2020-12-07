@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		022EF23D255C859300C393AC /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 022EF23C255C859300C393AC /* Notes.storyboard */; };
 		022EF27C255C8A1B00C393AC /* marimba_nota_la.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 022EF262255C8A1B00C393AC /* marimba_nota_la.mp3 */; };
 		022EF282255C8A1B00C393AC /* feedback_negativo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 022EF269255C8A1B00C393AC /* feedback_negativo.mp3 */; };
 		022EF283255C8A1B00C393AC /* marimba_nota_re.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 022EF26A255C8A1B00C393AC /* marimba_nota_re.mp3 */; };
@@ -20,7 +19,6 @@
 		022EF291255C8A1B00C393AC /* feedback_recompensa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 022EF279255C8A1B00C393AC /* feedback_recompensa.mp3 */; };
 		022EF293255C8A1B00C393AC /* marimba_nota_mi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 022EF27B255C8A1B00C393AC /* marimba_nota_mi.mp3 */; };
 		027EB5FF255DAA6A00DD7720 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027EB5FD255DAA6900DD7720 /* TutorialViewController.swift */; };
-		027EB600255DAA6A00DD7720 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027EB5FE255DAA6900DD7720 /* Tutorial.storyboard */; };
 		5A122FE82547490C00417AEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A122FE72547490C00417AEE /* AppDelegate.swift */; };
 		5A122FEA2547490C00417AEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A122FE92547490C00417AEE /* SceneDelegate.swift */; };
 		5A122FEC2547490C00417AEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A122FEB2547490C00417AEE /* ViewController.swift */; };
@@ -32,10 +30,6 @@
 		5A12300D2547490D00417AEE /* MemuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A12300C2547490D00417AEE /* MemuUITests.swift */; };
 		5A19B1A62554943E00C4F804 /* LaunchpadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A19B1A52554943E00C4F804 /* LaunchpadCell.swift */; };
 		5A19B1AE2554988A00C4F804 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A19B1AD2554988A00C4F804 /* ButtonCell.swift */; };
-		5A6A09122551D2B600F143ED /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09112551D2B600F143ED /* HomeScreen.storyboard */; };
-		5A6A09172551D2C000F143ED /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09162551D2C000F143ED /* Menu.storyboard */; };
-		5A6A091C2551D2D200F143ED /* Launchpad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A091B2551D2D200F143ED /* Launchpad.storyboard */; };
-		5A6A09262551D2EB00F143ED /* Puzzle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09252551D2EB00F143ED /* Puzzle.storyboard */; };
 		5A6A092B2551D32200F143ED /* Rewards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A092A2551D32200F143ED /* Rewards.storyboard */; };
 		5A6A093D2551D41300F143ED /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A093C2551D41300F143ED /* MenuViewController.swift */; };
 		5A6A09452551D44800F143ED /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09442551D44800F143ED /* HomeScreenViewController.swift */; };
@@ -46,9 +40,18 @@
 		5A6A09632551D83C00F143ED /* Completion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A6A09622551D83C00F143ED /* Completion.storyboard */; };
 		5A6A09682551D86900F143ED /* CompletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09672551D86900F143ED /* CompletionViewController.swift */; };
 		5A6A09712551E6D700F143ED /* SequenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09702551E6D700F143ED /* SequenceCell.swift */; };
+
 		5AEF384C257AF3BD007FAF56 /* SF-Compact-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5AEF384B257AF3A2007FAF56 /* SF-Compact-Display-Bold.otf */; };
 		5AEF3852257AF65F007FAF56 /* SF-Pro-Rounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5AEF3850257AF65F007FAF56 /* SF-Pro-Rounded-Regular.otf */; };
 		5AEF3853257AF65F007FAF56 /* SF-Compact-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5AEF3851257AF65F007FAF56 /* SF-Compact-Display-Regular.otf */; };
+
+		836164F5257AD697001D6D8A /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836164F7257AD697001D6D8A /* HomeScreen.storyboard */; };
+		83616509257AD765001D6D8A /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8361650B257AD765001D6D8A /* Menu.storyboard */; };
+		83616521257AD945001D6D8A /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83616523257AD945001D6D8A /* Notes.storyboard */; };
+		8361652B257ADAFD001D6D8A /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8361652D257ADAFD001D6D8A /* Tutorial.storyboard */; };
+		83616535257ADBF2001D6D8A /* Puzzle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83616537257ADBF2001D6D8A /* Puzzle.storyboard */; };
+		83616550257AE1A4001D6D8A /* Launchpad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83616552257AE1A4001D6D8A /* Launchpad.storyboard */; };
+
 		83F4666525730D6200C42430 /* feedback_interface.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83F4666425730D6200C42430 /* feedback_interface.mp3 */; };
 		8536C6012559B2C200706EE7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536C6002559B2C200706EE7 /* Note.swift */; };
 		8536C6092559B39D00706EE7 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536C6082559B39D00706EE7 /* Board.swift */; };
@@ -75,7 +78,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		022EF23C255C859300C393AC /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		022EF262255C8A1B00C393AC /* marimba_nota_la.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_la.mp3; sourceTree = "<group>"; };
 		022EF269255C8A1B00C393AC /* feedback_negativo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feedback_negativo.mp3; sourceTree = "<group>"; };
 		022EF26A255C8A1B00C393AC /* marimba_nota_re.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_re.mp3; sourceTree = "<group>"; };
@@ -88,7 +90,6 @@
 		022EF279255C8A1B00C393AC /* feedback_recompensa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feedback_recompensa.mp3; sourceTree = "<group>"; };
 		022EF27B255C8A1B00C393AC /* marimba_nota_mi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba_nota_mi.mp3; sourceTree = "<group>"; };
 		027EB5FD255DAA6900DD7720 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
-		027EB5FE255DAA6900DD7720 /* Tutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		5A122FE42547490C00417AEE /* Memu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A122FE72547490C00417AEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A122FE92547490C00417AEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,10 +107,6 @@
 		5A12300E2547490D00417AEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A19B1A52554943E00C4F804 /* LaunchpadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadCell.swift; sourceTree = "<group>"; };
 		5A19B1AD2554988A00C4F804 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
-		5A6A09112551D2B600F143ED /* HomeScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreen.storyboard; sourceTree = "<group>"; };
-		5A6A09162551D2C000F143ED /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
-		5A6A091B2551D2D200F143ED /* Launchpad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launchpad.storyboard; sourceTree = "<group>"; };
-		5A6A09252551D2EB00F143ED /* Puzzle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Puzzle.storyboard; sourceTree = "<group>"; };
 		5A6A092A2551D32200F143ED /* Rewards.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rewards.storyboard; sourceTree = "<group>"; };
 		5A6A093C2551D41300F143ED /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		5A6A09442551D44800F143ED /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
@@ -120,9 +117,32 @@
 		5A6A09622551D83C00F143ED /* Completion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Completion.storyboard; sourceTree = "<group>"; };
 		5A6A09672551D86900F143ED /* CompletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionViewController.swift; sourceTree = "<group>"; };
 		5A6A09702551E6D700F143ED /* SequenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceCell.swift; sourceTree = "<group>"; };
+
 		5AEF384B257AF3A2007FAF56 /* SF-Compact-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Display-Bold.otf"; sourceTree = "<group>"; };
 		5AEF3850257AF65F007FAF56 /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
 		5AEF3851257AF65F007FAF56 /* SF-Compact-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Display-Regular.otf"; sourceTree = "<group>"; };
+
+		836164F0257AD67B001D6D8A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		836164F1257AD67C001D6D8A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		836164F6257AD697001D6D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeScreen.storyboard; sourceTree = "<group>"; };
+		83616501257AD6CD001D6D8A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/HomeScreen.strings; sourceTree = "<group>"; };
+		83616505257AD704001D6D8A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/HomeScreen.strings"; sourceTree = "<group>"; };
+		8361650A257AD765001D6D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Menu.storyboard; sourceTree = "<group>"; };
+		83616512257AD76E001D6D8A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Menu.strings; sourceTree = "<group>"; };
+		83616516257AD7D6001D6D8A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Menu.strings"; sourceTree = "<group>"; };
+		83616522257AD945001D6D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Notes.storyboard; sourceTree = "<group>"; };
+		83616528257AD978001D6D8A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Notes.strings; sourceTree = "<group>"; };
+		8361652A257AD97B001D6D8A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Notes.strings"; sourceTree = "<group>"; };
+		8361652C257ADAFD001D6D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Tutorial.storyboard; sourceTree = "<group>"; };
+		83616532257ADB06001D6D8A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Tutorial.strings; sourceTree = "<group>"; };
+		83616534257ADB0A001D6D8A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Tutorial.strings"; sourceTree = "<group>"; };
+		83616536257ADBF2001D6D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Puzzle.storyboard; sourceTree = "<group>"; };
+		8361653C257ADBF9001D6D8A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Puzzle.strings; sourceTree = "<group>"; };
+		8361653E257ADC02001D6D8A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Puzzle.strings"; sourceTree = "<group>"; };
+		83616551257AE1A4001D6D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Launchpad.storyboard; sourceTree = "<group>"; };
+		83616559257AE1AE001D6D8A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Launchpad.strings; sourceTree = "<group>"; };
+		8361655D257AE1E6001D6D8A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Launchpad.strings"; sourceTree = "<group>"; };
+
 		83F4666425730D6200C42430 /* feedback_interface.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feedback_interface.mp3; sourceTree = "<group>"; };
 		8536C6002559B2C200706EE7 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		8536C6082559B39D00706EE7 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
@@ -168,7 +188,7 @@
 		027EB5FC255DAA6900DD7720 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				027EB5FE255DAA6900DD7720 /* Tutorial.storyboard */,
+				8361652D257ADAFD001D6D8A /* Tutorial.storyboard */,
 				027EB5FD255DAA6900DD7720 /* TutorialViewController.swift */,
 			);
 			name = Tutorial;
@@ -243,7 +263,7 @@
 		5A6A090A2551CFFD00F143ED /* Home Screen */ = {
 			isa = PBXGroup;
 			children = (
-				5A6A09112551D2B600F143ED /* HomeScreen.storyboard */,
+				836164F7257AD697001D6D8A /* HomeScreen.storyboard */,
 				5A6A09442551D44800F143ED /* HomeScreenViewController.swift */,
 			);
 			path = "Home Screen";
@@ -252,7 +272,7 @@
 		5A6A090B2551D12700F143ED /* Notes */ = {
 			isa = PBXGroup;
 			children = (
-				022EF23C255C859300C393AC /* Notes.storyboard */,
+				83616523257AD945001D6D8A /* Notes.storyboard */,
 				5A6A094E2551D48C00F143ED /* NotesViewController.swift */,
 			);
 			path = Notes;
@@ -261,8 +281,8 @@
 		5A6A090C2551D16000F143ED /* Launchpad */ = {
 			isa = PBXGroup;
 			children = (
-				5A6A091B2551D2D200F143ED /* Launchpad.storyboard */,
 				5A6A09492551D47B00F143ED /* LaunchpadViewController.swift */,
+				83616552257AE1A4001D6D8A /* Launchpad.storyboard */,
 			);
 			path = Launchpad;
 			sourceTree = "<group>";
@@ -270,7 +290,7 @@
 		5A6A090E2551D18000F143ED /* Puzzle */ = {
 			isa = PBXGroup;
 			children = (
-				5A6A09252551D2EB00F143ED /* Puzzle.storyboard */,
+				83616537257ADBF2001D6D8A /* Puzzle.storyboard */,
 				5A6A09542551D4AA00F143ED /* PuzzleViewController.swift */,
 			);
 			path = Puzzle;
@@ -279,7 +299,7 @@
 		5A6A090F2551D1BA00F143ED /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				5A6A09162551D2C000F143ED /* Menu.storyboard */,
+				8361650B257AD765001D6D8A /* Menu.storyboard */,
 				5A6A093C2551D41300F143ED /* MenuViewController.swift */,
 			);
 			path = Menu;
@@ -446,6 +466,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 5A122FDB2547490C00417AEE;
 			productRefGroup = 5A122FE52547490C00417AEE /* Products */;
@@ -468,26 +489,31 @@
 				5AEF3852257AF65F007FAF56 /* SF-Pro-Rounded-Regular.otf in Resources */,
 				022EF285255C8A1B00C393AC /* feedback_positivo.mp3 in Resources */,
 				022EF291255C8A1B00C393AC /* feedback_recompensa.mp3 in Resources */,
+
 				5AEF3853257AF65F007FAF56 /* SF-Compact-Display-Regular.otf in Resources */,
 				5A6A09172551D2C000F143ED /* Menu.storyboard in Resources */,
 				027EB600255DAA6A00DD7720 /* Tutorial.storyboard in Resources */,
+
+				83616509257AD765001D6D8A /* Menu.storyboard in Resources */,
+				8361652B257ADAFD001D6D8A /* Tutorial.storyboard in Resources */,
+
 				5A6A09632551D83C00F143ED /* Completion.storyboard in Resources */,
 				5A6A092B2551D32200F143ED /* Rewards.storyboard in Resources */,
 				022EF283255C8A1B00C393AC /* marimba_nota_re.mp3 in Resources */,
-				5A6A09262551D2EB00F143ED /* Puzzle.storyboard in Resources */,
+				83616535257ADBF2001D6D8A /* Puzzle.storyboard in Resources */,
 				022EF286255C8A1B00C393AC /* marimba_nota_do.mp3 in Resources */,
 				022EF282255C8A1B00C393AC /* feedback_negativo.mp3 in Resources */,
 				022EF293255C8A1B00C393AC /* marimba_nota_mi.mp3 in Resources */,
 				5A122FF72547490D00417AEE /* LaunchScreen.storyboard in Resources */,
 				83F4666525730D6200C42430 /* feedback_interface.mp3 in Resources */,
-				5A6A09122551D2B600F143ED /* HomeScreen.storyboard in Resources */,
-				5A6A091C2551D2D200F143ED /* Launchpad.storyboard in Resources */,
+				836164F5257AD697001D6D8A /* HomeScreen.storyboard in Resources */,
 				022EF288255C8A1B00C393AC /* marimba_nota_sol.mp3 in Resources */,
 				5A122FF42547490D00417AEE /* Assets.xcassets in Resources */,
 				022EF287255C8A1B00C393AC /* feedback_bloqueada.mp3 in Resources */,
-				022EF23D255C859300C393AC /* Notes.storyboard in Resources */,
+				83616521257AD945001D6D8A /* Notes.storyboard in Resources */,
 				022EF284255C8A1B00C393AC /* marimba_nota_fa.mp3 in Resources */,
 				022EF27C255C8A1B00C393AC /* marimba_nota_la.mp3 in Resources */,
+				83616550257AE1A4001D6D8A /* Launchpad.storyboard in Resources */,
 				022EF289255C8A1B00C393AC /* marimba_nota_si.mp3 in Resources */,
 				5A122FEF2547490C00417AEE /* Main.storyboard in Resources */,
 			);
@@ -573,6 +599,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				5A122FEE2547490C00417AEE /* Base */,
+				836164F0257AD67B001D6D8A /* pt-BR */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -581,8 +608,69 @@
 			isa = PBXVariantGroup;
 			children = (
 				5A122FF62547490D00417AEE /* Base */,
+				836164F1257AD67C001D6D8A /* pt-BR */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		836164F7257AD697001D6D8A /* HomeScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				836164F6257AD697001D6D8A /* Base */,
+				83616501257AD6CD001D6D8A /* en */,
+				83616505257AD704001D6D8A /* pt-BR */,
+			);
+			name = HomeScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8361650B257AD765001D6D8A /* Menu.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8361650A257AD765001D6D8A /* Base */,
+				83616512257AD76E001D6D8A /* en */,
+				83616516257AD7D6001D6D8A /* pt-BR */,
+			);
+			name = Menu.storyboard;
+			sourceTree = "<group>";
+		};
+		83616523257AD945001D6D8A /* Notes.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83616522257AD945001D6D8A /* Base */,
+				83616528257AD978001D6D8A /* en */,
+				8361652A257AD97B001D6D8A /* pt-BR */,
+			);
+			name = Notes.storyboard;
+			sourceTree = "<group>";
+		};
+		8361652D257ADAFD001D6D8A /* Tutorial.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8361652C257ADAFD001D6D8A /* Base */,
+				83616532257ADB06001D6D8A /* en */,
+				83616534257ADB0A001D6D8A /* pt-BR */,
+			);
+			name = Tutorial.storyboard;
+			sourceTree = "<group>";
+		};
+		83616537257ADBF2001D6D8A /* Puzzle.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83616536257ADBF2001D6D8A /* Base */,
+				8361653C257ADBF9001D6D8A /* en */,
+				8361653E257ADC02001D6D8A /* pt-BR */,
+			);
+			name = Puzzle.storyboard;
+			sourceTree = "<group>";
+		};
+		83616552257AE1A4001D6D8A /* Launchpad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83616551257AE1A4001D6D8A /* Base */,
+				83616559257AE1AE001D6D8A /* en */,
+				8361655D257AE1E6001D6D8A /* pt-BR */,
+			);
+			name = Launchpad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -592,6 +680,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -653,6 +742,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
