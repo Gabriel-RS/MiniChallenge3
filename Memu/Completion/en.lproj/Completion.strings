@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "Pontuação da partida:"; ObjectID = "1Ak-RJ-Qba"; */
+"1Ak-RJ-Qba.text" = "Game score:";
+
+/* Class = "UIButton"; normalTitle = "Menu Inicial"; ObjectID = "3LW-gR-mai"; */
+"3LW-gR-mai.normalTitle" = "Initial Menu ";
+
+/* Class = "UIButton"; normalTitle = "Novo Jogo"; ObjectID = "D9L-NR-CFO"; */
+"D9L-NR-CFO.normalTitle" = "New Game";
+
+/* Class = "UILabel"; text = "Essa é sua melodia:"; ObjectID = "P6G-OK-SIX"; */
+"P6G-OK-SIX.text" = "This is your melody:";
+
+/* Class = "UILabel"; text = "Seu progresso"; ObjectID = "P6O-mP-tJ6"; */
+"P6O-mP-tJ6.text" = "Your progress";
+
+/* Class = "UILabel"; text = "Parabéns! Você solucionou o puzzle!"; ObjectID = "SDr-69-dmP"; */
+"SDr-69-dmP.text" = "Congratulations! You solved the puzzle!";
+
+/* Class = "UIViewController"; title = "Completion"; ObjectID = "j3x-vK-EPw"; */
+"j3x-vK-EPw.title" = "Completion";
+
+/* Class = "UILabel"; text = "0/100"; ObjectID = "jHk-SF-ADE"; */
+"jHk-SF-ADE.text" = "0/100";
