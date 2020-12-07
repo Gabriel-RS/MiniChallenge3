@@ -64,13 +64,13 @@ class CompletionViewController: UIViewController, NSFetchedResultsControllerDele
         }
         
         if ouvidas == 3 {
-            lbGamePoints.text = "Pontuação da partida: 5"
+            lbGamePoints.text = NSLocalizedString("gameScore5", comment: "Score")
         } else if ouvidas == 2 {
-            lbGamePoints.text = "Pontuação da partida: 4"
+            lbGamePoints.text = NSLocalizedString("gameScore4", comment: "Score")
         } else if ouvidas == 1 {
-            lbGamePoints.text = "Pontuação da partida: 3"
+            lbGamePoints.text = NSLocalizedString("gameScore3", comment: "Score")
         } else if ouvidas == 0 {
-            lbGamePoints.text = "Pontuação da partida: 2"
+            lbGamePoints.text = NSLocalizedString("gameScore2", comment: "Score")
         }
         
         // modifica tamanho da ProgressView

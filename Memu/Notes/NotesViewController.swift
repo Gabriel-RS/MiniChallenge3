@@ -78,7 +78,7 @@ class Notas: UIViewController {
                 btn.isSelected = false
                 aux -= 1
             } else {
-                lblAviso.text = "Só é possível selecionar 4 notas"
+                lblAviso.text = NSLocalizedString("alertNotes", comment: "Alert")
                 lblAviso.isHidden = false
             }
         //se o número de notas for menor que 4, ele poderá incluir notas ou remover outras que ainda existam
@@ -95,7 +95,7 @@ class Notas: UIViewController {
                 }
         } else {
             btn.isSelected = false
-            lblAviso.text = "Só é possível selecionar 4 notas"
+            lblAviso.text = NSLocalizedString("alertNotes", comment: "Alert")
             lblAviso.isHidden = false
         }
         
@@ -104,7 +104,7 @@ class Notas: UIViewController {
     
     func checkMin() -> Bool{
         if aux < 4 {
-            lblAviso.text = "Selecione 4 notas"
+            lblAviso.text = NSLocalizedString("alertPickNotes" , comment: "Alert")
             lblAviso.isHidden = false
             return false
         } else {
@@ -124,7 +124,7 @@ class Notas: UIViewController {
             defineNotas(btn: btnSi, note: noteSi)
             performSegue(withIdentifier: "unwind", sender: self)
         } else {
-            lblAviso.text = "Selecione 4 notas"
+            lblAviso.text = NSLocalizedString("alertPickNotes" , comment: "Alert")
             lblAviso.isHidden = false
         }
     }

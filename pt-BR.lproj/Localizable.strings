@@ -1,0 +1,53 @@
+/* 
+  Localizable.strings
+  Memu
+
+  Created by Juliana Pereira Machado on 07/12/20.
+  
+*/
+
+"unknownTitle" = "Desconhecido";
+"explorerTitle" = "Explorador";
+"amateurTitle" = "Músico Amador";
+"masterTitle" = "Mestre dos Sons";
+"godTitle"  = "Deus da Música";
+
+"unknownDescription" = "Comece a explorar as notas e os sons que elas tem.";
+"unknownLbProgress" = "Jogue a primeira vez para ganhar sua primeira medalha de ouro.";
+"explorerDescription" = "Você busca conhecer os sons e explorar cada um deles.";
+"amateurDescription" = "Todo profissional já foi um amador, continue treinando";
+"masterDescription" = "Você é um mestre dos sons, pelo menos sabe diferenciá-los.";
+"godDescription" = "Você atingiu o nível de Deus da música! Agora o céu é o limite.";
+"godLbProgress" = "Parabéns você agora é um Deus da música.";
+
+"winMedalExplorer" = "Você conquistou a medalha ouro de Músico Amador! Clique no botão no final da barra de progresso para subir de nível.";
+"winMedalAmateur" = "Você conquistou a medalha ouro de Mestre dos Sons! Clique no botão no final da barra de progresso para subir de nível.";
+"winMedalMaster" = "Você conquistou a medalha ouro de Deus da Música! Clique no botão no final da barra de progresso para subir de nível.";
+
+"pointsExplorer" = "Acumule 100 pontos para conquistar o título de Músico Amador.";
+"pointsAmateur" = "Acumule 250 pontos para conquistar o título de Mestre dos Sons.";
+"pointsMaster" = "Acumule 450 pontos para conquistar o título de Deus da Música.";
+
+"noteProgressBronze" = "Jogue mais %d vezes com a nota %@ e alcance o nível bronze.";
+"noteProgressSilver" = "Jogue mais %d vezes com a nota %@ e alcance o nível prata.";
+"noteProgressGold" = "Jogue mais %d vezes com a nota %@ e alcance o nível ouro.";
+
+"noteGodProgress" = "Parabéns você é um Deus da nota %@!";
+
+"levelUp" = "Você conquistou a medalha ouro de %@. Clique no botão no final da barra de progresso para subir de nível.";
+
+"pointsLevelUp" = "Faltam %d para você conquistar o título de %@.";
+
+"gameScore5"= "Pontuação da partida: 5";
+"gameScore4"= "Pontuação da partida: 4";
+"gameScore3"= "Pontuação da partida: 3";
+"gameScore2"= "Pontuação da partida: 2";
+
+"alertNewGame" = "Deseja realmente iniciar um novo jogo?";
+"alertMenu" = "Deseja realmente voltar ao menu inicial?";
+"alertWarning" = "Todo progresso atual será perdido.";
+"confirmButton" = "Confirmar";
+"cancelButton" = "Cancelar";
+
+"alertNotes" = "Só é possível selecionar 4 notas";
+"alertPickNotes" = "Selecione 4 notas";
