@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j3x-vK-EPw">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Compact-Display-Bold.otf">
+            <string>SFCompactDisplay-Bold</string>
+        </array>
+        <array key="SF-Pro-Rounded-Regular.otf">
+            <string>SFProRounded-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Completion-->
+        <scene sceneID="xJp-a6-2YA">
+            <objects>
+                <viewController title="Completion" id="j3x-vK-EPw" customClass="CompletionViewController" customModule="Memu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i9s-OT-zta">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MJV-Do-3Ds">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kXy-tl-z5f">
+                                        <rect key="frame" x="20" y="30" width="374" height="384"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="u1u-s1-YUE">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="72"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="754" verticalCompressionResistancePriority="752" text="Parabéns! Você solucionou o puzzle!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDr-69-dmP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="72"/>
+                                                        <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="30"/>
+                                                        <color key="textColor" red="0.40000000000000002" green="0.42745098039215684" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IKS-xE-Ld0">
+                                                <rect key="frame" x="0.0" y="102" width="374" height="90"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="752" verticalCompressionResistancePriority="751" text="Essa é sua melodia:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="P6G-OK-SIX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                                        <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="25"/>
+                                                        <color key="textColor" red="0.40000000000000002" green="0.42745098039215684" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P5c-4U-eJj">
+                                                        <rect key="frame" x="0.0" y="40" width="374" height="50"/>
+                                                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="SzI-Vo-yuk"/>
+                                                        </constraints>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a1x-Nl-pJ4">
+                                                            <size key="itemSize" width="90" height="80"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="SequenceCell" id="QZX-Ca-Wph" customClass="SequenceCell" customModule="Memu" customModuleProvider="target">
+                                                                <rect key="frame" x="26" y="0.0" width="322" height="50"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Z2-rQ-dVo">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="322" height="50"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seqBlueOn" translatesAutoresizingMaskIntoConstraints="NO" id="f8l-Mk-TOW">
+                                                                            <rect key="frame" x="138.5" y="7.5" width="45" height="35"/>
+                                                                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" secondItem="f8l-Mk-TOW" secondAttribute="height" multiplier="9:7" id="FOi-1U-DBo"/>
+                                                                                <constraint firstAttribute="height" constant="35" id="MDh-xl-o82"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="f8l-Mk-TOW" firstAttribute="centerX" secondItem="1Z2-rQ-dVo" secondAttribute="centerX" id="DHq-VL-gxf"/>
+                                                                        <constraint firstItem="f8l-Mk-TOW" firstAttribute="top" secondItem="1Z2-rQ-dVo" secondAttribute="top" constant="7.5" id="SRi-ZO-fZJ"/>
+                                                                    </constraints>
+                                                                </collectionViewCellContentView>
+                                                                <size key="customSize" width="322" height="50"/>
+                                                                <connections>
+                                                                    <outlet property="image" destination="f8l-Mk-TOW" id="rlS-k7-jwU"/>
+                                                                </connections>
+                                                            </collectionViewCell>
+                                                        </cells>
+                                                    </collectionView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="P5c-4U-eJj" firstAttribute="centerX" secondItem="P6G-OK-SIX" secondAttribute="centerX" id="Aay-uO-G5E"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="DdE-5O-UNy">
+                                                <rect key="frame" x="0.0" y="222" width="374" height="162"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="750" verticalCompressionResistancePriority="751" text="Pontuação da partida:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1Ak-RJ-Qba">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="29.5"/>
+                                                        <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="25"/>
+                                                        <color key="textColor" red="0.39215686274509803" green="0.42745098039215684" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YAN-b7-4Eh">
+                                                        <rect key="frame" x="0.0" y="69.5" width="374" height="92.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="753" verticalCompressionResistancePriority="751" text="Seu progresso" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="P6O-mP-tJ6">
+                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="28"/>
+                                                                <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="24"/>
+                                                                <color key="textColor" red="0.39235633609999998" green="0.42674070600000003" blue="0.47451752419999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="752" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pqk-Cx-bEC">
+                                                                <rect key="frame" x="0.0" y="48" width="374" height="4"/>
+                                                                <color key="progressTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </progressView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHk-SF-ADE">
+                                                                <rect key="frame" x="0.0" y="72" width="374" height="20.5"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="0/100">
+                                                                        <attributes>
+                                                                            <color key="NSColor" red="0.39235633609999998" green="0.42674070600000003" blue="0.47451752419999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                            <font key="NSFont" size="17" name="SFCompactDisplay-Regular"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" axis="vertical" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ARP-p0-JZi">
+                                        <rect key="frame" x="63" y="613" width="288" height="175"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9L-NR-CFO">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="bbM-zk-zio"/>
+                                                    <constraint firstAttribute="width" secondItem="D9L-NR-CFO" secondAttribute="height" multiplier="18:5" id="j5E-z1-40M"/>
+                                                    <constraint firstAttribute="width" constant="288" id="pQq-P8-WhB"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="30"/>
+                                                <state key="normal" title="Novo Jogo" backgroundImage="novoJogo">
+                                                    <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnNewGame:" destination="j3x-vK-EPw" eventType="touchUpInside" id="99r-Jk-iEf"/>
+                                                    <segue destination="TVq-gs-5Y1" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="B7w-VE-aN1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3LW-gR-mai">
+                                                <rect key="frame" x="0.0" y="95" width="288" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="3LW-gR-mai" secondAttribute="height" multiplier="18:5" id="AXc-C4-iZR"/>
+                                                    <constraint firstAttribute="height" constant="80" id="iV7-WY-WA9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="30"/>
+                                                <state key="normal" title="Menu Inicial" backgroundImage="menuInicial">
+                                                    <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnHomeScreen:" destination="j3x-vK-EPw" eventType="touchUpInside" id="Na4-bd-ngM"/>
+                                                    <segue destination="oaB-Ca-JFz" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="r9E-U2-Wal"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kXy-tl-z5f" firstAttribute="centerX" secondItem="MJV-Do-3Ds" secondAttribute="centerX" id="Qtj-5U-csr"/>
+                                    <constraint firstAttribute="bottom" secondItem="ARP-p0-JZi" secondAttribute="bottom" constant="30" id="Xox-ZI-agQ"/>
+                                    <constraint firstItem="ARP-p0-JZi" firstAttribute="centerX" secondItem="MJV-Do-3Ds" secondAttribute="centerX" id="YDN-b3-3dn"/>
+                                    <constraint firstItem="kXy-tl-z5f" firstAttribute="top" secondItem="MJV-Do-3Ds" secondAttribute="top" constant="30" id="uyi-xF-o7X"/>
+                                    <constraint firstAttribute="trailing" secondItem="kXy-tl-z5f" secondAttribute="trailing" constant="20" id="xf4-IG-iVp"/>
+                                    <constraint firstItem="kXy-tl-z5f" firstAttribute="leading" secondItem="MJV-Do-3Ds" secondAttribute="leading" constant="20" id="yAw-IW-M0j"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vuc-AJ-P40"/>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vuc-AJ-P40" firstAttribute="trailing" secondItem="MJV-Do-3Ds" secondAttribute="trailing" id="471-TY-WjW"/>
+                            <constraint firstItem="MJV-Do-3Ds" firstAttribute="top" secondItem="Vuc-AJ-P40" secondAttribute="top" id="LVb-po-5m5"/>
+                            <constraint firstItem="MJV-Do-3Ds" firstAttribute="bottom" secondItem="Vuc-AJ-P40" secondAttribute="bottom" id="OU1-Q5-D9X"/>
+                            <constraint firstItem="MJV-Do-3Ds" firstAttribute="leading" secondItem="Vuc-AJ-P40" secondAttribute="leading" id="igR-sp-QUg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="P5c-4U-eJj" id="hzt-qf-5wC"/>
+                        <outlet property="lbGamePoints" destination="1Ak-RJ-Qba" id="lhT-rL-1g8"/>
+                        <outlet property="lbProgress" destination="jHk-SF-ADE" id="UaZ-4c-paa"/>
+                        <outlet property="progressViewPlayer" destination="pqk-Cx-bEC" id="8jZ-jg-ZXT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kAS-5Y-SNe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-163.768115942029" y="129.91071428571428"/>
+        </scene>
+        <!--Launchpad-->
+        <scene sceneID="2wU-nt-u7A">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Launchpad" id="TVq-gs-5Y1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cgc-VW-XlU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="220"/>
+        </scene>
+        <!--HomeScreen-->
+        <scene sceneID="8fq-s9-IkZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeScreen" id="oaB-Ca-JFz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T0C-7x-YRf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="387" y="309"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="menuInicial" width="517.5" height="133.44000244140625"/>
+        <image name="novoJogo" width="517.5" height="133.44000244140625"/>
+        <image name="seqBlueOn" width="150" height="150"/>
+    </resources>
+</document>

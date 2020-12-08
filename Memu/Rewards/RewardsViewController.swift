@@ -68,7 +68,9 @@ class RewardsViewController: UIViewController {
     @IBOutlet weak var buttonRewardSi: UIButton!
     @IBOutlet weak var noteDescriptionSi: UILabel!
     
-    let playerTitles: [String] = ["Desconhecido", "Explorador", "Músico amador", "Mestre dos sons", "Deus da música"]
+    let playerTitlesPT: [String] = ["Desconhecido", "Explorador", "Músico amador", "Mestre dos sons", "Deus da música"]
+    
+    let playerTitlesEN: [String] = ["Unknown", "Explorer", "Amateur Musician", "Sound Master", "Music God"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,6 +84,7 @@ class RewardsViewController: UIViewController {
         checkNote(4, progressViewRe, medalNoteRe, noteDescriptionRe, buttonRewardRe)
         checkNote(5, progressViewSi, medalNoteSi, noteDescriptionSi, buttonRewardSi)
         checkNote(6, progressViewSol, medalNoteSol, noteDescriptionSol, buttonRewardSol)
+        
     }
     
     @IBAction func btnClose(_ sender: Any) {
@@ -109,72 +112,73 @@ class RewardsViewController: UIViewController {
     
     // de acordo com o nível do Player exibi as informações na tela
     func loadStatusPlayer() {
+        
         if playerProgress.points != 0 && playerProgress.level == 0 {
             playerProgress.level = 1
         }
         
         switch playerProgress.level {
-            case 0:
-                lbTitle.text = "\(playerTitles[Int(playerProgress.level)])"
-                ivImage.image = UIImage(named: "medalhaAmadorOff")
-                lbDescription.text = "Comece a explorar as notas e os sons que elas tem."
-                playerProgress.pointsLevelUp = 100.0
-                lbScore.text = " / \(Int(playerProgress.pointsLevelUp))"
-                lbProgress.text = "Jogue a primeira vez para ganhar sua primeira medalha de ouro."
-                let actualScore = Int(playerProgress.points)
-                updateScore(difference: 0, actualScore: actualScore)
-            case 1:
-                lbTitle.text = "\(playerTitles[Int(playerProgress.level)])"
-                ivImage.image = UIImage(named: "medalhaExplorador")
-                lbDescription.text = "Você busca conhecer os sons e explorar cada um deles."
-                playerProgress.pointsLevelUp = 100.0
-                lbScore.text = " / \(Int(playerProgress.pointsLevelUp))"
-                if playerProgress.points < playerProgress.pointsLevelUp {
-                    lbProgress.text = "Acumule \(Int(playerProgress.pointsLevelUp)) pontos para conquistar o título de \(playerTitles[Int(playerProgress.level)+1])."
-                } else {
-                    lbProgress.text = "Você conquistou a medalha ouro de \(playerTitles[Int(playerProgress.level)]). Clique no botão no final da barra de progresso para subir de nível."
-                }
-                let actualScore = Int(playerProgress.points)
-                updateScore(difference: 0, actualScore: actualScore)
-            case 2:
-                lbTitle.text = "\(playerTitles[Int(playerProgress.level)])"
-                ivImage.image = UIImage(named: "medalhaAmador")
-                lbDescription.text = "Todo profissional já foi um amador, continue treinando"
-                playerProgress.pointsLevelUp = 250.0
-                lbScore.text = " / \(Int(playerProgress.pointsLevelUp))"
-                if playerProgress.points < playerProgress.pointsLevelUp {
-                    lbProgress.text = "Acumule \(Int(playerProgress.pointsLevelUp)) pontos para conquistar o título de \(playerTitles[Int(playerProgress.level)+1])."
-                } else {
-                    lbProgress.text = "Você conquistou a medalha ouro de \(playerTitles[Int(playerProgress.level)]). Clique no botão no final da barra de progresso para subir de nível."
-                }
-                let actualScore = Int(playerProgress.points)
-                updateScore(difference: 0, actualScore: actualScore)
-            case 3:
-                lbTitle.text = "\(playerTitles[Int(playerProgress.level)])"
-                ivImage.image = UIImage(named: "medalhaMestre")
-                lbDescription.text = "Você é um mestre dos sons, pelo menos sabe diferenciá-los."
-                playerProgress.pointsLevelUp = 450.0
-                lbScore.text = " / \(Int(playerProgress.pointsLevelUp))"
-                if playerProgress.points < playerProgress.pointsLevelUp {
-                    lbProgress.text = "Acumule \(Int(playerProgress.pointsLevelUp)) pontos para conquistar o título de \(playerTitles[Int(playerProgress.level)+1])."
-                } else {
-                    lbProgress.text = "Você conquistou a medalha ouro de \(playerTitles[Int(playerProgress.level)]). Clique no botão no final da barra de progresso para subir de nível."
-                }
-                let actualScore = Int(playerProgress.points)
-                updateScore(difference: 0, actualScore: actualScore)
-            case 4:
-                lbTitle.text = "\(playerTitles[Int(playerProgress.level)])"
-                ivImage.image = UIImage(named: "medalhaDeus")
-                lbDescription.text = "Você atingiu o nível de Deus da música! Agora o céu é o limite."
-                playerProgress.pointsLevelUp = 450.0
-                lbScore.text = " / \(Int(playerProgress.pointsLevelUp))"
-                lbProgress.text = "Parabéns você agora é um Deus da música."
-                btCheckProgress.setImage(UIImage(named: "progressoOuro"), for: .normal)
-                let actualScore = Int(playerProgress.points)
-                updateScore(difference: 0, actualScore: actualScore)
-                //lbScore.isHidden = true
-            default:
-                print("default")
+        case 0:
+            lbTitle.text = NSLocalizedString("unknownTitle", comment: "Title")
+            ivImage.image = UIImage(named: "medalhaAmadorOff")
+            lbDescription.text = NSLocalizedString("unknownDescription", comment: "Description")
+            playerProgress.pointsLevelUp = 100.0
+            lbScore.text = " / \(Int(playerProgress.pointsLevelUp))"
+            lbProgress.text = NSLocalizedString("unknownLbProgress", comment: "Description")
+            let actualScore = Int(playerProgress.points)
+            updateScore(difference: 0, actualScore: actualScore)
+        case 1:
+            lbTitle.text = NSLocalizedString("explorerTitle", comment: "Title")
+            ivImage.image = UIImage(named: "medalhaExplorador")
+            lbDescription.text = NSLocalizedString("explorerDescription", comment: "Description")
+            playerProgress.pointsLevelUp = 100.0
+            lbScore.text = " / \(Int(playerProgress.pointsLevelUp))"
+            if playerProgress.points < playerProgress.pointsLevelUp {
+                lbProgress.text = NSLocalizedString("pointsExplorer", comment: "Points for medal")
+            } else {
+                lbProgress.text = NSLocalizedString("winMedalExplorer", comment: "Title Medal")
+            }
+            let actualScore = Int(playerProgress.points)
+            updateScore(difference: 0, actualScore: actualScore)
+        case 2:
+            lbTitle.text = NSLocalizedString("amateurTitle", comment: "Title")
+            ivImage.image = UIImage(named: "medalhaAmador")
+            lbDescription.text = NSLocalizedString("amateurDescription", comment: "Description")
+            playerProgress.pointsLevelUp = 250.0
+            lbScore.text = " / \(Int(playerProgress.pointsLevelUp))"
+            if playerProgress.points < playerProgress.pointsLevelUp {
+                lbProgress.text = NSLocalizedString("pointsAmateur", comment: "Points for medal")
+            } else {
+                lbProgress.text = NSLocalizedString("winMedalAmateur", comment: "Title Medal")
+            }
+            let actualScore = Int(playerProgress.points)
+            updateScore(difference: 0, actualScore: actualScore)
+        case 3:
+            lbTitle.text = NSLocalizedString("masterTitle", comment: "Title")
+            ivImage.image = UIImage(named: "medalhaMestre")
+            lbDescription.text = NSLocalizedString("masterDescription", comment: "Description")
+            playerProgress.pointsLevelUp = 450.0
+            lbScore.text = " / \(Int(playerProgress.pointsLevelUp))"
+            if playerProgress.points < playerProgress.pointsLevelUp {
+                lbProgress.text = NSLocalizedString("pointsMaster", comment: "Points for medal")
+            } else {
+                lbProgress.text = NSLocalizedString("winMedalMaster", comment: "Title Medal")
+            }
+            let actualScore = Int(playerProgress.points)
+            updateScore(difference: 0, actualScore: actualScore)
+        case 4:
+            lbTitle.text = NSLocalizedString("godTitle", comment: "Title")
+            ivImage.image = UIImage(named: "medalhaDeus")
+            lbDescription.text = NSLocalizedString("godDescription", comment: "Description")
+            playerProgress.pointsLevelUp = 450.0
+            lbScore.text = " / \(Int(playerProgress.pointsLevelUp))"
+            lbProgress.text = NSLocalizedString("godLbProgress", comment: "Description")
+            btCheckProgress.setImage(UIImage(named: "progressoOuro"), for: .normal)
+            let actualScore = Int(playerProgress.points)
+            updateScore(difference: 0, actualScore: actualScore)
+        //lbScore.isHidden = true
+        default:
+            print("default")
         }
         
         progressViewPlayer.progress = playerProgress.points/playerProgress.pointsLevelUp
@@ -221,22 +225,25 @@ class RewardsViewController: UIViewController {
         let imagesNote: [String] = ["iniciante", "bronze", "prata", "ouro"]
         
         if notesManager.notes[index].level == 0 {
+            
             notesManager.notes[index].pointsLevelUp = 3.0
             medalNote.image = UIImage(named: "\(imagesNote[Int(notesManager.notes[index].level)])\(noteSelect!)")
-            noteDescription.text = "Jogue mais \(Int(notesManager.notes[index].pointsLevelUp-notesManager.notes[index].points)) vezes com a nota \(notesManager.notes[index].name!) e alcance o nível \(imagesNote[Int(notesManager.notes[index].level)+1])."
+            noteDescription.text =  String.localizedStringWithFormat(NSLocalizedString("noteProgressBronze", comment: "Note"), Int(notesManager.notes[index].pointsLevelUp-notesManager.notes[index].points), (notesManager.notes[index].name!))
         } else if notesManager.notes[index].level == 1 {
             notesManager.notes[index].pointsLevelUp = 4
             medalNote.image = UIImage(named: "\(imagesNote[Int(notesManager.notes[index].level)])\(noteSelect!)")
-            noteDescription.text = "Jogue mais \(Int(notesManager.notes[index].pointsLevelUp-notesManager.notes[index].points)) vezes com a nota \(notesManager.notes[index].name!) e alcance o nível \(imagesNote[Int(notesManager.notes[index].level)+1])."
+            noteDescription.text = String.localizedStringWithFormat(NSLocalizedString("noteProgressSilver", comment: "Note"), Int(notesManager.notes[index].pointsLevelUp-notesManager.notes[index].points), (notesManager.notes[index].name!))
         } else if notesManager.notes[index].level == 2 {
+            
             notesManager.notes[index].pointsLevelUp = 5
             medalNote.image = UIImage(named: "\(imagesNote[Int(notesManager.notes[index].level)])\(noteSelect!)")
-            noteDescription.text = "Jogue mais \(Int(notesManager.notes[index].pointsLevelUp-notesManager.notes[index].points)) vezes com a nota \(notesManager.notes[index].name!) e alcance o nível \(imagesNote[Int(notesManager.notes[index].level)+1])."
+            noteDescription.text = String.localizedStringWithFormat(NSLocalizedString("noteProgressGold", comment: "Note"), Int(notesManager.notes[index].pointsLevelUp-notesManager.notes[index].points), (notesManager.notes[index].name!))
+            
         } else {
             notesManager.notes[index].pointsLevelUp = 5
             notesManager.notes[index].points = 5
             medalNote.image = UIImage(named: "\(imagesNote[Int(notesManager.notes[index].level)])\(noteSelect!)")
-            noteDescription.text = "Parabéns você é um Deus da nota \(notesManager.notes[index].name!)."
+            noteDescription.text = String.localizedStringWithFormat(NSLocalizedString("noteGodProgress", comment: "Note"),(notesManager.notes[index].name!))
             progressView.progressTintColor = UIColor(named: "pvOuro")
         }
         
@@ -288,6 +295,11 @@ class RewardsViewController: UIViewController {
     }
     
     @IBAction func btCheckProgress(_ sender: Any) {
+        
+        let locale = Locale.current.identifier
+        
+        print(locale)
+        
         if playerProgress.points >= playerProgress.pointsLevelUp && playerProgress.level > 0 && playerProgress.level < 4  {
             playerProgress.level+=1
             btCheckProgress.setImage(UIImage(named: "progressoPadrao"), for: .normal)
@@ -295,12 +307,26 @@ class RewardsViewController: UIViewController {
                 btCheckProgress.setImage(UIImage(named: "progressoOuro"), for: .normal)
             }
         }
-        if playerProgress.pointsLevelUp-playerProgress.points < 0 {
-            lbProgress.text = "Você conquistou a medalha ouro de \(playerTitles[Int(playerProgress.level)]). Clique no botão no final da barra de progresso para subir de nível."
+        
+        if locale.prefix(2) == "pt"{
+            if playerProgress.pointsLevelUp-playerProgress.points < 0 {
+                //            lbProgress.text = "Você conquistou a medalha ouro de \(playerTitles[Int(playerProgress.level)]). Clique no botão no final da barra de progresso para subir de nível."
+                lbProgress.text = String.localizedStringWithFormat(NSLocalizedString("levelUp", comment: "Level"), (playerTitlesPT[Int(playerProgress.level)]))
+            }
+            loadStatusPlayer()
+            if playerProgress.level < 4 && playerProgress.points < playerProgress.pointsLevelUp {
+                lbProgress.text = String.localizedStringWithFormat(NSLocalizedString("pointsLevelUp", comment: "Level"), (Int(playerProgress.pointsLevelUp-playerProgress.points)), (playerTitlesPT[Int(playerProgress.level)+1]))
+            }
         }
-        loadStatusPlayer()
-        if playerProgress.level < 4 && playerProgress.points < playerProgress.pointsLevelUp {
-            lbProgress.text = "Faltam \(Int(playerProgress.pointsLevelUp-playerProgress.points)) para você conquistar o título de \(playerTitles[Int(playerProgress.level)+1])."
+        else{
+            if playerProgress.pointsLevelUp-playerProgress.points < 0 {
+                //            lbProgress.text = "Você conquistou a medalha ouro de \(playerTitles[Int(playerProgress.level)]). Clique no botão no final da barra de progresso para subir de nível."
+                lbProgress.text = String.localizedStringWithFormat(NSLocalizedString("levelUp", comment: "Level"), (playerTitlesEN[Int(playerProgress.level)]))
+            }
+            loadStatusPlayer()
+            if playerProgress.level < 4 && playerProgress.points < playerProgress.pointsLevelUp {
+                lbProgress.text = String.localizedStringWithFormat(NSLocalizedString("pointsLevelUp", comment: "Level"), (Int(playerProgress.pointsLevelUp-playerProgress.points)), (playerTitlesEN[Int(playerProgress.level)+1]))
+            }
         }
     }
     
@@ -348,7 +374,7 @@ class RewardsViewController: UIViewController {
         
         animateIncrement(difference: difference, actualScore: actualScore, addScore: addScore, totalScore: totalScore)
     }
-
+    
     func animateIncrement(difference: Int, actualScore: Int, addScore: Int, totalScore: Int) {
         if actualScore > totalScore {return}
         lbDynamicScore.text = "\(actualScore)"

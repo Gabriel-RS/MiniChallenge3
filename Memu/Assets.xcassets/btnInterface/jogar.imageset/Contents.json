@@ -1,12 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "jogar.svg",
+      "filename" : "btnPlayTutorial.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "jogar 2.svg",
+      "filename" : "btnPlayTutorial-1.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },

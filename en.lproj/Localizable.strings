@@ -1,0 +1,54 @@
+/* 
+  Localizable.strings
+  Memu
+
+  Created by Juliana Pereira Machado on 07/12/20.
+  
+*/
+
+
+"unknownTitle" = "Unknown";
+"explorerTitle" = "Explorer";
+"amateurTitle" = "Amateur Musician";
+"masterTitle" = "Sound Master";
+"godTitle"  = "Music God";
+
+"unknownDescription" = "Start exploring notes and the sound they make";
+"unknownLbProgress" = "Play once to win your first gold medal";
+"explorerDescription" = "You want to experiment sounds and explore each one of them";
+"amateurDescription" = "Every professional was once an amateur, keep practicing";
+"masterDescription" = "You're a sound master, at least you know how to tell em apart";
+"godDescription" = "You've reached the Music God title! Now the sky is the limit";
+"godLbProgress" = "Congratulations, you are now a Music God!";
+
+"winMedalExplorer" = "You won the Amateur Musician gold medal! Touch the gold music button to level up!";
+"winMedalAmateur" = "You won the Sound Master gold medal! Touch the gold music button to level up!";
+"winMedalMaster" = "You won the Music God gold medal! Touch the gold music button to level up!";
+
+"pointsExplorer" = "Win 100 points to get the Amateur Musician title.";
+"pointsAmateur" = "Win 250 points to get the Sound Master title.";
+"pointsMaster" = "Win 450 points to get the Music God title.";
+
+"noteProgressBronze" = "Play %d times with the note %@ and reach the bronze level.";
+"noteProgressSilver" = "Play %d times with the note %@ and reach the silver level.";
+"noteProgressGold" = "Play %d times with the note %@ and reach the gold level.";
+
+"noteGodProgress" = "Congratulations, you're a note %@ God!";
+
+"pointsLevelUp" = "Win %d points to get the %@ title";
+
+"gameScore5"= "Game score: 5";
+"gameScore4"= "Game score: 4";
+"gameScore3"= "Game score: 3";
+"gameScore2"= "Game score: 2";
+
+"alertNewGame" = "Do you really want to start a new game?";
+"alertMenu" = "Do you want to go back to the home screen?";
+"alertWarning" = "Your current progress will be lost.";
+"confirmButton" = "Confirm";
+"cancelButton" = "Cancel";
+
+"alertNotes" = "It’s only possible to select 4 notes";
+"alertPickNotes" = "Select 4 notes";
+
+

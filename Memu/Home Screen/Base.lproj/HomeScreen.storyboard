@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wnR-8y-xY7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Compact-Display-Bold.otf">
+            <string>SFCompactDisplay-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Tutorial-->
+        <scene sceneID="mxJ-rd-nv1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tutorial" id="Vra-5s-wx9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OLu-IX-P6k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-40" y="577"/>
+        </scene>
+        <!--Rewards-->
+        <scene sceneID="P68-je-Jbj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Rewards" id="GY6-kM-68C" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Lr-yI-qQ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="589" y="386"/>
+        </scene>
+        <!--Home Screen View Controller-->
+        <scene sceneID="zhG-ci-qJM">
+            <objects>
+                <viewController id="wnR-8y-xY7" customClass="HomeScreenViewController" customModule="Memu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tpP-3Q-V8p">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="iQR-at-PeX">
+                                <rect key="frame" x="63" y="125" width="288" height="646"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="Krs-In-53W">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="350"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="350" id="34E-qW-Re9"/>
+                                            <constraint firstAttribute="width" secondItem="Krs-In-53W" secondAttribute="height" multiplier="144:175" id="h5Y-jg-lQD"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="KAi-7H-dye">
+                                        <rect key="frame" x="0.0" y="430" width="288" height="216"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26v-XB-1xk">
+                                                <rect key="frame" x="13" y="0.0" width="262" height="115"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="26v-XB-1xk" secondAttribute="height" multiplier="262:115" id="htR-ZM-PPS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="38"/>
+                                                <state key="normal" title="Jogar" backgroundImage="jogar">
+                                                    <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnPlay:" destination="wnR-8y-xY7" eventType="touchUpInside" id="e1S-j6-rXl"/>
+                                                    <segue destination="qOy-HD-MYn" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Lqw-qj-RrB"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="7pi-WA-mTJ">
+                                                <rect key="frame" x="53" y="140" width="182" height="76"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAw-g3-yBf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="76"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="71" id="1Se-Mg-nXZ"/>
+                                                            <constraint firstAttribute="width" secondItem="dAw-g3-yBf" secondAttribute="height" multiplier="71:76" id="MwO-wy-zYo"/>
+                                                            <constraint firstAttribute="height" constant="76" id="lQ8-FR-RCT"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Help" image="help"/>
+                                                        <connections>
+                                                            <action selector="btnHelp:" destination="wnR-8y-xY7" eventType="touchUpInside" id="TrN-4T-Ldo"/>
+                                                            <segue destination="Vra-5s-wx9" kind="presentation" id="BXO-3X-8Uw"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJf-y0-NQ8">
+                                                        <rect key="frame" x="111" y="0.0" width="71" height="76"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="71" id="9cP-SU-CJB"/>
+                                                            <constraint firstAttribute="width" secondItem="nJf-y0-NQ8" secondAttribute="height" multiplier="71:76" id="LBZ-RQ-yjv"/>
+                                                            <constraint firstAttribute="height" constant="76" id="Mzu-mo-NRb"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Reward" image="reward"/>
+                                                        <connections>
+                                                            <action selector="btnRewards:" destination="wnR-8y-xY7" eventType="touchUpInside" id="vuX-oJ-bJh"/>
+                                                            <segue destination="GY6-kM-68C" kind="presentation" id="qDa-hH-wMZ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rxn-5f-BrR"/>
+                        <color key="backgroundColor" red="0.97256201509999995" green="0.972525537" blue="0.9725503325" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="iQR-at-PeX" firstAttribute="centerX" secondItem="tpP-3Q-V8p" secondAttribute="centerX" id="7qE-K0-aRd"/>
+                            <constraint firstItem="iQR-at-PeX" firstAttribute="centerY" secondItem="tpP-3Q-V8p" secondAttribute="centerY" id="AjQ-Ax-WbZ"/>
+                            <constraint firstItem="iQR-at-PeX" firstAttribute="leading" secondItem="Rxn-5f-BrR" secondAttribute="leading" constant="63" id="ISH-k2-hgZ"/>
+                            <constraint firstItem="Rxn-5f-BrR" firstAttribute="trailing" secondItem="iQR-at-PeX" secondAttribute="trailing" constant="63" id="M8e-Os-exP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J8S-vG-7bo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.623188405797109" y="167.41071428571428"/>
+        </scene>
+        <!--Launchpad-->
+        <scene sceneID="aC6-mM-LJq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Launchpad" id="qOy-HD-MYn" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="1Mi-1q-dNO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="924-IE-TMF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="599" y="263"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="help" width="150" height="160"/>
+        <image name="home" width="1080.0400390625" height="1077.7900390625"/>
+        <image name="jogar" width="262" height="115"/>
+        <image name="reward" width="150" height="160"/>
+    </resources>
+</document>
