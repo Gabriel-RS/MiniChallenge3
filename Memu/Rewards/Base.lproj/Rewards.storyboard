@@ -82,6 +82,9 @@
                                                         <state key="normal" title="Obter recompensa" backgroundImage="obterRecompensa">
                                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="rewardDo:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="EFN-jl-a99"/>
                                                         </connections>
@@ -139,6 +142,9 @@
                                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="18"/>
                                                         <state key="normal" title="Obter recompensa" backgroundImage="obterRecompensa">
                                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="rewardRe:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="3p8-we-cBa"/>
@@ -198,6 +204,9 @@
                                                         <state key="normal" title="Obter recompensa" backgroundImage="obterRecompensa">
                                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="rewardMi:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="e3l-bp-D8k"/>
                                                         </connections>
@@ -255,6 +264,9 @@
                                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="18"/>
                                                         <state key="normal" title="Obter recompensa" backgroundImage="obterRecompensa">
                                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="rewardFa:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="0yk-NF-jMh"/>
@@ -314,6 +326,9 @@
                                                         <state key="normal" title="Obter recompensa" backgroundImage="obterRecompensa">
                                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="rewardSol:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="21u-aF-S0r"/>
                                                         </connections>
@@ -371,6 +386,9 @@
                                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="18"/>
                                                         <state key="normal" title="Obter recompensa" backgroundImage="obterRecompensa">
                                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="rewardLa:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="4fu-c9-Avm"/>
@@ -430,6 +448,9 @@
                                                         <state key="normal" title="Obter recompensa" backgroundImage="obterRecompensa">
                                                             <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
+                                                        <state key="highlighted">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
                                                         <connections>
                                                             <action selector="rewardSi:" destination="wqY-Wh-Wjv" eventType="touchUpInside" id="6vs-LT-LMO"/>
                                                         </connections>
@@ -459,11 +480,11 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EiT-X5-WfP">
-                                                <rect key="frame" x="14" y="379" width="345" height="4"/>
+                                                <rect key="frame" x="14" y="378.5" width="345" height="4"/>
                                                 <color key="progressTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </progressView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKE-wR-5nT">
-                                                <rect key="frame" x="355" y="358.5" width="45" height="45"/>
+                                                <rect key="frame" x="355" y="358" width="45" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="KOg-mn-xjc"/>
                                                     <constraint firstAttribute="width" constant="45" id="Svp-Oo-Tzd"/>
@@ -474,35 +495,35 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inicio" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxN-a0-Ry7">
-                                                <rect key="frame" x="14" y="84" width="386" height="29.5"/>
+                                                <rect key="frame" x="14" y="84" width="386" height="30"/>
                                                 <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="25"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TlS-fe-UvL">
-                                                <rect key="frame" x="132" y="123.5" width="150" height="150"/>
+                                                <rect key="frame" x="132" y="124" width="150" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="1MA-tg-BfR"/>
                                                     <constraint firstAttribute="width" constant="150" id="KJk-M2-uae"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6o-MR-8qL">
-                                                <rect key="frame" x="80" y="283.5" width="254" height="20"/>
+                                                <rect key="frame" x="80" y="284" width="254" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pvF-IT-UOB">
-                                                <rect key="frame" x="165" y="403" width="84" height="20"/>
+                                                <rect key="frame" x="167.5" y="402.5" width="79" height="20.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="751" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFq-ge-dtp">
-                                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="39.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="751" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Y6-Xs-bDn">
-                                                        <rect key="frame" x="42" y="0.0" width="42" height="20"/>
+                                                        <rect key="frame" x="39.5" y="0.0" width="39.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
