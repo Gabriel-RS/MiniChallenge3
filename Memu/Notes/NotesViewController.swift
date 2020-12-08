@@ -76,6 +76,7 @@ class Notas: UIViewController {
             lblAviso.isHidden = true
             if(btn.isSelected){
                 btn.isSelected = false
+                btn.setTitleColor(UIColor(red: 101/255, green: 109/255, blue: 121/255, alpha: 1), for: .normal)
                 aux -= 1
             } else {
                 lblAviso.text = NSLocalizedString("alertNotes", comment: "Alert")
@@ -86,15 +87,18 @@ class Notas: UIViewController {
             //se o botão não está selecionado e a houver um click, o botão passa a estar selecionado e a nota toca
             if(btn.isSelected == false) {
                 btn.isSelected = true
+                btn.setTitleColor(.white, for: .normal)
                 aux += 1
                 playSound(note: note)
                 //caso o botão já esteja selecionado e o usuário clicar, a nota é removida
             } else {
                 btn.isSelected = false
+                btn.setTitleColor(UIColor(red: 101/255, green: 109/255, blue: 121/255, alpha: 1), for: .normal)
                 aux -= 1
                 }
         } else {
             btn.isSelected = false
+            btn.setTitleColor(UIColor(red: 101/255, green: 109/255, blue: 121/255, alpha: 1), for: .normal)
             lblAviso.text = NSLocalizedString("alertNotes", comment: "Alert")
             lblAviso.isHidden = false
         }
@@ -172,4 +176,13 @@ class Notas: UIViewController {
         }
     }
     
+    
+    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
 }
