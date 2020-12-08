@@ -128,6 +128,9 @@ A seguir, entenda como funciona:</string>
                                 <state key="normal" title="Jogar" backgroundImage="jogar">
                                     <color key="titleColor" red="0.40046492220000002" green="0.42675316330000002" blue="0.47059440609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="playTutorial:" destination="YbS-vD-RU7" eventType="touchUpInside" id="RFj-aO-Rfc"/>
                                 </connections>
