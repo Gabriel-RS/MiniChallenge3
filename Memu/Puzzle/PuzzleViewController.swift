@@ -203,7 +203,7 @@ class PuzzleViewController: UIViewController{
     
     // recupera a pontuação de cada Nota do CoreData
     func loadNotes() {
-        notesManager.loadNotes(with: context)
+        //notesManager.loadNotes(with: context)
         print("Count notes: \(notesManager.notes.count)")
         do {
             try context.save()
