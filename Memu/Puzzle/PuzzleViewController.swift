@@ -76,7 +76,6 @@ class PuzzleViewController: UIViewController{
         PuzzleViewController.ouvidas = 3
         
         if !tutorialHasLaunched {
-            UserDefaults.standard.set(true, forKey: "tutorialHasLaunched")
             instructionLabel.isHidden = false
         }
     }
@@ -141,15 +140,21 @@ class PuzzleViewController: UIViewController{
             }
             
             // se sequencia estiver certa
-            performSegue(withIdentifier: "conclusionSegue", sender: self)
+            if !tutorialHasLaunched {
+//                UserDefaults.standard.set(true, forKey: "tutorialHasLaunched")
+                performSegue(withIdentifier: "homeSegue", sender: self)
+            } else {
+                performSegue(withIdentifier: "conclusionSegue", sender: self)
+                
+
+                // TODO: emitir som de feedback positivo
+                //playFeedback(feedbackType: "positivo")
+                
+                playNote("feedback_positivo")
+
+            }
             
 
-            // TODO: emitir som de feedback positivo
-            //playFeedback(feedbackType: "positivo")
-            
-            playNote("feedback_positivo")
-
-            // TODO: JULIANA emitir som de feedback positivo (nao sei se aqui ou na conclusao)
 
             
         } else {

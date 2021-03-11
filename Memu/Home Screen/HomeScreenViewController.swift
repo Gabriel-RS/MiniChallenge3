@@ -9,10 +9,17 @@ import UIKit
 
 class HomeScreenViewController: UIViewController {
 
+    let tutorialHasLaunched: Bool = UserDefaults.standard.bool(forKey: "tutorialHasLaunched")
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if !tutorialHasLaunched {
+            UserDefaults.standard.set(true, forKey: "tutorialHasLaunched")
+            print("parabéns agora vai jogar")
+        }
+
     }
     
     var launchpadVc = LaunchpadViewController()

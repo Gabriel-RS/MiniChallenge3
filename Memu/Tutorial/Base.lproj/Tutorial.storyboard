@@ -261,7 +261,7 @@ A seguir, entenda como funciona:</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPM-H4-75E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="192.75362318840581" y="-31.473214285714285"/>
+            <point key="canvasLocation" x="181" y="40"/>
         </scene>
     </scenes>
     <resources>
