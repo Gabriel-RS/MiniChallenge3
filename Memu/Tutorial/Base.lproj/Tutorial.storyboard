@@ -60,7 +60,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tRl-ZJ-KbF">
                                                 <rect key="frame" x="8" y="8" width="398" height="285"/>
                                                 <subviews>
-                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Bem Vindo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="EXz-0I-xLe">
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Bem Vindo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="EXz-0I-xLe" userLabel="Welcome Label">
                                                         <rect key="frame" x="125.5" y="-10" width="147" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="vab-KM-UkQ"/>
@@ -101,6 +101,9 @@ A seguir, entenda como funciona:</string>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locked" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ARt-2K-gty" userLabel="imgRandom">
                                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                <accessibility key="accessibilityConfiguration" label="Botão Cadeado">
+                                                                    <bool key="isElement" value="YES"/>
+                                                                </accessibility>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="0N1-Fy-Qel"/>
                                                                     <constraint firstAttribute="width" constant="50" id="VmN-VF-JTU"/>
@@ -108,6 +111,7 @@ A seguir, entenda como funciona:</string>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Permite ouvir o som sem adicionar à melodia" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="0qQ-i4-bzG">
                                                                 <rect key="frame" x="66" y="0.0" width="236" height="50"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Explicação do botão cadeado" label="Permite ouvir o som sem adicionar à melodia"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="5hl-7P-H63"/>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="236" id="tcE-yu-Trk"/>
@@ -123,6 +127,9 @@ A seguir, entenda como funciona:</string>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="note" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fnf-fb-XcG" userLabel="imgPickNotes">
                                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                <accessibility key="accessibilityConfiguration" label="Botão Nota">
+                                                                    <bool key="isElement" value="YES"/>
+                                                                </accessibility>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="4M2-2c-8gA"/>
                                                                     <constraint firstAttribute="height" constant="50" id="L0I-Qg-R10"/>
@@ -130,6 +137,7 @@ A seguir, entenda como funciona:</string>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Possibilita alterar as notas disponíveis" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="QuF-ps-81x">
                                                                 <rect key="frame" x="66" y="0.0" width="236" height="50"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Explicação do botão nota" label="Possibilita alterar as notas disponíveis"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="236" id="VOI-oy-xpX"/>
                                                                 </constraints>
@@ -144,6 +152,9 @@ A seguir, entenda como funciona:</string>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oo7-L0-apu" userLabel="imgPlayStop">
                                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                <accessibility key="accessibilityConfiguration" label="Botão Play">
+                                                                    <bool key="isElement" value="YES"/>
+                                                                </accessibility>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="50" id="JD3-dC-dh4"/>
                                                                     <constraint firstAttribute="height" constant="50" id="utM-Ul-t31"/>
@@ -151,6 +162,7 @@ A seguir, entenda como funciona:</string>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toca a melodia criada na primeira vez" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ZAa-Cw-7o7">
                                                                 <rect key="frame" x="66" y="0.0" width="236" height="50"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Explicação do botão play" label="Toca a melodia criada na primeira vez"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="2X5-xY-i5e"/>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="236" id="R7R-cL-zZr"/>
@@ -166,6 +178,9 @@ A seguir, entenda como funciona:</string>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earOn" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HS0-hU-CHq" userLabel="imgEar">
                                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                <accessibility key="accessibilityConfiguration" label="Botão orelha">
+                                                                    <bool key="isElement" value="YES"/>
+                                                                </accessibility>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="icQ-fM-MIj"/>
                                                                     <constraint firstAttribute="width" constant="50" id="jNb-9f-NdJ"/>
@@ -173,6 +188,7 @@ A seguir, entenda como funciona:</string>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indica quantas vezes pode ouvir a melodia do puzzle" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="dvW-Vb-Kbk">
                                                                 <rect key="frame" x="66" y="0.0" width="236" height="50"/>
+                                                                <accessibility key="accessibilityConfiguration" hint="Explicação do botão ouvir" label="Indica quantas vezes pode ouvir a melodia do puzzle"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="236" id="dWJ-5L-nUg"/>
                                                                     <constraint firstAttribute="height" constant="50" id="oW5-ri-7bK"/>
@@ -188,8 +204,9 @@ A seguir, entenda como funciona:</string>
                                                     <constraint firstAttribute="height" constant="290" id="3Xu-bk-JRe"/>
                                                 </constraints>
                                             </stackView>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zk-r6-Jpj">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Zk-r6-Jpj" userLabel="Play Button">
                                                 <rect key="frame" x="76" y="606" width="262" height="80"/>
+                                                <accessibility key="accessibilityConfiguration" label="Jogar"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="Mmg-kW-VEU"/>
                                                     <constraint firstAttribute="height" constant="80" id="X6w-6e-p5A"/>
@@ -207,6 +224,7 @@ A seguir, entenda como funciona:</string>
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="1Zk-r6-Jpj" firstAttribute="centerX" secondItem="JYL-dD-PGt" secondAttribute="centerX" id="S2Z-4C-uvZ"/>
                                             <constraint firstItem="tRl-ZJ-KbF" firstAttribute="centerX" secondItem="JYL-dD-PGt" secondAttribute="centerX" id="WOC-SX-yG6"/>
                                         </constraints>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="50" right="8"/>
