@@ -38,11 +38,9 @@
 		5A6A095D2551D4C300F143ED /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A095C2551D4C300F143ED /* RewardsViewController.swift */; };
 		5A6A09682551D86900F143ED /* CompletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09672551D86900F143ED /* CompletionViewController.swift */; };
 		5A6A09712551E6D700F143ED /* SequenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09702551E6D700F143ED /* SequenceCell.swift */; };
-
 		5AEF384C257AF3BD007FAF56 /* SF-Compact-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5AEF384B257AF3A2007FAF56 /* SF-Compact-Display-Bold.otf */; };
 		5AEF3852257AF65F007FAF56 /* SF-Pro-Rounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5AEF3850257AF65F007FAF56 /* SF-Pro-Rounded-Regular.otf */; };
 		5AEF3853257AF65F007FAF56 /* SF-Compact-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5AEF3851257AF65F007FAF56 /* SF-Compact-Display-Regular.otf */; };
-
 		836164F5257AD697001D6D8A /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836164F7257AD697001D6D8A /* HomeScreen.storyboard */; };
 		83616509257AD765001D6D8A /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8361650B257AD765001D6D8A /* Menu.storyboard */; };
 		83616521257AD945001D6D8A /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83616523257AD945001D6D8A /* Notes.storyboard */; };
@@ -52,6 +50,7 @@
 		83BC9ABD257E9C5C007FFD3F /* Rewards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83BC9ABF257E9C5C007FFD3F /* Rewards.storyboard */; };
 		83BC9ACF257EA627007FFD3F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83BC9AD1257EA627007FFD3F /* Localizable.strings */; };
 		83BC9AD9257EC14C007FFD3F /* Completion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83BC9ADB257EC14C007FFD3F /* Completion.storyboard */; };
+		83C62EA4260CD56900E5589D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83C62EA3260CD56900E5589D /* Colors.xcassets */; };
 		83F4666525730D6200C42430 /* feedback_interface.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 83F4666425730D6200C42430 /* feedback_interface.mp3 */; };
 		8536C6012559B2C200706EE7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536C6002559B2C200706EE7 /* Note.swift */; };
 		8536C6092559B39D00706EE7 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536C6082559B39D00706EE7 /* Board.swift */; };
@@ -115,11 +114,9 @@
 		5A6A095C2551D4C300F143ED /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 		5A6A09672551D86900F143ED /* CompletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionViewController.swift; sourceTree = "<group>"; };
 		5A6A09702551E6D700F143ED /* SequenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceCell.swift; sourceTree = "<group>"; };
-
 		5AEF384B257AF3A2007FAF56 /* SF-Compact-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Display-Bold.otf"; sourceTree = "<group>"; };
 		5AEF3850257AF65F007FAF56 /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
 		5AEF3851257AF65F007FAF56 /* SF-Compact-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Display-Regular.otf"; sourceTree = "<group>"; };
-
 		836164F0257AD67B001D6D8A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		836164F1257AD67C001D6D8A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		836164F6257AD697001D6D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeScreen.storyboard; sourceTree = "<group>"; };
@@ -148,6 +145,7 @@
 		83BC9ADA257EC14C007FFD3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Completion.storyboard; sourceTree = "<group>"; };
 		83BC9AE0257EC150007FFD3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Completion.strings; sourceTree = "<group>"; };
 		83BC9AE2257EC156007FFD3F /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Completion.strings"; sourceTree = "<group>"; };
+		83C62EA3260CD56900E5589D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		83F4666425730D6200C42430 /* feedback_interface.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = feedback_interface.mp3; sourceTree = "<group>"; };
 		8536C6002559B2C200706EE7 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		8536C6082559B39D00706EE7 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
@@ -241,6 +239,7 @@
 				5A122FEB2547490C00417AEE /* ViewController.swift */,
 				5A122FED2547490C00417AEE /* Main.storyboard */,
 				5A122FF32547490D00417AEE /* Assets.xcassets */,
+				83C62EA3260CD56900E5589D /* Colors.xcassets */,
 				5A122FF52547490D00417AEE /* LaunchScreen.storyboard */,
 				5A122FF82547490D00417AEE /* Info.plist */,
 				5A122FF02547490C00417AEE /* Memu.xcdatamodeld */,
@@ -495,11 +494,7 @@
 				5AEF3852257AF65F007FAF56 /* SF-Pro-Rounded-Regular.otf in Resources */,
 				022EF285255C8A1B00C393AC /* feedback_positivo.mp3 in Resources */,
 				022EF291255C8A1B00C393AC /* feedback_recompensa.mp3 in Resources */,
-
 				5AEF3853257AF65F007FAF56 /* SF-Compact-Display-Regular.otf in Resources */,
-				5A6A09172551D2C000F143ED /* Menu.storyboard in Resources */,
-				027EB600255DAA6A00DD7720 /* Tutorial.storyboard in Resources */,
-
 				83616509257AD765001D6D8A /* Menu.storyboard in Resources */,
 				8361652B257ADAFD001D6D8A /* Tutorial.storyboard in Resources */,
 				83BC9AD9257EC14C007FFD3F /* Completion.storyboard in Resources */,
@@ -508,6 +503,7 @@
 				83616535257ADBF2001D6D8A /* Puzzle.storyboard in Resources */,
 				022EF286255C8A1B00C393AC /* marimba_nota_do.mp3 in Resources */,
 				022EF282255C8A1B00C393AC /* feedback_negativo.mp3 in Resources */,
+				83C62EA4260CD56900E5589D /* Colors.xcassets in Resources */,
 				022EF293255C8A1B00C393AC /* marimba_nota_mi.mp3 in Resources */,
 				5A122FF72547490D00417AEE /* LaunchScreen.storyboard in Resources */,
 				83F4666525730D6200C42430 /* feedback_interface.mp3 in Resources */,
