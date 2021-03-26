@@ -10,12 +10,14 @@ import CoreData
 
 class RewardsViewController: UIViewController {
     
+    //MARK: Properties
     var launchpadVc = LaunchpadViewController()
     var fetchedResultController: NSFetchedResultsController<PlayerProgress>!
     var playerProgress: PlayerProgress!
     var notesManager = NotesManager.shared
     var differenceScore = 0
     
+    //MARK: IBOutlets
     // Player
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var ivImage: UIImageView!
@@ -69,7 +71,6 @@ class RewardsViewController: UIViewController {
     @IBOutlet weak var noteDescriptionSi: UILabel!
     
     let playerTitlesPT: [String] = ["Desconhecido", "Explorador", "Músico amador", "Mestre dos sons", "Deus da música"]
-    
     let playerTitlesEN: [String] = ["Unknown", "Explorer", "Amateur Musician", "Sound Master", "Music God"]
     
     override func viewDidLoad() {
@@ -201,7 +202,7 @@ class RewardsViewController: UIViewController {
     
     // carrega as informações das Notas
     func loadNotes() {
-        //notesManager.loadNotes(with: context)
+        notesManager.loadNotes(with: context)
         print("Count notes: \(notesManager.notes.count)")
         do {
             try context.save()
@@ -225,7 +226,6 @@ class RewardsViewController: UIViewController {
         let imagesNote: [String] = ["iniciante", "bronze", "prata", "ouro"]
         
         if notesManager.notes[index].level == 0 {
-            
             notesManager.notes[index].pointsLevelUp = 3.0
             medalNote.image = UIImage(named: "\(imagesNote[Int(notesManager.notes[index].level)])\(noteSelect!)")
             noteDescription.text =  String.localizedStringWithFormat(NSLocalizedString("noteProgressBronze", comment: "Note"), Int(notesManager.notes[index].pointsLevelUp-notesManager.notes[index].points), (notesManager.notes[index].name!))

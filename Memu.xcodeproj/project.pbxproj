@@ -35,14 +35,11 @@
 		5A6A094A2551D47B00F143ED /* LaunchpadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09492551D47B00F143ED /* LaunchpadViewController.swift */; };
 		5A6A094F2551D48C00F143ED /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A094E2551D48C00F143ED /* NotesViewController.swift */; };
 		5A6A09552551D4AA00F143ED /* PuzzleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09542551D4AA00F143ED /* PuzzleViewController.swift */; };
-		5A6A095D2551D4C300F143ED /* RewardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A095C2551D4C300F143ED /* RewardsViewController.swift */; };
 		5A6A09682551D86900F143ED /* CompletionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09672551D86900F143ED /* CompletionViewController.swift */; };
 		5A6A09712551E6D700F143ED /* SequenceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A09702551E6D700F143ED /* SequenceCell.swift */; };
-
 		5AEF384C257AF3BD007FAF56 /* SF-Compact-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5AEF384B257AF3A2007FAF56 /* SF-Compact-Display-Bold.otf */; };
 		5AEF3852257AF65F007FAF56 /* SF-Pro-Rounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5AEF3850257AF65F007FAF56 /* SF-Pro-Rounded-Regular.otf */; };
 		5AEF3853257AF65F007FAF56 /* SF-Compact-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5AEF3851257AF65F007FAF56 /* SF-Compact-Display-Regular.otf */; };
-
 		836164F5257AD697001D6D8A /* HomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 836164F7257AD697001D6D8A /* HomeScreen.storyboard */; };
 		83616509257AD765001D6D8A /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8361650B257AD765001D6D8A /* Menu.storyboard */; };
 		83616521257AD945001D6D8A /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83616523257AD945001D6D8A /* Notes.storyboard */; };
@@ -57,6 +54,9 @@
 		8536C6092559B39D00706EE7 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8536C6082559B39D00706EE7 /* Board.swift */; };
 		85B4A5F6255EFFFD0019D0EF /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B4A5F5255EFFFD0019D0EF /* Sequence.swift */; };
 		A30765C9256EB3FF00579822 /* NotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30765C8256EB3FF00579822 /* NotesManager.swift */; };
+		A3257E7125F4311700AF8943 /* Rewards2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3257E7025F4311700AF8943 /* Rewards2ViewController.swift */; };
+		A3257E7625F4350C00AF8943 /* RewardsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3257E7525F4350C00AF8943 /* RewardsTableViewCell.swift */; };
+		A3861ADE25F93E7D006AD1DF /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3861ADD25F93E7D006AD1DF /* PlayerManager.swift */; };
 		A3E79FE82568893F00D5FAD7 /* ViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E79FE72568893F00D5FAD7 /* ViewController+CoreData.swift */; };
 /* End PBXBuildFile section */
 
@@ -112,14 +112,11 @@
 		5A6A09492551D47B00F143ED /* LaunchpadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchpadViewController.swift; sourceTree = "<group>"; };
 		5A6A094E2551D48C00F143ED /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		5A6A09542551D4AA00F143ED /* PuzzleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleViewController.swift; sourceTree = "<group>"; };
-		5A6A095C2551D4C300F143ED /* RewardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsViewController.swift; sourceTree = "<group>"; };
 		5A6A09672551D86900F143ED /* CompletionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionViewController.swift; sourceTree = "<group>"; };
 		5A6A09702551E6D700F143ED /* SequenceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceCell.swift; sourceTree = "<group>"; };
-
 		5AEF384B257AF3A2007FAF56 /* SF-Compact-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Display-Bold.otf"; sourceTree = "<group>"; };
 		5AEF3850257AF65F007FAF56 /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
 		5AEF3851257AF65F007FAF56 /* SF-Compact-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Display-Regular.otf"; sourceTree = "<group>"; };
-
 		836164F0257AD67B001D6D8A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
 		836164F1257AD67C001D6D8A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		836164F6257AD697001D6D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeScreen.storyboard; sourceTree = "<group>"; };
@@ -153,6 +150,9 @@
 		8536C6082559B39D00706EE7 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		85B4A5F5255EFFFD0019D0EF /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
 		A30765C8256EB3FF00579822 /* NotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesManager.swift; sourceTree = "<group>"; };
+		A3257E7025F4311700AF8943 /* Rewards2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rewards2ViewController.swift; sourceTree = "<group>"; };
+		A3257E7525F4350C00AF8943 /* RewardsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsTableViewCell.swift; sourceTree = "<group>"; };
+		A3861ADD25F93E7D006AD1DF /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
 		A3E79FE72568893F00D5FAD7 /* ViewController+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+CoreData.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -315,7 +315,8 @@
 			isa = PBXGroup;
 			children = (
 				83BC9ABF257E9C5C007FFD3F /* Rewards.storyboard */,
-				5A6A095C2551D4C300F143ED /* RewardsViewController.swift */,
+				A3257E7025F4311700AF8943 /* Rewards2ViewController.swift */,
+				A3257E7525F4350C00AF8943 /* RewardsTableViewCell.swift */,
 			);
 			path = Rewards;
 			sourceTree = "<group>";
@@ -383,6 +384,7 @@
 				A3E79FE72568893F00D5FAD7 /* ViewController+CoreData.swift */,
 				85B4A5F5255EFFFD0019D0EF /* Sequence.swift */,
 				A30765C8256EB3FF00579822 /* NotesManager.swift */,
+				A3861ADD25F93E7D006AD1DF /* PlayerManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -495,11 +497,7 @@
 				5AEF3852257AF65F007FAF56 /* SF-Pro-Rounded-Regular.otf in Resources */,
 				022EF285255C8A1B00C393AC /* feedback_positivo.mp3 in Resources */,
 				022EF291255C8A1B00C393AC /* feedback_recompensa.mp3 in Resources */,
-
 				5AEF3853257AF65F007FAF56 /* SF-Compact-Display-Regular.otf in Resources */,
-				5A6A09172551D2C000F143ED /* Menu.storyboard in Resources */,
-				027EB600255DAA6A00DD7720 /* Tutorial.storyboard in Resources */,
-
 				83616509257AD765001D6D8A /* Menu.storyboard in Resources */,
 				8361652B257ADAFD001D6D8A /* Tutorial.storyboard in Resources */,
 				83BC9AD9257EC14C007FFD3F /* Completion.storyboard in Resources */,
@@ -553,14 +551,16 @@
 				5A6A09712551E6D700F143ED /* SequenceCell.swift in Sources */,
 				5A6A093D2551D41300F143ED /* MenuViewController.swift in Sources */,
 				5A122FF22547490C00417AEE /* Memu.xcdatamodeld in Sources */,
+				A3861ADE25F93E7D006AD1DF /* PlayerManager.swift in Sources */,
+				A3257E7125F4311700AF8943 /* Rewards2ViewController.swift in Sources */,
 				8536C6012559B2C200706EE7 /* Note.swift in Sources */,
 				5A122FE82547490C00417AEE /* AppDelegate.swift in Sources */,
-				5A6A095D2551D4C300F143ED /* RewardsViewController.swift in Sources */,
 				A30765C9256EB3FF00579822 /* NotesManager.swift in Sources */,
 				5A6A094F2551D48C00F143ED /* NotesViewController.swift in Sources */,
 				5A6A094A2551D47B00F143ED /* LaunchpadViewController.swift in Sources */,
 				5A6A09682551D86900F143ED /* CompletionViewController.swift in Sources */,
 				5A122FEA2547490C00417AEE /* SceneDelegate.swift in Sources */,
+				A3257E7625F4350C00AF8943 /* RewardsTableViewCell.swift in Sources */,
 				5A19B1A62554943E00C4F804 /* LaunchpadCell.swift in Sources */,
 				027EB5FF255DAA6A00DD7720 /* TutorialViewController.swift in Sources */,
 				5A6A09452551D44800F143ED /* HomeScreenViewController.swift in Sources */,

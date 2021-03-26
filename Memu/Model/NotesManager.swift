@@ -11,7 +11,7 @@ class NotesManager {
     
     static let shared = NotesManager()
     var notes: [NoteProgress] = []
-    var note: NoteProgress!
+    private var note: NoteProgress!
 //    var noteRe: NoteProgress!
 //    var noteMi: NoteProgress!
 //    var noteFa: NoteProgress!
@@ -19,46 +19,43 @@ class NotesManager {
 //    var noteLa: NoteProgress!
 //    var noteSi: NoteProgress!
     
-    func initNotes() {
+//    func initNotes(with context: NSManagedObjectContext) {
+//        let noteNames = ["Dó", "Ré", "Mi", "Fá", "Sol", "Lá", "Si"]
+//        for name in noteNames {
+//            note.setValue("1", forKey: "name")
+//            //note.level = 0
+//            notes.append(note)
+//        }
+//    }
+    
+    func loadNotes(with context: NSManagedObjectContext) {
         let fetchRequest: NSFetchRequest<NoteProgress> = NoteProgress.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         do {
-            //notes = try context.fetch(fetchRequest)
+            notes = try context.fetch(fetchRequest)
         } catch {
             print(error.localizedDescription)
         }
         if notes.isEmpty {
-            creatingNotes()
+            creatingNotes(context: context)
         }
     }
     
-    func creatingNotes() {
-        //var note: NoteProgress!
+    func creatingNotes(context: NSManagedObjectContext) {
         let noteNames = ["Dó", "Ré", "Mi", "Fá", "Sol", "Lá", "Si"]
-        for name in noteNames {
+        for (index, name) in noteNames.enumerated() {
             note = NoteProgress(context: context)
-            note.name = name
-            //note.setValue("\(name)", forKey: "name")
+            note.setValue(index, forKey: "index")
+            note.setValue(name, forKey: "name")
             note.setValue(0, forKey: "level")
+            note.setValue(0, forKey: "points")
+            note.setValue(0, forKey: "pointsLevelUp")
             notes.append(note)
         }
-        
     }
     
-//    func loadNotes(with context: NSManagedObjectContext) {
-//        let fetchRequest: NSFetchRequest<NoteProgress> = NoteProgress.fetchRequest()
-//        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-//        fetchRequest.sortDescriptors = [sortDescriptor]
-//        do {
-//            notes = try context.fetch(fetchRequest)
-//        } catch {
-//            print(error.localizedDescription)
-//        }
-//        if notes.isEmpty {
-//            initNotes(context: context)
-//        }
-//    }
+    
 //
 //    // inicializas as Notas
 //    func initNotes(context: NSManagedObjectContext) {
@@ -107,6 +104,5 @@ class NotesManager {
 //    }
     
     private init() {
-        
     }
 }

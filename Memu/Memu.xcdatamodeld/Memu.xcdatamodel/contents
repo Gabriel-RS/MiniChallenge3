@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="20B29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D64" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="NoteProgress" representedClassName="NoteProgress" syncable="YES" codeGenerationType="class">
+        <attribute name="image" optional="YES" attributeType="Transformable"/>
+        <attribute name="index" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="noteDescription" optional="YES" attributeType="String"/>
@@ -11,6 +13,7 @@
     <entity name="PlayerProgress" representedClassName="PlayerProgress" syncable="YES" codeGenerationType="class">
         <attribute name="descriptionPoints" optional="YES" attributeType="String"/>
         <attribute name="descriptionTitle" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="Transformable"/>
         <attribute name="level" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="points" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="pointsLevelUp" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
@@ -19,7 +22,7 @@
         <relationship name="noteProgress" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NoteProgress" inverseName="playerProgress" inverseEntity="NoteProgress"/>
     </entity>
     <elements>
-        <element name="NoteProgress" positionX="-54" positionY="45" width="128" height="119"/>
-        <element name="PlayerProgress" positionX="-63" positionY="-18" width="128" height="149"/>
+        <element name="NoteProgress" positionX="-54" positionY="45" width="128" height="149"/>
+        <element name="PlayerProgress" positionX="-63" positionY="-18" width="128" height="164"/>
     </elements>
 </model>
