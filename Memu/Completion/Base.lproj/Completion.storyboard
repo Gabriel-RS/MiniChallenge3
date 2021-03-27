@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j3x-vK-EPw">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j3x-vK-EPw">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,20 +20,20 @@
             <objects>
                 <viewController title="Completion" id="j3x-vK-EPw" customClass="CompletionViewController" customModule="Memu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i9s-OT-zta">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MJV-Do-3Ds">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kXy-tl-z5f">
-                                        <rect key="frame" x="20" y="30" width="374" height="384"/>
+                                        <rect key="frame" x="20" y="30" width="560" height="346"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="u1u-s1-YUE">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="72"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="754" verticalCompressionResistancePriority="752" text="Parabéns! Você solucionou o puzzle!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDr-69-dmP">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="72"/>
+                                                        <rect key="frame" x="34" y="0.0" width="492" height="35"/>
                                                         <fontDescription key="fontDescription" name="SFCompactDisplay-Bold" family="SF Compact Display" pointSize="30"/>
                                                         <color key="textColor" red="0.40000000000000002" green="0.42745098039215684" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
@@ -42,16 +41,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IKS-xE-Ld0">
-                                                <rect key="frame" x="0.0" y="102" width="374" height="90"/>
+                                                <rect key="frame" x="0.0" y="65" width="560" height="89.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="752" verticalCompressionResistancePriority="751" text="Essa é sua melodia:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="P6G-OK-SIX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="560" height="29.5"/>
                                                         <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="25"/>
                                                         <color key="textColor" red="0.40000000000000002" green="0.42745098039215684" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="P5c-4U-eJj">
-                                                        <rect key="frame" x="0.0" y="40" width="374" height="50"/>
+                                                        <rect key="frame" x="0.0" y="39.5" width="560" height="50"/>
                                                         <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="SzI-Vo-yuk"/>
@@ -64,7 +63,7 @@
                                                         </collectionViewFlowLayout>
                                                         <cells>
                                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="SequenceCell" id="QZX-Ca-Wph" customClass="SequenceCell" customModule="Memu" customModuleProvider="target">
-                                                                <rect key="frame" x="26" y="0.0" width="322" height="50"/>
+                                                                <rect key="frame" x="119" y="0.0" width="322" height="50"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Z2-rQ-dVo">
                                                                     <rect key="frame" x="0.0" y="0.0" width="322" height="50"/>
@@ -98,29 +97,29 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="DdE-5O-UNy">
-                                                <rect key="frame" x="0.0" y="222" width="374" height="162"/>
+                                                <rect key="frame" x="0.0" y="184.5" width="560" height="161.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="750" verticalCompressionResistancePriority="751" text="Pontuação da partida:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1Ak-RJ-Qba">
-                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="29.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="560" height="29.5"/>
                                                         <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="25"/>
                                                         <color key="textColor" red="0.39215686274509803" green="0.42745098039215684" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YAN-b7-4Eh">
-                                                        <rect key="frame" x="0.0" y="69.5" width="374" height="92.5"/>
+                                                        <rect key="frame" x="0.0" y="69.5" width="560" height="92"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="753" verticalCompressionResistancePriority="751" text="Seu progresso" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="P6O-mP-tJ6">
-                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="28"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="560" height="28"/>
                                                                 <fontDescription key="fontDescription" name="SFCompactRounded-Bold" family="SF Compact Rounded" pointSize="24"/>
                                                                 <color key="textColor" red="0.39235633609999998" green="0.42674070600000003" blue="0.47451752419999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="752" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pqk-Cx-bEC">
-                                                                <rect key="frame" x="0.0" y="48" width="374" height="4"/>
+                                                                <rect key="frame" x="0.0" y="48" width="560" height="4"/>
                                                                 <color key="progressTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </progressView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHk-SF-ADE">
-                                                                <rect key="frame" x="0.0" y="72" width="374" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="72" width="560" height="20"/>
                                                                 <attributedString key="attributedText">
                                                                     <fragment content="0/100">
                                                                         <attributes>
@@ -139,7 +138,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" axis="vertical" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ARP-p0-JZi">
-                                        <rect key="frame" x="63" y="613" width="288" height="175"/>
+                                        <rect key="frame" x="156" y="395" width="288" height="175"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9L-NR-CFO">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="80"/>
@@ -204,7 +203,7 @@
                         <outlet property="collectionView" destination="P5c-4U-eJj" id="hzt-qf-5wC"/>
                         <outlet property="lbGamePoints" destination="1Ak-RJ-Qba" id="lhT-rL-1g8"/>
                         <outlet property="lbProgress" destination="jHk-SF-ADE" id="UaZ-4c-paa"/>
-                        <outlet property="progressViewPlayer" destination="pqk-Cx-bEC" id="8jZ-jg-ZXT"/>
+                        <outlet property="pvPlayer" destination="pqk-Cx-bEC" id="8jZ-jg-ZXT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kAS-5Y-SNe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -14,27 +14,26 @@ class CompletionViewController: UIViewController, NSFetchedResultsControllerDele
         case main
     }
     
-    var fetchedResultController: NSFetchedResultsController<PlayerProgress>!
-    var playerProgress: PlayerProgress!
-    
-    @IBOutlet weak var progressViewPlayer: UIProgressView!
-    @IBOutlet weak var lbProgress: UILabel!
-    @IBOutlet weak var lbGamePoints: UILabel!
-    @IBOutlet weak var collectionView: UICollectionView!
+    // MARK: - Properties
+    var playerManager = PlayerManager.shared
     var dataSource: UICollectionViewDiffableDataSource<Section, Note>!
-    
     // recebe a sequencia final
     var resultSequence = [Note]()
     var ouvidas = Int()
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var pvPlayer: UIProgressView!
+    @IBOutlet weak var lbProgress: UILabel!
+    @IBOutlet weak var lbGamePoints: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadProgressPlayer()
-        
+        loadInfos()
+                
         collectionView.collectionViewLayout = layout()
         sequenceDataSource()
-
     }
     
     @IBAction func btnNewGame(_ sender: Any) {
@@ -45,24 +44,7 @@ class CompletionViewController: UIViewController, NSFetchedResultsControllerDele
         //self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
     
-    func loadProgressPlayer() {
-        let fetchRequest: NSFetchRequest<PlayerProgress> = PlayerProgress.fetchRequest()
-        let sortDescritor = NSSortDescriptor(key: "title", ascending: true)
-        fetchRequest.sortDescriptors = [sortDescritor]
-        fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-        fetchedResultController.delegate = self
-        do {
-            try fetchedResultController.performFetch()
-        } catch {
-            print(error.localizedDescription)
-        }
-        playerProgress = fetchedResultController.fetchedObjects?.first
-        if playerProgress == nil {
-            playerProgress = PlayerProgress(context: context)
-            playerProgress.level = 0
-            playerProgress.pointsLevelUp = 100.0
-        }
-        
+    func loadInfos() {
         if ouvidas == 3 {
             lbGamePoints.text = NSLocalizedString("gameScore5", comment: "Score")
         } else if ouvidas == 2 {
@@ -74,10 +56,9 @@ class CompletionViewController: UIViewController, NSFetchedResultsControllerDele
         }
         
         // modifica tamanho da ProgressView
-        progressViewPlayer.transform = CGAffineTransform(scaleX: 1.0, y: 5.0)
-        progressViewPlayer.progress = playerProgress.points/playerProgress.pointsLevelUp
-        
-        lbProgress.text = "\(Int(playerProgress.points))/\(Int(playerProgress.pointsLevelUp))"
+        pvPlayer.transform = CGAffineTransform(scaleX: 1.0, y: 5.0)
+        pvPlayer.progress = playerManager.player.points/playerManager.player.pointsLevelUp
+        lbProgress.text = "\(Int(playerManager.player.points))/\(Int(playerManager.player.pointsLevelUp))"
     }
     
     func layout() -> UICollectionViewCompositionalLayout {
