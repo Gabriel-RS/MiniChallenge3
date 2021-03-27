@@ -34,8 +34,6 @@ class PlayerManager {
                 player.descriptionTitle = NSLocalizedString("unknownDescription", comment: "Description")
                 player.pointsLevelUp = 100.0
                 player.descriptionPoints = NSLocalizedString("unknownLbProgress", comment: "Description")
-//                let actualScore = Int(playerProgress.points)
-//                updateScore(difference: 0, actualScore: actualScore)
             case 1:
                 player.title = NSLocalizedString("explorerTitle", comment: "Title")
                 player.descriptionTitle = NSLocalizedString("explorerDescription", comment: "Description")
@@ -44,8 +42,6 @@ class PlayerManager {
                 } else {
                     player.descriptionPoints = NSLocalizedString("winMedalExplorer", comment: "Title Medal")
                 }
-//                let actualScore = Int(playerProgress.points)
-//                updateScore(difference: 0, actualScore: actualScore)
             case 2:
                 player.title = NSLocalizedString("amateurTitle", comment: "Title")
                 player.descriptionTitle = NSLocalizedString("amateurDescription", comment: "Description")
@@ -55,8 +51,6 @@ class PlayerManager {
                 } else {
                     player.descriptionPoints = NSLocalizedString("winMedalAmateur", comment: "Title Medal")
                 }
-//                let actualScore = Int(playerProgress.points)
-//                updateScore(difference: 0, actualScore: actualScore)
             case 3:
                 player.title = NSLocalizedString("masterTitle", comment: "Title")
                 player.descriptionTitle = NSLocalizedString("masterDescription", comment: "Description")
@@ -66,16 +60,11 @@ class PlayerManager {
                 } else {
                     player.descriptionPoints = NSLocalizedString("winMedalMaster", comment: "Title Medal")
                 }
-//                let actualScore = Int(playerProgress.points)
-//                updateScore(difference: 0, actualScore: actualScore)
             default:
                 player.title = NSLocalizedString("godTitle", comment: "Title")
                 player.descriptionTitle = NSLocalizedString("godDescription", comment: "Description")
                 player.descriptionPoints = NSLocalizedString("godLbProgress", comment: "Description")
 //                btCheckProgress.setImage(UIImage(named: "progressoOuro"), for: .normal)
-//                let actualScore = Int(playerProgress.points)
-//                updateScore(difference: 0, actualScore: actualScore)
-            //lbScore.isHidden = true
         }
     }
     

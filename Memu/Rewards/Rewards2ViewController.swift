@@ -32,20 +32,17 @@ class Rewards2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Carregando infos do Jogador
+        // Carrega infos do Jogador e das Notas
         playerManager.loadPlayer(with: context)
-        //playerManager.player.level = 1
-        //playerManager.player.points = 300
-        playerManager.notes[0].points = 15
-        //playerManager.notes[1].points = 15
-        //playerManager.notes[2].points = 15
-        //playerManager.notes[3].points = 15
+        playerManager.loadNotes(with: context)
+        if playerManager.player.level == 0 && playerManager.player.points > 0 {
+            playerManager.player.level+=1
+        }
         
         // Informações do Jogador na tela
         loadInfo()
+        
         pvPlayer.transform = CGAffineTransform(scaleX: 1.0, y: 5.0)
-                
-        print("Rewards2: \(playerManager.notes.count)")
     }
     
     // MARK: Functions
@@ -197,13 +194,6 @@ class Rewards2ViewController: UIViewController {
     @IBAction func btnClose(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-//    @objc func indexButtonTapped(_ sender: UIButton) {
-//        let point = sender.convert(CGPoint.zero, to: tableView)
-//        guard let index = tableView.indexPathForRow(at: point) else { return }
-//        self.index = index[1]
-//        print("custom \(index[1])")
-//    }
 
 }
 
@@ -216,14 +206,9 @@ extension Rewards2ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RewardsTableViewCell
-        //cell.btReward.addTarget(self, action: #selector(indexButtonTapped), for: .touchUpInside)
         checkNotesProgress(note: playerManager.notes[indexPath.row], context: context)
         cell.prepare(index: indexPath.row)
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("didSelectRowAt: \(indexPath.row)")
     }
     
 }

@@ -12,27 +12,24 @@ import CoreData
 
 class PuzzleViewController: UIViewController{
     
-    @IBOutlet weak var ear1: UIImageView!
-    @IBOutlet weak var ear2: UIImageView!
-    @IBOutlet weak var ear3: UIImageView!
-    @IBOutlet weak var instructionLabel: UILabel!
-    
-    let tutorialHasLaunched: Bool = UserDefaults.standard.bool(forKey: "tutorialHasLaunched")
-    
-    var launchpadVc = LaunchpadViewController()
-    var fetchedResultController: NSFetchedResultsController<PlayerProgress>!
-    var playerProgress: PlayerProgress!
-    var notesManager = NotesManager.shared
-    
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var btnCheck: UIButton!
-    
     enum Section {
         case sequence
         case button
         case puzzle
     }
     
+    // MARK: IBOutlets
+    @IBOutlet weak var ear1: UIImageView!
+    @IBOutlet weak var ear2: UIImageView!
+    @IBOutlet weak var ear3: UIImageView!
+    @IBOutlet weak var instructionLabel: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var btnCheck: UIButton!
+    
+    // MARK: Propeties
+    let tutorialHasLaunched: Bool = UserDefaults.standard.bool(forKey: "tutorialHasLaunched")
+    var launchpadVc = LaunchpadViewController()
+    var playerManager = PlayerManager.shared
     // variaveis usadas no ButtonCell
     static var locked = false
     static var timesLocked = 0
@@ -53,14 +50,13 @@ class PuzzleViewController: UIViewController{
     var dataSource: UICollectionViewDiffableDataSource<Section, Note>!
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.collectionViewLayout = configLayout()
         
-        // carrega infos do CoreData
-        loadProgressPlayer()
-        loadNotes()
+        // Carrega infos do Jogador e das Notas
+        playerManager.loadPlayer(with: context)
+        playerManager.loadNotes(with: context)
                 
         // seção button
         keyNotes3 = board3.getLaunchpad()
@@ -99,38 +95,31 @@ class PuzzleViewController: UIViewController{
             for note in sequenceResult {
                 print("Nome nota: \(note.getName())")
                 if note.getName() == "do" {
-                    notesManager.notes[0].points+=1
-                    print(notesManager.notes[0].name!)
+                    playerManager.notes[0].points+=1
                 } else if note.getName() == "re" {
-                    notesManager.notes[4].points+=1
-                    print(notesManager.notes[4].name!)
+                    playerManager.notes[1].points+=1
                 } else if note.getName() == "mi" {
-                    notesManager.notes[3].points+=1
-                    print(notesManager.notes[3].name!)
+                    playerManager.notes[2].points+=1
                 } else if note.getName() == "fa" {
-                    notesManager.notes[1].points+=1
-                    print(notesManager.notes[1].name!)
+                    playerManager.notes[3].points+=1
                 } else if note.getName() == "sol" {
-                    notesManager.notes[6].points+=1
-                    print(notesManager.notes[6].name!)
+                    playerManager.notes[4].points+=1
                 } else if note.getName() == "la" {
-                    notesManager.notes[2].points+=1
-                    print(notesManager.notes[2].name!)
+                    playerManager.notes[5].points+=1
                 } else if note.getName() == "si" {
-                    notesManager.notes[5].points+=1
-                    print(notesManager.notes[5].name!)
+                    playerManager.notes[6].points+=1
                 }
             }
             
             // checa e dá a pontuação para o usuário de acordo com as ouvidas usadas
             if PuzzleViewController.ouvidas == 3 {
-                playerProgress.points+=5
+                playerManager.player.points+=5
             } else if PuzzleViewController.ouvidas == 2 {
-                playerProgress.points+=4
+                playerManager.player.points+=4
             } else if PuzzleViewController.ouvidas == 1 {
-                playerProgress.points+=3
+                playerManager.player.points+=3
             } else if PuzzleViewController.ouvidas == 0 {
-                playerProgress.points+=2
+                playerManager.player.points+=2
             }
             
             // salva progresso no CoreData
@@ -180,38 +169,6 @@ class PuzzleViewController: UIViewController{
     }
     
     // MARK: Logic
-    
-    // recupera a pontuaçõão do Player do CoreData
-    func loadProgressPlayer() {
-        let fetchRequest: NSFetchRequest<PlayerProgress> = PlayerProgress.fetchRequest()
-        let sortDescritor = NSSortDescriptor(key: "title", ascending: true)
-        fetchRequest.sortDescriptors = [sortDescritor]
-        fetchedResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-        fetchedResultController.delegate = self
-        do {
-            try fetchedResultController.performFetch()
-        } catch {
-            print(error.localizedDescription)
-        }
-        playerProgress = fetchedResultController.fetchedObjects?.first
-        if playerProgress == nil {
-            playerProgress = PlayerProgress(context: context)
-            playerProgress.level = 0
-            playerProgress.pointsLevelUp = 100.0
-        }
-    }
-    
-    // recupera a pontuação de cada Nota do CoreData
-    func loadNotes() {
-        //notesManager.loadNotes(with: context)
-        print("Count notes: \(notesManager.notes.count)")
-        do {
-            try context.save()
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
-    
     // gera uma nova sequencia para ser apresentada na conclusão ou na sequencia do puzzle
     func generateResultSequence() -> Array<Note>{
         var result: [Note] = []
@@ -461,10 +418,9 @@ extension PuzzleViewController: ButtonCellDelegate {
 
 extension PuzzleViewController: NSFetchedResultsControllerDelegate {
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-
         switch type {
             case .update:
-                print("Atualizado")
+                print("Atualizado PuzzleViewController")
             default:
                 print("Default")
         }
